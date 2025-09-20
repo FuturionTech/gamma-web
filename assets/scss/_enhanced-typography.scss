@@ -1,0 +1,294 @@
+/*
+ * Enhanced Typography & Visual Hierarchy
+ * Around-inspired typography system for Gamma Neutral
+ */
+
+// Professional heading hierarchy with optimal line heights
+.display-1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+
+  // Professional text gradient for impact
+  &.text-gradient {
+    background: linear-gradient(135deg, #1f2937 0%, #4b5563 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.display-2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+
+.display-3 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+// Enhanced heading styles with professional spacing
+h1, .h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  color: var(--ar-gray-900);
+}
+
+h2, .h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  margin-bottom: 0.875rem;
+  color: var(--ar-gray-900);
+}
+
+h3, .h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+  color: var(--ar-gray-800);
+}
+
+h4, .h4 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  color: var(--ar-gray-800);
+}
+
+h5, .h5 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+  color: var(--ar-gray-700);
+}
+
+h6, .h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: var(--ar-gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Professional paragraph styling
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--ar-gray-700);
+  font-weight: 400;
+
+  &.lead {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: var(--ar-gray-600);
+  }
+
+  &.text-large {
+    font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+    line-height: 1.65;
+  }
+
+  &.text-small {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+// Professional spacing system
+.section-padding {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+}
+
+.section-padding-sm {
+  padding: clamp(2rem, 4vw, 4rem) 0;
+}
+
+.section-padding-lg {
+  padding: clamp(6rem, 10vw, 12rem) 0;
+}
+
+// Content spacing
+.content-spacing > * + * {
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.content-spacing-sm > * + * {
+  margin-top: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.content-spacing-lg > * + * {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+// Professional blockquotes
+blockquote {
+  position: relative;
+  padding: 2rem 2rem 2rem 4rem;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(168, 85, 247, 0.05));
+  border-left: 4px solid #8b5cf6;
+  border-radius: 0 1rem 1rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-style: italic;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    color: #8b5cf6;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ar-gray-600);
+
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+// Enhanced lists
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+
+    &::marker {
+      color: #8b5cf6;
+    }
+  }
+}
+
+ul.list-unstyled {
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 6px;
+      height: 6px;
+      background: #8b5cf6;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Professional text utilities
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.text-nowrap-sm {
+  @media (min-width: 576px) {
+    white-space: nowrap;
+  }
+}
+
+// Enhanced readability classes
+.readable-width {
+  max-width: 65ch;
+}
+
+.readable-width-sm {
+  max-width: 45ch;
+}
+
+.readable-width-lg {
+  max-width: 75ch;
+}
+
+// Professional emphasis
+.text-emphasis {
+  font-weight: 600;
+  color: var(--ar-gray-900);
+}
+
+.text-subtle {
+  font-weight: 400;
+  color: var(--ar-gray-600);
+}
+
+.text-muted-soft {
+  color: var(--ar-gray-500);
+  font-weight: 400;
+}
+
+// Dark mode typography adjustments
+[data-bs-theme="dark"] {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .text-emphasis {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .text-subtle {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .text-muted-soft {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  blockquote {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(168, 85, 247, 0.15));
+    color: rgba(255, 255, 255, 0.9);
+  }
+}

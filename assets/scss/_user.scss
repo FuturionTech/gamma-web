@@ -1,0 +1,17 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.text-color-with-states {
+    color: $gray-600;
+    font-weight: bold;
+  
+    &:hover {
+      color: rgba($primary, 0.6) !important; // Opacité de 60% au survol
+    }
+  
+    &.router-link-active, &.router-link-exact-active {
+      color: $primary !important;
+    }
+  }

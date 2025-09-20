@@ -1,0 +1,168 @@
+// Navigation Enhancement Styles
+// Professional navigation styles for Gamma Neutral Consulting
+
+// Header enhancements
+.navbar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bs-border-color-translucent);
+
+  &.bg-white {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+// Professional dropdown styling
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 1px solid var(--bs-border-color);
+    border-right: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+}
+
+// Navigation link enhancements
+.navbar-nav .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--bs-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after,
+  &.router-link-active::after {
+    width: 80%;
+  }
+}
+
+// Dropdown item enhancements
+.dropdown-item {
+  font-weight: 500;
+
+  &:hover {
+    background: var(--bs-primary-bg-subtle);
+    color: var(--bs-primary);
+
+    i {
+      color: var(--bs-primary) !important;
+    }
+  }
+}
+
+// Mobile navigation enhancements
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: white;
+    margin: 1rem -1rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu {
+    box-shadow: none;
+    border: 1px solid var(--bs-border-color);
+    margin-top: 0.5rem;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+}
+
+// CTA button enhancements
+.btn-primary {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 1rem rgba(var(--bs-primary-rgb), 0.3);
+  }
+}
+
+.btn-outline-primary {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// Language selector positioning
+.language-selector {
+  .dropdown-toggle {
+    border: none;
+    background: transparent;
+    color: var(--bs-gray-600);
+
+    &:hover {
+      color: var(--bs-primary);
+    }
+  }
+}
+
+// Professional color adjustments
+.text-color-with-states {
+  color: var(--bs-gray-800);
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--bs-primary);
+  }
+}
+
+// Accessibility improvements
+.nav-link:focus,
+.dropdown-toggle:focus,
+.btn:focus {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .navbar {
+    border-bottom: 2px solid var(--bs-gray-900);
+  }
+
+  .dropdown-menu {
+    border: 2px solid var(--bs-gray-900);
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after,
+  .dropdown-item,
+  .btn-primary,
+  .btn-outline-primary {
+    transition: none;
+  }
+}

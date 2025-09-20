@@ -1,0 +1,442 @@
+/*
+ * Integration Guide for Around-Inspired Enhancements
+ * How to integrate all the professional UI/UX improvements
+ */
+
+/*
+=============================================================================
+INTEGRATION CHECKLIST - Follow these steps for best results:
+=============================================================================
+
+1. UPDATE YOUR MAIN THEME FILE (assets/scss/theme.scss):
+   Add these imports after your existing imports:
+
+   @import "enhanced-typography";
+   @import "enhanced-colors";
+   @import "components/enhanced-navigation";
+   @import "components/micro-interactions";
+   @import "components/professional-components";
+   @import "components/mobile-enhancements";
+
+2. UPDATE YOUR NUXT.CONFIG.TS:
+   Add CSS file to global styles:
+
+   css: [
+     '@/assets/scss/theme.scss',
+     // ... your other CSS imports
+   ]
+
+3. COMPONENT REPLACEMENTS:
+   Replace your existing SolutionsMenu.vue with EnhancedSolutionsMenu.vue
+   Update import in Header.vue:
+
+   import EnhancedSolutionsMenu from "./menus/EnhancedSolutionsMenu.vue";
+
+4. JAVASCRIPT ENHANCEMENTS:
+   Add scroll-to-top functionality to your app.vue or layout:
+
+5. GLOBAL CLASSES TO USE:
+   - .section-padding (for consistent section spacing)
+   - .animate-slide-up (for entrance animations)
+   - .card-elevated (for premium card styling)
+   - .btn-primary (enhanced with gradients)
+   - .interactive (for hover effects)
+
+=============================================================================
+*/
+
+// Example usage patterns for enhanced components
+.example-usage {
+
+  // Enhanced hero section
+  .hero-section {
+    @extend .section-padding-lg;
+    background: var(--gradient-hero);
+    color: white;
+
+    .hero-title {
+      @extend .display-1;
+      @extend .text-gradient;
+      @extend .animate-slide-up;
+    }
+
+    .hero-description {
+      @extend .lead;
+      @extend .readable-width;
+      margin: 0 auto;
+    }
+
+    .hero-cta {
+      @extend .btn;
+      @extend .btn-primary;
+      @extend .btn-lg;
+      margin-top: 2rem;
+    }
+  }
+
+  // Enhanced card grid
+  .features-grid {
+    .feature-card {
+      @extend .card;
+      @extend .card-elevated;
+      @extend .interactive;
+      @extend .animate-fade-scale;
+
+      .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        background: var(--gradient-primary);
+        border-radius: var(--ar-border-radius-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-title {
+        @extend .h4;
+        margin-bottom: 1rem;
+      }
+
+      .feature-description {
+        @extend .text-secondary-color;
+      }
+    }
+  }
+
+  // Enhanced form styling
+  .contact-form {
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      .form-label {
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .form-control {
+        // Enhanced form controls automatically styled
+        &:focus {
+          transform: translateY(-1px);
+        }
+      }
+    }
+
+    .submit-button {
+      @extend .btn;
+      @extend .btn-primary;
+      @extend .btn-lg;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  // Enhanced navigation usage
+  .enhanced-navbar {
+    @extend .navbar;
+    @extend .navbar-expand-lg;
+    @extend .fixed-top;
+
+    .nav-link {
+      // Enhanced navigation automatically styled
+      font-weight: 600;
+
+      &:hover {
+        // Micro-interactions applied automatically
+      }
+    }
+  }
+
+  // Enhanced content sections
+  .content-section {
+    @extend .section-padding;
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      .section-badge {
+        @extend .badge;
+        @extend .badge-primary-light;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .section-title {
+        @extend .display-3;
+        margin-bottom: 1rem;
+      }
+
+      .section-description {
+        @extend .lead;
+        @extend .readable-width;
+        @extend .text-secondary-color;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Enhanced testimonial cards
+  .testimonial-card {
+    @extend .card;
+    @extend .card-floating;
+    background: var(--gradient-surface);
+    text-align: center;
+    padding: 3rem 2rem;
+
+    .testimonial-content {
+      @extend .lead;
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: var(--color-text-secondary);
+    }
+
+    .testimonial-author {
+      .author-name {
+        font-weight: 700;
+        color: var(--color-text-primary);
+        margin-bottom: 0.25rem;
+      }
+
+      .author-title {
+        @extend .text-small;
+        color: var(--color-text-tertiary);
+      }
+    }
+  }
+
+  // Enhanced stats section
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    .stat-item {
+      text-align: center;
+      padding: 2rem 1rem;
+
+      .stat-number {
+        @extend .display-2;
+        font-weight: 800;
+        color: var(--color-primary-600);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        @extend .text-secondary-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  // Enhanced call-to-action
+  .cta-section {
+    background: var(--gradient-primary);
+    color: white;
+    text-align: center;
+    @extend .section-padding;
+    border-radius: var(--ar-border-radius-2xl);
+    margin: 4rem 0;
+
+    .cta-title {
+      @extend .display-4;
+      margin-bottom: 1rem;
+    }
+
+    .cta-description {
+      @extend .lead;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .btn {
+        min-width: 160px;
+      }
+    }
+  }
+}
+
+/*
+=============================================================================
+ANIMATION IMPLEMENTATION EXAMPLES:
+=============================================================================
+*/
+
+// Add these classes to elements for automatic animations
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// JavaScript to add to your components:
+/*
+// Intersection Observer for scroll animations
+const observeElements = () => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+};
+
+// Call in mounted() lifecycle hook
+onMounted(() => {
+  observeElements();
+});
+*/
+
+/*
+=============================================================================
+SCROLL-TO-TOP BUTTON IMPLEMENTATION:
+=============================================================================
+*/
+
+// Add this to your main layout or app.vue:
+/*
+<template>
+  <a
+    href="#top"
+    class="btn-scroll-top"
+    :class="{ show: showScrollTop }"
+    @click.prevent="scrollToTop"
+  >
+    <i class="fa fa-arrow-up"></i>
+  </a>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const showScrollTop = ref(false)
+
+const handleScroll = () => {
+  showScrollTop.value = window.scrollY > 300
+
+  // Update progress indicator
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+  document.querySelector('.btn-scroll-top')?.style.setProperty('--progress', `${scrolled}%`)
+}
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+*/
+
+/*
+=============================================================================
+THEME TOGGLE ENHANCEMENT:
+=============================================================================
+*/
+
+// Enhanced theme toggle with smooth transitions:
+/*
+// In your ThemeToggle.vue component
+<template>
+  <div class="theme-toggle" @click="toggleTheme">
+    <div class="toggle-track">
+      <div class="toggle-thumb" :class="{ active: isDark }">
+        <i class="fa fa-sun sun-icon" :class="{ active: !isDark }"></i>
+        <i class="fa fa-moon moon-icon" :class="{ active: isDark }"></i>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.toggle-track {
+  width: 3rem;
+  height: 1.5rem;
+  background: var(--color-neutral-200);
+  border-radius: 0.75rem;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &.active {
+    transform: translateX(1.5rem);
+  }
+}
+
+.sun-icon,
+.moon-icon {
+  position: absolute;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.5);
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sun-icon {
+  color: #f59e0b;
+}
+
+.moon-icon {
+  color: #6366f1;
+}
+</style>
+*/

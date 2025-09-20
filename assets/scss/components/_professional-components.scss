@@ -1,0 +1,473 @@
+/*
+ * Professional Component Polish
+ * Around-inspired shadows, depth, and premium styling
+ */
+
+// Enhanced Card System
+.card {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--ar-border-radius-xl);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color-surface);
+  overflow: hidden;
+
+  &:hover {
+    border-color: var(--color-primary-200);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  // Professional card variants
+  &.card-elevated {
+    box-shadow: var(--shadow-lg);
+    border: none;
+
+    &:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-6px);
+    }
+  }
+
+  &.card-floating {
+    box-shadow: var(--shadow-xl);
+    border: none;
+
+    &:hover {
+      box-shadow: var(--shadow-2xl);
+      transform: translateY(-8px);
+    }
+  }
+
+  &.card-interactive {
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(-2px) scale(0.98);
+    }
+  }
+
+  // Professional card headers
+  .card-header {
+    background: linear-gradient(135deg, var(--color-surface), var(--color-surface-hover));
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 2rem;
+
+    h5, h6 {
+      margin-bottom: 0;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .card-footer {
+    background: transparent;
+    border-top: 1px solid var(--color-border);
+    padding: 1.5rem 2rem;
+  }
+}
+
+// Enhanced Button System
+.btn {
+  font-weight: 600;
+  border-radius: var(--ar-border-radius);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 2px;
+  position: relative;
+  overflow: hidden;
+
+  // Professional button variants
+  &.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
+
+    &:hover {
+      background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+  }
+
+  &.btn-secondary {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+
+    &:hover {
+      background: var(--color-surface-hover);
+      border-color: var(--color-primary-300);
+      color: var(--color-primary-600);
+    }
+  }
+
+  &.btn-outline-primary {
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-600);
+
+    &:hover {
+      background: var(--color-primary-500);
+      color: white;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
+    }
+  }
+
+  // Button sizes with professional proportions
+  &.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  &.btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  // Professional loading state
+  &.loading {
+    pointer-events: none;
+    opacity: 0.7;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid transparent;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
+}
+
+// Professional Form Components
+.form-floating {
+  .form-control {
+    border-radius: var(--ar-border-radius);
+    border: 2px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+      border-color: var(--color-primary-500);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+    }
+
+    &:focus ~ label {
+      color: var(--color-primary-600);
+    }
+  }
+
+  label {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+}
+
+.input-group {
+  .form-control {
+    border-radius: var(--ar-border-radius);
+  }
+
+  .input-group-text {
+    background: var(--color-surface-hover);
+    border: 2px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+}
+
+// Enhanced Badge System
+.badge {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.375em 0.75em;
+  border-radius: var(--ar-border-radius-pill);
+  transition: all 0.3s ease;
+
+  &.badge-lg {
+    font-size: 0.875rem;
+    padding: 0.5em 1em;
+  }
+
+  &.badge-sm {
+    font-size: 0.6875rem;
+    padding: 0.25em 0.5em;
+  }
+
+  // Professional status badges
+  &.badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+}
+
+// Professional Alert System
+.alert {
+  border: none;
+  border-radius: var(--ar-border-radius-lg);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid;
+
+  &.alert-primary {
+    background: var(--color-primary-100);
+    color: var(--color-primary-800);
+    border-left-color: var(--color-primary-500);
+  }
+
+  &.alert-success {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+    border-left-color: var(--color-success);
+  }
+
+  &.alert-warning {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+    border-left-color: var(--color-warning);
+  }
+
+  &.alert-danger {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+    border-left-color: var(--color-error);
+  }
+
+  &.alert-info {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+    border-left-color: var(--color-info);
+  }
+}
+
+// Enhanced List Group
+.list-group {
+  border-radius: var(--ar-border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+
+  .list-group-item {
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--color-surface-hover);
+    }
+
+    &.active {
+      background: var(--gradient-primary);
+      color: white;
+      border-color: transparent;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// Professional Navigation Tabs
+.nav-tabs {
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 2rem;
+
+  .nav-link {
+    border: none;
+    border-radius: var(--ar-border-radius) var(--ar-border-radius) 0 0;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    margin-bottom: -2px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--color-primary-600);
+      background: var(--color-surface-hover);
+    }
+
+    &.active {
+      color: var(--color-primary-600);
+      background: white;
+      border-bottom: 2px solid var(--color-primary-500);
+    }
+  }
+}
+
+// Enhanced Progress Bars
+.progress {
+  height: 8px;
+  border-radius: var(--ar-border-radius-pill);
+  background: var(--color-neutral-200);
+  overflow: hidden;
+
+  .progress-bar {
+    background: var(--gradient-primary);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.progress-lg {
+    height: 12px;
+  }
+
+  &.progress-sm {
+    height: 6px;
+  }
+}
+
+// Professional Modal Enhancements
+.modal {
+  .modal-content {
+    border: none;
+    border-radius: var(--ar-border-radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+
+    .modal-header {
+      background: var(--gradient-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+
+      .modal-title {
+        font-weight: 600;
+        color: var(--color-text-primary);
+      }
+
+      .btn-close {
+        padding: 0.5rem;
+        margin: -0.5rem;
+      }
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .modal-footer {
+      background: var(--color-surface-hover);
+      border-top: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+    }
+  }
+}
+
+// Professional Tooltip Styling
+.tooltip {
+  .tooltip-inner {
+    background: var(--color-neutral-900);
+    color: white;
+    border-radius: var(--ar-border-radius);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--color-neutral-900);
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: var(--color-neutral-900);
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: var(--color-neutral-900);
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: var(--color-neutral-900);
+  }
+}
+
+// Professional Dropdown Menu
+.dropdown-menu {
+  border: none;
+  border-radius: var(--ar-border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+
+  .dropdown-item {
+    padding: 0.75rem 1.25rem;
+    color: var(--color-text-primary);
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--color-primary-50);
+      color: var(--color-primary-700);
+    }
+
+    &:active {
+      background: var(--color-primary-100);
+    }
+  }
+
+  .dropdown-divider {
+    margin: 0.5rem 0;
+    border-color: var(--color-border);
+  }
+
+  .dropdown-header {
+    padding: 0.75rem 1.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-tertiary);
+  }
+}
+
+// Dark theme adjustments
+[data-bs-theme="dark"] {
+  .card {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .dropdown-menu {
+    background: rgba(17, 24, 39, 0.98);
+  }
+
+  .form-control {
+    background: rgba(17, 24, 39, 0.8);
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+
+    &:focus {
+      background: var(--color-surface);
+    }
+  }
+}

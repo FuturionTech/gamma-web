@@ -1,0 +1,38 @@
+query teamsQuery($application_id: ID!) {
+  teams(application_id: $application_id) {
+    data {
+      id
+      name
+      profilePictureUrl
+      profile_picture
+      role
+      email
+      created_at
+      contact
+      biography
+      socialMediaLinks {
+        id
+        url
+        platform {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+
+query certificationsQuery($application_id: ID!) {
+  certifications(application_id: $application_id) {
+    data {
+      id
+      fileUrl
+      title
+      certificationCategory {
+        id
+        name
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "header": {
+    "about": "À Propos",
+    "services": "Services",
+    "industries": "Industries",
+    "resources": "Ressources",
+    "home": "Accueil",
+    "contact_us": "Contact",
+    "careers": "Carrières",
+    "get_started": "Commencer",
+    "faq": "FAQ"
+  },
+  "homepage": {
+    "banner": {
+      "title": "Vos Solutions de Données",
+      "description": "Chez Gamma Neutral, nous aidons les entreprises à exploiter la puissance de leurs données. De l'IA au cloud computing, notre équipe offre des solutions innovantes, sécurisées et évolutives adaptées aux besoins uniques de votre organisation.",
+      "cta": "Commencer",
+      "feature1": "Insights basés sur les données qui comptent",
+      "feature2": "Sécurité de niveau entreprise"
+    },
+    "services": {
+      "title": "Nos Services",
+      "description": "Nous offrons une suite complète de services adaptés aux besoins uniques de chaque client."
+    },
+    "contact": {
+      "title": "Partenariat avec Nous",
+      "description": "Nous recherchons toujours de nouvelles opportunités commerciales et collaborations.",
+      "cta": "Contactez-Nous",
+      "ready": "Prêt à transformer vos données?",
+      "message": "Notre équipe d'experts est là pour vous aider à atteindre vos objectifs commerciaux.",
+      "contact_us": "Contactez-Nous"
+    }
+  },
+  "about": {
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Chez Gamma Neutral Consulting, nous permettons aux entreprises d'exploiter le plein potentiel de leurs données."
+    },
+    "company": {
+      "title": "Aperçu de l'Entreprise",
+      "name": "Gamma Neutral Consulting Inc.",
+      "location": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+      "incorporated": "16 juin 2025",
+      "slogan": "Vos Solutions de Données"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions de données complètes pour les entreprises modernes"
+  },
+  "careers": {
+    "title": "Rejoignez Notre Équipe",
+    "subtitle": "Construisez l'avenir des données avec nous"
+  },
+  "contact": {
+    "title": "Obtenez une consultation gratuite",
+    "first_name": "Prénom",
+    "last_name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "company": "Entreprise",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  "footer": {
+    "company": "Gamma Neutral Consulting Inc.",
+    "address": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "rights_reserved": "© 2025 Gamma Neutral Consulting Inc. Tous droits réservés."
+  },
+  "meta": {
+    "home": {
+      "title": "Gamma Neutral Consulting - Vos Solutions de Données",
+      "description": "Transformez les données en opportunité avec Gamma Neutral Consulting. Solutions d'IA, cloud computing, cybersécurité et ingénierie de données à Toronto, Canada."
+    }
+  }
+}

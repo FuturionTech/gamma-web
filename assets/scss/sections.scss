@@ -1,0 +1,303 @@
+/**
+ * Professional Section Spacing - Based on Around Template
+ * Ensures consistent, world-class spacing between all homepage sections
+ */
+
+// Import variables
+@import "variables";
+
+/* ==================================================
+   SECTION SPACING SYSTEM
+   ================================================== */
+
+// Base section spacing (follows Around template patterns)
+section {
+  position: relative;
+  overflow-x: hidden; // Prevent horizontal scroll issues
+}
+
+// Remove default margin between sections to prevent double spacing
+section + section {
+  margin-top: 0;
+}
+
+// Professional spacing classes
+.section-spacing {
+  &-sm {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: 992px) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &-md {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @media (min-width: 992px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  &-lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media (min-width: 992px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &-xl {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @media (min-width: 992px) {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+/* ==================================================
+   BACKGROUND SYSTEM
+   ================================================== */
+
+// Professional background variants
+.section-bg {
+  &-primary {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &-light {
+    background-color: $gray-100;
+    color: $body-color;
+  }
+
+  &-dark {
+    background-color: $dark;
+    color: $white;
+  }
+
+  &-gradient-primary {
+    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+    color: $white;
+  }
+
+  &-gradient-secondary {
+    background: linear-gradient(135deg, $secondary 0%, $primary 100%);
+    color: $white;
+  }
+}
+
+/* ==================================================
+   CONTENT CONTAINER SYSTEM
+   ================================================== */
+
+// Professional header sections
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @media (min-width: 992px) {
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: $font-weight-semibold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: $headings-color;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: $body-secondary-color;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      font-size: 1.375rem;
+    }
+  }
+
+  // Dark theme adjustments
+  .section-bg-primary &,
+  .section-bg-dark & {
+    .section-title {
+      color: $white;
+    }
+
+    .section-subtitle {
+      color: rgba($white, 0.8);
+    }
+  }
+}
+
+/* ==================================================
+   DEBUGGING SYSTEM (Development Only)
+   ================================================== */
+
+// Debug mode styles
+.debug-section {
+  border: 2px dashed #ff6b6b !important;
+  position: relative;
+  min-height: 100px;
+
+  &::before {
+    content: 'DEBUG: ' attr(data-section-name);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #ff6b6b;
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 4px;
+    z-index: 1000;
+    font-weight: bold;
+  }
+
+  &::after {
+    content: attr(data-debug-info);
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #333;
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 4px;
+    z-index: 1000;
+  }
+}
+
+// Empty section detection
+.section-content:empty {
+  min-height: 200px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff9999,
+    #ff9999 10px,
+    #ffcccc 10px,
+    #ffcccc 20px
+  );
+  border: 3px solid #ff0000;
+  position: relative;
+
+  &::before {
+    content: '⚠️ EMPTY SECTION DETECTED';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ff0000;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* ==================================================
+   HERO SECTION ADJUSTMENTS
+   ================================================== */
+
+// Ensure hero section doesn't interfere with other sections
+.hero-section {
+  margin-bottom: 0;
+
+  + section {
+    border-top: none;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE ADJUSTMENTS
+   ================================================== */
+
+// Mobile optimizations
+@media (max-width: 576px) {
+  .section-spacing {
+    &-sm { padding-top: 2rem; padding-bottom: 2rem; }
+    &-md { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    &-lg { padding-top: 3rem; padding-bottom: 3rem; }
+    &-xl { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+// Tablet optimizations
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ==================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ================================================== */
+
+// Ensure proper focus indicators
+section:focus-within {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+// Reduce motion for users who prefer it
+@media (prefers-reduced-motion: reduce) {
+  section {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .section-bg-light {
+    background-color: $white;
+    border: 1px solid $gray-400;
+  }
+
+  .section-bg-dark {
+    background-color: $black;
+    border: 1px solid $gray-600;
+  }
+}

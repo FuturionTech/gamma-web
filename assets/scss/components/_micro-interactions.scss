@@ -1,0 +1,323 @@
+/*
+ * Professional Micro-interactions
+ * Around-inspired interaction patterns for Gamma Neutral
+ */
+
+// Smooth scroll behavior with professional easing
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; // Account for fixed navbar
+}
+
+// Enhanced card hover effects
+.card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.12),
+      0 8px 32px rgba(0, 0, 0, 0.08);
+    border-color: rgba(139, 92, 246, 0.2);
+  }
+}
+
+// Professional button interactions
+.btn {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0); // Hardware acceleration
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Ripple effect
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  &:active::after {
+    width: 300px;
+    height: 300px;
+    transition: 0s;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+// Enhanced form interactions
+.form-control {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.8);
+
+  &:focus {
+    border-color: #8b5cf6;
+    box-shadow:
+      0 0 0 4px rgba(139, 92, 246, 0.15),
+      0 4px 12px rgba(139, 92, 246, 0.1);
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 1);
+  }
+
+  &:hover:not(:focus) {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+// Professional loading animations
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Animation utility classes
+.animate-slide-up {
+  animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+// Staggered animations for lists
+.animate-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animate-stagger.animate {
+  > *:nth-child(1) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards; }
+  > *:nth-child(2) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards; }
+  > *:nth-child(3) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards; }
+  > *:nth-child(4) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards; }
+  > *:nth-child(5) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards; }
+  > *:nth-child(6) { animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards; }
+}
+
+// Professional image hover effects
+.image-hover-zoom {
+  overflow: hidden;
+  border-radius: var(--ar-border-radius-lg);
+
+  img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(1);
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.image-hover-lift {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    transform: translateY(-12px);
+    box-shadow:
+      0 24px 64px rgba(0, 0, 0, 0.15),
+      0 12px 32px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Enhanced scroll-to-top button
+.btn-scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b5cf6;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1000;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  &:hover {
+    background: #8b5cf6;
+    color: white;
+    transform: translateY(-4px) scale(1.1);
+    box-shadow:
+      0 12px 32px rgba(139, 92, 246, 0.25),
+      0 4px 16px rgba(139, 92, 246, 0.15);
+  }
+
+  // Progress indicator
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background: conic-gradient(#8b5cf6 var(--progress, 0%), transparent 0%);
+    padding: 2px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+}
+
+// Professional link hover effects
+a:not(.btn):not(.dropdown-item) {
+  position: relative;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #8b5cf6;
+  }
+
+  // Underline animation
+  &.link-underline {
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #8b5cf6;
+      transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+// Interactive elements states
+.interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+// Badge hover effects
+.badge {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+  }
+}
+
+// Professional focus indicators
+*:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+  transition: outline-offset 0.2s ease;
+}
+
+// Reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

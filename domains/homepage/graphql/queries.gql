@@ -1,0 +1,26 @@
+query partnersQuery($application_id: ID!) {
+   partners(application_id: $application_id) {
+    data {
+      id
+      image
+      imageUrl
+      name
+    }
+  }
+}
+
+query bannersQuery($application_id: ID!) {
+   banners(application_id: $application_id) {
+    data {
+      id
+      image
+      imageUrl
+      title
+      subtitle
+      created_at
+      updated_at
+    }
+  }
+}
+
+

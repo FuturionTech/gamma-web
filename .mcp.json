@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "cloudinary-asset-mgmt": {
+      "command": "npx",
+      "args": ["-y", "--package", "@cloudinary/asset-management", "--", "mcp", "start"],
+      "env": {
+        "CLOUDINARY_CLOUD_NAME": "dsj9xpvap",
+        "CLOUDINARY_API_KEY": "597974611512719",
+        "CLOUDINARY_API_SECRET": "X6mYBz6pN-G7Ecxt35XrbspE5gE"
+      }
+    },
+    "stability-ai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-stability-ai"
+      ],
+      "env": {
+        "STABILITY_AI_API_KEY": "sk-PxlnzBJqskbP0tKZD7mxNaPv4ujSH2M2N7ajEFc99Hm4ovgJ"
+      }
+    },
+    "recraft": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@recraft-ai/mcp-recraft-server@latest"
+      ],
+      "env": {
+        "RECRAFT_API_KEY": "FbqpRSs0Lnf4igwXISF0MIT88wG53zUnqoJA4ejE6y7hGmo29zzqXfMIBJhIf5df",
+        "IMAGE_STORAGE_DIRECTORY": "storage/app/recraft",
+        "RECRAFT_REMOTE_RESULTS_STORAGE": "1"
+      }
+    },
+    "openai-gpt-image": {
+      "command": "npx",
+      "args": ["openai-gpt-image-mcp-199bio"],
+      "env": { 
+        "OPENAI_API_KEY": "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" 
+      }
+    },
+    "mcp-graphql": {
+      "command": "npx",
+      "args": [
+        "mcp-graphql"
+      ],
+      "env": {
+        "ENDPOINT": "http://api.muse.test/graphql",
+        "ALLOW_MUTATIONS": "true"
+      }
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["@browsermcp/mcp@latest"]
+    }
+  }
+}

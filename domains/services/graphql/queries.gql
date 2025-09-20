@@ -1,0 +1,14 @@
+query testimonialsQuery($limit: Int!, $application_id: ID!) {
+    testimonials(limit: $limit, application_id: $application_id) {
+        data {
+            id
+            image
+            imageUrl
+            name
+            content  
+            created_at
+            updated_at
+        }
+    }
+}
+

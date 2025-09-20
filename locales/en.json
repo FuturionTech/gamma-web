@@ -1,0 +1,313 @@
+{
+  "header": {
+    "about": "About Us",
+    "services": "Services",
+    "industries": "Industries",
+    "resources": "Resources",
+    "home": "Home",
+    "contact_us": "Contact Us",
+    "careers": "Careers",
+    "get_started": "Get Started",
+    "faq": "FAQ"
+  },
+  "homepage": {
+    "banner": {
+      "title": "Your Data Solutions",
+      "description": "At Gamma Neutral, we help businesses unlock the power of their data. From AI to cloud computing, our team delivers innovative, secure, and scalable solutions tailored to your organization's unique needs.",
+      "cta": "Get Started",
+      "feature1": "Data-driven insights that matter",
+      "feature2": "Enterprise-grade security"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "We offer a comprehensive suite of services tailored to meet the unique needs of each client.",
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Developing intelligent systems that automate processes and provide predictive insights through custom AI models and machine learning solutions."
+      },
+      "data_engineering": {
+        "title": "Data Engineering",
+        "description": "Designing and building robust data architectures to ensure seamless data flow and accessibility with scalable pipelines and real-time infrastructure."
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Implementing advanced security measures to protect data integrity and privacy with threat detection and compliance-driven frameworks."
+      },
+      "business_intelligence": {
+        "title": "Business Intelligence",
+        "description": "Transforming data into actionable insights through advanced analytics, reporting tools, and strategic dashboards for smarter decisions."
+      },
+      "big_data": {
+        "title": "Big Data",
+        "description": "Leveraging large datasets to uncover trends and patterns that inform strategic decisions through high-volume processing and analytics at scale."
+      },
+      "cloud_computing": {
+        "title": "Cloud Computing",
+        "description": "Providing scalable and flexible cloud solutions that enhance collaboration and efficiency through migration and cost-optimized deployment."
+      },
+      "project_management": {
+        "title": "Project Management",
+        "description": "Ensuring successful project delivery through meticulous planning, execution excellence, and stakeholder alignment using agile methodologies."
+      }
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "We tailor our services to meet the specific needs of various industries",
+      "banking": {
+        "title": "Banks & Financial Services",
+        "description": "Enhancing data security and analytics for better financial decision-making and regulatory compliance."
+      },
+      "education": {
+        "title": "Education & Training",
+        "description": "Developing AI-driven platforms for personalized learning experiences and educational technology solutions."
+      },
+      "business": {
+        "title": "Business Management",
+        "description": "Implementing BI tools to streamline operations and improve efficiency across all business functions."
+      },
+      "government": {
+        "title": "Government & Public Services",
+        "description": "Building secure data infrastructures for public sector organizations and citizen services."
+      },
+      "ngo": {
+        "title": "Non-Governmental Organizations",
+        "description": "Providing data solutions to support mission-driven initiatives and social impact measurement."
+      },
+      "healthcare": {
+        "title": "Healthcare Services",
+        "description": "Developing AI and big data solutions to improve patient care and operational efficiency in healthcare systems."
+      }
+    },
+    "approach": {
+      "title": "Our Approach",
+      "subtitle": "We follow a structured methodology to deliver results",
+      "discovery": {
+        "title": "Discovery",
+        "description": "Understanding your business challenges and objectives through comprehensive analysis."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Crafting customized solutions that address your specific needs and requirements."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Building and implementing the solution with precision and industry best practices."
+      },
+      "deployment": {
+        "title": "Deployment",
+        "description": "Ensuring smooth integration and adoption across your organization."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Providing ongoing assistance to ensure sustained success and continuous improvement."
+      }
+    },
+    "contact": {
+      "title": "Partner with Us",
+      "description": "We are always looking for new business opportunities and collaborations. Join us in delivering exceptional data solutions and services.",
+      "cta": "Contact Us",
+      "ready": "Ready to transform your data?",
+      "message": "Our team of experts is here to help you achieve your business goals. Let's work together to unlock the power of your data.",
+      "contact_us": "Get in Touch"
+    }
+  },
+  "contact": {
+    "title": "Get a free consultation",
+    "first_name": "First Name",
+    "first_name_placeholder": "Enter your first name",
+    "last_name": "Last Name",
+    "last_name_placeholder": "Enter your last name",
+    "email": "Email",
+    "email_placeholder": "Enter your email",
+    "phone": "Phone",
+    "phone_placeholder": "Enter your phone number",
+    "company": "Company",
+    "company_placeholder": "Enter your company name",
+    "message": "Message",
+    "message_placeholder": "Tell us about your data challenges",
+    "send": "Send Message",
+    "sending_title": "Sending your message...",
+    "sending_message": "Your consultation request is being sent.",
+    "success_title": "Success!",
+    "success_message": "Thank you for your interest. We'll be in touch soon.",
+    "error_title": "Error!",
+    "error_message": "Failed to send your message. Please try again.",
+    "retry": "Try again"
+  },
+  "contact_page": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you. Here's how you can reach us.",
+    "address_title": "Address",
+    "address_text": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "get_directions": "Get Directions",
+    "phone_title": "Phone",
+    "email_title": "Email",
+    "schedule_title": "Business Hours",
+    "schedule_weekdays": "Monday - Friday: 9:00 AM - 6:00 PM EST",
+    "schedule_weekends": "Saturday - Sunday: Closed"
+  },
+  "about": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "At Gamma Neutral Consulting, we empower businesses to harness the full potential of their data. Our mission is to deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence."
+    },
+    "company": {
+      "title": "Company Overview",
+      "name": "Gamma Neutral Consulting Inc.",
+      "location": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+      "incorporated": "June 16, 2025",
+      "slogan": "Your Data Solutions"
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay at the forefront of technology to deliver cutting-edge solutions."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Data protection and privacy are at the core of everything we do."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for the highest quality in all our deliverables and services."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We build long-term relationships based on trust and mutual success."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive data solutions for modern businesses",
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Custom AI models, predictive analytics, and intelligent automation solutions that drive business transformation.",
+      "features": [
+        "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics"
+      ]
+    },
+    "data_engineering": {
+      "title": "Data Engineering",
+      "description": "Scalable pipelines, ETL processes, and real-time data infrastructure for seamless data management.",
+      "features": [
+        "Data Pipeline Design",
+        "ETL/ELT Processes",
+        "Real-time Streaming",
+        "Data Warehousing"
+      ]
+    },
+    "cybersecurity": {
+      "title": "Cybersecurity",
+      "description": "Threat detection, risk mitigation, and compliance-driven security frameworks to protect your data assets.",
+      "features": [
+        "Security Assessment",
+        "Threat Detection",
+        "Compliance Management",
+        "Incident Response"
+      ]
+    },
+    "business_intelligence": {
+      "title": "Business Intelligence",
+      "description": "Dashboards, reporting tools, and strategic insights for data-driven decision making.",
+      "features": [
+        "Interactive Dashboards",
+        "Automated Reporting",
+        "Data Visualization",
+        "Performance Analytics"
+      ]
+    },
+    "big_data": {
+      "title": "Big Data",
+      "description": "High-volume data processing, distributed systems, and analytics at scale for enterprise needs.",
+      "features": [
+        "Distributed Computing",
+        "Data Lake Architecture",
+        "Batch Processing",
+        "Stream Processing"
+      ]
+    },
+    "cloud_computing": {
+      "title": "Cloud Computing",
+      "description": "Cloud migration, architecture design, and cost-optimized deployment for modern infrastructure.",
+      "features": [
+        "Cloud Migration",
+        "Architecture Design",
+        "Cost Optimization",
+        "Multi-cloud Solutions"
+      ]
+    },
+    "project_management": {
+      "title": "Project Management",
+      "description": "Agile delivery, stakeholder alignment, and end-to-end execution excellence for successful outcomes.",
+      "features": [
+        "Agile Methodologies",
+        "Stakeholder Management",
+        "Risk Assessment",
+        "Quality Assurance"
+      ]
+    }
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "Build the future of data with us",
+    "description": "We're always looking for talented individuals who share our passion for data and innovation. Join us in transforming how businesses leverage their data.",
+    "benefits": {
+      "title": "Why Work With Us",
+      "competitive": "Competitive compensation and benefits",
+      "growth": "Professional development opportunities",
+      "flexible": "Flexible work arrangements",
+      "innovative": "Work on cutting-edge projects"
+    },
+    "apply": "View Open Positions"
+  },
+  "footer": {
+    "company": "Gamma Neutral Consulting Inc.",
+    "address": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "services": "Services",
+    "about": "About Us",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacy_policy": "Privacy Policy",
+    "rights_reserved": "© 2025 Gamma Neutral Consulting Inc. All rights reserved."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "careers": "Careers",
+    "privacy_policy": "Privacy Policy"
+  },
+  "meta": {
+    "home": {
+      "title": "Gamma Neutral Consulting - Your Data Solutions",
+      "description": "Transform data into opportunity with Gamma Neutral Consulting. AI, cloud computing, cybersecurity, and data engineering solutions in Toronto, Canada.",
+      "keywords": "data consulting, AI solutions, cloud computing, cybersecurity, data engineering, Toronto, Canada"
+    },
+    "about": {
+      "title": "About Us - Gamma Neutral Consulting",
+      "description": "Learn about Gamma Neutral Consulting Inc., your trusted partner for data solutions in Toronto. Established 2025.",
+      "keywords": "about gamma neutral, data consulting company, Toronto consulting, data solutions"
+    },
+    "services": {
+      "title": "Our Services - Gamma Neutral Consulting",
+      "description": "Comprehensive data services: AI, data engineering, cybersecurity, business intelligence, big data, and cloud computing solutions.",
+      "keywords": "AI services, data engineering, cybersecurity, business intelligence, big data, cloud computing"
+    },
+    "contact": {
+      "title": "Contact Us - Gamma Neutral Consulting",
+      "description": "Get in touch with Gamma Neutral Consulting. Located in Toronto, Canada. Free consultation available.",
+      "keywords": "contact gamma neutral, Toronto data consulting, free consultation, data solutions"
+    },
+    "careers": {
+      "title": "Careers - Gamma Neutral Consulting",
+      "description": "Join our team of data experts. Explore career opportunities at Gamma Neutral Consulting in Toronto.",
+      "keywords": "data jobs, Toronto careers, consulting careers, AI jobs, data engineering jobs"
+    }
+  }
+}
