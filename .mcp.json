@@ -4,9 +4,9 @@
       "command": "npx",
       "args": ["-y", "--package", "@cloudinary/asset-management", "--", "mcp", "start"],
       "env": {
-        "CLOUDINARY_CLOUD_NAME": "dsj9xpvap",
-        "CLOUDINARY_API_KEY": "597974611512719",
-        "CLOUDINARY_API_SECRET": "X6mYBz6pN-G7Ecxt35XrbspE5gE"
+        "CLOUDINARY_CLOUD_NAME": "${CLOUDINARY_CLOUD_NAME}",
+        "CLOUDINARY_API_KEY": "${CLOUDINARY_API_KEY}",
+        "CLOUDINARY_API_SECRET": "${CLOUDINARY_API_SECRET}"
       }
     },
     "stability-ai": {
@@ -16,7 +16,7 @@
         "mcp-server-stability-ai"
       ],
       "env": {
-        "STABILITY_AI_API_KEY": "sk-PxlnzBJqskbP0tKZD7mxNaPv4ujSH2M2N7ajEFc99Hm4ovgJ"
+        "STABILITY_AI_API_KEY": "${STABILITY_AI_API_KEY}"
       }
     },
     "recraft": {
@@ -26,7 +26,7 @@
         "@recraft-ai/mcp-recraft-server@latest"
       ],
       "env": {
-        "RECRAFT_API_KEY": "FbqpRSs0Lnf4igwXISF0MIT88wG53zUnqoJA4ejE6y7hGmo29zzqXfMIBJhIf5df",
+        "RECRAFT_API_KEY": "${RECRAFT_API_KEY}",
         "IMAGE_STORAGE_DIRECTORY": "storage/app/recraft",
         "RECRAFT_REMOTE_RESULTS_STORAGE": "1"
       }
@@ -35,7 +35,7 @@
       "command": "npx",
       "args": ["openai-gpt-image-mcp-199bio"],
       "env": { 
-        "OPENAI_API_KEY": "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" 
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
       }
     },
     "mcp-graphql": {
