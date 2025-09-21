@@ -1,6 +1,9 @@
-import path from 'path'
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
 import {defineNuxtModule} from "@nuxt/kit";
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export default defineNuxtModule({
     // Default configuration options for your module
@@ -11,12 +14,12 @@ export default defineNuxtModule({
             pages.push({
                     name: 'contact___fr',
                     path: '/contact',
-                    file: path.resolve(__dirname, 'pages/contact.vue'),
+                    file: resolve(__dirname, 'pages/contact.vue'),
                 },
                 {
                     name: 'contact___en',
                     path: '/en/contact',
-                    file: path.resolve(__dirname, 'pages/contact.vue'),
+                    file: resolve(__dirname, 'pages/contact.vue'),
                 })
         },
 
@@ -24,13 +27,13 @@ export default defineNuxtModule({
         'components:dirs'(dirs) {
             // Add ./components dir to the list
             dirs.push({
-                path: path.resolve(__dirname, 'components'),
+                path: resolve(__dirname, 'components'),
             })
         },
 
         // COMPOSABLES
         /*'autoImports:dirs'(dirs) {
-          dirs.push(path.resolve(__dirname, './composables'))
+          dirs.push(resolve(__dirname, './composables'))
         },*/
     },
     async setup(moduleOptions, nuxt) {
