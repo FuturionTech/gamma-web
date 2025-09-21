@@ -11,12 +11,12 @@ export default defineNuxtModule({
             pages.push({
                 name: 'services___fr',
                 path: '/services',
-                file: path.resolve(__dirname, 'pages/index.vue'),
+                file: path.resolve(__dirname, 'pages/services.vue'),
             },
             {
                 name: 'services___en',
                 path: '/en/services',
-                file: path.resolve(__dirname, 'pages/index.vue'),
+                file: path.resolve(__dirname, 'pages/services.vue'),
             })
         },
 

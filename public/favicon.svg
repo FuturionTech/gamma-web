@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#bgGradient)"/>
+
+  <!-- Letter G stylized for Gamma Neutral -->
+  <g transform="translate(16, 16)">
+    <!-- Gamma symbol (Γ) stylized as modern G -->
+    <path d="M -8 -8 L 8 -8 L 8 -4 L -4 -4 L -4 8 L -8 8 Z"
+          fill="url(#letterGradient)"
+          opacity="0.95"/>
+
+    <!-- Small accent dot representing "Neutral" -->
+    <circle cx="6" cy="6" r="2" fill="#ffd700" opacity="0.9"/>
+  </g>
+</svg>

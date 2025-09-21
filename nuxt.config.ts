@@ -24,7 +24,11 @@ export default defineNuxtConfig({
             link: [
                 {
                     rel: 'icon',
-                    type: 'image/x-icon',
+                    type: 'image/svg+xml',
+                    href: '/gn-favicon.svg'
+                },
+                {
+                    rel: 'alternate icon',
                     href: '/favicon.ico'
                 }],
             script: [
@@ -58,6 +62,7 @@ export default defineNuxtConfig({
         '~/domains/homepage/index.ts',
         '~/domains/privacy-policy/index.ts',
         '~/domains/services/index.ts',
+        '~/domains/solutions/index.ts',
 
         'nuxt-swiper',
         'nuxt-graphql-client',

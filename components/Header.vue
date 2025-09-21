@@ -17,7 +17,9 @@
           <HomeMenu/>
           <SolutionsMenu/>
           <AboutMenu/>
-          <RessourcesMenu/>
+          <li class="nav-item">
+            <NuxtLink class="nav-link fw-semibold" to="/careers">Careers</NuxtLink>
+          </li>
         </ul>
 
         <!-- Desktop CTA and Language -->
@@ -48,12 +50,10 @@ import AboutMenu from "./menus/AboutMenu.vue";
 import LanguageSelector from "./selectors/LanguageSelector.vue";
 import ThemeToggle from "./selectors/ThemeToggle.vue";
 import HeaderLogo from "./logo/HeaderLogo.vue";
-import RessourcesMenu from "~/components/menus/RessourcesMenu.vue";
 
 export default {
   name: "Header",
   components: {
-    RessourcesMenu,
     HeaderLogo,
     ThemeToggle,
     LanguageSelector,

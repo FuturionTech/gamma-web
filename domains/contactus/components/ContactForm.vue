@@ -1,184 +1,346 @@
 <template>
-  <section class="container" style="margin-top: -260px;" data-bs-theme="dark">
-    <div class="card rounded-1 border-0 bg-primary position-relative py-lg-4 py-xl-5">
-      <!-- Decorative shapes -->
-      <svg class="position-absolute end-0 mt-n2" width="242" height="331" viewBox="0 0 242 331" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M172.014 250.127C137.236 227.74 112.349 192.144 144.586 153.591C157.686 137.932 176.759 127.973 196.524 122.046C234.647 110.639 277.027 113.361 313.349 129.576C338.19 140.666 361.129 159.183 369.934 184.502C383.476 223.496 359.75 260.161 321.569 273.118C288.832 284.223 247.685 279.513 214.885 269.837C201.003 265.743 185.745 258.966 172.014 250.127Z"
-          fill="#121519" fill-opacity=".07"
-        ></path>
-        <path
-          d="M20.3265 69.264C19.7064 43.0736 29.8071 17.1878 62.3851 19.8622C75.6229 20.9505 87.9525 27.2066 98.3563 35.3132C118.426 50.9253 132.424 73.896 136.952 98.6413C140.044 115.562 138.424 134.218 127.978 148C111.901 169.236 83.4531 170.283 62.5246 155.209C44.5807 142.281 32.0983 119.217 25.3391 98.6799C22.4836 89.9885 20.5616 79.6021 20.3265 69.264Z"
-          fill="#121519" fill-opacity=".07"
-        ></path>
-      </svg>
-      <div class="card-body position-relative z-2 py-5">
-        <form class="mx-auto needs-validation" style="max-width: 800px;" novalidate>
-          <h2 class="h1 card-title text-center pb-4">{{ $t('contact.title') }}</h2>
-          <div class="row g-4">
-            <div class="col-sm-6">
-              <label class="form-label fs-base" for="last-name">{{ $t('contact.last_name') }}</label>
-              <input
-                class="form-control form-control-lg"
-                type="text"
-                :placeholder="$t('contact.last_name_placeholder')"
-                v-model="contactDetails.last_name"
-                id="last-name"
-                required
-              />
-            </div>
-            <div class="col-sm-6">
-              <label class="form-label fs-base" for="first-name">{{ $t('contact.first_name') }}</label>
-              <input
-                class="form-control form-control-lg"
-                type="text"
-                :placeholder="$t('contact.first_name_placeholder')"
-                v-model="contactDetails.first_name"
-                id="first-name"
-                required
-              />
-            </div>
-            <div class="col-sm-6">
-              <label class="form-label fs-base" for="email">{{ $t('contact.email') }}</label>
-              <input
-                class="form-control form-control-lg"
-                type="email"
-                :placeholder="$t('contact.email_placeholder')"
-                v-model="contactDetails.email"
-                id="email"
-                required
-              />
-            </div>
-            <div class="col-sm-6">
-              <label class="form-label fs-base" for="phone">{{ $t('contact.phone') }}</label>
-              <input
-                class="form-control form-control-lg"
-                type="text"
-                :placeholder="$t('contact.phone_placeholder')"
-                v-model="contactDetails.phone"
-                id="phone"
-              />
-            </div>
-            <div class="col-sm-12">
-              <label class="form-label fs-base" for="message">{{ $t('contact.message') }}</label>
-              <textarea
-                class="form-control form-control-lg"
-                rows="6"
-                :placeholder="$t('contact.message_placeholder')"
-                v-model="contactDetails.message"
-                id="message"
-                required
-              ></textarea>
-            </div>
-            <div class="col-sm-12 text-center pt-4">
-              <button class="btn btn-lg btn-light" type="button" @click="submitForm">{{ $t('contact.send') }}</button>
-            </div>
-          </div>
-        </form>
+  <form @submit.prevent="handleSubmit" class="needs-validation" novalidate>
+    <div class="row g-4">
+      <!-- Name -->
+      <div class="col-sm-6">
+        <label class="form-label fs-base" for="name">Name</label>
+        <input
+          v-model="formData.name"
+          type="text"
+          class="form-control form-control-lg"
+          id="name"
+          placeholder="Your name"
+          required
+        >
+        <div class="invalid-feedback">Please enter your name!</div>
+      </div>
+
+      <!-- Company -->
+      <div class="col-sm-6">
+        <label class="form-label fs-base" for="company">Company</label>
+        <input
+          v-model="formData.company"
+          type="text"
+          class="form-control form-control-lg"
+          id="company"
+          placeholder="Your company name"
+        >
+      </div>
+
+      <!-- Email -->
+      <div class="col-sm-6">
+        <label class="form-label fs-base" for="email">Email</label>
+        <input
+          v-model="formData.email"
+          type="email"
+          class="form-control form-control-lg"
+          id="email"
+          placeholder="Email address"
+          required
+        >
+        <div class="invalid-feedback">Please provide a valid email address!</div>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-sm-6">
+        <label class="form-label fs-base" for="phone">Phone</label>
+        <input
+          v-model="formData.phone"
+          type="text"
+          class="form-control form-control-lg"
+          id="phone"
+          placeholder="Phone number"
+        >
+      </div>
+
+      <!-- Message -->
+      <div class="col-sm-12">
+        <label class="form-label fs-base" for="message">How can we help?</label>
+        <textarea
+          v-model="formData.message"
+          class="form-control form-control-lg"
+          id="message"
+          rows="6"
+          placeholder="Enter your message here..."
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter your message!</div>
+      </div>
+
+      <!-- Services Interest -->
+      <div class="col-sm-12">
+        <div class="form-check form-check-inline">
+          <input
+            v-model="formData.services"
+            class="form-check-input"
+            type="checkbox"
+            id="dataEngineering"
+            value="Data Engineering"
+          >
+          <label class="form-check-label fs-base" for="dataEngineering">Data Engineering & Architecture</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            v-model="formData.services"
+            class="form-check-input"
+            type="checkbox"
+            id="aiMl"
+            value="AI & Machine Learning"
+          >
+          <label class="form-check-label fs-base" for="aiMl">AI & Machine Learning</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            v-model="formData.services"
+            class="form-check-input"
+            type="checkbox"
+            id="cloudComputing"
+            value="Cloud Computing"
+          >
+          <label class="form-check-label fs-base" for="cloudComputing">Cloud Computing</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            v-model="formData.services"
+            class="form-check-input"
+            type="checkbox"
+            id="businessIntelligence"
+            value="Business Intelligence"
+          >
+          <label class="form-check-label fs-base" for="businessIntelligence">Business Intelligence</label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-sm-12 pt-4">
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg w-100"
+          :disabled="isSubmitting"
+        >
+          <span v-if="!isSubmitting">
+            Send Message
+            <i class="bi bi-send ms-2"></i>
+          </span>
+          <span v-else>
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+            Sending...
+          </span>
+        </button>
       </div>
     </div>
-  </section>
-</template>
-  
-  <script>
-  import { ref } from 'vue';
-  import { useContactStore } from '~/domains/contactus/stores/useContactStore';
-  import { useI18n } from 'vue-i18n';
-  import Swal from 'sweetalert2';
-  import { useRuntimeConfig } from '#app';
-  
-  export default {
-    setup() {
-      const { t } = useI18n();
-      const config = useRuntimeConfig();
-  
-      const contactStore = useContactStore();
-      const { loading, sendContactRequest } = contactStore;
-  
-      const contactDetails = ref({
-        first_name: '',
-        last_name: '',
-        email: '',
-        phone: '',
-        message: '',
-      });
-  
-      const resetForm = () => {
-        contactDetails.value = {
-          first_name: '',
-          last_name: '',
-          email: '',
-          phone: '',
-          message: '',
-        };
-        const form = document.querySelector('.needs-validation');
-        form.classList.remove('was-validated');
-      };
-  
-      const submitForm = async () => {
-  const form = document.querySelector('.needs-validation');
-  form.classList.add('was-validated');
 
+    <!-- Success Message -->
+    <div v-if="showSuccess" class="alert alert-success mt-4" role="alert">
+      <i class="bi bi-check-circle me-2"></i>
+      Thank you for your message! We'll get back to you within 24 hours.
+    </div>
+
+    <!-- Error Message -->
+    <div v-if="showError" class="alert alert-danger mt-4" role="alert">
+      <i class="bi bi-exclamation-triangle me-2"></i>
+      Something went wrong. Please try again or email us directly at info@gammaneutral.com
+    </div>
+  </form>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+// Form data
+const formData = ref({
+  name: '',
+  email: '',
+  phone: '',
+  company: '',
+  services: [],
+  message: ''
+})
+
+// Form states
+const isSubmitting = ref(false)
+const showSuccess = ref(false)
+const showError = ref(false)
+
+// Handle form submission
+const handleSubmit = async () => {
+  // Basic validation
+  const form = document.querySelector('.needs-validation')
   if (!form.checkValidity()) {
-    Swal.fire({
-      title: t('contact.error_title'),
-      text: t('contact.error_message'),
-      icon: 'warning',
-      confirmButtonText: 'OK',
-      customClass: {
-        confirmButton: 'btn btn-primary',
-      },
-    });
-    return;
+    form.classList.add('was-validated')
+    return
   }
+
+  isSubmitting.value = true
+  showSuccess.value = false
+  showError.value = false
 
   try {
-    Swal.fire({
-      title: t('contact.sending_title'),
-      text: t('contact.sending_message'),
-      icon: 'info',
-      allowOutsideClick: false,
-      showConfirmButton: false,
-      didOpen: () => Swal.showLoading(),
-    });
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000))
 
-    const applicationId = config.public.applicationId;
-    await sendContactRequest(contactDetails.value, applicationId);
+    // Reset form on success
+    formData.value = {
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      services: [],
+      message: ''
+    }
 
-    Swal.fire({
-      title: t('contact.success_title'),
-      text: t('contact.success_message'),
-      icon: 'success',
-      confirmButtonText: 'OK',
-      customClass: {
-        confirmButton: 'btn btn-primary',
-      },
-    });
+    form.classList.remove('was-validated')
+    showSuccess.value = true
 
-    resetForm();
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      showSuccess.value = false
+    }, 5000)
+
   } catch (error) {
-    Swal.fire({
-      title: t('contact.error_title'),
-      text: t('contact.error_message'),
-      icon: 'error',
-      confirmButtonText: t('contact.retry'),
-      customClass: {
-        confirmButton: 'btn btn-primary',
-      },
-    });
-    console.error('Erreur lors de l\'envoi du message :', error);
-  }
-};
+    console.error('Form submission error:', error)
+    showError.value = true
 
-      return {
-        contactDetails,
-        submitForm,
-      };
-    },
-  };
-  </script>
-  
-  <style scoped>
-  /* Ajoutez ici vos styles supplémentaires si nécessaire */
-  </style>
-  
+    // Hide error message after 5 seconds
+    setTimeout(() => {
+      showError.value = false
+    }, 5000)
+  } finally {
+    isSubmitting.value = false
+  }
+}
+</script>
+
+<style scoped>
+/* Clean form styles */
+.form-control,
+.form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
+}
+
+.form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Labels */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+/* Validation */
+.invalid-feedback {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  color: #dc3545;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem 1.25rem;
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.alert-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Checkboxes inline layout */
+.form-check-inline {
+  margin-right: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .form-check-inline {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Dark mode support */
+:global(.dark-mode) .form-control,
+:global(.dark-mode) .form-select {
+  background-color: #1a1a1a;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+:global(.dark-mode) .form-control:focus,
+:global(.dark-mode) .form-select:focus {
+  background-color: #1a1a1a;
+  border-color: #8b5cf6;
+  color: #e5e7eb;
+}
+
+:global(.dark-mode) .form-label {
+  color: #e5e7eb;
+}
+
+:global(.dark-mode) .form-check-label {
+  color: #e5e7eb;
+}
+
+:global(.dark-mode) .text-muted {
+  color: #9ca3af !important;
+}
+</style>

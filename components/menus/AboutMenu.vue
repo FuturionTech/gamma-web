@@ -7,19 +7,19 @@
       <!-- Header Section -->
       <div class="dropdown-header-section">
         <h6 class="dropdown-header-title">About Gamma Neutral</h6>
-        <p class="dropdown-header-subtitle">Your trusted partner in data innovation and analytics excellence</p>
+        <p class="dropdown-header-subtitle">Leading the future of data-driven transformation</p>
       </div>
 
       <div class="row g-3">
-        <!-- Company Information -->
+        <!-- Left Column -->
         <div class="col-md-6">
           <NuxtLink class="about-dropdown-item" to="/about">
             <div class="about-icon-wrapper company">
-              <i class="fa fa-building about-icon"></i>
+              <i class="fa fa-rocket about-icon"></i>
             </div>
             <div class="about-content">
-              <div class="about-title">Our Company</div>
-              <div class="about-description">Mission, vision, values, and our commitment to excellence</div>
+              <div class="about-title">Our Story</div>
+              <div class="about-description">How we became the #1 trusted AI partner for Fortune 500</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
@@ -32,20 +32,7 @@
             </div>
             <div class="about-content">
               <div class="about-title">Leadership Team</div>
-              <div class="about-description">Meet our experienced data scientists and industry experts</div>
-            </div>
-            <div class="about-arrow">
-              <i class="fa fa-arrow-right"></i>
-            </div>
-          </NuxtLink>
-
-          <NuxtLink class="about-dropdown-item" to="/about/careers">
-            <div class="about-icon-wrapper careers">
-              <i class="fa fa-briefcase about-icon"></i>
-            </div>
-            <div class="about-content">
-              <div class="about-title">Careers</div>
-              <div class="about-description">Join our team of innovative data professionals</div>
+              <div class="about-description">Industry veterans with 200+ years combined experience</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
@@ -53,40 +40,28 @@
           </NuxtLink>
         </div>
 
+        <!-- Right Column -->
         <div class="col-md-6">
           <NuxtLink class="about-dropdown-item" to="/about/methodology">
             <div class="about-icon-wrapper methodology">
               <i class="fa fa-cogs about-icon"></i>
             </div>
             <div class="about-content">
-              <div class="about-title">Our Methodology</div>
-              <div class="about-description">Proven 5-step approach to data transformation</div>
+              <div class="about-title">Our Approach</div>
+              <div class="about-description">Proven methodology delivering measurable ROI</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
             </div>
           </NuxtLink>
 
-          <NuxtLink class="about-dropdown-item" to="/about/certifications">
-            <div class="about-icon-wrapper certifications">
-              <i class="fa fa-certificate about-icon"></i>
+          <NuxtLink class="about-dropdown-item" to="/careers">
+            <div class="about-icon-wrapper careers">
+              <i class="fa fa-briefcase about-icon"></i>
             </div>
             <div class="about-content">
-              <div class="about-title">Certifications</div>
-              <div class="about-description">Industry credentials, compliance, and quality standards</div>
-            </div>
-            <div class="about-arrow">
-              <i class="fa fa-arrow-right"></i>
-            </div>
-          </NuxtLink>
-
-          <NuxtLink class="about-dropdown-item" to="/contact">
-            <div class="about-icon-wrapper contact">
-              <i class="fa fa-envelope about-icon"></i>
-            </div>
-            <div class="about-content">
-              <div class="about-title">Contact Us</div>
-              <div class="about-description">Get in touch with our team for consultation</div>
+              <div class="about-title">Careers</div>
+              <div class="about-description">Join our award-winning team of AI experts</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
@@ -98,24 +73,24 @@
       <!-- Core Values Section -->
       <div class="values-section">
         <div class="values-header">
-          <span class="values-label">Our Core Values</span>
+          <span class="values-label">What Makes Us Different</span>
         </div>
         <div class="values-badges">
           <span class="value-badge">
-            <i class="fa fa-shield-alt"></i>
-            Data Security
+            <i class="fa fa-brain"></i>
+            AI-Powered
           </span>
           <span class="value-badge">
-            <i class="fa fa-rocket"></i>
-            Innovation
+            <i class="fa fa-bolt"></i>
+            10x Faster
           </span>
           <span class="value-badge">
-            <i class="fa fa-handshake"></i>
-            Partnership
+            <i class="fa fa-chart-line"></i>
+            98% Success
           </span>
           <span class="value-badge">
-            <i class="fa fa-trophy"></i>
-            Excellence
+            <i class="fa fa-gem"></i>
+            Premium Quality
           </span>
         </div>
       </div>
@@ -282,15 +257,6 @@
   box-shadow: 0 4px 16px rgba(107, 114, 128, 0.25);
 }
 
-.about-icon-wrapper.certifications {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
-  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.25);
-}
-
-.about-icon-wrapper.contact {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.25);
-}
 
 .about-icon {
   color: white;

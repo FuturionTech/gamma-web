@@ -11,12 +11,12 @@ export default defineNuxtModule({
             pages.push({
                 name: 'privacy-policy___fr',
                 path: '/privacy-policy',
-                file: path.resolve(__dirname, 'pages/index.vue'),
+                file: path.resolve(__dirname, 'pages/privacy.vue'),
             },
             {
                 name: 'privacy-policy___en',
                 path: '/en/privacy-policy',
-                file: path.resolve(__dirname, 'pages/index.vue'),
+                file: path.resolve(__dirname, 'pages/privacy.vue'),
             })
         },
 

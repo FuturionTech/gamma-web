@@ -8,14 +8,14 @@ export default defineNuxtModule({
         // ROUTES
         'pages:extend'(pages) {
             pages.push({
-                name: 'careers___fr',
+                name: 'careers',
                 path: '/careers',
                 file: path.resolve(__dirname, 'pages/careers.vue'),
             },
             {
-                name: 'careers___en',
-                path: '/en/careers',
-                file: path.resolve(__dirname, 'pages/careers.vue'),
+                name: 'careers-position',
+                path: '/careers/:id',
+                file: path.resolve(__dirname, 'pages/position.vue'),
             })
         },
     },

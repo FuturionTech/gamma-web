@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Gamma Neutral Favicon - Professional Design -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Modern rounded square background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" ry="12" fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+  <!-- Gamma (Γ) and N combined logo -->
+  <g transform="translate(32, 32)">
+    <!-- Stylized Gamma symbol -->
+    <path d="M -14 -14 L 14 -14 L 14 -8 L -8 -8 L -8 0 L 2 0 L 2 14 L -4 14 L -4 0 L -14 0 Z"
+          fill="white"
+          opacity="0.95"/>
+
+    <!-- Accent element for "Neutral" -->
+    <rect x="8" y="8" width="6" height="6" rx="1" fill="#ffd700" opacity="0.9"/>
+  </g>
+
+  <!-- Data points decoration (subtle) -->
+  <circle cx="10" cy="10" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="54" cy="10" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="10" cy="54" r="1.5" fill="white" opacity="0.3"/>
+</svg>
