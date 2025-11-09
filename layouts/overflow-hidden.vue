@@ -24,20 +24,7 @@
   </div>
 </template>
 
-<script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-if (process.client) {
-  let mode = window.localStorage.getItem('mode'),
-      root = document.getElementsByTagName('html')[0];
-  if (mode !== undefined && mode === 'dark') {
-    root.classList.add('dark-mode');
-  } else {
-    root.classList.remove('dark-mode');
-  }
-}
-export default {
-  components: {Footer, Header}
-}
+<script setup>
+// Components auto-imported in Nuxt 3
+// Dark mode is handled by ThemeToggle component and Pinia store
 </script>

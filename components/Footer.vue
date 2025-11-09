@@ -141,7 +141,7 @@
               <i class="bi bi-envelope-fill text-primary me-2"></i>
               <small class="text-light">
                 <a href="mailto:info@gammaneutral.ca" class="text-light text-decoration-none hover-primary">
-                  {{ $t('footer.email', 'info@gammaneutral.ca') }}
+                  info@gammaneutral.ca
                 </a>
               </small>
             </div>
@@ -177,26 +177,8 @@
   </footer>
 </template>
 
-<script>
-import { useThemeStore } from "../stores/theme";
-import { computed } from "vue";
-import HeaderLogo from "./logo/HeaderLogo.vue";
-
-export default {
-  name: "Footer",
-  components: {
-    HeaderLogo
-  },
-  setup() {
-    const store = useThemeStore();
-
-    const logoUrl = computed(() => store.mode ? '/img/logos/white-logo.png' : '/img/logos/black-logo.png');
-
-    return {
-      logoUrl
-    };
-  }
-};
+<script setup>
+// Components auto-imported in Nuxt 3
 </script>
 
 <style scoped>

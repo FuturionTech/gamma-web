@@ -20,12 +20,6 @@
   </div>
 </template>
 
-<script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-
-export default {
-  components: {Footer, Header}
-}
+<script setup>
+// Components auto-imported in Nuxt 3
 </script>
