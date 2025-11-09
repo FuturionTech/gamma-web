@@ -67,50 +67,6 @@
         <div class="invalid-feedback">Please enter your message!</div>
       </div>
 
-      <!-- Services Interest -->
-      <div class="col-sm-12">
-        <div class="form-check form-check-inline">
-          <input
-            v-model="formData.services"
-            class="form-check-input"
-            type="checkbox"
-            id="dataEngineering"
-            value="Data Engineering"
-          >
-          <label class="form-check-label fs-base" for="dataEngineering">Data Engineering & Architecture</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            v-model="formData.services"
-            class="form-check-input"
-            type="checkbox"
-            id="aiMl"
-            value="AI & Machine Learning"
-          >
-          <label class="form-check-label fs-base" for="aiMl">AI & Machine Learning</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            v-model="formData.services"
-            class="form-check-input"
-            type="checkbox"
-            id="cloudComputing"
-            value="Cloud Computing"
-          >
-          <label class="form-check-label fs-base" for="cloudComputing">Cloud Computing</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            v-model="formData.services"
-            class="form-check-input"
-            type="checkbox"
-            id="businessIntelligence"
-            value="Business Intelligence"
-          >
-          <label class="form-check-label fs-base" for="businessIntelligence">Business Intelligence</label>
-        </div>
-      </div>
-
       <!-- Submit Button -->
       <div class="col-sm-12 pt-4">
         <button
@@ -139,7 +95,7 @@
     <!-- Error Message -->
     <div v-if="showError" class="alert alert-danger mt-4" role="alert">
       <i class="bi bi-exclamation-triangle me-2"></i>
-      Something went wrong. Please try again or email us directly at info@gammaneutral.com
+      Something went wrong. Please try again or email us directly at info@gammaneutral.ca
     </div>
   </form>
 </template>
@@ -153,7 +109,6 @@ const formData = ref({
   email: '',
   phone: '',
   company: '',
-  services: [],
   message: ''
 })
 
@@ -185,7 +140,6 @@ const handleSubmit = async () => {
       email: '',
       phone: '',
       company: '',
-      services: [],
       message: ''
     }
 

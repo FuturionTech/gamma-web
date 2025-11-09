@@ -12,6 +12,17 @@ export default defineNuxtModule({
         // ROUTES
         'pages:extend'(pages) {
             pages.push({
+                name: 'industries___fr',
+                path: '/industries',
+                file: resolve(__dirname, 'pages/services.vue'),
+            },
+            {
+                name: 'industries___en',
+                path: '/en/industries',
+                file: resolve(__dirname, 'pages/services.vue'),
+            },
+            // Keep legacy services routes for backward compatibility
+            {
                 name: 'services___fr',
                 path: '/services',
                 file: resolve(__dirname, 'pages/services.vue'),

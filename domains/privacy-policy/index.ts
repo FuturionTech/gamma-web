@@ -11,7 +11,9 @@ export default defineNuxtModule({
     hooks: {
         // ROUTES
         'pages:extend'(pages) {
-            pages.push({
+            pages.push(
+            // Privacy Policy
+            {
                 name: 'privacy-policy___fr',
                 path: '/privacy-policy',
                 file: resolve(__dirname, 'pages/privacy.vue'),
@@ -20,6 +22,17 @@ export default defineNuxtModule({
                 name: 'privacy-policy___en',
                 path: '/en/privacy-policy',
                 file: resolve(__dirname, 'pages/privacy.vue'),
+            },
+            // Terms and Conditions
+            {
+                name: 'terms-of-service___fr',
+                path: '/terms-of-service',
+                file: resolve(__dirname, 'pages/terms.vue'),
+            },
+            {
+                name: 'terms-of-service___en',
+                path: '/en/terms-of-service',
+                file: resolve(__dirname, 'pages/terms.vue'),
             })
         },
 

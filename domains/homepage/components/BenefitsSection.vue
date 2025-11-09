@@ -21,13 +21,13 @@
                 <div class="d-flex">
                   <div class="flex-shrink-0">
                     <div class="icon-circle bg-success bg-opacity-10 text-success">
-                      <i class="bi bi-check-lg fs-5"></i>
+                      <i class="bi bi-people fs-5"></i>
                     </div>
                   </div>
                   <div class="ms-3">
-                    <h5 class="h6 mb-2">Fast Implementation</h5>
+                    <h5 class="h6 mb-2">Expert Team</h5>
                     <p class="text-muted small mb-0">
-                      Get up and running in days, not months
+                      Certified data professionals with proven expertise
                     </p>
                   </div>
                 </div>
@@ -38,13 +38,13 @@
                 <div class="d-flex">
                   <div class="flex-shrink-0">
                     <div class="icon-circle bg-primary bg-opacity-10 text-primary">
-                      <i class="bi bi-shield-check fs-5"></i>
+                      <i class="bi bi-gear fs-5"></i>
                     </div>
                   </div>
                   <div class="ms-3">
-                    <h5 class="h6 mb-2">Enterprise Security</h5>
+                    <h5 class="h6 mb-2">Tailored Solutions</h5>
                     <p class="text-muted small mb-0">
-                      Bank-level encryption and compliance
+                      Custom strategies designed for your specific needs
                     </p>
                   </div>
                 </div>
@@ -55,13 +55,13 @@
                 <div class="d-flex">
                   <div class="flex-shrink-0">
                     <div class="icon-circle bg-warning bg-opacity-10 text-warning">
-                      <i class="bi bi-graph-up fs-5"></i>
+                      <i class="bi bi-building fs-5"></i>
                     </div>
                   </div>
                   <div class="ms-3">
-                    <h5 class="h6 mb-2">Scalable Platform</h5>
+                    <h5 class="h6 mb-2">Industry Expertise</h5>
                     <p class="text-muted small mb-0">
-                      Grows with your business needs
+                      Deep knowledge across banking, healthcare, and more
                     </p>
                   </div>
                 </div>
@@ -72,13 +72,13 @@
                 <div class="d-flex">
                   <div class="flex-shrink-0">
                     <div class="icon-circle bg-info bg-opacity-10 text-info">
-                      <i class="bi bi-headset fs-5"></i>
+                      <i class="bi bi-clipboard-check fs-5"></i>
                     </div>
                   </div>
                   <div class="ms-3">
-                    <h5 class="h6 mb-2">24/7 Support</h5>
+                    <h5 class="h6 mb-2">Proven Methodologies</h5>
                     <p class="text-muted small mb-0">
-                      Expert help whenever you need it
+                      Structured 5-step approach to deliver results
                     </p>
                   </div>
                 </div>
@@ -87,12 +87,12 @@
 
             <!-- CTA -->
             <div class="mt-5">
-              <a href="#" class="btn btn-primary btn-lg me-3">
-                Get Started
+              <a href="/contact" class="btn btn-primary btn-lg me-3">
+                Schedule Consultation
                 <i class="bi bi-arrow-right ms-2"></i>
               </a>
-              <a href="#" class="btn btn-link text-primary text-decoration-none">
-                View case studies
+              <a href="/about" class="btn btn-link text-primary text-decoration-none">
+                Learn more about us
                 <i class="bi bi-arrow-right ms-1"></i>
               </a>
             </div>
@@ -108,22 +108,37 @@
                 <div class="mb-4">
                   <div class="d-flex align-items-center mb-3">
                     <div class="avatar-circle bg-primary text-white me-3">
-                      <i class="bi bi-bar-chart-line fs-4"></i>
+                      <i class="bi bi-award fs-4"></i>
                     </div>
                     <div>
-                      <h6 class="mb-0">Performance Dashboard</h6>
-                      <small class="text-muted">Real-time metrics</small>
+                      <h6 class="mb-0">Our Consulting Approach</h6>
+                      <small class="text-muted">What sets us apart</small>
                     </div>
                   </div>
 
-                  <!-- Mini Chart -->
+                  <!-- Service Icons -->
                   <div class="chart-container bg-light rounded p-3">
                     <div class="d-flex align-items-end justify-content-around" style="height: 120px;">
-                      <div class="bg-primary rounded" style="width: 20px; height: 40%;"></div>
-                      <div class="bg-primary rounded" style="width: 20px; height: 70%;"></div>
-                      <div class="bg-success rounded" style="width: 20px; height: 90%;"></div>
-                      <div class="bg-primary rounded" style="width: 20px; height: 60%;"></div>
-                      <div class="bg-primary rounded" style="width: 20px; height: 80%;"></div>
+                      <div class="text-center">
+                        <i class="bi bi-cpu fs-3 text-primary"></i>
+                        <div class="small text-muted mt-1">AI</div>
+                      </div>
+                      <div class="text-center">
+                        <i class="bi bi-database fs-3 text-info"></i>
+                        <div class="small text-muted mt-1">Data</div>
+                      </div>
+                      <div class="text-center">
+                        <i class="bi bi-cloud fs-3 text-success"></i>
+                        <div class="small text-muted mt-1">Cloud</div>
+                      </div>
+                      <div class="text-center">
+                        <i class="bi bi-shield-check fs-3 text-danger"></i>
+                        <div class="small text-muted mt-1">Security</div>
+                      </div>
+                      <div class="text-center">
+                        <i class="bi bi-diagram-3 fs-3 text-warning"></i>
+                        <div class="small text-muted mt-1">BI</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -132,20 +147,20 @@
                 <div class="row g-3 text-center">
                   <div class="col-4">
                     <div class="p-2 bg-success bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-success">+47%</div>
-                      <small class="text-muted">Growth</small>
+                      <div class="h5 mb-0 text-success">7</div>
+                      <small class="text-muted">Services</small>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="p-2 bg-primary bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-primary">99.9%</div>
-                      <small class="text-muted">Uptime</small>
+                      <div class="h5 mb-0 text-primary">6</div>
+                      <small class="text-muted">Industries</small>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="p-2 bg-warning bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-warning">24/7</div>
-                      <small class="text-muted">Support</small>
+                      <div class="h5 mb-0 text-warning">5</div>
+                      <small class="text-muted">Step Process</small>
                     </div>
                   </div>
                 </div>
@@ -154,9 +169,9 @@
 
             <!-- Floating Badge -->
             <div class="position-absolute top-0 end-0 translate-middle">
-              <div class="badge bg-danger rounded-pill px-3 py-2 shadow">
-                <i class="bi bi-star-fill me-1"></i>
-                Top Rated
+              <div class="badge bg-primary rounded-pill px-3 py-2 shadow">
+                <i class="bi bi-briefcase me-1"></i>
+                Consulting Experts
               </div>
             </div>
 

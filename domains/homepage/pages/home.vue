@@ -31,28 +31,13 @@
       <template #header>
         <h2 class="h1 mb-4">Why Choose Gamma Neutral</h2>
         <p class="fs-lg text-muted mb-0">
-          Experience the advantages of working with Canada's leading data consulting firm
+          Experience the advantages of working with a dedicated data consulting firm
         </p>
       </template>
       <BenefitsSection/>
     </SectionWrapper>
 
-    <!-- Statistics & Impact - Dark theme -->
-    <SectionWrapper
-      spacing="lg"
-      backgroundColor="primary"
-      has-header
-      header-width="lg"
-      :debug-mode="debugMode"
-    >
-      <template #header>
-        <h2 class="h1 mb-4 text-white">Our Impact in Numbers</h2>
-        <p class="fs-lg text-white opacity-75 mb-0">
-          Proven results that demonstrate our commitment to excellence
-        </p>
-      </template>
-      <StatsSection/>
-    </SectionWrapper>
+    <!-- Statistics section removed - company is newly incorporated -->
 
     <!-- Our Process - Clean white -->
     <ProcessSection/>

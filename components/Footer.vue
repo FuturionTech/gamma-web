@@ -10,21 +10,12 @@
             <p class="text-light mb-4">
               Transform data into opportunity. Empower businesses to harness data potential with expert consulting in AI, cybersecurity, and business intelligence.
             </p>
+            <!-- Social media links removed - to be added when accounts are created -->
             <div class="d-flex gap-3">
-              <NuxtLink class="btn btn-icon btn-sm btn-outline-light rounded-circle"
-                       href="https://linkedin.com/company/gamma-neutral-consulting"
-                       target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="ai-linkedin"></i>
-              </NuxtLink>
-              <NuxtLink class="btn btn-icon btn-sm btn-outline-light rounded-circle"
-                       href="https://twitter.com/gammaneutral"
-                       target="_blank" rel="noopener" aria-label="Twitter">
-                <i class="ai-x"></i>
-              </NuxtLink>
               <NuxtLink class="btn btn-icon btn-sm btn-outline-light rounded-circle"
                        href="mailto:info@gammaneutral.ca"
                        aria-label="Email">
-                <i class="ai-mail"></i>
+                <i class="bi bi-envelope-fill"></i>
               </NuxtLink>
             </div>
           </div>
@@ -59,6 +50,16 @@
                 Cloud Computing
               </NuxtLink>
             </li>
+            <li class="mb-2">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/big-data">
+                Big Data
+              </NuxtLink>
+            </li>
+            <li class="mb-2">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/project-management">
+                Project Management
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -68,22 +69,32 @@
           <ul class="list-unstyled">
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/banking">
-                Banking & Finance
+                Banks & Financial Services
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/healthcare">
-                Healthcare
+                Healthcare Services
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/government">
-                Government
+                Governments & Public Services
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/education">
-                Education
+                Education & Training
+              </NuxtLink>
+            </li>
+            <li class="mb-2">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/business">
+                Business Management
+              </NuxtLink>
+            </li>
+            <li class="mb-2">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/ngo">
+                NGOs
               </NuxtLink>
             </li>
           </ul>
@@ -121,21 +132,13 @@
           <h6 class="text-white fw-bold mb-3">Contact Info</h6>
           <div class="mb-3">
             <div class="d-flex align-items-start mb-2">
-              <i class="ai-map-pin text-primary me-2 mt-1"></i>
+              <i class="bi bi-geo-alt-fill text-primary me-2 mt-1"></i>
               <small class="text-light">
-                Toronto, Ontario<br>Canada
-              </small>
-            </div>
-            <div class="d-flex align-items-center mb-2">
-              <i class="ai-phone text-primary me-2"></i>
-              <small class="text-light">
-                <a href="tel:+14161234567" class="text-light text-decoration-none hover-primary">
-                  +1 (416) 123-4567
-                </a>
+                108 Redpath Ave, Suite 19<br>Toronto, ON M4S 2J7<br>Canada
               </small>
             </div>
             <div class="d-flex align-items-center">
-              <i class="ai-mail text-primary me-2"></i>
+              <i class="bi bi-envelope-fill text-primary me-2"></i>
               <small class="text-light">
                 <a href="mailto:info@gammaneutral.ca" class="text-light text-decoration-none hover-primary">
                   {{ $t('footer.email', 'info@gammaneutral.ca') }}

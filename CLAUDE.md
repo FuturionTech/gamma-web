@@ -171,7 +171,7 @@ When referencing Around Bootstrap template designs:
 - Larger zoom values = more zoomed out view
 
 ## Contact Information
-- **Company**: Gamma Neutral Consulting
-- **Location**: 123 Bay Street, Suite 1000, Toronto, ON M5J 2T3
-- **Email**: info@gammaneutral.com, support@gammaneutral.com
-- **Phone**: +1 (416) 555-1234, +1 (888) 555-1234 (Support)
+- **Company**: Gamma Neutral Consulting Inc.
+- **Location**: 108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada
+- **Email**: info@gammaneutral.ca
+- **Phone**: TBD (to be added when available)

@@ -1,5 +1,9 @@
 <template>
-  <header class="navbar navbar-expand-lg fixed-top navbar-initial" data-bs-theme="dark">
+  <header
+    class="navbar navbar-expand-lg fixed-top"
+    :class="navbarClasses"
+    data-bs-theme="dark"
+  >
     <div class="container">
 
       <!-- Navbar brand (Logo) -->
@@ -7,7 +11,7 @@
 
       <!-- Mobile menu toggler (Hamburger) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-label="Toggle navigation" :aria-expanded="isNavbarOpen.toString()" @click="toggleNavbar">
+              aria-label="Toggle navigation" :aria-expanded="isMenuOpen.toString()" @click="toggleMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -43,7 +47,7 @@
   </header>
 </template>
 
-<script>
+<script setup>
 import HomeMenu from "./menus/HomeMenu.vue";
 import SolutionsMenu from "./menus/SolutionsMenu.vue";
 import AboutMenu from "./menus/AboutMenu.vue";
@@ -51,73 +55,47 @@ import LanguageSelector from "./selectors/LanguageSelector.vue";
 import ThemeToggle from "./selectors/ThemeToggle.vue";
 import HeaderLogo from "./logo/HeaderLogo.vue";
 
-export default {
-  name: "Header",
-  components: {
-    HeaderLogo,
-    ThemeToggle,
-    LanguageSelector,
-    AboutMenu,
-    SolutionsMenu,
-    HomeMenu
-  },
-  data() {
-    return {
-      isNavbarOpen: false,  // Suivi de l'état du menu
-    };
-  },
-  methods: {
-    // Basculer l'état du menu (ouvert/fermé)
-    toggleNavbar() {
-      this.isNavbarOpen = !this.isNavbarOpen;
-    }
-  },
-  watch: {
-    // Observer pour surveiller les changements de route
-    $route(to, from) {
-      const navbar = this.$refs.navbarNav;
-      if (navbar.classList.contains('show')) {
-        navbar.classList.remove('show'); // Ferme le menu
-      }
-      this.isNavbarOpen = false; // Réinitialise l'état du bouton hamburger
-    }
+const { isScrolled, isMenuOpen, toggleMenu, closeMenu } = useNavbar()
+const navbarNav = ref(null)
+const route = useRoute()
+
+// Check if current page is homepage
+const isHomePage = computed(() => route.path === '/')
+
+// Compute navbar classes based on page and scroll state
+const navbarClasses = computed(() => {
+  return isHomePage.value
+    ? (isScrolled.value ? 'navbar-scrolled' : 'navbar-transparent')
+    : 'navbar-scrolled navbar-solid'
+})
+
+// Watch for route changes to close menu
+watch(() => route.path, () => {
+  if (navbarNav.value?.classList.contains('show')) {
+    navbarNav.value.classList.remove('show')
   }
-}
+  closeMenu()
+})
 </script>
 
-<style scoped>
-/* Initial navbar state (semi-transparent dark) */
-.navbar-initial {
-  background-color: rgba(0, 0, 0, 0.7) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-/* Make sure text is visible on transparent background */
-.navbar-initial .navbar-brand,
-.navbar-initial .nav-link,
-.navbar-initial .dropdown-toggle,
-.navbar-initial .btn-outline {
-  color: white !important;
-}
-
-/* Ensure dropdown toggle arrow is visible in initial state */
-.navbar-initial .dropdown-toggle::after {
-  border-top-color: white !important;
-}
-
-/* Scrolled state will be handled by HeroSection component */
-</style>
 
 <style>
 /* Global styles for navbar states */
-.navbar-transparent {
+/* Only apply transparent on homepage */
+.navbar.navbar-transparent {
   background-color: rgba(0, 0, 0, 0.7) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure solid overrides transparent in all cases */
+.navbar.navbar-solid {
+  background-color: #1a1a1a !important;
+  background: #1a1a1a !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .navbar-transparent .navbar-brand,
@@ -155,10 +133,21 @@ export default {
 }
 
 /* Scrolled navbar state */
-.navbar-scrolled {
+.navbar.navbar-scrolled {
   background-color: #1a1a1a !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
   transition: all 0.3s ease;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Force solid background on non-homepage routes - highest specificity */
+.navbar.navbar-scrolled.navbar-solid {
+  background-color: #1a1a1a !important;
+  background: #1a1a1a !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important;
 }
 
 .navbar-scrolled .navbar-brand,

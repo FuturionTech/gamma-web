@@ -22,12 +22,8 @@
             <!-- Quick Contact Info -->
             <div class="d-flex flex-column flex-sm-row gap-4">
               <div>
-                <p class="text-white-50 mb-1">Call us</p>
-                <a href="tel:+14165551234" class="text-white text-decoration-none fs-5">+1 (416) 555-1234</a>
-              </div>
-              <div>
                 <p class="text-white-50 mb-1">Email us</p>
-                <a href="mailto:info@gammaneutral.com" class="text-white text-decoration-none fs-5">info@gammaneutral.com</a>
+                <a href="mailto:info@gammaneutral.ca" class="text-white text-decoration-none fs-5">info@gammaneutral.ca</a>
               </div>
             </div>
           </div>
@@ -60,9 +56,9 @@
                   </div>
                   <h3 class="h5 mb-0">Office</h3>
                 </div>
-                <p class="mb-2">123 Bay Street, Suite 1000</p>
-                <p class="mb-3">Toronto, ON M5J 2T3</p>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-outline-primary">
+                <p class="mb-2">108 Redpath Ave, Suite 19</p>
+                <p class="mb-3">Toronto, ON M4S 2J7, Canada</p>
+                <a href="https://www.google.com/maps/place/108+Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
                   <i class="bi bi-map me-1"></i> Get Directions
                 </a>
               </div>
@@ -101,13 +97,9 @@
                   </div>
                   <h3 class="h5 mb-0">Support</h3>
                 </div>
-                <p class="mb-2">
-                  <small class="text-muted d-block">Support Hotline</small>
-                  <a href="tel:+18885551234" class="text-decoration-none">+1 (888) 555-1234</a>
-                </p>
                 <p class="mb-0">
                   <small class="text-muted d-block">Support Email</small>
-                  <a href="mailto:support@gammaneutral.com" class="text-decoration-none">support@gammaneutral.com</a>
+                  <a href="mailto:support@gammaneutral.ca" class="text-decoration-none">support@gammaneutral.ca</a>
                 </p>
               </div>
             </div>
@@ -120,7 +112,7 @@
     <section class="position-relative">
       <div class="ratio ratio-21x9">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92394.75654292!2d-79.47318668450347!3d43.68425227912119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d5c4c4c4c5%3A0x4c4c4c4c4c4c4c!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sca!4v1634567890123!5m2!1sen!2sca"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5771935582853!2d-79.39169842346238!3d43.70667535109786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32d6e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2s108%20Redpath%20Ave%2C%20Toronto%2C%20ON%20M4S%202J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1634567890123!5m2!1sen!2sca"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"

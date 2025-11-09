@@ -5,7 +5,7 @@
 
       <!-- Industries Grid -->
       <div class="row g-4">
-        <!-- Banking & Finance -->
+        <!-- Banks & Financial Services -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm industry-card">
             <div class="card-body p-4">
@@ -15,10 +15,10 @@
                     <path d="M2 10h20v2H2zm0 4h20v2H2zm0 4h20v2H2zM6 4h12v2H6z"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Banking & Finance</h4>
+                <h4 class="mb-0">Banks & Financial Services</h4>
               </div>
               <p class="text-muted">
-                Risk modeling, fraud detection, regulatory compliance, and customer analytics powered by AI systems processing millions of transactions daily.
+                Enhancing data security and analytics for better financial decision-making with AI-powered risk modeling and fraud detection.
               </p>
               <a href="/industries/banking" class="btn btn-link p-0 text-decoration-none">
                 Learn more →
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <!-- Healthcare & Life Sciences -->
+        <!-- Healthcare Services -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm industry-card">
             <div class="card-body p-4">
@@ -37,10 +37,10 @@
                     <path d="M11 2v9H2v2h9v9h2v-9h9v-2h-9V2z"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Healthcare</h4>
+                <h4 class="mb-0">Healthcare Services</h4>
               </div>
               <p class="text-muted">
-                Patient outcome predictions, drug discovery acceleration, and medical data insights while maintaining HIPAA compliance.
+                Developing AI and big data solutions to improve patient care and operational efficiency while maintaining HIPAA compliance.
               </p>
               <a href="/industries/healthcare" class="btn btn-link p-0 text-decoration-none">
                 Learn more →
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <!-- Government & Public Sector -->
+        <!-- Governments & Public Services -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm industry-card">
             <div class="card-body p-4">
@@ -59,10 +59,10 @@
                     <path d="M12 2L2 7v13c0 5 10 7 10 7s10-2 10-7V7L12 2z"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Government</h4>
+                <h4 class="mb-0">Governments & Public Services</h4>
               </div>
               <p class="text-muted">
-                Citizen service optimization, smart city initiatives, and public safety analytics with highest security standards.
+                Building secure data infrastructures for public sector organizations with smart city initiatives and citizen service optimization.
               </p>
               <a href="/industries/government" class="btn btn-link p-0 text-decoration-none">
                 Learn more →
@@ -71,44 +71,45 @@
           </div>
         </div>
 
-        <!-- Retail & E-Commerce -->
+        <!-- Business Management -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm industry-card">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-3">
                 <div class="icon-wrapper bg-warning bg-opacity-10 rounded-3 p-3 me-3">
                   <svg width="32" height="32" fill="currentColor" class="text-warning">
-                    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7Z"/>
+                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Retail & E-Commerce</h4>
+                <h4 class="mb-0">Business Management</h4>
               </div>
               <p class="text-muted">
-                Customer behavior analysis, inventory optimization, demand forecasting, and personalized marketing solutions.
+                Implementing BI tools to streamline operations and improve efficiency with data-driven decision-making and process optimization.
               </p>
-              <a href="/industries/retail" class="btn btn-link p-0 text-decoration-none">
+              <a href="/industries/business" class="btn btn-link p-0 text-decoration-none">
                 Learn more →
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Manufacturing & Supply Chain -->
+        <!-- Non-Governmental Organizations (NGOs) -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 border-0 shadow-sm industry-card">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-3">
                 <div class="icon-wrapper bg-secondary bg-opacity-10 rounded-3 p-3 me-3">
                   <svg width="32" height="32" fill="currentColor" class="text-secondary">
-                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+                    <circle cx="12" cy="8" r="1.5"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Manufacturing</h4>
+                <h4 class="mb-0">Non-Governmental Organizations</h4>
               </div>
               <p class="text-muted">
-                Supply chain optimization, predictive maintenance, quality control, and production efficiency analytics.
+                Providing data solutions to support mission-driven initiatives with impact measurement, donor analytics, and program optimization.
               </p>
-              <a href="/industries/manufacturing" class="btn btn-link p-0 text-decoration-none">
+              <a href="/industries/ngo" class="btn btn-link p-0 text-decoration-none">
                 Learn more →
               </a>
             </div>
@@ -125,10 +126,10 @@
                     <path d="M12 2L2 9L12 16L22 9L12 2ZM2 17L12 24L22 17V9L12 16L2 9V17Z"/>
                   </svg>
                 </div>
-                <h4 class="mb-0">Education</h4>
+                <h4 class="mb-0">Education & Training</h4>
               </div>
               <p class="text-muted">
-                AI-driven learning platforms, student performance analytics, and personalized education experiences.
+                Developing AI-driven platforms for personalized learning experiences with student performance analytics and adaptive learning paths.
               </p>
               <a href="/industries/education" class="btn btn-link p-0 text-decoration-none">
                 Learn more →

@@ -28,7 +28,7 @@
           <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
             <span class="badge bg-secondary text-white px-4 py-2 rounded-pill">
               <span class="pulse-dot me-2"></span>
-              AI-Powered Data Solutions
+              Your Data Solutions
             </span>
           </div>
 
@@ -40,8 +40,8 @@
 
           <!-- Subheading -->
           <p class="lead text-professional text-white opacity-75 mb-5 animate-fade-in-up animation-delay-1">
-            Unlock the power of your data with our enterprise-grade AI and machine learning solutions.
-            Drive innovation, optimize operations, and accelerate growth.
+            At Gamma Neutral Consulting, we empower businesses to harness the full potential of their data.
+            We deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence.
           </p>
 
           <!-- CTA Buttons -->
@@ -58,77 +58,11 @@
 
           <!-- Trust Indicators -->
           <div class="animate-fade-in-up animation-delay-3">
-            <p class="text-white-50 mb-3">Trusted by data-driven companies</p>
-            <div class="d-flex flex-wrap gap-4 align-items-center justify-content-center justify-content-lg-start">
-              <div class="text-white opacity-75">
-                <i class="bi bi-shield-check fs-5 me-2 text-success"></i>
-                SOC 2 Certified
-              </div>
-              <div class="text-white opacity-75">
-                <i class="bi bi-award fs-5 me-2 text-warning"></i>
-                ISO 27001
-              </div>
-              <div class="text-white opacity-75">
-                <i class="bi bi-patch-check fs-5 me-2 text-info"></i>
-                GDPR Compliant
-              </div>
-            </div>
+            <p class="text-white-50 mb-3">Toronto-based data consulting firm</p>
           </div>
         </div>
 
-        <!-- Right Side Floating Elements -->
-        <div class="col-lg-4 col-xl-5 d-none d-lg-block">
-          <div class="position-relative">
-            <!-- Floating Dashboard Cards -->
-            <div class="floating-card position-absolute" style="top: 50px; right: 50px; z-index: 10;">
-              <div class="card bg-dark border border-secondary border-opacity-25 text-white p-3">
-                <div class="d-flex align-items-center">
-                  <div class="flex-shrink-0">
-                    <div class="bg-secondary rounded-circle p-2">
-                      <i class="bi bi-graph-up text-white fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h6 class="mb-0 small">Performance</h6>
-                    <div class="h4 mb-0 fw-bold">+47%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="floating-card-delayed position-absolute" style="top: 180px; right: 20px; z-index: 10;">
-              <div class="card bg-dark border border-info text-white p-3">
-                <div class="d-flex align-items-center">
-                  <div class="flex-shrink-0">
-                    <div class="bg-info rounded-circle p-2">
-                      <i class="bi bi-cpu text-white fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h6 class="mb-0 small">Processing</h6>
-                    <div class="h4 mb-0 fw-bold">10TB+</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="floating-card-slow position-absolute" style="bottom: 100px; right: 80px; z-index: 10;">
-              <div class="card bg-dark border border-warning text-white p-3">
-                <div class="d-flex align-items-center">
-                  <div class="flex-shrink-0">
-                    <div class="bg-warning rounded-circle p-2">
-                      <i class="bi bi-lightning text-dark fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h6 class="mb-0 small">API Calls</h6>
-                    <div class="h4 mb-0 fw-bold">2M+</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Right Side Floating Elements - Removed fake statistics -->
       </div>
     </div>
 
@@ -142,41 +76,7 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
-
-let scrollHandler = null;
-
-onMounted(() => {
-  // Add transparent navbar class when component mounts
-  if (typeof window !== 'undefined') {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      // Remove default classes and add transparent class
-      navbar.classList.remove('bg-white', 'shadow-sm', 'navbar-initial');
-      navbar.classList.add('navbar-transparent');
-      navbar.setAttribute('data-bs-theme', 'dark');
-
-      // Remove transparent class on scroll
-      scrollHandler = () => {
-        if (window.scrollY > 50) {
-          navbar.classList.remove('navbar-transparent');
-          navbar.classList.add('navbar-scrolled');
-        } else {
-          navbar.classList.add('navbar-transparent');
-          navbar.classList.remove('navbar-scrolled');
-        }
-      };
-
-      window.addEventListener('scroll', scrollHandler);
-    }
-  }
-});
-
-onUnmounted(() => {
-  if (scrollHandler && typeof window !== 'undefined') {
-    window.removeEventListener('scroll', scrollHandler);
-  }
-});
+// Hero section component - navbar management is handled globally
 </script>
 
 <style scoped>
@@ -377,28 +277,3 @@ onUnmounted(() => {
 }
 </style>
 
-<style>
-/* Global navbar styles for transparency */
-.navbar-transparent {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.navbar-transparent .navbar-brand,
-.navbar-transparent .nav-link {
-  color: white !important;
-}
-
-.navbar-scrolled {
-  background-color: #1a1a1a !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-
-.navbar-scrolled .navbar-brand,
-.navbar-scrolled .nav-link {
-  color: #ffffff !important;
-}
-</style>

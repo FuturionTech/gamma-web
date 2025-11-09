@@ -21,16 +21,14 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
+            title: 'Gamma Neutral Consulting Inc.',
+            meta: [
+                { name: 'theme-color', content: '#8b5cf6' },
+                { name: 'msapplication-TileColor', content: '#8b5cf6' }
+            ],
             link: [
-                {
-                    rel: 'icon',
-                    type: 'image/svg+xml',
-                    href: '/gn-favicon.svg'
-                },
-                {
-                    rel: 'alternate icon',
-                    href: '/favicon.ico'
-                }],
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            ],
             script: [
                 {src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose'},
                 {src: '/assets/vendor/parallax-js/dist/parallax.min.js', tagPosition: 'bodyClose'},

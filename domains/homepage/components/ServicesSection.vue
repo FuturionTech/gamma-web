@@ -216,6 +216,47 @@
             </a>
           </div>
         </div>
+
+        <!-- Project Management - Hidden on homepage, shown on full services page -->
+        <!-- Keeping 6 services for balanced 3x2 grid layout -->
+        <!--
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card card h-100 p-4 rounded-4 border-0 shadow-sm hover-shadow-lg transition-all">
+            <div class="service-icon mb-4">
+              <div class="icon-wrapper bg-gradient-dark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="white" stroke-width="2"/>
+                  <path d="M3 10h18M9 4v6" stroke="white" stroke-width="2"/>
+                  <circle cx="8" cy="15" r="1.5" fill="white"/>
+                  <circle cx="12" cy="15" r="1.5" fill="white"/>
+                  <circle cx="16" cy="15" r="1.5" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="h4 mb-3">Project Management</h3>
+            <p class="text-muted mb-4">
+              Ensure successful project delivery through meticulous planning and execution excellence.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <span class="small">Agile Delivery</span>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <span class="small">Stakeholder Alignment</span>
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <span class="small">End-to-End Execution</span>
+              </li>
+            </ul>
+            <a href="/services/project-management" class="btn-link fw-semibold">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        -->
       </div>
 
       <!-- CTA -->
@@ -279,6 +320,10 @@
 
 .bg-gradient-purple {
   background-color: #8b5cf6;
+}
+
+.bg-gradient-dark {
+  background-color: #1e293b;
 }
 
 /* Button Link */

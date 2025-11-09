@@ -41,10 +41,10 @@
                 <i class="bi bi-rocket-takeoff me-2"></i>
                 Start Your Journey
               </NuxtLink>
-              <a href="https://bridgeatlantic.com/" target="_blank" class="btn btn-outline-light px-4 py-2">
-                <i class="bi bi-box-arrow-up-right me-2"></i>
-                See Our Work
-              </a>
+              <NuxtLink to="/services" class="btn btn-outline-light px-4 py-2">
+                <i class="bi bi-grid-3x3-gap me-2"></i>
+                Explore Services
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -91,21 +91,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="d-flex flex-wrap gap-4">
-              <div>
-                <div class="h4 fw-bold text-primary mb-0">50+</div>
-                <small class="text-muted">Expert Team</small>
-              </div>
-              <div>
-                <div class="h4 fw-bold text-primary mb-0">150+</div>
-                <small class="text-muted">Projects</small>
-              </div>
-              <div>
-                <div class="h4 fw-bold text-primary mb-0">98%</div>
-                <small class="text-muted">Satisfaction</small>
               </div>
             </div>
           </div>
@@ -237,7 +222,7 @@
               Our proven approach delivers results
             </h2>
             <p class="fs-6 text-muted mb-4 lh-base">
-              A systematic methodology refined over 500+ successful projects
+              A systematic methodology ensuring successful project delivery
             </p>
 
             <!-- Simple Steps -->
@@ -247,8 +232,8 @@
                   1
                 </div>
                 <div>
-                  <h5 class="mb-1">Discovery & Assessment</h5>
-                  <p class="text-muted mb-0">We analyze your data landscape and identify opportunities</p>
+                  <h5 class="mb-1">Discovery</h5>
+                  <p class="text-muted mb-0">Understanding your business challenges and objectives</p>
                 </div>
               </div>
 
@@ -257,8 +242,8 @@
                   2
                 </div>
                 <div>
-                  <h5 class="mb-1">Strategy & Design</h5>
-                  <p class="text-muted mb-0">We create a tailored roadmap aligned with your goals</p>
+                  <h5 class="mb-1">Design</h5>
+                  <p class="text-muted mb-0">Crafting customized solutions that address your specific needs</p>
                 </div>
               </div>
 
@@ -267,52 +252,37 @@
                   3
                 </div>
                 <div>
-                  <h5 class="mb-1">Implementation</h5>
-                  <p class="text-muted mb-0">We deploy solutions with agile methodologies</p>
+                  <h5 class="mb-1">Development</h5>
+                  <p class="text-muted mb-0">Building and implementing the solution with precision</p>
+                </div>
+              </div>
+
+              <div class="d-flex mb-4">
+                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
+                  4
+                </div>
+                <div>
+                  <h5 class="mb-1">Deployment</h5>
+                  <p class="text-muted mb-0">Ensuring smooth integration and adoption</p>
                 </div>
               </div>
 
               <div class="d-flex">
                 <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  4
+                  5
                 </div>
                 <div>
-                  <h5 class="mb-1">Optimization</h5>
-                  <p class="text-muted mb-0">We continuously improve and scale your solutions</p>
+                  <h5 class="mb-1">Support</h5>
+                  <p class="text-muted mb-0">Providing ongoing assistance to ensure sustained success</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="stats-grid">
-              <div class="row g-3 text-center">
-                <div class="col-6">
-                  <div class="p-3 bg-light rounded-3">
-                    <div class="h4 fw-bold text-primary mb-1">2-4 weeks</div>
-                    <p class="text-muted mb-0 small">Average time to first insight</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3 bg-light rounded-3">
-                    <div class="h4 fw-bold text-primary mb-1">3-6 months</div>
-                    <p class="text-muted mb-0 small">Full implementation</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3 bg-light rounded-3">
-                    <div class="h4 fw-bold text-primary mb-1">40% faster</div>
-                    <p class="text-muted mb-0 small">Decision making</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="p-3 bg-light rounded-3">
-                    <div class="h4 fw-bold text-primary mb-1">10x ROI</div>
-                    <p class="text-muted mb-0 small">Average return</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+                 alt="Gamma Neutral systematic approach"
+                 class="img-fluid rounded-3 shadow">
           </div>
         </div>
       </div>
@@ -390,19 +360,20 @@
               Ready to transform your data?
             </h2>
             <p class="fs-6 text-white-50 mb-4">
-              Join 150+ industry leaders who trust Gamma Neutral with their data strategy.
+              Let's discuss how we can help unlock the full potential of your data.
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
               <NuxtLink to="/contact" class="btn btn-white btn-lg px-4 py-2 shadow">
+                <i class="bi bi-calendar-check me-2"></i>
                 Schedule Consultation
               </NuxtLink>
-              <a href="tel:+14165551234" class="btn btn-outline-light btn-lg px-4 py-2">
-                <i class="bi bi-telephone me-2"></i>
-                Call (416) 555-1234
-              </a>
+              <NuxtLink to="/services" class="btn btn-outline-light btn-lg px-4 py-2">
+                <i class="bi bi-grid-3x3-gap me-2"></i>
+                View Our Services
+              </NuxtLink>
             </div>
             <p class="text-white-50 mt-4 small">
-              No commitment required. Get actionable insights in your first meeting.
+              No commitment required. Get expert insights in your first meeting.
             </p>
           </div>
         </div>
@@ -419,15 +390,15 @@ const featuredTeamMembers = teamMembers.slice(0, 3)
 
 // SEO
 useHead({
-  title: 'About Us - Gamma Neutral | Leading Data Analytics & AI Consultancy',
+  title: 'About Us - Gamma Neutral Consulting Inc.',
   meta: [
     {
       name: 'description',
-      content: 'Gamma Neutral transforms data into competitive advantage for 150+ Fortune 500 companies. World-class AI and analytics solutions with $2.5B+ in generated value.'
+      content: 'Gamma Neutral Consulting Inc. delivers innovative, secure, and scalable data solutions. From AI to cloud computing, we empower businesses to harness the full potential of their data.'
     },
     {
       name: 'keywords',
-      content: 'data analytics, AI consulting, machine learning, business intelligence, Toronto'
+      content: 'data analytics, AI consulting, machine learning, business intelligence, Toronto, data solutions, cybersecurity, cloud computing'
     }
   ]
 })
