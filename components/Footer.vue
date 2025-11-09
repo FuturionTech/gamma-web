@@ -191,7 +191,18 @@
 }
 
 .footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+/* Override Bootstrap's bg-dark to ensure dark footer always */
+.footer.bg-dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+/* Ensure footer stays dark in all theme modes */
+:global([data-bs-theme="light"]) .footer,
+:global([data-bs-theme="dark"]) .footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
 }
 
 .nav-link {
