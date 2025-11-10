@@ -1,30 +1,32 @@
 <template>
   <form @submit.prevent="handleSubmit" class="needs-validation" novalidate>
     <div class="row g-4">
-      <!-- Name -->
+      <!-- First Name -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="name">Name</label>
+        <label class="form-label fs-base" for="first_name">First Name</label>
         <input
-          v-model="formData.name"
+          v-model="formData.first_name"
           type="text"
           class="form-control form-control-lg"
-          id="name"
-          placeholder="Your name"
+          id="first_name"
+          placeholder="Your first name"
           required
         >
-        <div class="invalid-feedback">Please enter your name!</div>
+        <div class="invalid-feedback">Please enter your first name!</div>
       </div>
 
-      <!-- Company -->
+      <!-- Last Name -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="company">Company</label>
+        <label class="form-label fs-base" for="last_name">Last Name</label>
         <input
-          v-model="formData.company"
+          v-model="formData.last_name"
           type="text"
           class="form-control form-control-lg"
-          id="company"
-          placeholder="Your company name"
+          id="last_name"
+          placeholder="Your last name"
+          required
         >
+        <div class="invalid-feedback">Please enter your last name!</div>
       </div>
 
       <!-- Email -->
@@ -50,6 +52,18 @@
           class="form-control form-control-lg"
           id="phone"
           placeholder="Phone number"
+        >
+      </div>
+
+      <!-- Subject -->
+      <div class="col-sm-6">
+        <label class="form-label fs-base" for="subject">Subject <span class="text-muted">(Optional)</span></label>
+        <input
+          v-model="formData.subject"
+          type="text"
+          class="form-control form-control-lg"
+          id="subject"
+          placeholder="Subject of your inquiry"
         >
       </div>
 
@@ -95,20 +109,34 @@
     <!-- Error Message -->
     <div v-if="showError" class="alert alert-danger mt-4" role="alert">
       <i class="bi bi-exclamation-triangle me-2"></i>
-      Something went wrong. Please try again or email us directly at info@gammaneutral.ca
+      {{ errorMessage || 'Something went wrong. Please try again or email us directly at info@gammaneutral.ca' }}
     </div>
   </form>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import { useContactStore } from '../stores/useContactStore'
+
+interface ContactFormData {
+  first_name: string
+  last_name: string
+  email: string
+  phone: string
+  subject: string
+  message: string
+}
+
+// Initialize store
+const contactStore = useContactStore()
 
 // Form data
-const formData = ref({
-  name: '',
+const formData = ref<ContactFormData>({
+  first_name: '',
+  last_name: '',
   email: '',
   phone: '',
-  company: '',
+  subject: '',
   message: ''
 })
 
@@ -116,6 +144,7 @@ const formData = ref({
 const isSubmitting = ref(false)
 const showSuccess = ref(false)
 const showError = ref(false)
+const errorMessage = ref('')
 
 // Handle form submission
 const handleSubmit = async () => {
@@ -129,17 +158,19 @@ const handleSubmit = async () => {
   isSubmitting.value = true
   showSuccess.value = false
   showError.value = false
+  errorMessage.value = ''
 
   try {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Call the store to send the contact request
+    await contactStore.sendContactRequest(formData.value)
 
     // Reset form on success
     formData.value = {
-      name: '',
+      first_name: '',
+      last_name: '',
       email: '',
       phone: '',
-      company: '',
+      subject: '',
       message: ''
     }
 
@@ -153,11 +184,13 @@ const handleSubmit = async () => {
 
   } catch (error) {
     console.error('Form submission error:', error)
+    errorMessage.value = error instanceof Error ? error.message : 'Failed to send your message. Please try again.'
     showError.value = true
 
     // Hide error message after 5 seconds
     setTimeout(() => {
       showError.value = false
+      errorMessage.value = ''
     }, 5000)
   } finally {
     isSubmitting.value = false

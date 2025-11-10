@@ -4,7 +4,12 @@ mutation CreateContactRequest($input: CreateContactRequestInput!) {
     first_name
     last_name
     email
+    phone
+    subject
     message
+    status
+    created_at
+    updated_at
   }
 }
 

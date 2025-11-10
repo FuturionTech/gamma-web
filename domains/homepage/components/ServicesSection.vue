@@ -83,7 +83,7 @@ const services = [
     features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision'],
     svgIcon: AIIcon,
     gradientClass: 'bg-gradient-primary',
-    link: '/services/ai'
+    link: '/services'
   },
   {
     title: 'Data Engineering',
@@ -91,7 +91,7 @@ const services = [
     features: ['ETL/ELT Pipelines', 'Real-time Processing', 'Data Lake Design'],
     svgIcon: DataEngIcon,
     gradientClass: 'bg-gradient-info',
-    link: '/services/data-engineering'
+    link: '/services'
   },
   {
     title: 'Cloud Computing',
@@ -99,7 +99,7 @@ const services = [
     features: ['Cloud Migration', 'Serverless Architecture', 'Cost Optimization'],
     svgIcon: CloudIcon,
     gradientClass: 'bg-gradient-success',
-    link: '/services/cloud'
+    link: '/services'
   },
   {
     title: 'Cybersecurity',
@@ -107,7 +107,7 @@ const services = [
     features: ['Threat Detection', 'Compliance Management', '24/7 Monitoring'],
     svgIcon: SecurityIcon,
     gradientClass: 'bg-gradient-danger',
-    link: '/services/security'
+    link: '/services'
   },
   {
     title: 'Business Intelligence',
@@ -115,7 +115,7 @@ const services = [
     features: ['Interactive Dashboards', 'KPI Monitoring', 'Strategic Reporting'],
     svgIcon: BIIcon,
     gradientClass: 'bg-gradient-warning',
-    link: '/services/bi'
+    link: '/services'
   },
   {
     title: 'Big Data Solutions',
@@ -123,7 +123,7 @@ const services = [
     features: ['Distributed Processing', 'Spark & Hadoop', 'Data Lake Solutions'],
     svgIcon: BigDataIcon,
     gradientClass: 'bg-gradient-purple',
-    link: '/services/bigdata'
+    link: '/services'
   }
 ]
 </script>

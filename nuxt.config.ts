@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     runtimeConfig: {
       public: {
         applicationId: process.env.APPLICATION_ID,
-        siteUrl: process.env.NUXT_PUBLIC_SITE_URL
+        siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+        graphqlEndpoint: process.env.GQL_HOST || 'https://gamma.ngrok.app/graphql'
       },
     },
     site: {
@@ -63,7 +64,6 @@ export default defineNuxtConfig({
         '~/domains/solutions/index.ts',
 
         'nuxt-swiper',
-        'nuxt-graphql-client',
         "@nuxt/image",
         'nuxt-simple-sitemap',
         '@i2d/nuxt-pdf-frame'
