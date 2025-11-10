@@ -67,41 +67,24 @@
     <!-- Services Grid Section -->
     <section class="py-5 my-5">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="h1 fw-bold mb-3">Our Core Services</h2>
-          <p class="fs-lg text-muted mx-auto" style="max-width: 600px;">
-            Comprehensive solutions tailored to your unique business challenges
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Core Services"
+          subtitle="Comprehensive solutions tailored to your unique business challenges"
+          headingSize="h1"
+          maxWidth="600px"
+        />
 
         <div class="row g-4">
-          <!-- Service Cards -->
+          <!-- Service Cards using shared component -->
           <div class="col-lg-4 col-md-6" v-for="(service, index) in services" :key="index">
-            <div class="service-card card h-100 p-4 rounded-4 border-0 shadow-sm">
-              <!-- Icon -->
-              <div class="service-icon mb-4">
-                <div class="icon-wrapper" :class="service.gradientClass">
-                  <component :is="service.svgIcon" />
-                </div>
-              </div>
-
-              <!-- Title & Description -->
-              <h3 class="h4 fw-bold mb-3">{{ service.title }}</h3>
-              <p class="text-muted mb-4">{{ service.description }}</p>
-
-              <!-- Feature List -->
-              <ul class="list-unstyled mb-4">
-                <li class="d-flex align-items-center mb-2" v-for="(feature, idx) in service.features" :key="idx">
-                  <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
-                  <span class="small">{{ feature }}</span>
-                </li>
-              </ul>
-
-              <!-- Learn More Link -->
-              <a :href="service.link" class="btn-link fw-semibold mt-auto">
-                Learn More <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
+            <ServiceCard
+              :title="service.title"
+              :description="service.description"
+              :features="service.features"
+              :svgIcon="service.svgIcon"
+              :gradientClass="service.gradientClass"
+              :link="service.link"
+            />
           </div>
         </div>
       </div>
@@ -110,29 +93,22 @@
     <!-- Our Approach Section -->
     <section class="bg-light py-5 my-5">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="h1 fw-bold mb-3">Our Approach</h2>
-          <p class="fs-lg text-muted mx-auto" style="max-width: 600px;">
-            A proven methodology that ensures successful delivery and lasting results
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Approach"
+          subtitle="A proven methodology that ensures successful delivery and lasting results"
+          headingSize="h1"
+          maxWidth="600px"
+        />
 
         <div class="row g-4">
           <div v-for="(step, index) in approachSteps" :key="index" class="col-lg col-md-6">
-            <div class="approach-card card h-100 p-4 rounded-4 border-0 shadow-sm text-center">
-              <!-- Number Badge -->
-              <div class="approach-number mx-auto mb-4">
-                <span class="fw-bold">{{ index + 1 }}</span>
-              </div>
-
-              <!-- Icon -->
-              <div class="mb-3">
-                <i :class="`${step.icon} fs-1 text-primary`"></i>
-              </div>
-
-              <h4 class="h5 fw-bold mb-2">{{ step.title }}</h4>
-              <p class="text-muted small mb-0">{{ step.description }}</p>
-            </div>
+            <ProcessStepCard
+              :stepNumber="index + 1"
+              :title="step.title"
+              :description="step.description"
+              :icon="step.icon"
+              badgeColor="gradient"
+            />
           </div>
         </div>
       </div>
@@ -168,6 +144,9 @@
 <script setup>
 import { useHead } from '#imports'
 import { h } from 'vue'
+import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
+import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
+import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
 
 const { t, locale } = useI18n();
 
@@ -518,106 +497,6 @@ const approachSteps = ref([
 }
 
 /* ================================
-   SERVICE CARDS
-   ================================ */
-
-.service-card {
-  transition: all 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Icon Wrapper */
-.icon-wrapper {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover .icon-wrapper {
-  transform: scale(1.1);
-}
-
-/* Gradient Classes */
-.bg-gradient-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.bg-gradient-info {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-}
-
-.bg-gradient-success {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-}
-
-.bg-gradient-danger {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-}
-
-.bg-gradient-warning {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-}
-
-.bg-gradient-purple {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-}
-
-.bg-gradient-dark {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-}
-
-/* Button Link */
-.btn-link {
-  color: #8b5cf6;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn-link:hover {
-  color: #7c3aed;
-  gap: 0.75rem;
-}
-
-/* ================================
-   APPROACH SECTION
-   ================================ */
-
-.approach-card {
-  transition: all 0.3s ease;
-}
-
-.approach-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
-}
-
-.approach-number {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-/* ================================
    CTA SECTION
    ================================ */
 
@@ -657,20 +536,6 @@ const approachSteps = ref([
 /* ================================
    DARK MODE SUPPORT
    ================================ */
-
-:global([data-bs-theme="dark"]) .service-card {
-  background: #1a1a1a !important;
-  border: 1px solid rgba(139, 92, 246, 0.2) !important;
-}
-
-:global([data-bs-theme="dark"]) .service-card:hover {
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2) !important;
-  border-color: rgba(139, 92, 246, 0.4) !important;
-}
-
-:global([data-bs-theme="dark"]) .approach-card {
-  background: #1a1a1a !important;
-}
 
 :global([data-bs-theme="dark"]) .wave-svg {
   fill: #0f0f0f;
@@ -724,12 +589,6 @@ const approachSteps = ref([
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-.service-card:focus-visible,
-.approach-card:focus-visible {
-  outline: 2px solid #8b5cf6;
-  outline-offset: 2px;
 }
 
 /* ================================
