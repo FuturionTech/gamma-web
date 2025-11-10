@@ -14,74 +14,15 @@
               We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
             </p>
 
-            <!-- Benefits List -->
+            <!-- Benefits List using BenefitCard -->
             <div class="row g-4">
-              <!-- Benefit 1 -->
-              <div class="col-sm-6">
-                <div class="d-flex">
-                  <div class="flex-shrink-0">
-                    <div class="icon-circle bg-success bg-opacity-10 text-success">
-                      <i class="bi bi-people fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h5 class="h6 mb-2">Expert Team</h5>
-                    <p class="text-muted small mb-0">
-                      Certified data professionals with proven expertise
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Benefit 2 -->
-              <div class="col-sm-6">
-                <div class="d-flex">
-                  <div class="flex-shrink-0">
-                    <div class="icon-circle bg-primary bg-opacity-10 text-primary">
-                      <i class="bi bi-gear fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h5 class="h6 mb-2">Tailored Solutions</h5>
-                    <p class="text-muted small mb-0">
-                      Custom strategies designed for your specific needs
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Benefit 3 -->
-              <div class="col-sm-6">
-                <div class="d-flex">
-                  <div class="flex-shrink-0">
-                    <div class="icon-circle bg-warning bg-opacity-10 text-warning">
-                      <i class="bi bi-building fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h5 class="h6 mb-2">Industry Expertise</h5>
-                    <p class="text-muted small mb-0">
-                      Deep knowledge across banking, healthcare, and more
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Benefit 4 -->
-              <div class="col-sm-6">
-                <div class="d-flex">
-                  <div class="flex-shrink-0">
-                    <div class="icon-circle bg-info bg-opacity-10 text-info">
-                      <i class="bi bi-clipboard-check fs-5"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <h5 class="h6 mb-2">Proven Methodologies</h5>
-                    <p class="text-muted small mb-0">
-                      Structured 5-step approach to deliver results
-                    </p>
-                  </div>
-                </div>
+              <div class="col-sm-6" v-for="benefit in benefits" :key="benefit.title">
+                <BenefitCard
+                  :title="benefit.title"
+                  :description="benefit.description"
+                  :icon="benefit.icon"
+                  :iconColor="benefit.iconColor"
+                />
               </div>
             </div>
 
@@ -191,19 +132,37 @@
 </template>
 
 <script setup>
+import BenefitCard from '~/components/shared/cards/BenefitCard.vue'
+
+const benefits = [
+  {
+    title: 'Expert Team',
+    description: 'Certified data professionals with proven expertise',
+    icon: 'bi-people',
+    iconColor: 'success'
+  },
+  {
+    title: 'Tailored Solutions',
+    description: 'Custom strategies designed for your specific needs',
+    icon: 'bi-gear',
+    iconColor: 'primary'
+  },
+  {
+    title: 'Industry Expertise',
+    description: 'Deep knowledge across banking, healthcare, and more',
+    icon: 'bi-building',
+    iconColor: 'warning'
+  },
+  {
+    title: 'Proven Methodologies',
+    description: 'Structured 5-step approach to deliver results',
+    icon: 'bi-clipboard-check',
+    iconColor: 'info'
+  }
+]
 </script>
 
 <style scoped>
-/* Icon Circle */
-.icon-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Avatar Circle */
 .avatar-circle {
   width: 56px;

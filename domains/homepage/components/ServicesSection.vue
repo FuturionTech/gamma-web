@@ -2,6 +2,14 @@
   <!-- Services Grid Section -->
   <section class="py-5 my-5">
     <div class="container">
+      <!-- Section Header using shared component -->
+      <SectionHeader
+        title="Our Core Services"
+        subtitle="Transform your business with our comprehensive data solutions"
+        headingSize="h1"
+        maxWidth="700px"
+      />
+
       <!-- Services Grid -->
       <div class="row g-4">
         <!-- Service Cards using shared component -->
@@ -31,6 +39,7 @@
 <script setup>
 import { h } from 'vue'
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
+import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 
 // SVG Icon Components
 const AIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
