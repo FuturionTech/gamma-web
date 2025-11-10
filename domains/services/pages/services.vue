@@ -1,42 +1,106 @@
 <template>
-  <div>
-    <!-- Services Hero Section -->
-    <section class="container py-5 mb-md-3 mb-lg-4 mb-xxl-5 mt-navbar">
-      <!-- Breadcrumb -->
-      <nav aria-label="breadcrumb" class="mt-3">
-        <ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
-          <li class="breadcrumb-item"><NuxtLink to="/" class="text-decoration-none">Home</NuxtLink></li>
-          <li class="breadcrumb-item active" aria-current="page">Services</li>
-        </ol>
-      </nav>
+  <div class="services-page">
+    <!-- Hero Section with Gradient Background -->
+    <section class="position-relative hero-section overflow-hidden">
+      <!-- Gradient Background -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 hero-gradient"></div>
 
-      <div class="text-center pt-2 pt-sm-3 pt-md-4 pt-xl-5 mt-lg-2 mt-xl-1">
-        <h1 class="display-4 fw-bold mb-3">Our Services</h1>
-        <p class="lead text-body-secondary mb-4 mb-lg-5 mx-auto" style="max-width: 600px;">
-          We deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence.
-        </p>
+      <!-- Animated Background Shapes -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+      </div>
+
+      <div class="container position-relative" style="z-index: 10;">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="pt-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><NuxtLink to="/" class="text-white text-opacity-75 text-decoration-none">Home</NuxtLink></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center py-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <!-- Badge -->
+            <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
+              <span class="badge bg-white bg-opacity-20 text-white px-4 py-2 rounded-pill backdrop-blur">
+                <span class="pulse-dot me-2"></span>
+                Comprehensive Data Solutions
+              </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="display-3 fw-bold text-white mb-4 animate-fade-in-up">
+              Transform Your Business<br/>
+              With Our <span class="text-gradient">Expert Services</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="lead text-white text-opacity-90 mb-5 mx-auto animate-fade-in-up animation-delay-1" style="max-width: 700px;">
+              We deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence across AI, Data Engineering, Cloud, and Cybersecurity.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center animate-fade-in-up animation-delay-2">
+              <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
+                Get Started
+                <i class="bi bi-arrow-right ms-2"></i>
+              </NuxtLink>
+              <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
+                Learn More
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave Divider -->
+      <div class="position-absolute bottom-0 start-0 w-100">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="wave-svg">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
       </div>
     </section>
 
     <!-- Services Grid Section -->
-    <section class="container pb-5 mb-md-3 mb-lg-4 mb-xxl-5">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-        <!-- Service Cards -->
-        <div class="col" v-for="(service, index) in services" :key="index">
-          <div class="card service-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-            <div class="card-body p-4 p-lg-5">
-              <div class="service-icon-wrapper bg-primary bg-opacity-10 rounded-3 p-3 mb-4 mx-auto text-center" style="width: fit-content;">
-                <i :class="`${service.icon} fs-1 text-primary`"></i>
+    <section class="py-5 my-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="h1 fw-bold mb-3">Our Core Services</h2>
+          <p class="fs-lg text-muted mx-auto" style="max-width: 600px;">
+            Comprehensive solutions tailored to your unique business challenges
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service Cards -->
+          <div class="col-lg-4 col-md-6" v-for="(service, index) in services" :key="index">
+            <div class="service-card card h-100 p-4 rounded-4 border-0 shadow-sm">
+              <!-- Icon -->
+              <div class="service-icon mb-4">
+                <div class="icon-wrapper" :class="service.gradientClass">
+                  <component :is="service.svgIcon" />
+                </div>
               </div>
 
-              <h3 class="h4 fw-bold text-center mb-3">{{ service.title }}</h3>
-              <p class="text-body-secondary text-center mb-4">{{ service.description }}</p>
+              <!-- Title & Description -->
+              <h3 class="h4 fw-bold mb-3">{{ service.title }}</h3>
+              <p class="text-muted mb-4">{{ service.description }}</p>
 
-              <div class="text-center">
-                <span class="badge bg-primary bg-opacity-10 text-primary fw-medium px-3 py-2">
-                  {{ service.category }}
-                </span>
-              </div>
+              <!-- Feature List -->
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex align-items-center mb-2" v-for="(feature, idx) in service.features" :key="idx">
+                  <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                  <span class="small">{{ feature }}</span>
+                </li>
+              </ul>
+
+              <!-- Learn More Link -->
+              <a :href="service.link" class="btn-link fw-semibold mt-auto">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -44,23 +108,30 @@
     </section>
 
     <!-- Our Approach Section -->
-    <section class="bg-secondary bg-opacity-25 py-5">
+    <section class="bg-light py-5 my-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="display-6 fw-bold mb-3">Our Approach</h2>
-          <p class="lead text-body-secondary mx-auto" style="max-width: 500px;">
-            We follow a structured methodology to deliver results
+          <h2 class="h1 fw-bold mb-3">Our Approach</h2>
+          <p class="fs-lg text-muted mx-auto" style="max-width: 600px;">
+            A proven methodology that ensures successful delivery and lasting results
           </p>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
-          <div v-for="(step, index) in approachSteps" :key="index" class="col">
-            <div class="text-center">
-              <div class="bg-primary rounded-circle p-3 mb-3 mx-auto" style="width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;">
-                <span class="text-white fw-bold fs-4">{{ index + 1 }}</span>
+        <div class="row g-4">
+          <div v-for="(step, index) in approachSteps" :key="index" class="col-lg col-md-6">
+            <div class="approach-card card h-100 p-4 rounded-4 border-0 shadow-sm text-center">
+              <!-- Number Badge -->
+              <div class="approach-number mx-auto mb-4">
+                <span class="fw-bold">{{ index + 1 }}</span>
               </div>
-              <h4 class="h6 fw-bold mb-2">{{ step.title }}</h4>
-              <p class="fs-sm text-body-secondary mb-0">{{ step.description }}</p>
+
+              <!-- Icon -->
+              <div class="mb-3">
+                <i :class="`${step.icon} fs-1 text-primary`"></i>
+              </div>
+
+              <h4 class="h5 fw-bold mb-2">{{ step.title }}</h4>
+              <p class="text-muted small mb-0">{{ step.description }}</p>
             </div>
           </div>
         </div>
@@ -68,20 +139,26 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="container py-5 my-md-3 my-lg-4 my-xxl-5">
-      <div class="bg-primary bg-opacity-5 rounded-4 p-5 text-center">
-        <h2 class="h1 fw-bold mb-3">Ready to Transform Your Data?</h2>
-        <p class="lead text-body-secondary mb-4 mx-auto" style="max-width: 500px;">
-          Let's discuss how our comprehensive data solutions can drive your business forward.
-        </p>
-        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-          <NuxtLink to="/contact" class="btn btn-primary btn-lg px-4">
-            <i class="bi-telephone-fill me-2"></i>
-            Get Started Today
-          </NuxtLink>
-          <NuxtLink to="/about" class="btn btn-outline-primary btn-lg px-4">
-            Learn More About Us
-          </NuxtLink>
+    <section class="cta-section position-relative py-5 my-5 overflow-hidden">
+      <div class="container position-relative" style="z-index: 10;">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-5 fw-bold text-white mb-4">
+              Ready to Transform Your Data?
+            </h2>
+            <p class="lead text-white text-opacity-90 mb-5">
+              Let's discuss how our comprehensive data solutions can drive your business forward. Our team is ready to help you unlock the full potential of your data.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+              <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
+                <i class="bi bi-telephone-fill me-2"></i>
+                Get Started Today
+              </NuxtLink>
+              <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
+                Learn More About Us
+              </NuxtLink>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,6 +167,8 @@
 
 <script setup>
 import { useHead } from '#imports'
+import { h } from 'vue'
+
 const { t, locale } = useI18n();
 
 useHead({
@@ -102,151 +181,566 @@ useHead({
   ]
 })
 
+// SVG Icon Components
+const AIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('path', { d: 'M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z', stroke: 'white', 'stroke-width': '2' }),
+  h('path', { d: 'M12 8v8M8 12h8', stroke: 'white', 'stroke-width': '2' })
+])
+
+const DataEngIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('rect', { x: '3', y: '3', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
+  h('rect', { x: '3', y: '10', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
+  h('rect', { x: '3', y: '17', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' })
+])
+
+const CloudIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('path', { d: 'M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z', stroke: 'white', 'stroke-width': '2' })
+])
+
+const SecurityIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('path', { d: 'M12 2L4 7v6c0 4.5 2.5 8.5 8 10 5.5-1.5 8-5.5 8-10V7l-8-5z', stroke: 'white', 'stroke-width': '2' }),
+  h('path', { d: 'M9 12l2 2 4-4', stroke: 'white', 'stroke-width': '2' })
+])
+
+const BIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('rect', { x: '3', y: '3', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
+  h('rect', { x: '14', y: '3', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' }),
+  h('rect', { x: '14', y: '12', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
+  h('rect', { x: '3', y: '16', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' })
+])
+
+const BigDataIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('circle', { cx: '12', cy: '12', r: '3', stroke: 'white', 'stroke-width': '2' }),
+  h('circle', { cx: '12', cy: '12', r: '8', stroke: 'white', 'stroke-width': '2' }),
+  h('path', { d: 'M12 1v6m0 6v6m11-7h-6m-6 0H1', stroke: 'white', 'stroke-width': '2' })
+])
+
+const ProjectIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
+  h('rect', { x: '3', y: '4', width: '18', height: '18', rx: '2', stroke: 'white', 'stroke-width': '2' }),
+  h('path', { d: 'M3 10h18M9 4v6', stroke: 'white', 'stroke-width': '2' }),
+  h('circle', { cx: '8', cy: '15', r: '1.5', fill: 'white' }),
+  h('circle', { cx: '12', cy: '15', r: '1.5', fill: 'white' }),
+  h('circle', { cx: '16', cy: '15', r: '1.5', fill: 'white' })
+])
+
 const services = ref([
   {
-    title: 'Artificial Intelligence (AI)',
-    description: 'Developing intelligent systems that automate processes and provide predictive insights.',
-    icon: 'bi-cpu',
-    category: 'AI & Machine Learning'
+    title: 'AI & Machine Learning',
+    description: 'Deploy intelligent systems that automate processes, predict outcomes, and unlock insights from your data.',
+    svgIcon: AIIcon,
+    gradientClass: 'bg-gradient-primary',
+    features: [
+      'Predictive Analytics',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Deep Learning Models'
+    ],
+    link: '/services/ai'
   },
   {
     title: 'Data Engineering',
-    description: 'Designing and building robust data architectures to ensure seamless data flow and accessibility.',
-    icon: 'bi-diagram-3',
-    category: 'Data Infrastructure'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Implementing advanced security measures to protect data integrity and privacy.',
-    icon: 'bi-shield-check',
-    category: 'Security & Compliance'
-  },
-  {
-    title: 'Business Intelligence (BI)',
-    description: 'Transforming data into actionable insights through advanced analytics and reporting tools.',
-    icon: 'bi-graph-up-arrow',
-    category: 'Analytics & Insights'
-  },
-  {
-    title: 'Big Data',
-    description: 'Leveraging large datasets to uncover trends and patterns that inform strategic decisions.',
-    icon: 'bi-database',
-    category: 'Data Analytics'
+    description: 'Build robust data pipelines and architectures that ensure seamless data flow across your organization.',
+    svgIcon: DataEngIcon,
+    gradientClass: 'bg-gradient-info',
+    features: [
+      'ETL/ELT Pipelines',
+      'Real-time Processing',
+      'Data Lake Design',
+      'Data Quality Management'
+    ],
+    link: '/services/data-engineering'
   },
   {
     title: 'Cloud Computing',
-    description: 'Providing scalable and flexible cloud solutions that enhance collaboration and efficiency.',
-    icon: 'bi-cloud-check',
-    category: 'Cloud Solutions'
+    description: 'Migrate and optimize your infrastructure with scalable cloud solutions from AWS, Azure, and GCP.',
+    svgIcon: CloudIcon,
+    gradientClass: 'bg-gradient-success',
+    features: [
+      'Cloud Migration',
+      'Serverless Architecture',
+      'Cost Optimization',
+      'Multi-Cloud Strategy'
+    ],
+    link: '/services/cloud'
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Protect your data assets with enterprise-grade security solutions and compliance frameworks.',
+    svgIcon: SecurityIcon,
+    gradientClass: 'bg-gradient-danger',
+    features: [
+      'Threat Detection & Response',
+      'Compliance Management',
+      '24/7 Security Monitoring',
+      'Penetration Testing'
+    ],
+    link: '/services/security'
+  },
+  {
+    title: 'Business Intelligence',
+    description: 'Transform raw data into actionable insights with interactive dashboards and strategic reports.',
+    svgIcon: BIIcon,
+    gradientClass: 'bg-gradient-warning',
+    features: [
+      'Interactive Dashboards',
+      'KPI Monitoring',
+      'Strategic Reporting',
+      'Self-Service Analytics'
+    ],
+    link: '/services/bi'
+  },
+  {
+    title: 'Big Data Solutions',
+    description: 'Process and analyze massive datasets with distributed computing and advanced analytics platforms.',
+    svgIcon: BigDataIcon,
+    gradientClass: 'bg-gradient-purple',
+    features: [
+      'Distributed Processing',
+      'Spark & Hadoop Ecosystems',
+      'Data Lake Architecture',
+      'Stream Processing'
+    ],
+    link: '/services/bigdata'
   },
   {
     title: 'Project Management',
-    description: 'Ensuring successful project delivery through meticulous planning and execution.',
-    icon: 'bi-kanban',
-    category: 'Management & Strategy'
+    description: 'Ensure successful project delivery through meticulous planning, execution, and stakeholder alignment.',
+    svgIcon: ProjectIcon,
+    gradientClass: 'bg-gradient-dark',
+    features: [
+      'Agile & Scrum Delivery',
+      'Stakeholder Management',
+      'End-to-End Execution',
+      'Risk Mitigation'
+    ],
+    link: '/services/project-management'
   }
 ]);
 
 const approachSteps = ref([
   {
     title: 'Discovery',
-    description: 'Understanding your business challenges and objectives.'
+    description: 'Understanding your business challenges, goals, and technical requirements.',
+    icon: 'bi-search'
   },
   {
     title: 'Design',
-    description: 'Crafting customized solutions that address your specific needs.'
+    description: 'Crafting customized solutions that address your specific needs and objectives.',
+    icon: 'bi-palette'
   },
   {
     title: 'Development',
-    description: 'Building and implementing the solution with precision.'
+    description: 'Building and implementing the solution with precision and best practices.',
+    icon: 'bi-code-slash'
   },
   {
     title: 'Deployment',
-    description: 'Ensuring smooth integration and adoption.'
+    description: 'Ensuring smooth integration, testing, and adoption across your organization.',
+    icon: 'bi-rocket-takeoff'
   },
   {
     title: 'Support',
-    description: 'Providing ongoing assistance to ensure sustained success.'
+    description: 'Providing ongoing assistance, monitoring, and optimization for sustained success.',
+    icon: 'bi-headset'
   }
 ]);
 
 </script>
 
 <style scoped>
-/* Service Card Hover Effects */
+/* ================================
+   HERO SECTION STYLES
+   ================================ */
+
+.hero-section {
+  min-height: 70vh;
+  padding-top: 80px;
+  position: relative;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+}
+
+/* Animated Background Shapes */
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.hero-shape-1 {
+  width: 300px;
+  height: 300px;
+  background: white;
+  top: 10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.hero-shape-2 {
+  width: 400px;
+  height: 400px;
+  background: white;
+  top: 30%;
+  right: -10%;
+  animation-delay: 5s;
+}
+
+.hero-shape-3 {
+  width: 250px;
+  height: 250px;
+  background: white;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pulse Animation */
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+/* Backdrop Blur */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Wave SVG */
+.wave-svg {
+  width: 100%;
+  height: 80px;
+  fill: var(--bs-body-bg);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Buttons */
+.hero-section .btn-light {
+  background: white;
+  color: #667eea;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  color: #667eea;
+}
+
+.hero-section .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* ================================
+   SERVICE CARDS
+   ================================ */
+
 .service-card {
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  background: var(--bs-body-bg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Icon Wrapper Animation */
-.service-icon-wrapper {
-  transition: all 0.3s ease-in-out;
+/* Icon Wrapper */
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-icon-wrapper {
-  transform: scale(1.05);
-  background: rgba(139, 92, 246, 0.15) !important;
+.service-card:hover .icon-wrapper {
+  transform: scale(1.1);
 }
 
-/* Badge hover effect */
-.service-card .badge {
-  transition: all 0.3s ease-in-out;
+/* Gradient Classes */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.service-card:hover .badge {
-  background: rgba(139, 92, 246, 0.15) !important;
-  color: var(--bs-primary) !important;
+.bg-gradient-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 }
 
-/* Dark mode compatibility */
+.bg-gradient-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+/* Button Link */
+.btn-link {
+  color: #8b5cf6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-link:hover {
+  color: #7c3aed;
+  gap: 0.75rem;
+}
+
+/* ================================
+   APPROACH SECTION
+   ================================ */
+
+.approach-card {
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.approach-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* ================================
+   CTA SECTION
+   ================================ */
+
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 100px 0;
+}
+
+.cta-section .btn-light {
+  background: white;
+  color: #667eea;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  color: #667eea;
+}
+
+.cta-section .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* ================================
+   DARK MODE SUPPORT
+   ================================ */
+
 :global([data-bs-theme="dark"]) .service-card {
-  background: var(--bs-dark) !important;
-  border: 1px solid rgba(139, 92, 246, 0.1) !important;
+  background: #1a1a1a !important;
+  border: 1px solid rgba(139, 92, 246, 0.2) !important;
 }
 
 :global([data-bs-theme="dark"]) .service-card:hover {
-  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.15) !important;
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
 }
 
-:global([data-bs-theme="dark"]) .service-icon-wrapper {
-  background: rgba(139, 92, 246, 0.1) !important;
+:global([data-bs-theme="dark"]) .approach-card {
+  background: #1a1a1a !important;
 }
 
-:global([data-bs-theme="dark"]) .service-card:hover .service-icon-wrapper {
-  background: rgba(139, 92, 246, 0.2) !important;
+:global([data-bs-theme="dark"]) .wave-svg {
+  fill: #0f0f0f;
 }
 
-/* Enhanced accessibility */
-.service-card:focus-visible {
-  outline: 2px solid var(--bs-primary);
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 60vh;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 50vh;
+  }
+
+  .display-3 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .hero-shape {
+    display: none;
+  }
+
+  .wave-svg {
+    height: 50px;
+  }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.service-card:focus-visible,
+.approach-card:focus-visible {
+  outline: 2px solid #8b5cf6;
   outline-offset: 2px;
 }
 
-/* Responsive hover effects - disable on touch devices */
-@media (hover: none) {
-  .service-card:hover {
-    transform: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  }
+/* ================================
+   UTILITIES
+   ================================ */
+
+.rounded-4 {
+  border-radius: 1rem !important;
 }
 
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .service-card,
-  .service-icon-wrapper,
-  .badge {
-    transition: none !important;
-  }
-}
-
-/* Navbar spacing for pages without hero section */
-.mt-navbar {
-  padding-top: 120px;
+.fs-lg {
+  font-size: 1.125rem;
 }
 </style>
