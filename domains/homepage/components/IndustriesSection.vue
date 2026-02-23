@@ -2,14 +2,6 @@
   <!-- Industries Section - Clean Modern Design -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <!-- Section Header using shared component -->
-      <SectionHeader
-        title="Industries We Serve"
-        subtitle="Specialized expertise across diverse sectors and business domains"
-        headingSize="h1"
-        maxWidth="700px"
-      />
-
       <!-- Industries Grid using IndustryCard -->
       <div class="row g-4">
         <div class="col-md-6 col-lg-4" v-for="industry in industries" :key="industry.title">
@@ -28,7 +20,6 @@
 </template>
 
 <script setup>
-import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import IndustryCard from '~/components/shared/cards/IndustryCard.vue'
 
 const industries = [

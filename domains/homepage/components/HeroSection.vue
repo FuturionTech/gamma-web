@@ -50,10 +50,6 @@
               Get In Touch
               <i class="bi bi-arrow-right ms-2"></i>
             </a>
-            <a href="#demo" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
-              <i class="bi bi-play-circle me-2"></i>
-              Watch Demo
-            </a>
           </div>
 
           <!-- Trust Indicators -->
@@ -236,21 +232,6 @@
   60% {
     transform: translateY(-5px) translateX(-50%);
   }
-}
-
-/* Button Outline */
-.btn-outline-light {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 /* Responsive */
