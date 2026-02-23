@@ -172,6 +172,6 @@ When referencing Around Bootstrap template designs:
 
 ## Contact Information
 - **Company**: Gamma Neutral Consulting Inc.
-- **Location**: 108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada
+- **Location**: Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada
 - **Email**: info@gammaneutral.ca
 - **Phone**: TBD (to be added when available)

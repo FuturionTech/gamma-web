@@ -241,7 +241,7 @@
               <ul>
                 <li><strong>Email:</strong> <a href="mailto:privacy@gammaneutral.ca">privacy@gammaneutral.ca</a></li>
                 <li><strong>Phone:</strong> <a href="tel:+14165551234">+1 (416) 555-1234</a></li>
-                <li><strong>Mail:</strong> 108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada</li>
+                <li><strong>Mail:</strong> Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada</li>
               </ul>
               <p>We will respond to your request within 30 days. In some cases, we may need to verify your identity before processing your request.</p>
             </section>
@@ -285,7 +285,7 @@
               <h3 class="subsection-title">Privacy Officer</h3>
               <p><strong>Company Name:</strong> Gamma Neutral Consulting Inc.</p>
               <p><strong>Mailing Address:</strong><br>
-                108 Redpath Ave, Suite 19<br>
+                Redpath Ave, Suite 19<br>
                 Toronto, ON M4S 2J7<br>
                 Canada
               </p>

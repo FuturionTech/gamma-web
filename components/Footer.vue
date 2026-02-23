@@ -134,7 +134,7 @@
             <div class="d-flex align-items-start mb-2">
               <i class="bi bi-geo-alt-fill text-primary me-2 mt-1"></i>
               <small class="text-light">
-                108 Redpath Ave, Suite 19<br>Toronto, ON M4S 2J7<br>Canada
+                Redpath Ave, Suite 19<br>Toronto, ON M4S 2J7<br>Canada
               </small>
             </div>
             <div class="d-flex align-items-center">

@@ -39,7 +39,7 @@
     "company": {
       "title": "Aperçu de l'Entreprise",
       "name": "Gamma Neutral Consulting Inc.",
-      "location": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+      "location": "Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
       "incorporated": "16 juin 2025",
       "slogan": "Vos Solutions de Données"
     }
@@ -64,7 +64,7 @@
   },
   "footer": {
     "company": "Gamma Neutral Consulting Inc.",
-    "address": "108 Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "address": "Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
     "rights_reserved": "© 2025 Gamma Neutral Consulting Inc. Tous droits réservés."
   },
   "meta": {

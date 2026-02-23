@@ -56,9 +56,9 @@
                   </div>
                   <h3 class="h5 mb-0">Office</h3>
                 </div>
-                <p class="mb-2">108 Redpath Ave, Suite 19</p>
+                <p class="mb-2">Redpath Ave, Suite 19</p>
                 <p class="mb-3">Toronto, ON M4S 2J7, Canada</p>
-                <a href="https://www.google.com/maps/place/108+Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
+                <a href="https://www.google.com/maps/place/Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
                   <i class="bi bi-map me-1"></i> Get Directions
                 </a>
               </div>
@@ -112,7 +112,7 @@
     <section class="position-relative">
       <div class="ratio ratio-21x9">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5771935582853!2d-79.39169842346238!3d43.70667535109786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32d6e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2s108%20Redpath%20Ave%2C%20Toronto%2C%20ON%20M4S%202J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1634567890123!5m2!1sen!2sca"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5771935582853!2d-79.39169842346238!3d43.70667535109786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32d6e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sRedpath%20Ave%2C%20Toronto%2C%20ON%20M4S%202J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1634567890123!5m2!1sen!2sca"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
