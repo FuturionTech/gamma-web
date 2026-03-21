@@ -138,7 +138,7 @@
     "title": "Contact Us",
     "subtitle": "We would love to hear from you. Here's how you can reach us.",
     "address_title": "Address",
-    "address_text": "Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "address_text": "Redpath Avenue, Toronto, ON M4S 2J7, Canada",
     "get_directions": "Get Directions",
     "phone_title": "Phone",
     "email_title": "Email",
@@ -154,7 +154,7 @@
     "company": {
       "title": "Company Overview",
       "name": "Gamma Neutral Consulting Inc.",
-      "location": "Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+      "location": "Redpath Avenue, Toronto, ON M4S 2J7, Canada",
       "incorporated": "June 16, 2025",
       "slogan": "Your Data Solutions"
     },
@@ -267,7 +267,7 @@
   },
   "footer": {
     "company": "Gamma Neutral Consulting Inc.",
-    "address": "Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada",
+    "address": "Redpath Avenue, Toronto, ON M4S 2J7, Canada",
     "services": "Services",
     "about": "About Us",
     "careers": "Careers",

@@ -9,7 +9,7 @@
 **🧭 Company Overview**
 
 - **Name:** Gamma Neutral Consulting Inc.
-- **Location:** Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada
+- **Location:** Redpath Avenue, Toronto, ON M4S 2J7, Canada
 - **Incorporated:** June 16, 2025
 - **Website:** <https://www.canadacompanyregistry.com/company?utm_source=gamma-neutral-consulting-inc>
 
@@ -80,4 +80,4 @@ e.g. <https://bridgeatlantic.com/pages/careers>
 
 - **Email:**
 - **Phone:**
-- **Address:** Redpath Ave, Suite 19, Toronto, ON M4S 2J7
+- **Address:** Redpath Avenue, Toronto, ON M4S 2J7

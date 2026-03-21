@@ -56,7 +56,7 @@
                   </div>
                   <h3 class="h5 mb-0">Office</h3>
                 </div>
-                <p class="mb-2">Redpath Ave, Suite 19</p>
+                <p class="mb-2">Redpath Avenue</p>
                 <p class="mb-3">Toronto, ON M4S 2J7, Canada</p>
                 <a href="https://www.google.com/maps/place/Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
                   <i class="bi bi-map me-1"></i> Get Directions

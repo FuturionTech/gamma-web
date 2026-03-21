@@ -78,7 +78,7 @@
                     <i class="bi bi-pin-map text-primary me-3 mt-1"></i>
                     <div>
                       <small class="text-muted d-block">Headquarters</small>
-                      <strong class="fs-6">Redpath Ave, Suite 19<br/>Toronto, ON M4S 2J7</strong>
+                      <strong class="fs-6">Redpath Avenue<br/>Toronto, ON M4S 2J7</strong>
                     </div>
                   </div>
                 </div>

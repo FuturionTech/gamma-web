@@ -518,7 +518,7 @@
               </p>
               <p>
                 <strong>Gamma Neutral Consulting Inc.</strong><br>
-                Redpath Ave, Suite 19<br>
+                Redpath Avenue<br>
                 Toronto, ON M4S 2J7, Canada<br>
                 Email: <a href="mailto:legal@gammaneutral.ca">legal@gammaneutral.ca</a>
               </p>
@@ -537,7 +537,7 @@
               </p>
               <p>
                 <strong>Email:</strong> <a href="mailto:legal@gammaneutral.ca">legal@gammaneutral.ca</a><br>
-                <strong>Mail:</strong> Redpath Ave, Suite 19, Toronto, ON M4S 2J7, Canada
+                <strong>Mail:</strong> Redpath Avenue, Toronto, ON M4S 2J7, Canada
               </p>
               <p style="margin-top: 2rem;">
                 <strong>Acknowledgment:</strong> By using our services, you acknowledge that you have read these Terms and Conditions, understand them, and agree to be bound by them. If you are entering into these Terms on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
