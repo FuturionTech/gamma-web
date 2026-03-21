@@ -19,7 +19,7 @@
           </div>
           <h3 class="h5">Can't find the answer you're looking for?</h3>
           <p class="mb-sm-4">Reach out to our team and we'll get back to you as soon as possible.</p>
-          <NuxtLink class="btn btn-primary" to="/contact">Contact Us</NuxtLink>
+          <NuxtLink class="btn btn-primary" to="/contact">Book a Discovery Call</NuxtLink>
         </div>
         <div class="col-md-8 col-lg-7">
           <div class="ps-md-3 ps-lg-4 ps-xl-5">

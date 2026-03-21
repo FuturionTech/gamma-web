@@ -25,7 +25,7 @@
             :icon="industry.icon"
             :iconColor="industry.iconColor"
             :link="industry.link"
-            linkText="Learn more"
+            linkText="Talk to a Specialist"
           />
         </div>
       </div>

@@ -227,12 +227,12 @@
       <div class="container py-4">
         <div class="row align-items-center">
           <div class="col-lg-8 mb-4 mb-lg-0">
-            <h2 class="display-5 fw-bold mb-3">{{ solution?.cta?.title ?? 'Get Started' }}</h2>
-            <p class="fs-lg mb-0 text-white-50">{{ solution?.cta?.description ?? 'Contact us to learn more about this solution.' }}</p>
+            <h2 class="display-5 fw-bold mb-3">{{ solution?.cta?.title ?? 'Ready to Move Forward?' }}</h2>
+            <p class="fs-lg mb-0 text-white-50">{{ solution?.cta?.description ?? 'Tell us about your challenge and we will outline a practical path forward.' }}</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <NuxtLink to="/contact" class="btn btn-primary btn-lg px-5">
-              {{ solution?.cta?.buttonText ?? 'Contact Us' }}
+              {{ solution?.cta?.buttonText ?? 'Discuss Your Project' }}
               <i class="bi bi-arrow-right ms-2"></i>
             </NuxtLink>
           </div>
@@ -280,9 +280,9 @@ onMounted(async () => {
         technologies: [],
         processSteps: [],
         cta: {
-          title: 'Get Started',
-          description: 'Contact us to learn more about this solution.',
-          buttonText: 'Contact Us',
+          title: 'Ready to Move Forward?',
+          description: 'Tell us about your challenge and we will outline a practical path forward.',
+          buttonText: 'Discuss Your Project',
         },
       }
 

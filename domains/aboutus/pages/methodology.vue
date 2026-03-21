@@ -425,7 +425,7 @@
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
             <NuxtLink to="/contact" class="btn btn-primary btn-lg px-5">
-              Get Started
+              Discuss Your Project
               <i class="bi bi-arrow-right ms-2"></i>
             </NuxtLink>
             <NuxtLink to="/solutions" class="btn btn-outline-light btn-lg px-5">

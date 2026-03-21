@@ -146,7 +146,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Ready to Transform Your Financial Operations?',
       description: 'Discover how our data solutions can help you make smarter financial decisions.',
-      buttonText: 'Schedule a Consultation'
+      buttonText: 'Discuss Your Project'
     }
   },
   {
@@ -256,7 +256,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Transform Healthcare with Data',
       description: 'Learn how our analytics solutions can improve patient care and operational efficiency.',
-      buttonText: 'Get Started'
+      buttonText: 'Discuss Your Project'
     }
   },
   {
@@ -366,7 +366,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Revolutionize Your Retail Strategy',
       description: 'Discover how data intelligence can transform your retail business.',
-      buttonText: 'Learn More'
+      buttonText: 'Discuss Your Project'
     }
   },
   {
@@ -476,7 +476,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Build a Smarter Government',
       description: 'Learn how data analytics can transform public services.',
-      buttonText: 'Explore Solutions'
+      buttonText: 'Talk to a Specialist'
     }
   },
   {
@@ -586,7 +586,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Modernize Your Manufacturing',
       description: 'Discover how Industry 4.0 solutions can transform your operations.',
-      buttonText: 'Request Demo'
+      buttonText: 'Talk to a Specialist'
     }
   },
   {
@@ -696,7 +696,7 @@ export const solutions: Solution[] = [
     cta: {
       title: 'Transform Education with Data',
       description: 'Learn how analytics can improve educational outcomes.',
-      buttonText: 'Discover More'
+      buttonText: 'Discuss Your Project'
     }
   }
 ]

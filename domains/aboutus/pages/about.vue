@@ -336,15 +336,15 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="h2 fw-bold text-white mb-3">
-              Ready to transform your data?
+              Ready to move forward?
             </h2>
             <p class="fs-6 text-white-50 mb-4">
-              Let's discuss how we can help unlock the full potential of your data.
+              Every engagement starts with a conversation. Tell us about your data challenges.
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
               <NuxtLink to="/contact" class="btn btn-white btn-lg px-4 py-2 shadow">
                 <i class="bi bi-calendar-check me-2"></i>
-                Schedule Consultation
+                Schedule a Consultation
               </NuxtLink>
               <NuxtLink to="/services" class="btn btn-outline-light btn-lg px-4 py-2">
                 <i class="bi bi-grid-3x3-gap me-2"></i>

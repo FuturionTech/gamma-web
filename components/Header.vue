@@ -32,14 +32,14 @@
           <LanguageSelector class="me-3"/>
           <NuxtLink class="btn btn-primary" to="/contact">
             <i class="ai-phone-call fs-sm me-2"></i>
-            Contact Us
+            Book a Call
           </NuxtLink>
         </div>
         <!-- Mobile CTA -->
         <div class="d-lg-none p-3 mt-n3">
           <NuxtLink class="btn btn-primary w-100" to="/contact">
             <i class="ai-phone-call fs-xl me-2 ms-n1"></i>
-            Contact Us
+            Book a Call
           </NuxtLink>
         </div>
       </nav>
