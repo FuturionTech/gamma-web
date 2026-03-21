@@ -48,7 +48,7 @@
           <div class="row align-items-center">
             <div class="col-lg-8">
               <h1 class="display-3 fw-bold mb-4">{{ solution?.title }}</h1>
-              <p class="fs-5 text-white-50 mb-5">{{ solution?.subtitle }}</p>
+              <p class="fs-5 text-white text-opacity-75 mb-5">{{ solution?.subtitle }}</p>
 
               <!-- Key Features Grid -->
               <div class="row g-4">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="ps-3">
                       <h5 class="mb-1 text-white">{{ feature.title }}</h5>
-                      <p class="mb-0 text-white-50 fs-sm">{{ feature.description }}</p>
+                      <p class="mb-0 text-white text-opacity-75 fs-sm">{{ feature.description }}</p>
                     </div>
                   </div>
                 </div>
@@ -228,7 +228,7 @@
         <div class="row align-items-center">
           <div class="col-lg-8 mb-4 mb-lg-0">
             <h2 class="display-5 fw-bold mb-3">{{ solution?.cta?.title ?? 'Ready to Move Forward?' }}</h2>
-            <p class="fs-lg mb-0 text-white-50">{{ solution?.cta?.description ?? 'Tell us about your challenge and we will outline a practical path forward.' }}</p>
+            <p class="fs-lg mb-0 text-white text-opacity-75">{{ solution?.cta?.description ?? 'Tell us about your challenge and we will outline a practical path forward.' }}</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <NuxtLink to="/contact" class="btn btn-primary btn-lg px-5">
