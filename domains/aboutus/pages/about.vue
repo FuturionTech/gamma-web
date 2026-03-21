@@ -362,9 +362,31 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers } from '~/domains/aboutus/data/team'
+import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
+import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
 
-const founder = teamMembers[0]
+const aboutStore = useAboutusStore()
+
+onMounted(async () => {
+  await aboutStore.fetchTeams(1)
+})
+
+// Prefer API data for the founder, fall back to static
+const founder = computed(() => {
+  if (aboutStore.teams.length > 0) {
+    const m = aboutStore.teams[0]
+    return {
+      name: m.name,
+      role: m.role,
+      bio: m.biography || '',
+      image: m.profile_picture_url || staticTeamMembers[0].image,
+      socialLinks: {
+        linkedin: m.socialMediaLinks?.find(l => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
+      },
+    }
+  }
+  return staticTeamMembers[0]
+})
 
 // SEO
 useHead({
