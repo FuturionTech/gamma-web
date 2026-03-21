@@ -58,7 +58,7 @@
     <!-- Company Overview -->
     <section class="py-5">
       <div class="container py-4">
-        <div class="row align-items-center g-5" data-aos="fade-up">
+        <div class="row align-items-center g-5">
           <div class="col-lg-6">
             <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
               <i class="bi bi-building me-2"></i>Who We Are
@@ -108,7 +108,7 @@
 
     <!-- How We Work -->
     <section class="py-5 bg-light">
-      <div class="container py-4" data-aos="fade-up">
+      <div class="container py-4">
         <div class="text-center mb-4">
           <h2 class="h2 fw-bold mb-3">How We Work</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
@@ -186,7 +186,7 @@
 
     <!-- Founder Section -->
     <section class="py-5">
-      <div class="container py-4" data-aos="fade-up">
+      <div class="container py-4">
         <div class="text-center mb-4">
           <h2 class="h2 fw-bold mb-3">Leadership</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
