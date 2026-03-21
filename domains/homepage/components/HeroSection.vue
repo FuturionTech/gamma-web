@@ -28,33 +28,37 @@
           <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
             <span class="badge bg-secondary text-white px-4 py-2 rounded-pill">
               <span class="pulse-dot me-2"></span>
-              Your Data Solutions
+              AI &amp; Data Consulting | Toronto
             </span>
           </div>
 
           <!-- Main Heading -->
           <h1 class="display-hero text-white mb-4 animate-fade-in-up">
-            Transform Your Data<br/>
-            Into <span class="text-secondary">Strategic Insights</span>
+            Your Data Has Answers.<br/>
+            We Ask the <span class="text-secondary">Right Questions.</span>
           </h1>
 
           <!-- Subheading -->
           <p class="lead text-professional text-white opacity-75 mb-5 animate-fade-in-up animation-delay-1">
-            At Gamma Neutral Consulting, we empower businesses to harness the full potential of their data.
-            We deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence.
+            Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies
+            to design AI systems, data architectures, and analytics platforms that solve specific business
+            problems — not just generate dashboards.
           </p>
 
           <!-- CTA Buttons -->
           <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5 animate-fade-in-up animation-delay-2">
             <a href="/contact" class="btn btn-secondary btn-lg px-5 py-3 rounded-pill">
-              Get In Touch
+              Book a Discovery Call
               <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
+              See How We Work
             </a>
           </div>
 
           <!-- Trust Indicators -->
           <div class="animate-fade-in-up animation-delay-3">
-            <p class="text-white-50 mb-3">Toronto-based data consulting firm</p>
+            <p class="text-white-50 mb-3">Toronto-based AI &amp; data consulting firm</p>
           </div>
         </div>
 
