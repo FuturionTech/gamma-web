@@ -1,13 +1,13 @@
 <template>
   <li class="nav-item">
-    <NuxtLink class="nav-link fw-semibold" to="/">
-      {{ $t('header.home') }}
+    <NuxtLink class="nav-link fw-semibold" to="/services">
+      Services
     </NuxtLink>
   </li>
 </template>
 
 <script setup>
-// Removed useLocalePath as it's not needed with current routing setup
+// Primary nav link — links to services page
 </script>
 
 <style scoped>
