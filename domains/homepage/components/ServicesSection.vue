@@ -21,7 +21,7 @@
 
       <!-- Services Grid -->
       <div v-else class="row g-4">
-        <div class="col-lg-4 col-md-6" v-for="(service, index) in displayServices" :key="service.title" data-aos="fade-up" :data-aos-delay="index * 100">
+        <div class="col-lg-4 col-md-6" v-for="(service, index) in displayServices" :key="service.title">
           <ServiceCard
             :title="service.title"
             :description="service.description"

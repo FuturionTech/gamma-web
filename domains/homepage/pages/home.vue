@@ -7,73 +7,63 @@
     <TechPartnersBar/>
 
     <!-- Core Services - Professional spacing -->
-    <div data-aos="fade-up">
-      <SectionWrapper
-        spacing="lg"
-        backgroundColor="transparent"
-        has-header
-        header-width="lg"
-        :debug-mode="debugMode"
-      >
-        <template #header>
-          <h2 class="h1 mb-4">What We Do</h2>
-          <p class="fs-lg text-muted mb-0">
-            Focused consulting in AI, data engineering, and cloud — from strategy to production
-          </p>
-        </template>
-        <ServicesSection/>
-      </SectionWrapper>
-    </div>
+    <SectionWrapper
+      spacing="lg"
+      backgroundColor="transparent"
+      has-header
+      header-width="lg"
+      :debug-mode="debugMode"
+    >
+      <template #header>
+        <h2 class="h1 mb-4">What We Do</h2>
+        <p class="fs-lg text-muted mb-0">
+          Focused consulting in AI, data engineering, and cloud — from strategy to production
+        </p>
+      </template>
+      <ServicesSection/>
+    </SectionWrapper>
 
     <!-- Benefits Section - Light background -->
-    <div data-aos="fade-up">
-      <SectionWrapper
-        spacing="lg"
-        backgroundColor="light"
-        has-header
-        header-width="lg"
-        :debug-mode="debugMode"
-      >
-        <template #header>
-          <h2 class="h1 mb-4">Why Choose Gamma Neutral</h2>
-          <p class="fs-lg text-muted mb-0">
-            Experience the advantages of working with a dedicated data consulting firm
-          </p>
-        </template>
-        <BenefitsSection/>
-      </SectionWrapper>
-    </div>
+    <SectionWrapper
+      spacing="lg"
+      backgroundColor="light"
+      has-header
+      header-width="lg"
+      :debug-mode="debugMode"
+    >
+      <template #header>
+        <h2 class="h1 mb-4">Why Choose Gamma Neutral</h2>
+        <p class="fs-lg text-muted mb-0">
+          Experience the advantages of working with a dedicated data consulting firm
+        </p>
+      </template>
+      <BenefitsSection/>
+    </SectionWrapper>
 
     <!-- Statistics section removed - company is newly incorporated -->
 
     <!-- Our Process - Clean white -->
-    <div data-aos="fade-up">
-      <ProcessSection/>
-    </div>
+    <ProcessSection/>
 
     <!-- Industries We Serve - Subtle background -->
-    <div data-aos="fade-up">
-      <SectionWrapper
-        spacing="lg"
-        backgroundColor="light"
-        has-header
-        header-width="lg"
-        :debug-mode="debugMode"
-      >
-        <template #header>
-          <h2 class="h1 mb-4">Industries We Serve</h2>
-          <p class="fs-lg text-muted mb-0">
-            Deep domain expertise in regulated, data-intensive sectors
-          </p>
-        </template>
-        <IndustriesSection/>
-      </SectionWrapper>
-    </div>
+    <SectionWrapper
+      spacing="lg"
+      backgroundColor="light"
+      has-header
+      header-width="lg"
+      :debug-mode="debugMode"
+    >
+      <template #header>
+        <h2 class="h1 mb-4">Industries We Serve</h2>
+        <p class="fs-lg text-muted mb-0">
+          Deep domain expertise in regulated, data-intensive sectors
+        </p>
+      </template>
+      <IndustriesSection/>
+    </SectionWrapper>
 
     <!-- Final Call to Action -->
-    <div data-aos="fade-up">
-      <CTASection/>
-    </div>
+    <CTASection/>
   </div>
 </template>
 

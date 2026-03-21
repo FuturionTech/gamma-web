@@ -84,20 +84,21 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* Service Card — Dark Navy */
+/* Service Card — Light theme (works on light backgrounds) */
 .service-card {
-  background: #1a1a2e;
-  border: 1px solid rgba(139, 92, 246, 0.08) !important;
+  background: #ffffff;
+  border: 1px solid #e5e7eb !important;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .service-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(139, 92, 246, 0.35) !important;
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.15) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
 }
 
 /* Icon Wrapper — Purple accent */
@@ -108,23 +109,23 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(139, 92, 246, 0.1);
   color: #8b5cf6;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .service-card:hover .icon-wrapper {
   transform: scale(1.08);
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.2);
 }
 
 /* Text Colors */
 .card-title-text {
-  color: #ffffff;
+  color: #1f2937;
 }
 
 .card-desc-text {
-  color: rgba(255, 255, 255, 0.6);
+  color: #6b7280;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -135,7 +136,7 @@ const props = defineProps({
 }
 
 .feature-text {
-  color: rgba(255, 255, 255, 0.7);
+  color: #4b5563;
 }
 
 /* Button Link */
@@ -147,19 +148,36 @@ const props = defineProps({
 }
 
 .btn-link:hover {
-  color: #a78bfa;
+  color: #7c3aed;
   gap: 0.75rem;
 }
 
-/* Dark Mode Support — cards are already dark, just refine */
+/* Dark Mode Support */
 :global([data-bs-theme="dark"]) .service-card {
-  background: #111122;
+  background: #1a1a2e;
   border-color: rgba(139, 92, 246, 0.12) !important;
+  box-shadow: none;
 }
 
 :global([data-bs-theme="dark"]) .service-card:hover {
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.2) !important;
   border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+:global([data-bs-theme="dark"]) .card-title-text {
+  color: #ffffff;
+}
+
+:global([data-bs-theme="dark"]) .card-desc-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:global([data-bs-theme="dark"]) .feature-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:global([data-bs-theme="dark"]) .icon-wrapper {
+  background: rgba(139, 92, 246, 0.15);
 }
 
 /* Accessibility */
