@@ -341,7 +341,9 @@ useHead({
 /* Capability Card Hover */
 .capability-card {
   transition: all 0.3s ease;
-  border: 1px solid transparent !important;
+  border: 1px solid var(--bs-border-color, transparent) !important;
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, inherit);
 }
 
 .capability-card:hover {
@@ -353,7 +355,9 @@ useHead({
 /* Team Card Hover */
 .team-card {
   transition: all 0.3s ease;
-  border: 1px solid transparent !important;
+  border: 1px solid var(--bs-border-color, transparent) !important;
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, inherit);
 }
 
 .team-card:hover {

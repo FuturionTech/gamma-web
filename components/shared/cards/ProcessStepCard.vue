@@ -1,5 +1,5 @@
 <template>
-  <div class="process-step-card card h-100 p-4 rounded-4 border-0 shadow-sm">
+  <div class="process-step-card card h-100 p-4 rounded-4 shadow-sm">
     <!-- Number Badge -->
     <div class="step-number-wrapper mx-auto mb-4" :class="badgeColorClass">
       <span class="fw-bold text-white">{{ stepNumber }}</span>

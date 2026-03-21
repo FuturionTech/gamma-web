@@ -224,9 +224,11 @@ const handleSubmit = async () => {
 /* Clean form styles */
 .form-control,
 .form-select {
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--bs-border-color, #dee2e6);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, #212529);
 }
 
 .form-control:focus,
@@ -239,7 +241,7 @@ const handleSubmit = async () => {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 0.125rem;
-  border: 2px solid #dee2e6;
+  border: 2px solid var(--bs-border-color, #dee2e6);
   transition: all 0.3s ease;
 }
 
@@ -278,7 +280,7 @@ const handleSubmit = async () => {
 .form-label {
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #495057;
+  color: var(--bs-body-color, #495057);
 }
 
 /* Validation */
@@ -296,15 +298,15 @@ const handleSubmit = async () => {
 }
 
 .alert-success {
-  background-color: #d1fae5;
-  color: #065f46;
-  border: 1px solid #a7f3d0;
+  background-color: var(--bs-success-bg-subtle, #d1fae5);
+  color: var(--bs-success-text-emphasis, #065f46);
+  border: 1px solid var(--bs-success-border-subtle, #a7f3d0);
 }
 
 .alert-danger {
-  background-color: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
+  background-color: var(--bs-danger-bg-subtle, #fee2e2);
+  color: var(--bs-danger-text-emphasis, #991b1b);
+  border: 1px solid var(--bs-danger-border-subtle, #fecaca);
 }
 
 /* Checkboxes inline layout */

@@ -1,5 +1,5 @@
 <template>
-  <div class="industry-card card h-100 p-4 rounded-4 border-0 shadow-sm">
+  <div class="industry-card card h-100 p-4 rounded-4 shadow-sm">
     <!-- Icon -->
     <div class="industry-icon-wrapper mb-3" :class="iconBgClass">
       <i v-if="icon" :class="`${icon} ${iconColorClass}`"></i>

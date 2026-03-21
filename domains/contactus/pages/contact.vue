@@ -197,6 +197,8 @@ useHead({
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1rem;
+  background-color: var(--bs-body-bg, #ffffff);
+  color: var(--bs-body-color, inherit);
 }
 
 .card:hover {
@@ -206,7 +208,7 @@ useHead({
 
 /* What to Expect Card */
 .what-to-expect-card {
-  background: linear-gradient(180deg, #faf9ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #faf9ff 0%, var(--bs-body-bg, #ffffff) 100%);
   border-left: 3px solid #8b5cf6 !important;
 }
 

@@ -84,10 +84,10 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* Service Card — Light theme (works on light backgrounds) */
+/* Service Card — uses CSS vars for theme-aware colors */
 .service-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb !important;
+  background: var(--bs-body-bg, #ffffff);
+  border: 1px solid var(--bs-border-color, #e5e7eb) !important;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -119,13 +119,13 @@ const props = defineProps({
   background: rgba(139, 92, 246, 0.2);
 }
 
-/* Text Colors */
+/* Text Colors — use CSS vars so they adapt to theme */
 .card-title-text {
-  color: #1f2937;
+  color: var(--bs-heading-color, #1f2937);
 }
 
 .card-desc-text {
-  color: #6b7280;
+  color: var(--bs-secondary-color, #6b7280);
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -136,7 +136,7 @@ const props = defineProps({
 }
 
 .feature-text {
-  color: #4b5563;
+  color: var(--bs-body-color, #4b5563);
 }
 
 /* Button Link */
@@ -154,9 +154,9 @@ const props = defineProps({
 
 /* Dark Mode Support */
 :global([data-bs-theme="dark"]) .service-card {
-  background: #1a1a2e;
+  background: #1a1a2e !important;
   border-color: rgba(139, 92, 246, 0.12) !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 :global([data-bs-theme="dark"]) .service-card:hover {
