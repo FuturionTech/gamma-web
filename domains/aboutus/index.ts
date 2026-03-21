@@ -20,7 +20,7 @@ export default defineNuxtModule({
             {
                 name: 'about-team',
                 path: '/about/team',
-                file: resolve(__dirname, 'pages/team.vue'),
+                redirect: '/about',
             },
             {
                 name: 'about-methodology',

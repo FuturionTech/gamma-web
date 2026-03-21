@@ -26,13 +26,13 @@
             </div>
           </NuxtLink>
 
-          <NuxtLink class="about-dropdown-item" to="/about/team">
+          <NuxtLink class="about-dropdown-item" to="/about#leadership">
             <div class="about-icon-wrapper team">
               <i class="fa fa-users about-icon"></i>
             </div>
             <div class="about-content">
-              <div class="about-title">Leadership Team</div>
-              <div class="about-description">Meet the team behind Gamma Neutral Consulting</div>
+              <div class="about-title">Leadership</div>
+              <div class="about-description">Meet the founder and our growing team</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
