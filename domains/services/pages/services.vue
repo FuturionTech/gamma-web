@@ -90,7 +90,7 @@
 
         <div v-else class="row g-4">
           <!-- Service Cards using shared component -->
-          <div class="col-lg-4 col-md-6" v-for="(service, index) in services" :key="index" data-aos="fade-up" :data-aos-delay="index * 100">
+          <div class="col-lg-4 col-md-6" v-for="(service, index) in services" :key="index">
             <ServiceCard
               :title="service.title"
               :description="service.description"
