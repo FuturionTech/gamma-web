@@ -66,28 +66,9 @@
         <!-- Industries -->
         <div class="col-lg-2 col-md-6">
           <h6 class="text-white fw-bold mb-3">Industries</h6>
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/financial-services">
-                Financial Services
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/healthcare-analytics">
-                Healthcare
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/smart-government">
-                Government &amp; Public Sector
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/retail-intelligence">
-                Retail (Emerging Focus)
-              </NuxtLink>
-            </li>
-          </ul>
+          <p class="text-light small mb-1">Financial Services</p>
+          <p class="text-light small mb-1">Healthcare</p>
+          <p class="text-light small mb-0">Government &amp; Public Sector</p>
         </div>
 
         <!-- Company -->

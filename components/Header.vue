@@ -19,8 +19,9 @@
       <nav class="collapse navbar-collapse" id="navbarNav" ref="navbarNav">
         <ul class="navbar-nav mx-auto" style="--ar-scroll-height: 520px;">
           <HomeMenu/>
-          <SolutionsMenu/>
-          <AboutMenu/>
+          <li class="nav-item">
+            <NuxtLink class="nav-link fw-semibold" to="/about">About</NuxtLink>
+          </li>
           <li class="nav-item">
             <NuxtLink class="nav-link fw-semibold" to="/careers">Careers</NuxtLink>
           </li>
@@ -49,8 +50,6 @@
 
 <script setup>
 import HomeMenu from "./menus/HomeMenu.vue";
-import SolutionsMenu from "./menus/SolutionsMenu.vue";
-import AboutMenu from "./menus/AboutMenu.vue";
 import LanguageSelector from "./selectors/LanguageSelector.vue";
 import ThemeToggle from "./selectors/ThemeToggle.vue";
 import HeaderLogo from "./logo/HeaderLogo.vue";
