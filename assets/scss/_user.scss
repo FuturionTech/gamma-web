@@ -3,14 +3,42 @@
 // Use this to write your custom SCSS
 //
 
+// ====================================
+// Premium Typography
+// ====================================
+
+body {
+  line-height: 1.7;
+}
+
+// Tighter letter-spacing on display headings for premium feel
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  letter-spacing: -0.02em;
+}
+
+// Section padding utility — generous whitespace
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 992px) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+// ====================================
+// Existing Styles
+// ====================================
+
 .text-color-with-states {
     color: $gray-600;
     font-weight: bold;
-  
+
     &:hover {
-      color: rgba($primary, 0.6) !important; // Opacité de 60% au survol
+      color: rgba($primary, 0.6) !important;
     }
-  
+
     &.router-link-active, &.router-link-exact-active {
       color: $primary !important;
     }
