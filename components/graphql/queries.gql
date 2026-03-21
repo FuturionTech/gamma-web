@@ -1,9 +1,0 @@
-
-query GetApplication($id: ID!) {
-  application(id: $id) {
-    information {
-      logoUrl
-      id
-    }
-  }
-}
