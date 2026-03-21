@@ -78,13 +78,10 @@ const isModalOpen = ref(false);
 const currentImageUrl = ref("");
 
 const loadCertifications = async () => {
-  certificationsStore.loading = true; // Assurer que loading est actif
   try {
-    await certificationsStore.getCertifications();
+    await certificationsStore.fetchCertifications();
   } catch (err) {
     // Certifications fetch failed — loading state will show
-  } finally {
-    certificationsStore.loading = false; // Assurer l'arrêt du loading
   }
 };
 

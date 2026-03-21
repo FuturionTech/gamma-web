@@ -34,10 +34,9 @@ export const useContactStore = defineStore('contactStore', {
       this.error = null;
 
       try {
-        const config = useRuntimeConfig();
-        const graphqlEndpoint = config.public.graphqlEndpoint as string;
+        const { mutation } = useGraphql();
 
-        const mutation = `
+        const gqlMutation = `
           mutation CreateContactRequest($input: CreateContactRequestInput!) {
             createContactRequest(input: $input) {
               id
@@ -54,34 +53,18 @@ export const useContactStore = defineStore('contactStore', {
           }
         `;
 
-        const response = await $fetch(graphqlEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
+        const data = await mutation<{ createContactRequest: ContactRequest }>(gqlMutation, {
+          input: {
+            first_name: contactDetails.first_name,
+            last_name: contactDetails.last_name,
+            email: contactDetails.email,
+            phone: contactDetails.phone || null,
+            subject: contactDetails.subject || null,
+            message: contactDetails.message,
           },
-          body: JSON.stringify({
-            query: mutation,
-            variables: {
-              input: {
-                first_name: contactDetails.first_name,
-                last_name: contactDetails.last_name,
-                email: contactDetails.email,
-                phone: contactDetails.phone || null,
-                subject: contactDetails.subject || null,
-                message: contactDetails.message,
-              },
-            },
-          }),
-        }) as any;
+        });
 
-        // Check for GraphQL errors
-        if (response.errors && response.errors.length > 0) {
-          const errorMessage = response.errors.map((err: any) => err.message).join(', ');
-          throw new Error(errorMessage);
-        }
-
-        // Check if the response contains data
-        const contactRequest = response?.data?.createContactRequest;
+        const contactRequest = data.createContactRequest;
         if (!contactRequest) {
           throw new Error('No data returned from the request.');
         }

@@ -87,8 +87,8 @@ const currentfileUrl = ref("");
 
 onMounted(async () => {
   try {
-    certificationsStore.certifications = []; // Réinitialiser les certifications pour forcer le chargement
-    await certificationsStore.getCertifications(); // Charger les certifications à chaque affichage de la page
+    certificationsStore.certifications = [];
+    await certificationsStore.fetchCertifications();
   } catch (err) {
     // Certifications fetch failed — loading state will show
   }
