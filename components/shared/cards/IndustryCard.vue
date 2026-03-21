@@ -91,11 +91,11 @@ const iconColorClass = computed(() => {
 .industry-icon-wrapper {
   width: 56px;
   height: 56px;
-  border-radius: 14px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   transition: transform 0.3s ease;
 }
 

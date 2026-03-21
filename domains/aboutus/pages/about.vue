@@ -121,7 +121,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
-                <div class="icon-wrapper bg-primary bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
+                <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
                   <i class="bi bi-search text-primary fs-4"></i>
                 </div>
                 <h4 class="mb-3">Discovery Workshops</h4>
@@ -137,7 +137,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
-                <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
+                <div class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
                   <i class="bi bi-diagram-3 text-success fs-4"></i>
                 </div>
                 <h4 class="mb-3">Architecture Decision Records</h4>
@@ -153,7 +153,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
-                <div class="icon-wrapper bg-warning bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
+                <div class="icon-wrapper bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
                   <i class="bi bi-arrow-repeat text-warning fs-4"></i>
                 </div>
                 <h4 class="mb-3">Iterative Delivery</h4>
@@ -169,7 +169,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
-                <div class="icon-wrapper bg-info bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
+                <div class="icon-wrapper bg-info bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
                   <i class="bi bi-book text-info fs-4"></i>
                 </div>
                 <h4 class="mb-3">Knowledge Transfer</h4>

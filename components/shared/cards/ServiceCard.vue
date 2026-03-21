@@ -5,7 +5,7 @@
       <div class="icon-wrapper">
         <!-- Support both SVG component and Bootstrap icons -->
         <component v-if="svgIcon" :is="svgIcon" />
-        <i v-else-if="icon" :class="icon" style="font-size: 28px;"></i>
+        <i v-else-if="icon" :class="icon" class="service-icon-i"></i>
       </div>
     </div>
 
@@ -101,17 +101,22 @@ const props = defineProps({
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
 }
 
-/* Icon Wrapper — Purple accent */
+/* Icon Wrapper — Purple accent circle */
 .icon-wrapper {
   width: 56px;
   height: 56px;
-  border-radius: 14px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(139, 92, 246, 0.1);
   color: #8b5cf6;
   transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-icon-i {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .service-card:hover .icon-wrapper {

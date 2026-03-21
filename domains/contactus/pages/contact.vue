@@ -96,7 +96,7 @@
             <div class="card shadow-sm border-0 mb-4">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center mb-3">
-                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-3">
+                  <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-building text-primary fs-5"></i>
                   </div>
                   <h3 class="h5 mb-0">Office</h3>
@@ -113,7 +113,7 @@
             <div class="card shadow-sm border-0 mb-4">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center mb-3">
-                  <div class="bg-success bg-opacity-10 rounded-3 p-3 me-3">
+                  <div class="bg-success bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-clock text-success fs-5"></i>
                   </div>
                   <h3 class="h5 mb-0">Working Hours</h3>
@@ -137,7 +137,7 @@
             <div class="card shadow-sm border-0">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center mb-3">
-                  <div class="bg-info bg-opacity-10 rounded-3 p-3 me-3">
+                  <div class="bg-info bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-headset text-info fs-5"></i>
                   </div>
                   <h3 class="h5 mb-0">Support</h3>

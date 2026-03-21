@@ -63,9 +63,9 @@ const iconColorClass = computed(() => {
 }
 
 .benefit-icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,9 +77,9 @@ const iconColorClass = computed(() => {
   transform: scale(1.1);
 }
 
-/* Dark mode support */
+/* Dark mode support — maintain distinct colors per icon type */
 :global([data-bs-theme="dark"]) .benefit-icon-wrapper {
-  background: rgba(139, 92, 246, 0.15) !important;
+  opacity: 0.9;
 }
 
 /* Reduced motion */

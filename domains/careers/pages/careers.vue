@@ -44,7 +44,7 @@
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-3" style="width: 56px; height: 56px;">
+                <div class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle" style="width: 56px; height: 56px;">
                   <i class="bi bi-graph-up text-primary fs-4"></i>
                 </div>
               </div>
@@ -60,7 +60,7 @@
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center justify-content-center bg-success bg-opacity-10 rounded-3" style="width: 56px; height: 56px;">
+                <div class="d-flex align-items-center justify-content-center bg-success bg-opacity-10 rounded-circle" style="width: 56px; height: 56px;">
                   <i class="bi bi-heart text-success fs-4"></i>
                 </div>
               </div>
@@ -76,7 +76,7 @@
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body p-4">
               <div class="d-flex align-items-center mb-3">
-                <div class="d-flex align-items-center justify-content-center bg-warning bg-opacity-10 rounded-3" style="width: 56px; height: 56px;">
+                <div class="d-flex align-items-center justify-content-center bg-warning bg-opacity-10 rounded-circle" style="width: 56px; height: 56px;">
                   <i class="bi bi-trophy text-warning fs-4"></i>
                 </div>
               </div>
