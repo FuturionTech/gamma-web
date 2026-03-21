@@ -106,198 +106,91 @@
       </div>
     </section>
 
-    <!-- Core Capabilities - Clean Grid -->
+    <!-- How We Work -->
     <section class="py-5 bg-light">
       <div class="container py-4" data-aos="fade-up">
         <div class="text-center mb-4">
-          <h2 class="h2 fw-bold mb-3">How we help you win</h2>
+          <h2 class="h2 fw-bold mb-3">How We Work</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
-            Enterprise-grade AI solutions tailored to your industry
+            A structured, transparent process designed to deliver production-ready solutions
           </p>
         </div>
 
         <div class="row g-4">
-          <!-- Capability 1 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Step 1 -->
+          <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
                 <div class="icon-wrapper bg-primary bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-graph-up-arrow text-primary fs-4"></i>
+                  <i class="bi bi-search text-primary fs-4"></i>
                 </div>
-                <h4 class="mb-3">Predictive Analytics</h4>
+                <h4 class="mb-3">Discovery Workshops</h4>
                 <p class="text-muted mb-0">
-                  Machine learning models that forecast trends and patterns,
-                  enabling proactive decision-making.
+                  Structured sessions that produce clear problem definitions, stakeholder alignment,
+                  and a prioritized roadmap — not just meeting notes.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Capability 2 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Step 2 -->
+          <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
                 <div class="icon-wrapper bg-success bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-robot text-success fs-4"></i>
+                  <i class="bi bi-diagram-3 text-success fs-4"></i>
                 </div>
-                <h4 class="mb-3">AI Automation</h4>
+                <h4 class="mb-3">Architecture Decision Records</h4>
                 <p class="text-muted mb-0">
-                  Custom AI solutions that automate complex processes,
-                  helping reduce operational costs and improve efficiency.
+                  Every significant technical decision is documented with context, alternatives considered,
+                  and rationale — so your team understands the "why" long after we leave.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Capability 3 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Step 3 -->
+          <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
                 <div class="icon-wrapper bg-warning bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-lightning-charge text-warning fs-4"></i>
+                  <i class="bi bi-arrow-repeat text-warning fs-4"></i>
                 </div>
-                <h4 class="mb-3">Real-time Insights</h4>
+                <h4 class="mb-3">Iterative Delivery</h4>
                 <p class="text-muted mb-0">
-                  Live dashboards and monitoring systems delivering
-                  timely, actionable business intelligence.
+                  Bi-weekly demos with working software. No disappearing for months — you see
+                  progress and can course-correct in real time.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Capability 4 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Step 4 -->
+          <div class="col-md-6 col-lg-3">
             <div class="card border-0 shadow-sm h-100 capability-card">
               <div class="card-body p-4">
                 <div class="icon-wrapper bg-info bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-cpu text-info fs-4"></i>
+                  <i class="bi bi-book text-info fs-4"></i>
                 </div>
-                <h4 class="mb-3">Machine Learning</h4>
+                <h4 class="mb-3">Knowledge Transfer</h4>
                 <p class="text-muted mb-0">
-                  End-to-end ML pipelines from data preparation to model
-                  deployment and monitoring.
+                  Documentation and training are deliverables, not afterthoughts. Your team should be
+                  able to maintain and extend every system we build.
                 </p>
               </div>
             </div>
-          </div>
-
-          <!-- Capability 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100 capability-card">
-              <div class="card-body p-4">
-                <div class="icon-wrapper bg-danger bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-shield-check text-danger fs-4"></i>
-                </div>
-                <h4 class="mb-3">Data Governance</h4>
-                <p class="text-muted mb-0">
-                  Enterprise-grade security and compliance with SOC 2,
-                  ISO 27001, and GDPR standards.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Capability 6 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100 capability-card">
-              <div class="card-body p-4">
-                <div class="icon-wrapper bg-secondary bg-opacity-10 rounded-3 d-inline-flex p-3 mb-3">
-                  <i class="bi bi-cloud text-secondary fs-4"></i>
-                </div>
-                <h4 class="mb-3">Cloud Infrastructure</h4>
-                <p class="text-muted mb-0">
-                  Scalable solutions on AWS, Azure, and GCP designed
-                  for high availability and reliability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Simple Process -->
-    <section class="py-5">
-      <div class="container py-4">
-        <div class="row align-items-center g-5" data-aos="fade-up">
-          <div class="col-lg-6">
-            <h2 class="h2 fw-bold mb-4">
-              Our proven approach delivers results
-            </h2>
-            <p class="fs-6 text-muted mb-4 lh-base">
-              A systematic methodology ensuring successful project delivery
-            </p>
-
-            <!-- Simple Steps -->
-            <div class="process-steps">
-              <div class="d-flex mb-4">
-                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  1
-                </div>
-                <div>
-                  <h5 class="mb-1">Discovery</h5>
-                  <p class="text-muted mb-0">Understanding your business challenges and objectives</p>
-                </div>
-              </div>
-
-              <div class="d-flex mb-4">
-                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  2
-                </div>
-                <div>
-                  <h5 class="mb-1">Design</h5>
-                  <p class="text-muted mb-0">Crafting customized solutions that address your specific needs</p>
-                </div>
-              </div>
-
-              <div class="d-flex mb-4">
-                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  3
-                </div>
-                <div>
-                  <h5 class="mb-1">Development</h5>
-                  <p class="text-muted mb-0">Building and implementing the solution with precision</p>
-                </div>
-              </div>
-
-              <div class="d-flex mb-4">
-                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  4
-                </div>
-                <div>
-                  <h5 class="mb-1">Deployment</h5>
-                  <p class="text-muted mb-0">Ensuring smooth integration and adoption</p>
-                </div>
-              </div>
-
-              <div class="d-flex">
-                <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="min-width: 48px; height: 48px;">
-                  5
-                </div>
-                <div>
-                  <h5 class="mb-1">Support</h5>
-                  <p class="text-muted mb-0">Providing ongoing assistance to ensure sustained success</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
-                 alt="Gamma Neutral systematic approach"
-                 class="img-fluid rounded-3 shadow">
           </div>
         </div>
       </div>
     </section>
 
     <!-- Founder Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
       <div class="container py-4" data-aos="fade-up">
         <div class="text-center mb-4">
           <h2 class="h2 fw-bold mb-3">Leadership</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
-            Driving innovation in data science and AI consulting
+            Hands-on expertise in data engineering, AI, and cloud architecture
           </p>
         </div>
 
@@ -327,6 +220,22 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Growing Team -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <div class="bg-light rounded-3 p-4 text-center">
+              <h5 class="fw-bold mb-3">
+                <i class="bi bi-people text-primary me-2"></i>A Growing Team
+              </h5>
+              <p class="text-muted mb-0">
+                Gamma Neutral brings together experienced consultants for each engagement. Our network includes
+                specialists in data engineering, ML operations, cloud architecture, and cybersecurity — assembled
+                based on the specific needs of your project.
+              </p>
             </div>
           </div>
         </div>
