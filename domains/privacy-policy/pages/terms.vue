@@ -1,8 +1,8 @@
 <template>
   <div class="privacy-page">
-    <!-- Clean Header -->
-    <section class="header-section">
-      <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container position-relative" style="z-index: 2;">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
           <NuxtLink to="/" class="breadcrumb-link">Home</NuxtLink>
           <span class="breadcrumb-separator">/</span>
@@ -589,21 +589,19 @@ useHead({
   color: #e5e7eb;
 }
 
-/* === HEADER SECTION === */
-.header-section {
+/* === HERO SECTION === */
+.hero-section {
   padding-top: 140px;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  position: relative;
 }
 
 .breadcrumb-nav {
   margin-bottom: 2rem;
   font-size: 0.875rem;
-  color: #6b7280;
-}
-
-:global([data-bs-theme="dark"]) .breadcrumb-nav {
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .breadcrumb-link {
@@ -613,6 +611,7 @@ useHead({
 
 .breadcrumb-link:hover {
   text-decoration: underline;
+  color: #a78bfa;
 }
 
 .breadcrumb-separator {
@@ -620,11 +619,7 @@ useHead({
 }
 
 .breadcrumb-current {
-  color: #111827;
-}
-
-:global([data-bs-theme="dark"]) .breadcrumb-current {
-  color: #e5e7eb;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .page-title {
@@ -633,32 +628,21 @@ useHead({
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin: 0 0 1rem 0;
-  color: #111827;
-}
-
-:global([data-bs-theme="dark"]) .page-title {
-  color: #f9fafb;
+  color: #ffffff;
 }
 
 .page-subtitle {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0 0 1rem 0;
-}
-
-:global([data-bs-theme="dark"]) .page-subtitle {
-  color: #d1d5db;
+  max-width: 700px;
 }
 
 .page-meta {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
-}
-
-:global([data-bs-theme="dark"]) .page-meta {
-  color: #9ca3af;
 }
 
 /* === CONTENT SECTION === */
@@ -798,7 +782,7 @@ ul li {
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .header-section {
+  .hero-section {
     padding-top: 100px;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
