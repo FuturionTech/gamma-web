@@ -14,8 +14,8 @@
           </template>
   
           <template v-else>
-            <div class="fs-sm text-uppercase mb-3" v-if="teams.lenght>0">{{ $t('team.sectionTitle') }}</div>
-<h2 class="display-6 pb-3 mb-lg-4" v-if="teams.lenght>0">{{ $t('team.heading') }}</h2>
+            <div class="fs-sm text-uppercase mb-3" v-if="teams.length>0">{{ $t('team.sectionTitle') }}</div>
+<h2 class="display-6 pb-3 mb-lg-4" v-if="teams.length>0">{{ $t('team.heading') }}</h2>
             <div v-for="teamMember in teams" :key="teamMember.id" class="col">
               <div class="card card-hover border-0 rounded-2 overflow-hidden position-relative fixed-card-size">
                 <NuxtImg

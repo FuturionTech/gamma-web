@@ -95,7 +95,7 @@
                   </div>
                   <div class="ps-3">
                     <h6 class="mb-0">Industry Leading</h6>
-                    <p class="mb-0 text-muted fs-sm">Trusted by 500+ companies</p>
+                    <p class="mb-0 text-muted fs-sm">Expert data solutions</p>
                   </div>
                 </div>
               </div>

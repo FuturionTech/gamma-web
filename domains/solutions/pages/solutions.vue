@@ -135,30 +135,6 @@
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-5 bg-primary bg-gradient text-white">
-      <div class="container py-4">
-        <div class="row text-center g-4">
-          <div class="col-6 col-lg-3">
-            <h2 class="display-4 fw-bold mb-2">500+</h2>
-            <p class="mb-0 text-white-50">Happy Clients</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h2 class="display-4 fw-bold mb-2">1000+</h2>
-            <p class="mb-0 text-white-50">Projects Completed</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h2 class="display-4 fw-bold mb-2">50+</h2>
-            <p class="mb-0 text-white-50">Industry Awards</p>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h2 class="display-4 fw-bold mb-2">98%</h2>
-            <p class="mb-0 text-white-50">Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="py-5">
       <div class="container py-4">

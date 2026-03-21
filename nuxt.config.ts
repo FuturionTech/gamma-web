@@ -28,7 +28,10 @@ export default defineNuxtConfig({
                 { name: 'msapplication-TileColor', content: '#8b5cf6' }
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'},
+                {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'},
+                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'}
             ],
             script: [
                 {src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose'},
@@ -39,12 +42,6 @@ export default defineNuxtConfig({
                 {src: '/assets/vendor/img-comparison-slider/dist/index.js', tagPosition: 'bodyClose'},
                 {src: '/assets/js/theme.js', tagPosition: 'bodyClose'},
                 {src: '/assets/js/theme-switcher.js', tagPosition: 'bodyClose'},
-                {src: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js', tagPosition: 'bodyClose'},
-            ],
-            link: [
-                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'},
-                {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'},
-                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'}
             ]
         },
     },
