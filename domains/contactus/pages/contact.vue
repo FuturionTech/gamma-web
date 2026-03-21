@@ -174,24 +174,20 @@ import ContactForm from '~/domains/contactus/components/ContactForm'
 
 // SEO Meta tags
 useHead({
-  title: 'Contact Us - Gamma Neutral Consulting',
+  title: 'Contact Us | Book a Discovery Call | Gamma Neutral Consulting',
   meta: [
     {
       name: 'description',
-      content: 'Get in touch with Gamma Neutral Consulting. Transform your data into actionable insights with our expert team in Toronto.'
+      content: 'Book a discovery call with Gamma Neutral Consulting. Tell us about your data and AI challenges — we will outline a practical path forward.'
     },
     {
       name: 'keywords',
-      content: 'contact gamma neutral, data consulting toronto, business analytics contact, data transformation services'
+      content: 'contact Gamma Neutral, AI consulting Toronto, data consulting discovery call, book consultation'
     },
     {
       name: 'author',
-      content: 'Gamma Neutral Consulting'
+      content: 'Gamma Neutral Consulting Inc.'
     },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1.0'
-    }
   ]
 })
 </script>

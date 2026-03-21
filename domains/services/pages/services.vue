@@ -171,12 +171,11 @@ onMounted(async () => {
 })
 
 useHead({
-  title: 'Our Services - Gamma Neutral Consulting',
+  title: 'Our Services | AI, Data Engineering & Cloud Consulting | Gamma Neutral',
   meta: [
-    { name: 'description', content: 'Comprehensive data solutions including AI, Data Engineering, Cybersecurity, Business Intelligence, Big Data, Cloud Computing, and Project Management services.' },
-    { name: 'keywords', content: 'artificial intelligence, data engineering, cybersecurity, business intelligence, big data, cloud computing, project management, data solutions, AI consulting' },
-    { name: 'author', content: 'Gamma Neutral Consulting' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    { name: 'description', content: 'From AI and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting services that move from pilot to production.' },
+    { name: 'keywords', content: 'AI consulting, data engineering, cloud migration, cybersecurity, business intelligence, MLOps, data architecture, Toronto' },
+    { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ]
 })
 

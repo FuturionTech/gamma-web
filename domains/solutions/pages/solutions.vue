@@ -212,11 +212,11 @@ const getIconMapping = (faIcon: string) => {
 
 // SEO
 useHead({
-  title: 'Solutions - Gamma Neutral',
+  title: 'Industry Solutions | Financial Services, Healthcare, Government | Gamma Neutral',
   meta: [
     {
       name: 'description',
-      content: 'Explore our comprehensive data solutions tailored for various industries including financial services, healthcare, retail, government, manufacturing, and education.'
+      content: 'AI and data consulting solutions for financial services, healthcare, and government. We bring domain expertise and engineering discipline to regulated, data-intensive industries.'
     }
   ]
 })

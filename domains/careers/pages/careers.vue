@@ -141,15 +141,15 @@
 <script setup lang="ts">
 // SEO
 useHead({
-  title: 'Careers - Gamma Neutral Consulting Inc.',
+  title: 'Careers | Gamma Neutral Consulting',
   meta: [
     {
       name: 'description',
-      content: 'Explore career opportunities at Gamma Neutral Consulting Inc. We are always looking for talented individuals in data science, AI, and technology consulting.'
+      content: 'Join Gamma Neutral Consulting. We are building a team of experienced consultants in data engineering, ML operations, cloud architecture, and cybersecurity.'
     },
     {
       name: 'keywords',
-      content: 'Gamma Neutral careers, Toronto tech jobs, data science jobs, AI jobs, consulting careers'
+      content: 'Gamma Neutral careers, Toronto tech jobs, data engineering careers, AI consulting jobs'
     }
   ]
 })

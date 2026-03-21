@@ -302,15 +302,15 @@ const founder = computed(() => {
 
 // SEO
 useHead({
-  title: 'About Us - Gamma Neutral Consulting Inc.',
+  title: 'About Us | Gamma Neutral Consulting',
   meta: [
     {
       name: 'description',
-      content: 'Gamma Neutral Consulting Inc. delivers innovative, secure, and scalable data solutions. From AI to cloud computing, we empower businesses to harness the full potential of their data.'
+      content: 'Gamma Neutral was founded to close the gap between AI prototypes and production-ready systems. We bring engineering discipline to data and AI consulting for financial services, healthcare, and government.'
     },
     {
       name: 'keywords',
-      content: 'data analytics, AI consulting, machine learning, business intelligence, Toronto, data solutions, cybersecurity, cloud computing'
+      content: 'AI consulting Toronto, data engineering firm, about Gamma Neutral, data consulting Canada'
     }
   ]
 })

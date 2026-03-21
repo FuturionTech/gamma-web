@@ -84,10 +84,10 @@ const { sanitize } = useSanitize()
 const faqStore = useFaqStore()
 
 useHead({
-  title: 'FAQ - Gamma Neutral Consulting',
+  title: 'Frequently Asked Questions | Gamma Neutral Consulting',
   meta: [
-    { name: 'description', content: 'Frequently asked questions about Gamma Neutral Consulting services, data solutions, and consulting process.' },
-    { name: 'keywords', content: 'FAQ, frequently asked questions, data consulting, AI consulting, Gamma Neutral' },
+    { name: 'description', content: 'Answers to common questions about Gamma Neutral Consulting — our services, engagement process, pricing, and how we work with clients.' },
+    { name: 'keywords', content: 'FAQ, frequently asked questions, AI consulting, data engineering, Gamma Neutral' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ]
 })

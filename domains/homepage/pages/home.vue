@@ -112,12 +112,11 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 useHead({
-  title: 'Gamma Neutral Consulting - Transform Your Data Into Strategic Power',
+  title: 'Gamma Neutral Consulting | AI & Data Consulting, Toronto',
   meta: [
-    { name: 'description', content: 'Leading data consulting firm specializing in AI, Machine Learning, Data Engineering, and Cloud Solutions. Transform your business with data-driven insights.' },
-    { name: 'keywords', content: 'data consulting, AI, machine learning, data engineering, cloud computing, business intelligence, Toronto, Canada' },
+    { name: 'description', content: 'Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that deliver measurable outcomes.' },
+    { name: 'keywords', content: 'AI consulting Toronto, data engineering, cloud architecture, machine learning, business intelligence, cybersecurity consulting, Canada' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
   ]
 })
 </script>
