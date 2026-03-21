@@ -5,9 +5,9 @@
       <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center py-5">
           <div class="col-lg-7">
-            <h1 class="display-4 fw-bold mb-4">Our Solutions</h1>
+            <h1 class="display-4 fw-bold mb-4">Industry Solutions</h1>
             <p class="fs-5 text-white-50 mb-4">
-              Comprehensive data solutions tailored to your industry needs. We combine deep domain expertise with cutting-edge technology to deliver transformative results.
+              We focus on industries where data and AI solve specific, measurable problems. Our team brings domain expertise in financial services, healthcare, and government to every engagement.
             </p>
             <div class="d-flex flex-wrap gap-3">
               <NuxtLink to="/contact" class="btn btn-primary btn-lg px-4">
@@ -160,37 +160,41 @@ import { useSolutionsStore } from '~/domains/solutions/stores/useSolutionsStore'
 const solutionsStore = useSolutionsStore()
 const staticSolutions = getAllSolutions()
 
+// Industries to show: 3 primary + 1 emerging focus
+const showSlugs = ['financial-services', 'healthcare-analytics', 'smart-government', 'retail-intelligence']
+
 onMounted(async () => {
   await solutionsStore.fetchSolutions(20)
 })
 
 // Prefer API data but fall back to static data for rich detail pages
+// Filter to primary + emerging industries only
 const solutions = computed(() => {
-  if (solutionsStore.solutions.length > 0) {
-    return solutionsStore.solutions.map((s) => {
-      // Try to find matching static data for full detail (features, benefits etc.)
-      const staticMatch = staticSolutions.find((ss) => ss.slug === s.slug)
-      if (staticMatch) {
-        return { ...staticMatch, title: s.title, description: s.description }
-      }
-      return {
-        id: s.id,
-        slug: s.slug,
-        title: s.title,
-        subtitle: s.description,
-        description: s.description,
-        icon: 'fa-chart-line',
-        iconColor: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
-        features: [],
-        benefits: [],
-        useCases: [],
-        technologies: [],
-        processSteps: [],
-        cta: { title: 'Ready to Move Forward?', description: 'Tell us about your challenge and we will outline a practical path forward.', buttonText: 'Discuss Your Project' },
-      }
-    })
-  }
-  return staticSolutions
+  const allSolutions = solutionsStore.solutions.length > 0
+    ? solutionsStore.solutions.map((s) => {
+        const staticMatch = staticSolutions.find((ss) => ss.slug === s.slug)
+        if (staticMatch) {
+          return { ...staticMatch, title: s.title, description: s.description }
+        }
+        return {
+          id: s.id,
+          slug: s.slug,
+          title: s.title,
+          subtitle: s.description,
+          description: s.description,
+          icon: 'fa-chart-line',
+          iconColor: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+          features: [],
+          benefits: [],
+          useCases: [],
+          technologies: [],
+          processSteps: [],
+          cta: { title: 'Ready to Move Forward?', description: 'Tell us about your challenge and we will outline a practical path forward.', buttonText: 'Discuss Your Project' },
+        }
+      })
+    : staticSolutions
+
+  return allSolutions.filter(s => showSlugs.includes(s.slug))
 })
 
 // Map Font Awesome icons to Bootstrap icons

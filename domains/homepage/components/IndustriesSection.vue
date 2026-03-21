@@ -4,7 +4,7 @@
     <div class="container py-4">
       <!-- Loading State -->
       <div v-if="loading" class="row g-4">
-        <div class="col-md-6 col-lg-4" v-for="n in 6" :key="n">
+        <div class="col-md-6 col-lg-4" v-for="n in 3" :key="n">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body p-4 placeholder-glow">
               <div class="placeholder bg-secondary rounded-circle mb-3" style="width: 56px; height: 56px;"></div>
@@ -58,64 +58,52 @@ const solutionIconMap = {
   'education-analytics': { icon: 'bi-mortarboard', iconColor: 'danger' },
 }
 
-// Static fallback
+// Primary industry slugs to show
+const primarySlugs = ['financial-services', 'healthcare-analytics', 'smart-government']
+
+// Static fallback — 3 primary industries with honest framing
 const staticIndustries = [
   {
-    title: 'Banks & Financial Services',
-    description: 'Enhancing data security and analytics for better financial decision-making with AI-powered risk modeling and fraud detection.',
+    title: 'Financial Services',
+    description: 'We work with banks, insurance companies, and investment firms to build AI-powered risk models, modernize legacy data infrastructure, and meet regulatory requirements from OSFI and PIPEDA.',
     icon: 'bi-bank',
     iconColor: 'primary',
     link: '/solutions/financial-services'
   },
   {
-    title: 'Healthcare Services',
-    description: 'Developing AI and big data solutions to improve patient care and operational efficiency while maintaining HIPAA compliance.',
+    title: 'Healthcare',
+    description: 'We are building capabilities in health data interoperability, patient analytics, and PHIPA-compliant data architectures for Canadian healthcare organizations.',
     icon: 'bi-heart-pulse',
     iconColor: 'success',
     link: '/solutions/healthcare-analytics'
   },
   {
-    title: 'Governments & Public Services',
-    description: 'Building secure data infrastructures for public sector organizations with smart city initiatives and citizen service optimization.',
+    title: 'Government & Public Sector',
+    description: 'We help government agencies modernize data infrastructure, implement secure cloud environments, and build analytics platforms that support evidence-based policy decisions.',
     icon: 'bi-shield-check',
     iconColor: 'info',
     link: '/solutions/smart-government'
-  },
-  {
-    title: 'Retail & Business',
-    description: 'Implementing BI tools to streamline operations and improve efficiency with data-driven decision-making and process optimization.',
-    icon: 'bi-bar-chart',
-    iconColor: 'warning',
-    link: '/solutions/retail-intelligence'
-  },
-  {
-    title: 'Manufacturing 4.0',
-    description: 'Providing IoT and AI solutions for predictive maintenance, supply chain optimization, and quality control.',
-    icon: 'bi-gear',
-    iconColor: 'secondary',
-    link: '/solutions/manufacturing-4-0'
-  },
-  {
-    title: 'Education & Training',
-    description: 'Developing AI-driven platforms for personalized learning experiences with student performance analytics and adaptive learning paths.',
-    icon: 'bi-mortarboard',
-    iconColor: 'danger',
-    link: '/solutions/education-analytics'
   }
 ]
 
 const displayIndustries = computed(() => {
   if (solutionsStore.solutions.length > 0) {
-    return solutionsStore.solutions.map(s => {
-      const mapping = solutionIconMap[s.slug] || { icon: 'bi-info-circle', iconColor: 'primary' }
-      return {
-        title: s.title,
-        description: s.description.substring(0, 150) + (s.description.length > 150 ? '...' : ''),
-        icon: mapping.icon,
-        iconColor: mapping.iconColor,
-        link: `/solutions/${s.slug}`,
-      }
-    })
+    // Filter to primary industries only
+    const filtered = solutionsStore.solutions.filter(s => primarySlugs.includes(s.slug))
+    if (filtered.length > 0) {
+      return filtered.map(s => {
+        const mapping = solutionIconMap[s.slug] || { icon: 'bi-info-circle', iconColor: 'primary' }
+        // Use static description if available (they're better), else API
+        const staticMatch = staticIndustries.find(si => si.link === `/solutions/${s.slug}`)
+        return {
+          title: s.title,
+          description: staticMatch?.description || s.description.substring(0, 200),
+          icon: mapping.icon,
+          iconColor: mapping.iconColor,
+          link: `/solutions/${s.slug}`,
+        }
+      })
+    }
   }
   return staticIndustries
 })

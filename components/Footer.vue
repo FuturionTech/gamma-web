@@ -69,32 +69,22 @@
           <ul class="list-unstyled">
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/financial-services">
-                Banks & Financial Services
+                Financial Services
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/healthcare-analytics">
-                Healthcare Services
+                Healthcare
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/smart-government">
-                Governments & Public Services
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/education-analytics">
-                Education & Training
+                Government &amp; Public Sector
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/retail-intelligence">
-                Retail & Business
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/manufacturing-4-0">
-                Manufacturing
+                Retail (Emerging Focus)
               </NuxtLink>
             </li>
           </ul>

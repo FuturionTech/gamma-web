@@ -63,7 +63,7 @@
         <template #header>
           <h2 class="h1 mb-4">Industries We Serve</h2>
           <p class="fs-lg text-muted mb-0">
-            Specialized expertise across diverse sectors and business domains
+            Deep domain expertise in regulated, data-intensive sectors
           </p>
         </template>
         <IndustriesSection/>
