@@ -26,26 +26,6 @@ export default defineNuxtModule({
                 name: 'about-methodology',
                 path: '/about/methodology',
                 file: resolve(__dirname, 'pages/methodology.vue'),
-            },
-            {
-                name: 'qhse___fr',
-                path: '/qhse',
-                file: resolve(__dirname, 'pages/QHSECertificates.vue'),
-            },
-            {
-                name: 'qhse___en',
-                path: '/en/qhse',
-                file: resolve(__dirname, 'pages/QHSECertificates.vue'),
-            },
-            {
-                name: 'licensesAndApprovals___fr',
-                path: '/licenses_and_approvals',
-                file: resolve(__dirname, 'pages/licensesAndApprovals.vue'),
-            },
-            {
-                name: 'licensesAndApprovals___en',
-                path: '/en/licenses_and_approvals',
-                file: resolve(__dirname, 'pages/licensesAndApprovals.vue'),
             })
         },
 

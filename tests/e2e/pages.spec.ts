@@ -140,23 +140,7 @@ test.describe('All public pages load correctly', () => {
     expect(errors).toEqual([])
   })
 
-  test('/qhse — QHSE certificates', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/qhse')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
 
-  test('/licenses_and_approvals — Licenses and approvals', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/licenses_and_approvals')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
 })
 
 // ──────────────────────────────────────────────
