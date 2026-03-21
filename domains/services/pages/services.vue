@@ -27,19 +27,19 @@
             <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
               <span class="badge bg-white bg-opacity-20 text-white px-4 py-2 rounded-pill backdrop-blur">
                 <span class="pulse-dot me-2"></span>
-                Comprehensive Data Solutions
+                AI &amp; Data Consulting Services
               </span>
             </div>
 
             <!-- Main Heading -->
             <h1 class="display-3 fw-bold text-white mb-4 animate-fade-in-up">
-              Transform Your Business<br/>
-              With Our <span class="text-gradient">Expert Services</span>
+              Engineering That Moves<br/>
+              AI From <span class="text-gradient">Pilot to Production</span>
             </h1>
 
             <!-- Subheading -->
             <p class="lead text-white text-opacity-90 mb-5 mx-auto animate-fade-in-up animation-delay-1" style="max-width: 700px;">
-              We deliver innovative, secure, and scalable solutions that drive informed decision-making and operational excellence across AI, Data Engineering, Cloud, and Cybersecurity.
+              From AI and data engineering to cloud architecture and cybersecurity, we deliver focused consulting that solves specific business problems for financial institutions, healthcare organizations, and government agencies.
             </p>
 
             <!-- CTA Buttons -->
@@ -205,59 +205,59 @@ const iconBootstrapMap: Record<string, string> = {
 // Static fallback services
 const staticServices = [
   {
-    title: 'AI & Machine Learning',
-    description: 'Deploy intelligent systems that automate processes, predict outcomes, and unlock insights from your data.',
+    title: 'Artificial Intelligence',
+    description: 'We build AI systems that move past the pilot stage. From fraud detection models for financial institutions to patient risk scoring for healthcare providers, our ML engineering team designs, trains, and deploys models that integrate with your existing systems and deliver measurable outcomes in production.',
     icon: 'bi bi-cpu',
     gradientClass: 'bg-gradient-primary',
-    features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning Models'],
+    features: ['Custom ML model development', 'NLP and document intelligence', 'Computer vision pipelines', 'MLOps and model monitoring'],
     link: '/contact'
   },
   {
     title: 'Data Engineering',
-    description: 'Build robust data pipelines and architectures that ensure seamless data flow across your organization.',
+    description: 'The foundation of every data initiative is reliable, well-governed data. We design and build the pipelines, warehouses, and lake architectures that turn scattered, siloed information into a unified, queryable asset.',
     icon: 'bi bi-database',
     gradientClass: 'bg-gradient-info',
-    features: ['ETL/ELT Pipelines', 'Real-time Processing', 'Data Lake Design', 'Data Quality Management'],
+    features: ['ETL/ELT pipeline design', 'Data warehouse/lakehouse architecture', 'Real-time streaming', 'Data quality frameworks'],
     link: '/contact'
   },
   {
     title: 'Cloud Computing',
-    description: 'Migrate and optimize your infrastructure with scalable cloud solutions from AWS, Azure, and GCP.',
+    description: 'We help organizations move to the cloud with a strategy that balances performance, cost, and compliance.',
     icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
-    features: ['Cloud Migration', 'Serverless Architecture', 'Cost Optimization', 'Multi-Cloud Strategy'],
+    features: ['Cloud migration (AWS, Azure, GCP)', 'Infrastructure as code', 'Cost optimization and FinOps', 'Multi-cloud architecture'],
     link: '/contact'
   },
   {
     title: 'Cybersecurity',
-    description: 'Protect your data assets with enterprise-grade security solutions and compliance frameworks.',
+    description: 'Data-intensive organizations face unique security challenges. We assess your current posture, identify vulnerabilities, and implement security controls that satisfy regulatory requirements in financial services, healthcare, and government.',
     icon: 'bi bi-shield-check',
     gradientClass: 'bg-gradient-danger',
-    features: ['Threat Detection & Response', 'Compliance Management', '24/7 Security Monitoring', 'Penetration Testing'],
+    features: ['Security architecture assessment', 'Compliance frameworks (SOC 2, ISO 27001, PIPEDA)', 'Threat detection', 'Identity and access management'],
     link: '/contact'
   },
   {
     title: 'Business Intelligence',
-    description: 'Transform raw data into actionable insights with interactive dashboards and strategic reports.',
+    description: 'Dashboards are only valuable when they answer the questions your team actually asks.',
     icon: 'bi bi-bar-chart',
     gradientClass: 'bg-gradient-warning',
-    features: ['Interactive Dashboards', 'KPI Monitoring', 'Strategic Reporting', 'Self-Service Analytics'],
+    features: ['Executive dashboard design', 'Self-service analytics', 'KPI framework development', 'Power BI/Tableau/Looker'],
     link: '/contact'
   },
   {
-    title: 'Big Data Solutions',
-    description: 'Process and analyze massive datasets with distributed computing and advanced analytics platforms.',
+    title: 'Data Platform & Big Data',
+    description: 'When your data volumes outgrow traditional databases, you need architecture designed for scale.',
     icon: 'bi bi-hdd-stack',
     gradientClass: 'bg-gradient-purple',
-    features: ['Distributed Processing', 'Spark & Hadoop Ecosystems', 'Data Lake Architecture', 'Stream Processing'],
+    features: ['Distributed processing (Spark, Databricks)', 'Data lakehouse', 'Stream processing', 'Performance optimization'],
     link: '/contact'
   },
   {
-    title: 'Project Management',
-    description: 'Ensure successful project delivery through meticulous planning, execution, and stakeholder alignment.',
+    title: 'Delivery & Program Management',
+    description: 'Technology projects fail more often from poor execution than poor ideas.',
     icon: 'bi bi-clipboard-data',
     gradientClass: 'bg-gradient-dark',
-    features: ['Agile & Scrum Delivery', 'Stakeholder Management', 'End-to-End Execution', 'Risk Mitigation'],
+    features: ['Agile delivery management', 'Program governance', 'Vendor coordination', 'Risk assessment'],
     link: '/contact'
   }
 ]

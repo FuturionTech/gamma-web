@@ -3,6 +3,9 @@
     <!-- Hero Section - Full viewport -->
     <HeroSection/>
 
+    <!-- Technologies Trust Bar -->
+    <TechPartnersBar/>
+
     <!-- Core Services - Professional spacing -->
     <SectionWrapper
       spacing="lg"
@@ -12,9 +15,9 @@
       :debug-mode="debugMode"
     >
       <template #header>
-        <h2 class="h1 mb-4">Our Core Services</h2>
+        <h2 class="h1 mb-4">What We Do</h2>
         <p class="fs-lg text-muted mb-0">
-          Transform your business with our comprehensive data solutions
+          Focused consulting in AI, data engineering, and cloud — from strategy to production
         </p>
       </template>
       <ServicesSection/>

@@ -4,7 +4,7 @@
     <div class="container">
       <!-- Loading State -->
       <div v-if="homepageStore.loadingServices" class="row g-4">
-        <div class="col-lg-4 col-md-6" v-for="n in 6" :key="n">
+        <div class="col-lg-4 col-md-6" v-for="n in 3" :key="n">
           <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
             <div class="placeholder-glow">
               <div class="placeholder bg-secondary rounded-3 mb-4" style="width: 64px; height: 64px;"></div>
@@ -70,62 +70,38 @@ const iconBootstrapMap = {
   server: 'bi bi-hdd-stack',
 }
 
-// Static fallback data
+// Static fallback data — top 3 services for homepage
 const staticServices = [
   {
     title: 'Artificial Intelligence',
-    description: 'Comprehensive AI solutions spanning machine learning, deep learning, NLP, computer vision, and algorithm development.',
-    features: ['Machine Learning', 'Deep Learning', 'Natural Language Processing'],
+    description: 'We build AI systems that move past the pilot stage — from fraud detection to patient risk scoring — delivering measurable outcomes in production.',
+    features: ['Custom ML model development', 'NLP and document intelligence', 'MLOps and model monitoring'],
     icon: 'bi bi-cpu',
     gradientClass: 'bg-gradient-primary',
     link: '/services'
   },
   {
     title: 'Data Engineering',
-    description: 'Build robust data pipelines and architectures that ensure seamless data flow across your organization.',
-    features: ['ETL/ELT Pipelines', 'Real-time Processing', 'Data Lake Design'],
+    description: 'The foundation of every data initiative is reliable, well-governed data. We build the pipelines and architectures that turn siloed information into a unified asset.',
+    features: ['ETL/ELT pipeline design', 'Data warehouse/lakehouse architecture', 'Data quality frameworks'],
     icon: 'bi bi-database',
     gradientClass: 'bg-gradient-info',
     link: '/services'
   },
   {
     title: 'Cloud Computing',
-    description: 'Migrate and optimize your infrastructure with scalable cloud solutions from AWS, Azure, and GCP.',
-    features: ['Cloud Migration', 'Serverless Architecture', 'Cost Optimization'],
+    description: 'We help organizations move to the cloud with a strategy that balances performance, cost, and compliance across AWS, Azure, and GCP.',
+    features: ['Cloud migration strategy', 'Infrastructure as code', 'Cost optimization and FinOps'],
     icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
-    link: '/services'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Protect your data assets with enterprise-grade security solutions and compliance frameworks.',
-    features: ['Threat Detection', 'Compliance Management', '24/7 Monitoring'],
-    icon: 'bi bi-shield-check',
-    gradientClass: 'bg-gradient-danger',
-    link: '/services'
-  },
-  {
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable insights with interactive dashboards and reports.',
-    features: ['Interactive Dashboards', 'KPI Monitoring', 'Strategic Reporting'],
-    icon: 'bi bi-bar-chart',
-    gradientClass: 'bg-gradient-warning',
-    link: '/services'
-  },
-  {
-    title: 'Big Data Solutions',
-    description: 'Process and analyze massive datasets with distributed computing and advanced analytics.',
-    features: ['Distributed Processing', 'Spark & Hadoop', 'Data Lake Solutions'],
-    icon: 'bi bi-hdd-stack',
-    gradientClass: 'bg-gradient-purple',
     link: '/services'
   }
 ]
 
-// Prefer API data, fall back to static
+// Prefer API data (top 3), fall back to static
 const displayServices = computed(() => {
   if (homepageStore.services.length > 0) {
-    return homepageStore.services.map(s => ({
+    return homepageStore.services.slice(0, 3).map(s => ({
       title: s.title,
       description: s.short_description || s.description,
       features: s.features.map(f => f.title),

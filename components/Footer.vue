@@ -52,12 +52,12 @@
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Big Data
+                Data Platform &amp; Big Data
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Project Management
+                Delivery &amp; Program Management
               </NuxtLink>
             </li>
           </ul>
