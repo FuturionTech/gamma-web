@@ -3,10 +3,10 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-09-18',
     devtools: { enabled: true },
     ssr: false, // Temporarily disable SSR for stable production build
+    devServer: { port: 3006 },
 
     runtimeConfig: {
       public: {
-        applicationId: process.env.APPLICATION_ID,
         siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
         graphqlEndpoint: process.env.GQL_HOST || 'https://gamma.ngrok.app/graphql'
       },

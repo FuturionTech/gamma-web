@@ -1,12 +1,11 @@
 import { defineStore } from 'pinia';
-import Swal from 'sweetalert2';
 import { useRuntimeConfig } from '#app';
 
 export const useApplicationStore = defineStore('applicationStore', {
   state: () => ({
     application: null,
     loading: false,
-    error: null,
+    error: null as string | null,
   }),
   actions: {
     async fetchApplication() {
@@ -15,19 +14,15 @@ export const useApplicationStore = defineStore('applicationStore', {
 
       try {
         const config = useRuntimeConfig();
-        const applicationId = config.public.applicationId;
-        const response = await GqlGetApplication({ id: applicationId });
+        const response = await GqlGetApplication();
 
         if (response && response.application) {
-          this.application = response.application; 
-          
+          this.application = response.application;
         } else {
           this.error = 'Application not found.';
-          
         }
-      } catch (error) {
+      } catch (error: any) {
         this.error = error.message || 'Failed to fetch application.';
-        
       } finally {
         this.loading = false;
       }

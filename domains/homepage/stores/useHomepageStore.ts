@@ -1,12 +1,11 @@
 import { defineStore } from 'pinia';
-import { useRuntimeConfig } from '#app';
 
-export const useHomepageStore = defineStore('aboutusStore', {
+export const useHomepageStore = defineStore('homepageStore', {
     state: () => ({
-        partners: [],
-        banners: [],
+        partners: [] as any[],
+        banners: [] as any[],
         loading: false,
-        error: null,
+        error: null as string | null,
     }),
 
     actions: {
@@ -15,14 +14,9 @@ export const useHomepageStore = defineStore('aboutusStore', {
             this.error = null;
 
             try {
-                // Check if running in client side and GraphQL is available
                 if (process.client && typeof GqlPartnersQuery === 'function') {
-                    const config = useRuntimeConfig();
-                    const applicationId = config.public.applicationId;
-
                     const response = await GqlPartnersQuery({
                         first: numberOfPartners,
-                        application_id: applicationId,
                     });
 
                     if (response && response.partners && response.partners.data) {
@@ -31,48 +25,23 @@ export const useHomepageStore = defineStore('aboutusStore', {
                         this.error = 'No partners found.';
                     }
                 } else {
-                    // Fallback data for SSR/SSG
-                    this.partners = [
-                        {
-                            id: 1,
-                            name: 'Partner 1',
-                            logo: '/assets/img/landing/corporate/partners/01.png'
-                        },
-                        {
-                            id: 2,
-                            name: 'Partner 2',
-                            logo: '/assets/img/landing/corporate/partners/02.png'
-                        }
-                    ];
+                    this.partners = [];
                 }
-            } catch (error) {
+            } catch (error: any) {
                 this.error = error.message || 'Failed to fetch partners.';
-                // Provide fallback on error
-                this.partners = [
-                    {
-                        id: 1,
-                        name: 'Partner 1',
-                        logo: '/assets/img/landing/corporate/partners/01.png'
-                    }
-                ];
+                this.partners = [];
             } finally {
                 this.loading = false;
             }
         },
-        
+
         async getBanners() {
             this.loading = true;
             this.error = null;
 
             try {
-                // Check if running in client side and GraphQL is available
                 if (process.client && typeof GqlBannersQuery === 'function') {
-                    const config = useRuntimeConfig();
-                    const applicationId = config.public.applicationId;
-
-                    const response = await GqlBannersQuery({
-                        application_id: applicationId,
-                    });
+                    const response = await GqlBannersQuery();
 
                     if (response && response.banners && response.banners.data) {
                         this.banners = response.banners.data;
@@ -80,27 +49,11 @@ export const useHomepageStore = defineStore('aboutusStore', {
                         this.error = 'No banners found.';
                     }
                 } else {
-                    // Fallback data for SSR/SSG
-                    this.banners = [
-                        {
-                            id: 1,
-                            imageUrl: '/assets/img/landing/corporate/hero-bg.jpg',
-                            title: 'Gamma Neutral Consulting',
-                            description: 'Expert consulting services for your business needs'
-                        }
-                    ];
+                    this.banners = [];
                 }
-            } catch (error) {
+            } catch (error: any) {
                 this.error = error.message || 'Failed to fetch banners.';
-                // Provide fallback on error
-                this.banners = [
-                    {
-                        id: 1,
-                        imageUrl: '/assets/img/landing/corporate/hero-bg.jpg',
-                        title: 'Gamma Neutral Consulting',
-                        description: 'Expert consulting services for your business needs'
-                    }
-                ];
+                this.banners = [];
             } finally {
                 this.loading = false;
             }

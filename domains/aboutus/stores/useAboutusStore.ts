@@ -1,12 +1,11 @@
 import { defineStore } from 'pinia';
-import { useRuntimeConfig } from '#app';
 
 export const useAboutusStore = defineStore('aboutusStore', {
     state: () => ({
-        teams: [],
-        certifications : [],
+        teams: [] as any[],
+        certifications: [] as any[],
         loading: false,
-        error: null,
+        error: null as string | null,
     }),
 
     actions: {
@@ -15,15 +14,11 @@ export const useAboutusStore = defineStore('aboutusStore', {
             this.error = null;
 
             try {
-                const config = useRuntimeConfig();
-                const applicationId = config.public.applicationId;
-
                 const response = await GqlTeamsQuery({
                     first: numberOfTeams,
-                    application_id: applicationId,
                 });
                 this.teams = response.teams.data;
-            } catch (error) {
+            } catch (error: any) {
                 this.error = error.message || 'Failed to fetch teams.';
             } finally {
                 this.loading = false;
@@ -35,19 +30,13 @@ export const useAboutusStore = defineStore('aboutusStore', {
             this.error = null;
 
             try {
-                const config = useRuntimeConfig();
-                const applicationId = config.public.applicationId;
-
-                const response = await GqlCertificationsQuery({
-                    application_id: applicationId,
-                });
+                const response = await GqlCertificationsQuery();
                 this.certifications = response.certifications.data;
-            } catch (error) {
+            } catch (error: any) {
                 this.error = error.message || 'Failed to fetch certifications.';
             } finally {
                 this.loading = false;
             }
         },
-        
     }
 });

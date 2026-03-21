@@ -63,7 +63,7 @@
   
   onMounted(async () => {
     try {
-      await getTeams(50); // Charger les données avec un application_id fictif
+      await getTeams(50);
     } catch (error) {
       console.error("Error fetching teams:", error);
     } finally {
