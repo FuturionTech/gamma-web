@@ -81,12 +81,12 @@
             AI-Powered
           </span>
           <span class="value-badge">
-            <i class="fa fa-bolt"></i>
-            10x Faster
+            <i class="fa fa-shield-halved"></i>
+            Secure & Reliable
           </span>
           <span class="value-badge">
             <i class="fa fa-chart-line"></i>
-            98% Success
+            Data-Driven
           </span>
           <span class="value-badge">
             <i class="fa fa-gem"></i>

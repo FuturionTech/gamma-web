@@ -123,7 +123,7 @@
                 </div>
                 <h4 class="mb-3">Predictive Analytics</h4>
                 <p class="text-muted mb-0">
-                  Machine learning models that forecast trends with 95%+ accuracy,
+                  Machine learning models that forecast trends and patterns,
                   enabling proactive decision-making.
                 </p>
               </div>
@@ -140,7 +140,7 @@
                 <h4 class="mb-3">AI Automation</h4>
                 <p class="text-muted mb-0">
                   Custom AI solutions that automate complex processes,
-                  reducing operational costs by up to 40%.
+                  helping reduce operational costs and improve efficiency.
                 </p>
               </div>
             </div>
@@ -155,8 +155,8 @@
                 </div>
                 <h4 class="mb-3">Real-time Insights</h4>
                 <p class="text-muted mb-0">
-                  Live dashboards and monitoring systems processing millions
-                  of data points per second.
+                  Live dashboards and monitoring systems delivering
+                  timely, actionable business intelligence.
                 </p>
               </div>
             </div>
@@ -203,8 +203,8 @@
                 </div>
                 <h4 class="mb-3">Cloud Infrastructure</h4>
                 <p class="text-muted mb-0">
-                  Scalable solutions on AWS, Azure, and GCP with
-                  99.9% uptime guarantee.
+                  Scalable solutions on AWS, Azure, and GCP designed
+                  for high availability and reliability.
                 </p>
               </div>
             </div>
