@@ -2,7 +2,7 @@
  * Shared GraphQL composable for making queries/mutations
  * against the gamma-api GraphQL endpoint.
  *
- * Uses $fetch directly (nuxt-graphql-client is not registered as a module).
+ * Uses $fetch directly against the GraphQL endpoint from runtimeConfig.
  */
 export function useGraphql() {
   const config = useRuntimeConfig()
