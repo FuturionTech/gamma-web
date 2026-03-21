@@ -190,11 +190,17 @@
         <i class="bi bi-exclamation-circle text-warning" style="font-size: 3rem;"></i>
         <h2 class="mt-3 mb-3">Position Not Found</h2>
         <p class="text-muted mb-4">
-          The position you're looking for doesn't exist or has been filled.
+          The position you're looking for is no longer available. We currently have no open positions, but we'd love to hear from you.
         </p>
-        <NuxtLink to="/careers" class="btn btn-primary">
-          View All Open Positions
-        </NuxtLink>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="mailto:careers@gammaneutral.com" class="btn btn-primary">
+            <i class="bi bi-envelope me-2"></i>
+            Send Us Your Resume
+          </a>
+          <NuxtLink to="/careers" class="btn btn-outline-primary">
+            Back to Careers
+          </NuxtLink>
+        </div>
       </div>
     </section>
   </div>
