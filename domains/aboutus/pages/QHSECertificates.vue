@@ -3,7 +3,7 @@
     <!-- Titre avec un shimmer en cas de chargement -->
     <div style="padding-top: 70px;">
       <h2 v-if="!loading" class="text-center my-4 mt-5">
-        {{ $t("certifications.qhse") }}
+        QHSE Certifications
       </h2>
       <div v-else class="shimmer-title"></div> <!-- Shimmer du titre -->
     </div>
@@ -27,8 +27,8 @@
 <div v-else class="container">
   <nav aria-label="breadcrumb" class="mt-3">
         <ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
-          <li class="breadcrumb-item"><NuxtLink to="/">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ $t('breadcrumbs.qhse') }}</li>
+          <li class="breadcrumb-item"><NuxtLink to="/">Home</NuxtLink></li>
+          <li class="breadcrumb-item active" aria-current="page">QHSE Certifications</li>
         </ol>
       </nav>
 
@@ -46,7 +46,7 @@
                   class="image-thumbnail"
                   alt="Image Preview"
                 />
-                <div class="hover-message">{{ $t("clickToView") }}</div>
+                <div class="hover-message">Click to view</div>
               </div>
             </a>
           </div>
@@ -57,7 +57,7 @@
     <!-- Message affiché s'il n'y a aucune certification -->
     <div v-else class="text-center my-5">
         <div class="alert alert-warning" role="alert">
-          <i class="fas fa-exclamation-circle"></i> {{ $t("certifications.noDocuments") }}
+          <i class="bi bi-info-circle me-2"></i> Certifications and compliance documentation will be available soon.
         </div>
       </div>
   </div>
@@ -77,10 +77,6 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import { useAboutusStore } from "~/domains/aboutus/stores/useAboutusStore";
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
-
 const certificationsStore = useAboutusStore();
 const isModalOpen = ref(false);
 const currentfileUrl = ref("");
