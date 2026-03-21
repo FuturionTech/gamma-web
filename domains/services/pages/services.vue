@@ -128,6 +128,31 @@
       </div>
     </section>
 
+    <!-- Industry Focus Section -->
+    <section class="py-5 my-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <SectionHeader
+              title="Industry Focus"
+              subtitle="Deep domain expertise in regulated, data-intensive sectors"
+              headingSize="h2"
+              maxWidth="600px"
+            />
+            <p class="text-muted fs-6 lh-lg mb-3">
+              We focus on regulated, data-intensive industries: financial services, healthcare, and government.
+              Our team brings domain expertise in compliance frameworks (OSFI, PIPEDA, PHIPA), data governance,
+              and secure cloud architectures required by these sectors.
+            </p>
+            <p class="text-muted fs-6 lh-lg">
+              This focus means we understand the unique constraints of your industry before the first meeting
+              &mdash; from data residency requirements to audit trails and access controls that regulators expect.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section class="cta-section position-relative py-5 my-5 overflow-hidden">
       <div class="container position-relative" style="z-index: 10;">

@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Title -->
       <p class="text-center text-muted text-uppercase fw-semibold small mb-4 tracking-wide">
-        Technologies We Work With
+        Technologies We Specialize In
       </p>
 
       <!-- Technology Badges -->
