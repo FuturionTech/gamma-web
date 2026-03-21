@@ -327,29 +327,25 @@ const handleSubmit = async () => {
 }
 
 /* Dark mode support */
-:global(.dark-mode) .form-control,
-:global(.dark-mode) .form-select {
-  background-color: #1a1a1a;
-  border-color: #374151;
-  color: #e5e7eb;
+:global([data-bs-theme="dark"]) .form-control,
+:global([data-bs-theme="dark"]) .form-select {
+  background-color: #1a1a2e;
+  border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
 }
 
-:global(.dark-mode) .form-control:focus,
-:global(.dark-mode) .form-select:focus {
-  background-color: #1a1a1a;
+:global([data-bs-theme="dark"]) .form-control:focus,
+:global([data-bs-theme="dark"]) .form-select:focus {
+  background-color: #1a1a2e;
   border-color: #8b5cf6;
-  color: #e5e7eb;
+  color: var(--bs-body-color);
 }
 
-:global(.dark-mode) .form-label {
-  color: #e5e7eb;
+:global([data-bs-theme="dark"]) .form-label {
+  color: var(--bs-body-color);
 }
 
-:global(.dark-mode) .form-check-label {
-  color: #e5e7eb;
-}
-
-:global(.dark-mode) .text-muted {
-  color: #9ca3af !important;
+:global([data-bs-theme="dark"]) .form-check-label {
+  color: var(--bs-body-color);
 }
 </style>

@@ -120,4 +120,25 @@ onMounted(() => {
   color: gray !important;
   box-shadow: none !important;
 }
+
+/* Dark mode support */
+:global([data-bs-theme="dark"]) .bg-light {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+:global([data-bs-theme="dark"]) .accordion-item {
+  border-color: var(--bs-border-color);
+}
+
+:global([data-bs-theme="dark"]) .accordion-button {
+  color: var(--bs-body-color);
+}
+
+:global([data-bs-theme="dark"]) .accordion-button.collapsed {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+:global([data-bs-theme="dark"]) .accordion-body {
+  color: var(--bs-body-color);
+}
 </style>

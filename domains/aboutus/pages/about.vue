@@ -432,4 +432,40 @@ useHead({
 .shadow-lg {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
+
+/* ================================
+   DARK MODE SUPPORT
+   ================================ */
+
+:global([data-bs-theme="dark"]) .capability-card {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+:global([data-bs-theme="dark"]) .capability-card:hover {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+:global([data-bs-theme="dark"]) .team-card {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+:global([data-bs-theme="dark"]) .team-card:hover {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+
+:global([data-bs-theme="dark"]) .bg-light {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+:global([data-bs-theme="dark"]) .shadow-sm {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+:global([data-bs-theme="dark"]) .shadow-lg {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
 </style>

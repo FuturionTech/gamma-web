@@ -185,37 +185,19 @@ onMounted(() => {
 </style>
 
 <style>
-/* Global dark mode styles */
-.dark-mode {
+/* Global dark mode styles — uses both .dark-mode class and data-bs-theme for compat */
+.dark-mode,
+[data-bs-theme="dark"] {
   --bs-body-bg: #0f0f0f;
   --bs-body-color: #e5e7eb;
   --bs-border-color: rgba(255, 255, 255, 0.1);
   --bs-card-bg: #1a1a1a;
+  --bs-tertiary-bg: rgba(255, 255, 255, 0.04);
 }
 
-.dark-mode .bg-light {
-  background-color: #1a1a1a !important;
-}
-
-.dark-mode .bg-white {
-  background-color: #0f0f0f !important;
-}
-
-.dark-mode .text-dark {
+.dark-mode .text-dark,
+[data-bs-theme="dark"] .text-dark {
   color: #e5e7eb !important;
-}
-
-.dark-mode .text-muted {
-  color: #9ca3af !important;
-}
-
-.dark-mode .card {
-  background-color: #1a1a1a;
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .shadow-sm {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Smooth transitions for theme changes */

@@ -47,5 +47,8 @@ const industries = [
 </script>
 
 <style scoped>
-/* No custom styles needed - all handled by IndustryCard component */
+/* Dark mode support for section background */
+:global([data-bs-theme="dark"]) .bg-light {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
 </style>

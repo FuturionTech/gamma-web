@@ -43,3 +43,8 @@ body {
       color: $primary !important;
     }
   }
+
+// ====================================
+// Dark Mode Fixes (centralized)
+// ====================================
+@import "dark-mode-fixes";

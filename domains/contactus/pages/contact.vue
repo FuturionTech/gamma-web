@@ -310,20 +310,21 @@ useHead({
 }
 
 /* Dark mode support */
-:global(.dark-mode) .bg-light {
-  background-color: #0f0f0f !important;
+:global([data-bs-theme="dark"]) .bg-light {
+  background-color: var(--bs-body-bg) !important;
 }
 
-:global(.dark-mode) .card {
-  background-color: #1a1a1a !important;
-  color: #e5e7eb !important;
+:global([data-bs-theme="dark"]) .card {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  border-color: var(--bs-border-color) !important;
 }
 
-:global(.dark-mode) .text-muted {
-  color: #9ca3af !important;
+:global([data-bs-theme="dark"]) .what-to-expect-card {
+  background: linear-gradient(180deg, #1a1a2e 0%, var(--bs-body-bg) 100%) !important;
 }
 
-:global(.dark-mode) .shadow-sm {
-  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05) !important;
+:global([data-bs-theme="dark"]) .shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 </style>

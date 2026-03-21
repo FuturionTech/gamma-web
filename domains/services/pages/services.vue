@@ -541,7 +541,11 @@ const approachSteps = ref([
    ================================ */
 
 :global([data-bs-theme="dark"]) .wave-svg {
-  fill: #0f0f0f;
+  fill: var(--bs-body-bg);
+}
+
+:global([data-bs-theme="dark"]) .bg-light {
+  background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
 /* ================================

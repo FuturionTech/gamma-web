@@ -157,6 +157,21 @@ const benefits = [
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Dark mode support */
+:global([data-bs-theme="dark"]) .card {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
+}
+
+:global([data-bs-theme="dark"]) .chart-container.bg-light {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+:global([data-bs-theme="dark"]) .shadow-lg {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .display-5 {
