@@ -105,7 +105,7 @@ const processSteps = [
   {
     title: 'Support',
     description: 'Our partnership continues with dedicated support and optimization for sustained success.',
-    items: ['24/7 Monitoring', 'Performance Tuning', 'Regular Updates'],
+    items: ['Ongoing Monitoring', 'Performance Tuning', 'Regular Updates'],
     badgeColor: 'success'
   }
 ]

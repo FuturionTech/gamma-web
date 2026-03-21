@@ -40,89 +40,52 @@
           </div>
         </div>
 
-        <!-- Right Visual -->
+        <!-- Right Visual — Consulting Approach -->
         <div class="col-lg-6">
           <div class="position-relative">
-            <!-- Main Card -->
             <div class="card border-0 shadow-lg">
               <div class="card-body p-5">
-                <div class="mb-4">
-                  <div class="d-flex align-items-center mb-3">
-                    <div class="avatar-circle bg-primary text-white me-3">
-                      <i class="bi bi-award fs-4"></i>
-                    </div>
-                    <div>
-                      <h6 class="mb-0">Our Consulting Approach</h6>
-                      <small class="text-muted">What sets us apart</small>
-                    </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div class="avatar-circle bg-primary text-white me-3">
+                    <i class="bi bi-award fs-4"></i>
                   </div>
+                  <div>
+                    <h6 class="mb-0">Our Consulting Approach</h6>
+                    <small class="text-muted">What sets us apart</small>
+                  </div>
+                </div>
 
-                  <!-- Service Icons -->
-                  <div class="chart-container bg-light rounded p-3">
-                    <div class="d-flex align-items-end justify-content-around" style="height: 120px;">
-                      <div class="text-center">
-                        <i class="bi bi-cpu fs-3 text-primary"></i>
-                        <div class="small text-muted mt-1">AI</div>
-                      </div>
-                      <div class="text-center">
-                        <i class="bi bi-database fs-3 text-info"></i>
-                        <div class="small text-muted mt-1">Data</div>
-                      </div>
-                      <div class="text-center">
-                        <i class="bi bi-cloud fs-3 text-success"></i>
-                        <div class="small text-muted mt-1">Cloud</div>
-                      </div>
-                      <div class="text-center">
-                        <i class="bi bi-shield-check fs-3 text-danger"></i>
-                        <div class="small text-muted mt-1">Security</div>
-                      </div>
-                      <div class="text-center">
-                        <i class="bi bi-diagram-3 fs-3 text-warning"></i>
-                        <div class="small text-muted mt-1">BI</div>
-                      </div>
+                <!-- Service Icons -->
+                <div class="chart-container bg-light rounded p-3 mb-4">
+                  <div class="d-flex align-items-end justify-content-around" style="height: 120px;">
+                    <div class="text-center">
+                      <i class="bi bi-cpu fs-3 text-primary"></i>
+                      <div class="small text-muted mt-1">AI</div>
+                    </div>
+                    <div class="text-center">
+                      <i class="bi bi-database fs-3 text-info"></i>
+                      <div class="small text-muted mt-1">Data</div>
+                    </div>
+                    <div class="text-center">
+                      <i class="bi bi-cloud fs-3 text-success"></i>
+                      <div class="small text-muted mt-1">Cloud</div>
+                    </div>
+                    <div class="text-center">
+                      <i class="bi bi-shield-check fs-3 text-danger"></i>
+                      <div class="small text-muted mt-1">Security</div>
+                    </div>
+                    <div class="text-center">
+                      <i class="bi bi-diagram-3 fs-3 text-warning"></i>
+                      <div class="small text-muted mt-1">BI</div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Stats Row -->
-                <div class="row g-3 text-center">
-                  <div class="col-4">
-                    <div class="p-2 bg-success bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-success">7</div>
-                      <small class="text-muted">Services</small>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="p-2 bg-primary bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-primary">6</div>
-                      <small class="text-muted">Industries</small>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="p-2 bg-warning bg-opacity-10 rounded">
-                      <div class="h5 mb-0 text-warning">5</div>
-                      <small class="text-muted">Step Process</small>
-                    </div>
-                  </div>
-                </div>
+                <!-- Focus Areas -->
+                <p class="text-muted mb-0">
+                  We focus on regulated, data-intensive industries: financial services, healthcare, and government &mdash; where engineering rigour matters most.
+                </p>
               </div>
-            </div>
-
-            <!-- Floating Badge -->
-            <div class="position-absolute top-0 end-0 translate-middle">
-              <div class="badge bg-primary rounded-pill px-3 py-2 shadow">
-                <i class="bi bi-briefcase me-1"></i>
-                Consulting Experts
-              </div>
-            </div>
-
-            <!-- Background Decoration -->
-            <div class="position-absolute top-50 start-100 translate-middle ms-5 d-none d-xl-block">
-              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" stroke="#e9ecef" stroke-width="2" stroke-dasharray="5 5"/>
-                <circle cx="100" cy="100" r="60" stroke="#dee2e6" stroke-width="2" stroke-dasharray="5 5"/>
-                <circle cx="100" cy="100" r="40" stroke="#ced4da" stroke-width="2" stroke-dasharray="5 5"/>
-              </svg>
             </div>
           </div>
         </div>

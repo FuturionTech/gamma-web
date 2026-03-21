@@ -98,8 +98,8 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                 alt="Gamma Neutral team collaboration"
+            <img src="https://images.unsplash.com/photo-1517090504332-af2e820c4882?w=600&h=400&fit=crop"
+                 alt="Toronto skyline"
                  class="img-fluid rounded-3 shadow">
           </div>
         </div>
