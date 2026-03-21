@@ -45,11 +45,11 @@
             <!-- CTA Buttons -->
             <div class="d-flex flex-wrap gap-3 justify-content-center animate-fade-in-up animation-delay-2">
               <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                Get Started
+                Discuss Your Project
                 <i class="bi bi-arrow-right ms-2"></i>
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                Learn More
+                See How We Work
               </NuxtLink>
             </div>
           </div>
@@ -142,10 +142,10 @@
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
               <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
                 <i class="bi bi-telephone-fill me-2"></i>
-                Get Started Today
+                Discuss Your Project
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                Learn More About Us
+                See How We Work
               </NuxtLink>
             </div>
           </div>
@@ -319,7 +319,7 @@ const approachSteps = ref([
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
 /* Animated Background Shapes */
@@ -451,7 +451,7 @@ const approachSteps = ref([
 /* Hero Buttons */
 .hero-section .btn-light {
   background: white;
-  color: #667eea;
+  color: #1a1a2e;
   border: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -460,7 +460,7 @@ const approachSteps = ref([
 .hero-section .btn-light:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-  color: #667eea;
+  color: #1a1a2e;
 }
 
 .hero-section .btn-outline-light {
@@ -482,13 +482,13 @@ const approachSteps = ref([
    ================================ */
 
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   padding: 100px 0;
 }
 
 .cta-section .btn-light {
   background: white;
-  color: #667eea;
+  color: #1a1a2e;
   border: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -497,7 +497,7 @@ const approachSteps = ref([
 .cta-section .btn-light:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-  color: #667eea;
+  color: #1a1a2e;
 }
 
 .cta-section .btn-outline-light {

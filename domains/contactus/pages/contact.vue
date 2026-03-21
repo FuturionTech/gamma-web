@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-dark position-relative py-5">
+    <section class="position-relative py-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);"
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -161,11 +161,6 @@ useHead({
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Hero Section */
-.bg-dark {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
 /* Typography */

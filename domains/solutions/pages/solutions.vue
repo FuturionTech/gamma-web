@@ -1,29 +1,21 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="position-relative bg-dark text-white overflow-hidden py-5">
-      <!-- Background overlay -->
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
-
-      <!-- Background pattern -->
-      <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25">
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('/assets/img/landing/saas-4/hero-bg-pattern.png'); background-size: cover;"></div>
-      </div>
-
+    <section class="position-relative text-white overflow-hidden py-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
       <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center py-5">
           <div class="col-lg-7">
-            <h1 class="display-2 fw-bold mb-4">Our Solutions</h1>
+            <h1 class="display-4 fw-bold mb-4">Our Solutions</h1>
             <p class="fs-5 text-white-50 mb-4">
               Comprehensive data solutions tailored to your industry needs. We combine deep domain expertise with cutting-edge technology to deliver transformative results.
             </p>
             <div class="d-flex flex-wrap gap-3">
               <NuxtLink to="/contact" class="btn btn-primary btn-lg px-4">
-                Get Started
+                Talk to a Specialist
                 <i class="ai-arrow-right ms-2"></i>
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-4">
-                Learn More
+                See How We Work
               </NuxtLink>
             </div>
           </div>
@@ -73,7 +65,7 @@
                   :to="`/solutions/${solution.slug}`"
                   class="btn btn-outline-primary w-100"
                 >
-                  Learn More
+                  Talk to a Specialist
                   <i class="bi bi-arrow-right ms-2"></i>
                 </NuxtLink>
               </div>
@@ -146,11 +138,11 @@
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
               <NuxtLink to="/contact" class="btn btn-primary btn-lg px-5">
-                Schedule a Consultation
+                Discuss Your Project
                 <i class="bi bi-calendar-check ms-2"></i>
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5">
-                Learn More About Us
+                See How We Work
                 <i class="bi bi-arrow-right ms-2"></i>
               </NuxtLink>
             </div>
@@ -194,7 +186,7 @@ const solutions = computed(() => {
         useCases: [],
         technologies: [],
         processSteps: [],
-        cta: { title: 'Get Started', description: 'Contact us to learn more.', buttonText: 'Contact Us' },
+        cta: { title: 'Ready to Move Forward?', description: 'Tell us about your challenge and we will outline a practical path forward.', buttonText: 'Discuss Your Project' },
       }
     })
   }

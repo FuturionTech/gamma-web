@@ -38,8 +38,8 @@
             <!-- Simple, Clear CTAs -->
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
               <NuxtLink to="/contact" class="btn btn-white px-4 py-2 shadow">
-                <i class="bi bi-rocket-takeoff me-2"></i>
-                Start Your Journey
+                <i class="bi bi-calendar-check me-2"></i>
+                Schedule a Consultation
               </NuxtLink>
               <NuxtLink to="/services" class="btn btn-outline-light px-4 py-2">
                 <i class="bi bi-grid-3x3-gap me-2"></i>
@@ -407,7 +407,7 @@ useHead({
 <style scoped>
 /* Hero Gradient */
 .hero-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
 /* Removed minimum height for more compact hero */
@@ -453,7 +453,7 @@ useHead({
 /* Button Improvements */
 .btn-white {
   background: white;
-  color: #667eea;
+  color: #1a1a2e;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -462,7 +462,7 @@ useHead({
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
   background: white;
-  color: #764ba2;
+  color: #0f3460;
 }
 
 .btn-outline-light:hover {

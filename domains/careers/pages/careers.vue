@@ -1,8 +1,7 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-dark position-relative py-4" style="margin-top: 80px;">
-      <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255, .03);"></div>
+    <section class="position-relative py-4" style="margin-top: 80px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
       <div class="container position-relative z-2 py-4">
         <div class="row">
           <div class="col-lg-10 col-xl-9">
@@ -130,7 +129,7 @@
               <i class="bi bi-envelope ms-2"></i>
             </a>
             <NuxtLink to="/contact" class="btn btn-outline-light btn-lg px-5">
-              Contact Us
+              Book a Call
             </NuxtLink>
           </div>
         </div>
