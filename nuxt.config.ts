@@ -58,7 +58,6 @@ export default defineNuxtConfig({
         '~/domains/homepage/index.ts',
         '~/domains/privacy-policy/index.ts',
         '~/domains/services/index.ts',
-        '~/domains/solutions/index.ts',
 
         'nuxt-swiper',
         "@nuxt/image",

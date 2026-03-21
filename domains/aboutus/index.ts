@@ -25,7 +25,7 @@ export default defineNuxtModule({
             {
                 name: 'about-methodology',
                 path: '/about/methodology',
-                file: resolve(__dirname, 'pages/methodology.vue'),
+                redirect: '/about',
             })
         },
 
