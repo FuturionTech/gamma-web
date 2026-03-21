@@ -129,22 +129,20 @@
     </section>
 
     <!-- Industry Focus Section -->
-    <section class="py-5 my-5">
+    <section class="industry-focus-section py-5 my-5">
       <div class="container">
         <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-6 fw-bold mb-3 industry-heading">Industry Focus</h2>
+            <p class="fs-5 mb-4 industry-subtitle">Deep domain expertise in regulated, data-intensive sectors</p>
+          </div>
           <div class="col-lg-8">
-            <SectionHeader
-              title="Industry Focus"
-              subtitle="Deep domain expertise in regulated, data-intensive sectors"
-              headingSize="h2"
-              maxWidth="600px"
-            />
-            <p class="text-muted fs-6 lh-lg mb-3">
+            <p class="industry-text fs-5 lh-lg mb-3">
               We focus on regulated, data-intensive industries: financial services, healthcare, and government.
               Our team brings domain expertise in compliance frameworks (OSFI, PIPEDA, PHIPA), data governance,
               and secure cloud architectures required by these sectors.
             </p>
-            <p class="text-muted fs-6 lh-lg">
+            <p class="industry-text fs-5 lh-lg">
               This focus means we understand the unique constraints of your industry before the first meeting
               &mdash; from data residency requirements to audit trails and access controls that regulators expect.
             </p>
@@ -606,5 +604,40 @@ const approachSteps = ref([
 
 .fs-lg {
   font-size: 1.125rem;
+}
+
+/* Industry Focus section — strong visual weight */
+.industry-focus-section {
+  background: #f8f9fa;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+:global([data-bs-theme="dark"]) .industry-focus-section {
+  background: #1a1a1a;
+}
+
+.industry-heading {
+  color: #111827;
+}
+
+:global([data-bs-theme="dark"]) .industry-heading {
+  color: #f9fafb;
+}
+
+.industry-subtitle {
+  color: #4b5563;
+}
+
+:global([data-bs-theme="dark"]) .industry-subtitle {
+  color: #9ca3af;
+}
+
+.industry-text {
+  color: #374151;
+}
+
+:global([data-bs-theme="dark"]) .industry-text {
+  color: #d1d5db;
 }
 </style>

@@ -22,39 +22,39 @@
           />
         </div>
 
-        <!-- Results Card (unique design, kept separate) -->
+        <!-- Results Card (consistent light design) -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 border-0 bg-primary text-white">
+          <div class="card h-100 border-0 shadow-sm results-card">
             <div class="card-body p-4">
               <!-- Trophy Icon -->
               <div class="d-flex align-items-center mb-3">
-                <span class="badge bg-white text-dark rounded-circle p-3 me-3 d-flex align-items-center justify-content-center badge-icon">
+                <span class="badge bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3 d-flex align-items-center justify-content-center badge-icon">
                   ★
                 </span>
-                <h4 class="mb-0 text-white">Results</h4>
+                <h4 class="mb-0">Results</h4>
               </div>
 
               <!-- Description -->
-              <p class="mb-3">
+              <p class="text-muted mb-3">
                 Our proven process delivers:
               </p>
 
               <!-- Features -->
               <div class="small">
                 <div class="d-flex align-items-start mb-2">
-                  <span class="me-2">→</span>
+                  <span class="text-primary me-2">→</span>
                   <span>Faster Time to Market</span>
                 </div>
                 <div class="d-flex align-items-start mb-2">
-                  <span class="me-2">→</span>
+                  <span class="text-primary me-2">→</span>
                   <span>Reduced Operational Costs</span>
                 </div>
                 <div class="d-flex align-items-start mb-2">
-                  <span class="me-2">→</span>
+                  <span class="text-primary me-2">→</span>
                   <span>Improved Data Quality</span>
                 </div>
                 <div class="d-flex align-items-start">
-                  <span class="me-2">→</span>
+                  <span class="text-primary me-2">→</span>
                   <span>Competitive Advantage</span>
                 </div>
               </div>
@@ -118,6 +118,16 @@ const processSteps = [
   height: 48px;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+/* Results card hover to match process step cards */
+.results-card {
+  transition: all 0.3s ease;
+}
+
+.results-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Button hover */

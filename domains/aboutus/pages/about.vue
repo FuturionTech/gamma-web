@@ -63,10 +63,10 @@
             <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
               <i class="bi bi-building me-2"></i>Who We Are
             </div>
-            <h2 class="h2 fw-bold mb-4">
+            <h2 class="display-6 fw-bold mb-4">
               Engineering discipline for data and AI
             </h2>
-            <p class="fs-6 text-muted mb-4 lh-base">
+            <p class="fs-5 mb-4 lh-lg about-body-text">
               <strong>Gamma Neutral Consulting Inc.</strong> is a Toronto-based consulting firm
               focused on AI systems, data engineering, and cloud architecture. We work with
               financial institutions, healthcare organizations, and government agencies to design,
@@ -413,6 +413,15 @@ useHead({
 /* Remove excessive animations */
 * {
   animation-duration: 0.3s !important;
+}
+
+/* About body text — readable contrast */
+.about-body-text {
+  color: #374151;
+}
+
+:global([data-bs-theme="dark"]) .about-body-text {
+  color: #d1d5db;
 }
 
 /* Clean shadows */

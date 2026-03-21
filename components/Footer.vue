@@ -12,11 +12,11 @@
             </p>
             <!-- Social media links removed - to be added when accounts are created -->
             <div class="d-flex gap-3">
-              <NuxtLink class="btn btn-icon btn-sm btn-outline-light rounded-circle"
-                       href="mailto:info@gammaneutral.ca"
-                       aria-label="Email">
+              <a class="btn btn-sm btn-outline-light rounded-circle social-icon-btn"
+                 href="mailto:info@gammaneutral.ca"
+                 aria-label="Email">
                 <i class="bi bi-envelope-fill"></i>
-              </NuxtLink>
+              </a>
             </div>
           </div>
         </div>
@@ -178,6 +178,17 @@
 
 .nav-link {
   transition: color 0.2s ease-in-out;
+}
+
+/* Social icon button */
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.875rem;
 }
 
 .btn-outline-light:hover {
