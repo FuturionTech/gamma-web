@@ -19,7 +19,7 @@
             </div>
             <div class="about-content">
               <div class="about-title">Our Story</div>
-              <div class="about-description">How we became the #1 trusted AI partner for Fortune 500</div>
+              <div class="about-description">Our journey building data-driven solutions for businesses</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
@@ -32,7 +32,7 @@
             </div>
             <div class="about-content">
               <div class="about-title">Leadership Team</div>
-              <div class="about-description">Industry veterans with 200+ years combined experience</div>
+              <div class="about-description">Meet the team behind Gamma Neutral Consulting</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>
@@ -61,7 +61,7 @@
             </div>
             <div class="about-content">
               <div class="about-title">Careers</div>
-              <div class="about-description">Join our award-winning team of AI experts</div>
+              <div class="about-description">Explore career opportunities at Gamma Neutral</div>
             </div>
             <div class="about-arrow">
               <i class="fa fa-arrow-right"></i>

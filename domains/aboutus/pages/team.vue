@@ -21,59 +21,42 @@
 
             <h1 class="display-2 text-white pb-2 pb-sm-3">Meet Our Leadership</h1>
             <p class="fs-lg text-white-50 pb-4 mb-0" style="max-width: 700px;">
-              Our diverse team of experts brings together decades of experience in data science, AI,
-              and business transformation to deliver exceptional results for our clients.
+              Dedicated to delivering data-driven solutions and helping businesses unlock the potential of their data.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Team Grid -->
+    <!-- Team Profile -->
     <section class="container py-5">
-      <div class="row g-4 py-lg-4">
-        <div v-for="member in teamMembers" :key="member.id" class="col-md-6 col-lg-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="position-relative">
-              <div class="ratio ratio-4x3 bg-secondary">
+      <div class="row justify-content-center py-lg-4">
+        <div class="col-lg-8" v-for="member in displayMembers" :key="member.id">
+          <div class="card border-0 shadow-sm">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 text-center p-4">
                 <img
                   :src="member.image"
                   :alt="member.name"
-                  class="card-img-top object-fit-cover"
+                  class="rounded-circle img-fluid shadow"
+                  style="width: 200px; height: 200px; object-fit: cover;"
                   onerror="this.src='/assets/img/team/placeholder.jpg'"
                 >
               </div>
-              <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
-                <div class="d-flex gap-2">
-                  <a v-if="member.linkedin" :href="member.linkedin" target="_blank" class="btn btn-sm btn-light btn-icon rounded-circle">
-                    <i class="bi bi-linkedin"></i>
-                  </a>
-                  <a v-if="member.twitter" :href="member.twitter" target="_blank" class="btn btn-sm btn-light btn-icon rounded-circle">
-                    <i class="bi bi-twitter"></i>
-                  </a>
-                  <a v-if="member.email" :href="`mailto:${member.email}`" class="btn btn-sm btn-light btn-icon rounded-circle">
-                    <i class="bi bi-envelope"></i>
-                  </a>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h4 class="card-title mb-1">{{ member.name }}</h4>
+                  <p class="text-primary fw-semibold mb-3">{{ member.role }}</p>
+                  <p class="text-muted mb-3">{{ member.bio }}</p>
+
+                  <!-- Social links -->
+                  <div class="d-flex gap-2">
+                    <a v-if="member.socialLinks?.linkedin" :href="member.socialLinks.linkedin" target="_blank"
+                       class="btn btn-sm btn-outline-primary btn-icon rounded-circle">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title mb-1">{{ member.name }}</h4>
-              <p class="text-primary fw-semibold mb-3">{{ member.position }}</p>
-              <p class="text-muted mb-3">{{ member.bio }}</p>
-
-              <!-- Expertise Tags -->
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <span v-for="(skill, idx) in member.expertise.slice(0, 3)" :key="idx"
-                  class="badge bg-primary bg-opacity-10 text-primary">
-                  {{ skill }}
-                </span>
-              </div>
-
-              <!-- Experience Badge -->
-              <div class="d-flex align-items-center text-muted">
-                <i class="bi bi-briefcase me-2"></i>
-                <small>{{ member.experience }} experience</small>
               </div>
             </div>
           </div>
@@ -164,33 +147,9 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
-import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
+import { teamMembers } from '~/domains/aboutus/data/team'
 
-const aboutStore = useAboutusStore()
-
-onMounted(async () => {
-  await aboutStore.fetchTeams(20)
-})
-
-// Map API team members to the shape the template expects, fall back to static
-const teamMembers = computed(() => {
-  if (aboutStore.teams.length > 0) {
-    return aboutStore.teams.map((m) => ({
-      id: m.id,
-      name: m.name,
-      position: m.role,
-      bio: m.biography || '',
-      image: m.profile_picture_url || '/assets/img/team/placeholder.jpg',
-      linkedin: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
-      twitter: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'twitter')?.url || null,
-      email: m.email,
-      expertise: [],
-      experience: '',
-    }))
-  }
-  return staticTeamMembers
-})
+const displayMembers = teamMembers
 
 // SEO
 useHead({

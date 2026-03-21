@@ -288,65 +288,44 @@
       </div>
     </section>
 
-    <!-- Team Section - Essential Leadership -->
+    <!-- Founder Section -->
     <section class="py-5 bg-light">
       <div class="container py-4">
         <div class="text-center mb-4">
-          <h2 class="h2 fw-bold mb-3">Meet our leadership</h2>
+          <h2 class="h2 fw-bold mb-3">Leadership</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
-            Experienced leaders driving innovation in data science and AI
+            Driving innovation in data science and AI consulting
           </p>
         </div>
 
-        <div class="row g-4 justify-content-center">
-          <!-- Key team members - showing only top 3 for essential approach -->
-          <div class="col-md-6 col-lg-4" v-for="member in featuredTeamMembers" :key="member.id">
-            <div class="card border-0 shadow-sm h-100 team-card">
-              <div class="position-relative">
-                <div class="ratio ratio-4x3 bg-secondary">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm team-card">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4 text-center p-4">
                   <img
-                    :src="member.image"
-                    :alt="member.name"
-                    class="card-img-top object-fit-cover"
-                    onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&face'"
+                    :src="founder.image"
+                    :alt="founder.name"
+                    class="rounded-circle img-fluid shadow"
+                    style="width: 180px; height: 180px; object-fit: cover;"
                   >
                 </div>
-              </div>
-              <div class="card-body p-4 text-center">
-                <h4 class="mb-1">{{ member.name }}</h4>
-                <p class="text-primary fw-semibold mb-3">{{ member.position }}</p>
-                <p class="text-muted small mb-3">{{ member.bio.substring(0, 120) }}...</p>
-
-                <!-- Key expertise badges -->
-                <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
-                  <span v-for="(skill, idx) in member.expertise.slice(0, 2)" :key="idx"
-                    class="badge bg-primary bg-opacity-10 text-primary small">
-                    {{ skill }}
-                  </span>
-                </div>
-
-                <!-- Social links -->
-                <div class="d-flex gap-2 justify-content-center">
-                  <a v-if="member.linkedin" :href="member.linkedin" target="_blank"
-                     class="btn btn-sm btn-outline-primary btn-icon rounded-circle">
-                    <i class="bi bi-linkedin"></i>
-                  </a>
-                  <a v-if="member.email" :href="`mailto:${member.email}`"
-                     class="btn btn-sm btn-outline-primary btn-icon rounded-circle">
-                    <i class="bi bi-envelope"></i>
-                  </a>
+                <div class="col-md-8">
+                  <div class="card-body p-4">
+                    <h4 class="mb-1">{{ founder.name }}</h4>
+                    <p class="text-primary fw-semibold mb-3">{{ founder.role }}</p>
+                    <p class="text-muted mb-3">{{ founder.bio }}</p>
+                    <div class="d-flex gap-2">
+                      <a v-if="founder.socialLinks.linkedin" :href="founder.socialLinks.linkedin" target="_blank"
+                         class="btn btn-sm btn-outline-primary btn-icon rounded-circle">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Link to full team page -->
-        <div class="text-center mt-5">
-          <NuxtLink to="/about/team" class="btn btn-primary btn-lg px-5">
-            Meet Our Full Team
-            <i class="bi bi-arrow-right ms-2"></i>
-          </NuxtLink>
         </div>
       </div>
     </section>
@@ -383,32 +362,9 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
-import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
+import { teamMembers } from '~/domains/aboutus/data/team'
 
-const aboutStore = useAboutusStore()
-
-// Try to fetch from API, fall back to static data
-onMounted(async () => {
-  await aboutStore.fetchTeams(6)
-})
-
-// Featured team members: prefer API data, fall back to static
-const featuredTeamMembers = computed(() => {
-  if (aboutStore.teams.length > 0) {
-    return aboutStore.teams.slice(0, 3).map((m) => ({
-      id: m.id,
-      name: m.name,
-      position: m.role,
-      bio: m.biography || '',
-      image: m.profile_picture_url || '/assets/img/team/placeholder.jpg',
-      linkedin: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
-      email: m.email,
-      expertise: [],
-    }))
-  }
-  return staticTeamMembers.slice(0, 3)
-})
+const founder = teamMembers[0]
 
 // SEO
 useHead({
