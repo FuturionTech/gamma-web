@@ -67,8 +67,15 @@
 <script setup>
 import { useHead } from '#imports'
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
 const { t, locale } = useI18n();
+const homepageStore = useHomepageStore()
+
+// Fetch all homepage data from GraphQL in parallel
+onMounted(() => {
+  homepageStore.fetchAll()
+})
 
 // Debug mode for development - helps identify empty sections
 const debugMode = ref(false)

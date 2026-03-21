@@ -1,11 +1,35 @@
 import { defineStore } from 'pinia'
 
+interface Service {
+  id: string
+  title: string
+  description: string
+  slug: string
+  icon: string | null
+  short_description: string | null
+  category: string | null
+  is_active: boolean
+  order: number
+  features: { id: string; title: string; description: string | null }[]
+}
+
 interface Partner {
   id: string
   name: string
   logo_url: string | null
   website_url: string | null
   is_active: boolean
+  order: number
+}
+
+interface Client {
+  id: string
+  name: string
+  logo_url: string | null
+  industry: string | null
+  website_url: string | null
+  is_active: boolean
+  order: number
 }
 
 interface Testimonial {
@@ -16,6 +40,7 @@ interface Testimonial {
   company: string | null
   rating: number | null
   image_url: string | null
+  is_active: boolean
 }
 
 interface Stat {
@@ -23,79 +48,166 @@ interface Stat {
   label: string
   value: string
   icon: string | null
+  is_active: boolean
+  order: number
+}
+
+interface BlogPost {
+  id: string
+  title: string
+  slug: string
+  excerpt: string | null
+  category: string | null
+  status: string
+  featured_image_url: string | null
+  published_at: string | null
+  author: { name: string; role: string | null } | null
 }
 
 export const useHomepageStore = defineStore('homepageStore', {
   state: () => ({
+    services: [] as Service[],
     partners: [] as Partner[],
+    clients: [] as Client[],
     testimonials: [] as Testimonial[],
     stats: [] as Stat[],
-    loading: false,
+    blogPosts: [] as BlogPost[],
+    loadingServices: false,
+    loadingPartners: false,
+    loadingClients: false,
+    loadingTestimonials: false,
+    loadingStats: false,
+    loadingBlogPosts: false,
     error: null as string | null,
   }),
 
   actions: {
-    async fetchPartners(limit = 10) {
-      this.loading = true
-      this.error = null
+    async fetchServices(limit = 6) {
+      this.loadingServices = true
       try {
         const { query } = useGraphql()
-        const data = await query<{ partners: Partner[] }>(`
-          query Partners($limit: Int) {
-            partners(limit: $limit) {
-              id name logo_url website_url is_active
+        const data = await query<{ services: Service[] }>(`
+          query Services($limit: Int, $is_active: Boolean) {
+            services(limit: $limit, is_active: $is_active) {
+              id title description slug icon short_description category is_active order
+              features { id title description }
             }
           }
-        `, { limit })
-        this.partners = data.partners ?? []
+        `, { limit, is_active: true })
+        this.services = data.services ?? []
       } catch (e: any) {
-        this.error = e.message || 'Failed to fetch partners.'
-        this.partners = []
+        this.error = e.message || 'Failed to fetch services.'
       } finally {
-        this.loading = false
+        this.loadingServices = false
       }
     },
 
-    async fetchTestimonials(limit = 10) {
-      this.loading = true
-      this.error = null
+    async fetchPartners(first = 10) {
+      this.loadingPartners = true
       try {
         const { query } = useGraphql()
-        const data = await query<{ testimonials: Testimonial[] }>(`
-          query Testimonials($limit: Int) {
-            testimonials(limit: $limit) {
-              id name content position company rating image_url
+        const data = await query<{ partners: { data: Partner[] } }>(`
+          query Partners($first: Int!) {
+            partners(first: $first) {
+              data { id name logo_url website_url is_active order }
             }
           }
-        `, { limit })
-        this.testimonials = data.testimonials ?? []
+        `, { first })
+        this.partners = data.partners?.data ?? []
+      } catch (e: any) {
+        this.error = e.message || 'Failed to fetch partners.'
+      } finally {
+        this.loadingPartners = false
+      }
+    },
+
+    async fetchClients(limit = 10) {
+      this.loadingClients = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ clients: Client[] }>(`
+          query Clients($limit: Int, $is_active: Boolean) {
+            clients(limit: $limit, is_active: $is_active) {
+              id name logo_url industry website_url is_active order
+            }
+          }
+        `, { limit, is_active: true })
+        this.clients = data.clients ?? []
+      } catch (e: any) {
+        this.error = e.message || 'Failed to fetch clients.'
+      } finally {
+        this.loadingClients = false
+      }
+    },
+
+    async fetchTestimonials(first = 10) {
+      this.loadingTestimonials = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ testimonials: { data: Testimonial[] } }>(`
+          query Testimonials($first: Int!) {
+            testimonials(first: $first) {
+              data { id name content position company rating image_url is_active }
+            }
+          }
+        `, { first })
+        this.testimonials = (data.testimonials?.data ?? []).filter(t => t.is_active)
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch testimonials.'
-        this.testimonials = []
       } finally {
-        this.loading = false
+        this.loadingTestimonials = false
       }
     },
 
     async fetchStats(limit = 10) {
-      this.loading = true
-      this.error = null
+      this.loadingStats = true
       try {
         const { query } = useGraphql()
         const data = await query<{ stats: Stat[] }>(`
-          query Stats($limit: Int) {
-            stats(limit: $limit) {
-              id label value icon
+          query Stats($limit: Int, $is_active: Boolean) {
+            stats(limit: $limit, is_active: $is_active) {
+              id label value icon is_active order
             }
           }
-        `, { limit })
+        `, { limit, is_active: true })
         this.stats = data.stats ?? []
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch stats.'
-        this.stats = []
       } finally {
-        this.loading = false
+        this.loadingStats = false
       }
+    },
+
+    async fetchBlogPosts(limit = 3) {
+      this.loadingBlogPosts = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ blogPosts: BlogPost[] }>(`
+          query BlogPosts($limit: Int, $status: PostStatus) {
+            blogPosts(limit: $limit, status: $status) {
+              id title slug excerpt category status featured_image_url published_at
+              author { name role }
+            }
+          }
+        `, { limit, status: 'PUBLISHED' })
+        this.blogPosts = data.blogPosts ?? []
+      } catch (e: any) {
+        this.error = e.message || 'Failed to fetch blog posts.'
+      } finally {
+        this.loadingBlogPosts = false
+      }
+    },
+
+    /** Fetch all homepage data in parallel */
+    async fetchAll() {
+      await Promise.allSettled([
+        this.fetchServices(6),
+        this.fetchStats(10),
+        this.fetchTestimonials(10),
+        this.fetchPartners(10),
+        this.fetchClients(10),
+        this.fetchBlogPosts(3),
+      ])
     },
   },
 })

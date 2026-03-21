@@ -74,14 +74,28 @@
           maxWidth="600px"
         />
 
-        <div class="row g-4">
+        <!-- Loading State -->
+        <div v-if="servicesStore.loading" class="row g-4">
+          <div class="col-lg-4 col-md-6" v-for="n in 6" :key="n">
+            <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
+              <div class="placeholder-glow">
+                <div class="placeholder bg-secondary rounded-3 mb-4" style="width: 64px; height: 64px;"></div>
+                <div class="placeholder bg-secondary col-8 mb-3" style="height: 24px;"></div>
+                <div class="placeholder bg-secondary col-12 mb-2" style="height: 16px;"></div>
+                <div class="placeholder bg-secondary col-10 mb-4" style="height: 16px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div v-else class="row g-4">
           <!-- Service Cards using shared component -->
           <div class="col-lg-4 col-md-6" v-for="(service, index) in services" :key="index">
             <ServiceCard
               :title="service.title"
               :description="service.description"
               :features="service.features"
-              :svgIcon="service.svgIcon"
+              :icon="service.icon"
               :gradientClass="service.gradientClass"
               :link="service.link"
             />
@@ -143,12 +157,18 @@
 
 <script setup>
 import { useHead } from '#imports'
-import { h } from 'vue'
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
+import { useServicesStore } from '~/domains/services/stores/useServicesStore'
 
 const { t, locale } = useI18n();
+const servicesStore = useServicesStore()
+
+// Fetch services from API
+onMounted(async () => {
+  await servicesStore.fetchServices(20)
+})
 
 useHead({
   title: 'Our Services - Gamma Neutral Consulting',
@@ -160,142 +180,102 @@ useHead({
   ]
 })
 
-// SVG Icon Components
-const AIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M12 8v8M8 12h8', stroke: 'white', 'stroke-width': '2' })
-])
+// Icon-to-gradient mapping for API services
+const iconGradientMap: Record<string, string> = {
+  brain: 'bg-gradient-primary',
+  database: 'bg-gradient-info',
+  cloud: 'bg-gradient-success',
+  shield: 'bg-gradient-danger',
+  chart: 'bg-gradient-warning',
+  server: 'bg-gradient-purple',
+  clipboard: 'bg-gradient-dark',
+}
 
-const DataEngIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('rect', { x: '3', y: '3', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '10', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '17', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' })
-])
+// Bootstrap icon mapping from API icon names
+const iconBootstrapMap: Record<string, string> = {
+  brain: 'bi bi-cpu',
+  database: 'bi bi-database',
+  cloud: 'bi bi-cloud',
+  shield: 'bi bi-shield-check',
+  chart: 'bi bi-bar-chart',
+  server: 'bi bi-hdd-stack',
+  clipboard: 'bi bi-clipboard-data',
+}
 
-const CloudIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z', stroke: 'white', 'stroke-width': '2' })
-])
-
-const SecurityIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M12 2L4 7v6c0 4.5 2.5 8.5 8 10 5.5-1.5 8-5.5 8-10V7l-8-5z', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M9 12l2 2 4-4', stroke: 'white', 'stroke-width': '2' })
-])
-
-const BIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('rect', { x: '3', y: '3', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '14', y: '3', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '14', y: '12', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '16', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' })
-])
-
-const BigDataIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('circle', { cx: '12', cy: '12', r: '3', stroke: 'white', 'stroke-width': '2' }),
-  h('circle', { cx: '12', cy: '12', r: '8', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M12 1v6m0 6v6m11-7h-6m-6 0H1', stroke: 'white', 'stroke-width': '2' })
-])
-
-const ProjectIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('rect', { x: '3', y: '4', width: '18', height: '18', rx: '2', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M3 10h18M9 4v6', stroke: 'white', 'stroke-width': '2' }),
-  h('circle', { cx: '8', cy: '15', r: '1.5', fill: 'white' }),
-  h('circle', { cx: '12', cy: '15', r: '1.5', fill: 'white' }),
-  h('circle', { cx: '16', cy: '15', r: '1.5', fill: 'white' })
-])
-
-const services = ref([
+// Static fallback services
+const staticServices = [
   {
-    title: 'Artificial Intelligence',
-    description: 'Comprehensive AI solutions spanning machine learning, deep learning, natural language processing, computer vision, and algorithm development to automate processes, predict outcomes, and unlock insights from your data.',
-    svgIcon: AIIcon,
+    title: 'AI & Machine Learning',
+    description: 'Deploy intelligent systems that automate processes, predict outcomes, and unlock insights from your data.',
+    icon: 'bi bi-cpu',
     gradientClass: 'bg-gradient-primary',
-    features: [
-      'Machine Learning',
-      'Deep Learning',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Algorithm Development'
-    ],
+    features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning Models'],
     link: '/contact'
   },
   {
     title: 'Data Engineering',
     description: 'Build robust data pipelines and architectures that ensure seamless data flow across your organization.',
-    svgIcon: DataEngIcon,
+    icon: 'bi bi-database',
     gradientClass: 'bg-gradient-info',
-    features: [
-      'ETL/ELT Pipelines',
-      'Real-time Processing',
-      'Data Lake Design',
-      'Data Quality Management'
-    ],
+    features: ['ETL/ELT Pipelines', 'Real-time Processing', 'Data Lake Design', 'Data Quality Management'],
     link: '/contact'
   },
   {
     title: 'Cloud Computing',
     description: 'Migrate and optimize your infrastructure with scalable cloud solutions from AWS, Azure, and GCP.',
-    svgIcon: CloudIcon,
+    icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
-    features: [
-      'Cloud Migration',
-      'Serverless Architecture',
-      'Cost Optimization',
-      'Multi-Cloud Strategy'
-    ],
+    features: ['Cloud Migration', 'Serverless Architecture', 'Cost Optimization', 'Multi-Cloud Strategy'],
     link: '/contact'
   },
   {
     title: 'Cybersecurity',
     description: 'Protect your data assets with enterprise-grade security solutions and compliance frameworks.',
-    svgIcon: SecurityIcon,
+    icon: 'bi bi-shield-check',
     gradientClass: 'bg-gradient-danger',
-    features: [
-      'Threat Detection & Response',
-      'Compliance Management',
-      '24/7 Security Monitoring',
-      'Penetration Testing'
-    ],
+    features: ['Threat Detection & Response', 'Compliance Management', '24/7 Security Monitoring', 'Penetration Testing'],
     link: '/contact'
   },
   {
     title: 'Business Intelligence',
     description: 'Transform raw data into actionable insights with interactive dashboards and strategic reports.',
-    svgIcon: BIIcon,
+    icon: 'bi bi-bar-chart',
     gradientClass: 'bg-gradient-warning',
-    features: [
-      'Interactive Dashboards',
-      'KPI Monitoring',
-      'Strategic Reporting',
-      'Self-Service Analytics'
-    ],
+    features: ['Interactive Dashboards', 'KPI Monitoring', 'Strategic Reporting', 'Self-Service Analytics'],
     link: '/contact'
   },
   {
     title: 'Big Data Solutions',
     description: 'Process and analyze massive datasets with distributed computing and advanced analytics platforms.',
-    svgIcon: BigDataIcon,
+    icon: 'bi bi-hdd-stack',
     gradientClass: 'bg-gradient-purple',
-    features: [
-      'Distributed Processing',
-      'Spark & Hadoop Ecosystems',
-      'Data Lake Architecture',
-      'Stream Processing'
-    ],
+    features: ['Distributed Processing', 'Spark & Hadoop Ecosystems', 'Data Lake Architecture', 'Stream Processing'],
     link: '/contact'
   },
   {
     title: 'Project Management',
     description: 'Ensure successful project delivery through meticulous planning, execution, and stakeholder alignment.',
-    svgIcon: ProjectIcon,
+    icon: 'bi bi-clipboard-data',
     gradientClass: 'bg-gradient-dark',
-    features: [
-      'Agile & Scrum Delivery',
-      'Stakeholder Management',
-      'End-to-End Execution',
-      'Risk Mitigation'
-    ],
+    features: ['Agile & Scrum Delivery', 'Stakeholder Management', 'End-to-End Execution', 'Risk Mitigation'],
     link: '/contact'
   }
-]);
+]
+
+// Prefer API data, fall back to static
+const services = computed(() => {
+  if (servicesStore.services.length > 0) {
+    return servicesStore.services.map(s => ({
+      title: s.title,
+      description: s.short_description || s.description,
+      icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
+      gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
+      features: s.features.map(f => f.title),
+      link: '/contact',
+    }))
+  }
+  return staticServices
+});
 
 const approachSteps = ref([
   {

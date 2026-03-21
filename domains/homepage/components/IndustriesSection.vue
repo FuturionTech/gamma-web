@@ -2,9 +2,23 @@
   <!-- Industries Section - Clean Modern Design -->
   <section class="py-5 bg-light">
     <div class="container py-4">
+      <!-- Loading State -->
+      <div v-if="loading" class="row g-4">
+        <div class="col-md-6 col-lg-4" v-for="n in 6" :key="n">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 placeholder-glow">
+              <div class="placeholder bg-secondary rounded-circle mb-3" style="width: 56px; height: 56px;"></div>
+              <div class="placeholder bg-secondary col-8 mb-2" style="height: 20px;"></div>
+              <div class="placeholder bg-secondary col-12 mb-1" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-10" style="height: 14px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Industries Grid using IndustryCard -->
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" v-for="industry in industries" :key="industry.title">
+      <div v-else class="row g-4">
+        <div class="col-md-6 col-lg-4" v-for="industry in displayIndustries" :key="industry.title">
           <IndustryCard
             :title="industry.title"
             :description="industry.description"
@@ -21,8 +35,31 @@
 
 <script setup>
 import IndustryCard from '~/components/shared/cards/IndustryCard.vue'
+import { useSolutionsStore } from '~/domains/solutions/stores/useSolutionsStore'
 
-const industries = [
+const solutionsStore = useSolutionsStore()
+
+// Fetch solutions if not already loaded
+onMounted(async () => {
+  if (solutionsStore.solutions.length === 0) {
+    await solutionsStore.fetchSolutions(10)
+  }
+})
+
+const loading = computed(() => solutionsStore.loading && solutionsStore.solutions.length === 0)
+
+// Map solution slugs to icons/colors
+const solutionIconMap = {
+  'financial-services': { icon: 'bi-bank', iconColor: 'primary' },
+  'healthcare-analytics': { icon: 'bi-heart-pulse', iconColor: 'success' },
+  'smart-government': { icon: 'bi-shield-check', iconColor: 'info' },
+  'retail-intelligence': { icon: 'bi-bar-chart', iconColor: 'warning' },
+  'manufacturing-4-0': { icon: 'bi-gear', iconColor: 'secondary' },
+  'education-analytics': { icon: 'bi-mortarboard', iconColor: 'danger' },
+}
+
+// Static fallback
+const staticIndustries = [
   {
     title: 'Banks & Financial Services',
     description: 'Enhancing data security and analytics for better financial decision-making with AI-powered risk modeling and fraud detection.',
@@ -66,6 +103,22 @@ const industries = [
     link: '/solutions/education-analytics'
   }
 ]
+
+const displayIndustries = computed(() => {
+  if (solutionsStore.solutions.length > 0) {
+    return solutionsStore.solutions.map(s => {
+      const mapping = solutionIconMap[s.slug] || { icon: 'bi-info-circle', iconColor: 'primary' }
+      return {
+        title: s.title,
+        description: s.description.substring(0, 150) + (s.description.length > 150 ? '...' : ''),
+        icon: mapping.icon,
+        iconColor: mapping.iconColor,
+        link: `/solutions/${s.slug}`,
+      }
+    })
+  }
+  return staticIndustries
+})
 </script>
 
 <style scoped>
