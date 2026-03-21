@@ -103,7 +103,7 @@
         <div class="capabilities-badges">
           <span class="capability-badge">
             <i class="fa fa-microchip"></i>
-            AI & Machine Learning
+            Artificial Intelligence
           </span>
           <span class="capability-badge">
             <i class="fa fa-cloud"></i>

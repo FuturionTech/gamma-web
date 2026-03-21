@@ -204,15 +204,16 @@ const ProjectIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24
 
 const services = ref([
   {
-    title: 'AI & Machine Learning',
-    description: 'Deploy intelligent systems that automate processes, predict outcomes, and unlock insights from your data.',
+    title: 'Artificial Intelligence',
+    description: 'Comprehensive AI solutions spanning machine learning, deep learning, natural language processing, computer vision, and algorithm development to automate processes, predict outcomes, and unlock insights from your data.',
     svgIcon: AIIcon,
     gradientClass: 'bg-gradient-primary',
     features: [
-      'Predictive Analytics',
+      'Machine Learning',
+      'Deep Learning',
       'Natural Language Processing',
       'Computer Vision',
-      'Deep Learning Models'
+      'Algorithm Development'
     ],
     link: '/contact'
   },

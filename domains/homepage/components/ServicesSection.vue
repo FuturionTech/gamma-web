@@ -2,15 +2,31 @@
   <!-- Services Grid Section -->
   <section class="py-5 my-5">
     <div class="container">
+      <!-- Loading State -->
+      <div v-if="homepageStore.loadingServices" class="row g-4">
+        <div class="col-lg-4 col-md-6" v-for="n in 6" :key="n">
+          <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
+            <div class="placeholder-glow">
+              <div class="placeholder bg-secondary rounded-3 mb-4" style="width: 64px; height: 64px;"></div>
+              <div class="placeholder bg-secondary col-8 mb-3" style="height: 24px;"></div>
+              <div class="placeholder bg-secondary col-12 mb-2" style="height: 16px;"></div>
+              <div class="placeholder bg-secondary col-10 mb-4" style="height: 16px;"></div>
+              <div class="placeholder bg-secondary col-6 mb-2" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-7 mb-2" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-5" style="height: 14px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Services Grid -->
-      <div class="row g-4">
-        <!-- Service Cards using shared component -->
-        <div class="col-lg-4 col-md-6" v-for="service in services" :key="service.title">
+      <div v-else class="row g-4">
+        <div class="col-lg-4 col-md-6" v-for="service in displayServices" :key="service.title">
           <ServiceCard
             :title="service.title"
             :description="service.description"
             :features="service.features"
-            :svgIcon="service.svgIcon"
+            :icon="service.icon"
             :gradientClass="service.gradientClass"
             :link="service.link"
           />
@@ -29,50 +45,38 @@
 </template>
 
 <script setup>
-import { h } from 'vue'
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
+import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
-// SVG Icon Components
-const AIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M12 8v8M8 12h8', stroke: 'white', 'stroke-width': '2' })
-])
+const homepageStore = useHomepageStore()
 
-const DataEngIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('rect', { x: '3', y: '3', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '10', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '17', width: '18', height: '5', rx: '1', stroke: 'white', 'stroke-width': '2' })
-])
+// Icon-to-gradient mapping for API services
+const iconGradientMap = {
+  brain: 'bg-gradient-primary',
+  database: 'bg-gradient-info',
+  cloud: 'bg-gradient-success',
+  shield: 'bg-gradient-danger',
+  chart: 'bg-gradient-warning',
+  server: 'bg-gradient-purple',
+}
 
-const CloudIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z', stroke: 'white', 'stroke-width': '2' })
-])
+// Bootstrap icon mapping from API icon names
+const iconBootstrapMap = {
+  brain: 'bi bi-cpu',
+  database: 'bi bi-database',
+  cloud: 'bi bi-cloud',
+  shield: 'bi bi-shield-check',
+  chart: 'bi bi-bar-chart',
+  server: 'bi bi-hdd-stack',
+}
 
-const SecurityIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('path', { d: 'M12 2L4 7v6c0 4.5 2.5 8.5 8 10 5.5-1.5 8-5.5 8-10V7l-8-5z', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M9 12l2 2 4-4', stroke: 'white', 'stroke-width': '2' })
-])
-
-const BIIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('rect', { x: '3', y: '3', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '14', y: '3', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '14', y: '12', width: '7', height: '9', stroke: 'white', 'stroke-width': '2' }),
-  h('rect', { x: '3', y: '16', width: '7', height: '5', stroke: 'white', 'stroke-width': '2' })
-])
-
-const BigDataIcon = () => h('svg', { width: '32', height: '32', viewBox: '0 0 24 24', fill: 'none' }, [
-  h('circle', { cx: '12', cy: '12', r: '3', stroke: 'white', 'stroke-width': '2' }),
-  h('circle', { cx: '12', cy: '12', r: '8', stroke: 'white', 'stroke-width': '2' }),
-  h('path', { d: 'M12 1v6m0 6v6m11-7h-6m-6 0H1', stroke: 'white', 'stroke-width': '2' })
-])
-
-// Services Data
-const services = [
+// Static fallback data
+const staticServices = [
   {
-    title: 'AI & Machine Learning',
-    description: 'Deploy intelligent systems that automate processes, predict outcomes, and unlock insights from your data.',
-    features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision'],
-    svgIcon: AIIcon,
+    title: 'Artificial Intelligence',
+    description: 'Comprehensive AI solutions spanning machine learning, deep learning, NLP, computer vision, and algorithm development.',
+    features: ['Machine Learning', 'Deep Learning', 'Natural Language Processing'],
+    icon: 'bi bi-cpu',
     gradientClass: 'bg-gradient-primary',
     link: '/services'
   },
@@ -80,7 +84,7 @@ const services = [
     title: 'Data Engineering',
     description: 'Build robust data pipelines and architectures that ensure seamless data flow across your organization.',
     features: ['ETL/ELT Pipelines', 'Real-time Processing', 'Data Lake Design'],
-    svgIcon: DataEngIcon,
+    icon: 'bi bi-database',
     gradientClass: 'bg-gradient-info',
     link: '/services'
   },
@@ -88,7 +92,7 @@ const services = [
     title: 'Cloud Computing',
     description: 'Migrate and optimize your infrastructure with scalable cloud solutions from AWS, Azure, and GCP.',
     features: ['Cloud Migration', 'Serverless Architecture', 'Cost Optimization'],
-    svgIcon: CloudIcon,
+    icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
     link: '/services'
   },
@@ -96,7 +100,7 @@ const services = [
     title: 'Cybersecurity',
     description: 'Protect your data assets with enterprise-grade security solutions and compliance frameworks.',
     features: ['Threat Detection', 'Compliance Management', '24/7 Monitoring'],
-    svgIcon: SecurityIcon,
+    icon: 'bi bi-shield-check',
     gradientClass: 'bg-gradient-danger',
     link: '/services'
   },
@@ -104,7 +108,7 @@ const services = [
     title: 'Business Intelligence',
     description: 'Transform raw data into actionable insights with interactive dashboards and reports.',
     features: ['Interactive Dashboards', 'KPI Monitoring', 'Strategic Reporting'],
-    svgIcon: BIIcon,
+    icon: 'bi bi-bar-chart',
     gradientClass: 'bg-gradient-warning',
     link: '/services'
   },
@@ -112,11 +116,26 @@ const services = [
     title: 'Big Data Solutions',
     description: 'Process and analyze massive datasets with distributed computing and advanced analytics.',
     features: ['Distributed Processing', 'Spark & Hadoop', 'Data Lake Solutions'],
-    svgIcon: BigDataIcon,
+    icon: 'bi bi-hdd-stack',
     gradientClass: 'bg-gradient-purple',
     link: '/services'
   }
 ]
+
+// Prefer API data, fall back to static
+const displayServices = computed(() => {
+  if (homepageStore.services.length > 0) {
+    return homepageStore.services.map(s => ({
+      title: s.title,
+      description: s.short_description || s.description,
+      features: s.features.map(f => f.title),
+      icon: iconBootstrapMap[s.icon] || 'bi bi-gear',
+      gradientClass: iconGradientMap[s.icon] || 'bg-gradient-primary',
+      link: '/services',
+    }))
+  }
+  return staticServices
+})
 </script>
 
 <style scoped>
