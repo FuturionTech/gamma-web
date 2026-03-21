@@ -1,7 +1,7 @@
 <template>
   <header
-    class="navbar navbar-expand-lg fixed-top header-smart"
-    :class="[navbarClasses, { 'header-hidden': !isHeaderVisible }]"
+    class="navbar navbar-expand-lg fixed-top"
+    :class="[navbarClasses]"
     data-bs-theme="dark"
   >
     <div class="container">
@@ -68,28 +68,7 @@ const navbarClasses = computed(() => {
     : 'navbar-scrolled navbar-solid'
 })
 
-// Smart scroll header — hide on scroll down, show on scroll up
-const lastScrollY = ref(0)
-const isHeaderVisible = ref(true)
-
-const handleSmartScroll = () => {
-  const currentScrollY = window.scrollY
-  // Always show header near top of page or when mobile menu is open
-  if (currentScrollY < 100 || isMenuOpen.value) {
-    isHeaderVisible.value = true
-  } else {
-    isHeaderVisible.value = currentScrollY < lastScrollY.value
-  }
-  lastScrollY.value = currentScrollY
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleSmartScroll, { passive: true })
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleSmartScroll)
-})
+// No smart scroll — header stays visible at all times via fixed-top
 
 // Watch for route changes to close menu
 watch(() => route.path, () => {
@@ -97,20 +76,15 @@ watch(() => route.path, () => {
     navbarNav.value.classList.remove('show')
   }
   closeMenu()
-  // Always show header on navigation
-  isHeaderVisible.value = true
+  // Menu closes on navigation
 })
 </script>
 
 
 <style>
-/* Smart scroll header */
-.header-smart {
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.header-hidden {
-  transform: translateY(-100%);
+/* Sticky header transitions */
+.navbar.fixed-top {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Global styles for navbar states */
