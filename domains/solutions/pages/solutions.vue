@@ -163,8 +163,43 @@
 
 <script setup lang="ts">
 import { getAllSolutions } from '~/domains/solutions/data/solutions'
+import { useSolutionsStore } from '~/domains/solutions/stores/useSolutionsStore'
 
-const solutions = getAllSolutions()
+const solutionsStore = useSolutionsStore()
+const staticSolutions = getAllSolutions()
+
+onMounted(async () => {
+  await solutionsStore.fetchSolutions(20)
+})
+
+// Prefer API data but fall back to static data for rich detail pages
+const solutions = computed(() => {
+  if (solutionsStore.solutions.length > 0) {
+    return solutionsStore.solutions.map((s) => {
+      // Try to find matching static data for full detail (features, benefits etc.)
+      const staticMatch = staticSolutions.find((ss) => ss.slug === s.slug)
+      if (staticMatch) {
+        return { ...staticMatch, title: s.title, description: s.description }
+      }
+      return {
+        id: s.id,
+        slug: s.slug,
+        title: s.title,
+        subtitle: s.description,
+        description: s.description,
+        icon: 'fa-chart-line',
+        iconColor: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        features: [],
+        benefits: [],
+        useCases: [],
+        technologies: [],
+        processSteps: [],
+        cta: { title: 'Get Started', description: 'Contact us to learn more.', buttonText: 'Contact Us' },
+      }
+    })
+  }
+  return staticSolutions
+})
 
 // Map Font Awesome icons to Bootstrap icons
 const getIconMapping = (faIcon: string) => {

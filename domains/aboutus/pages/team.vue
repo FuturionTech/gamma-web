@@ -164,7 +164,33 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers } from '~/domains/aboutus/data/team'
+import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
+import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
+
+const aboutStore = useAboutusStore()
+
+onMounted(async () => {
+  await aboutStore.fetchTeams(20)
+})
+
+// Map API team members to the shape the template expects, fall back to static
+const teamMembers = computed(() => {
+  if (aboutStore.teams.length > 0) {
+    return aboutStore.teams.map((m) => ({
+      id: m.id,
+      name: m.name,
+      position: m.role,
+      bio: m.biography || '',
+      image: m.profile_picture_url || '/assets/img/team/placeholder.jpg',
+      linkedin: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
+      twitter: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'twitter')?.url || null,
+      email: m.email,
+      expertise: [],
+      experience: '',
+    }))
+  }
+  return staticTeamMembers
+})
 
 // SEO
 useHead({

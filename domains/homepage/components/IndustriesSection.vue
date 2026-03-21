@@ -28,42 +28,42 @@ const industries = [
     description: 'Enhancing data security and analytics for better financial decision-making with AI-powered risk modeling and fraud detection.',
     icon: 'bi-bank',
     iconColor: 'primary',
-    link: '/industries/banking'
+    link: '/solutions/financial-services'
   },
   {
     title: 'Healthcare Services',
     description: 'Developing AI and big data solutions to improve patient care and operational efficiency while maintaining HIPAA compliance.',
     icon: 'bi-heart-pulse',
     iconColor: 'success',
-    link: '/industries/healthcare'
+    link: '/solutions/healthcare-analytics'
   },
   {
     title: 'Governments & Public Services',
     description: 'Building secure data infrastructures for public sector organizations with smart city initiatives and citizen service optimization.',
     icon: 'bi-shield-check',
     iconColor: 'info',
-    link: '/industries/government'
+    link: '/solutions/smart-government'
   },
   {
-    title: 'Business Management',
+    title: 'Retail & Business',
     description: 'Implementing BI tools to streamline operations and improve efficiency with data-driven decision-making and process optimization.',
     icon: 'bi-bar-chart',
     iconColor: 'warning',
-    link: '/industries/business'
+    link: '/solutions/retail-intelligence'
   },
   {
-    title: 'Non-Governmental Organizations',
-    description: 'Providing data solutions to support mission-driven initiatives with impact measurement, donor analytics, and program optimization.',
-    icon: 'bi-globe',
+    title: 'Manufacturing 4.0',
+    description: 'Providing IoT and AI solutions for predictive maintenance, supply chain optimization, and quality control.',
+    icon: 'bi-gear',
     iconColor: 'secondary',
-    link: '/industries/ngo'
+    link: '/solutions/manufacturing-4-0'
   },
   {
     title: 'Education & Training',
     description: 'Developing AI-driven platforms for personalized learning experiences with student performance analytics and adaptive learning paths.',
     icon: 'bi-mortarboard',
     iconColor: 'danger',
-    link: '/industries/education'
+    link: '/solutions/education-analytics'
   }
 ]
 </script>

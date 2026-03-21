@@ -383,10 +383,32 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers } from '~/domains/aboutus/data/team'
+import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
+import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
 
-// Featured team members for About page - showing only top 3 leadership
-const featuredTeamMembers = teamMembers.slice(0, 3)
+const aboutStore = useAboutusStore()
+
+// Try to fetch from API, fall back to static data
+onMounted(async () => {
+  await aboutStore.fetchTeams(6)
+})
+
+// Featured team members: prefer API data, fall back to static
+const featuredTeamMembers = computed(() => {
+  if (aboutStore.teams.length > 0) {
+    return aboutStore.teams.slice(0, 3).map((m) => ({
+      id: m.id,
+      name: m.name,
+      position: m.role,
+      bio: m.biography || '',
+      image: m.profile_picture_url || '/assets/img/team/placeholder.jpg',
+      linkedin: m.socialMediaLinks?.find((l) => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
+      email: m.email,
+      expertise: [],
+    }))
+  }
+  return staticTeamMembers.slice(0, 3)
+})
 
 // SEO
 useHead({
