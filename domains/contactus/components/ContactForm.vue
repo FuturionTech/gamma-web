@@ -67,6 +67,25 @@
         >
       </div>
 
+      <!-- Project Description -->
+      <div class="col-sm-12">
+        <label class="form-label fs-base" for="project_description">Tell us about your project <span class="text-muted">(Optional)</span></label>
+        <select
+          v-model="formData.project_type"
+          class="form-select form-select-lg"
+          id="project_description"
+        >
+          <option value="" disabled selected>Select a project type</option>
+          <option value="ai-ml">AI / Machine Learning</option>
+          <option value="data-engineering">Data Engineering</option>
+          <option value="cloud-migration">Cloud Migration</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="business-intelligence">Business Intelligence</option>
+          <option value="big-data">Big Data / Data Platform</option>
+          <option value="other">Other / Not sure yet</option>
+        </select>
+      </div>
+
       <!-- Message -->
       <div class="col-sm-12">
         <label class="form-label fs-base" for="message">How can we help?</label>
@@ -124,6 +143,7 @@ interface ContactFormData {
   email: string
   phone: string
   subject: string
+  project_type: string
   message: string
 }
 
@@ -137,6 +157,7 @@ const formData = ref<ContactFormData>({
   email: '',
   phone: '',
   subject: '',
+  project_type: '',
   message: ''
 })
 
@@ -171,6 +192,7 @@ const handleSubmit = async () => {
       email: '',
       phone: '',
       subject: '',
+      project_type: '',
       message: ''
     }
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="position-relative py-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);"
+    <section class="position-relative py-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -47,6 +47,51 @@
 
           <!-- Contact Information Sidebar -->
           <div class="col-lg-4">
+            <!-- What to Expect Card -->
+            <div class="card shadow-sm border-0 mb-4 what-to-expect-card">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold mb-4">What to Expect</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-start mb-3">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                      <i class="bi bi-clock text-primary"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block small">Quick Response</strong>
+                      <span class="text-muted small">We respond within 1 business day</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div class="bg-success bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                      <i class="bi bi-chat-dots text-success"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block small">Free Consultation</strong>
+                      <span class="text-muted small">Your initial consultation is complimentary</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div class="bg-info bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                      <i class="bi bi-shield-check text-info"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block small">30-45 Minute Conversation</strong>
+                      <span class="text-muted small">We take the time to understand your needs</span>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <div class="bg-warning bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                      <i class="bi bi-heart text-warning"></i>
+                    </div>
+                    <div>
+                      <strong class="d-block small">No Obligation</strong>
+                      <span class="text-muted small">Just an honest assessment of how we can help</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <!-- Office Card -->
             <div class="card shadow-sm border-0 mb-4">
               <div class="card-body p-4">
@@ -161,6 +206,20 @@ useHead({
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* What to Expect Card */
+.what-to-expect-card {
+  background: linear-gradient(180deg, #faf9ff 0%, #ffffff 100%);
+  border-left: 3px solid #8b5cf6 !important;
+}
+
+.what-to-expect-card:hover {
+  transform: none;
+}
+
+.bg-warning.bg-opacity-10 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
 }
 
 /* Typography */
