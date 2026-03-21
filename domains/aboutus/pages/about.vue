@@ -15,23 +15,26 @@
             </h1>
 
             <p class="h5 text-gradient fw-bold mb-3">
-              "Your Data Solutions"
+              AI &amp; Data Consulting
             </p>
 
             <p class="fs-5 text-white-50 mb-4 mx-auto" style="max-width: 700px;">
-              We transform data into opportunity. From AI to cloud computing, our team delivers
-              innovative, secure, and scalable solutions tailored to your organization's unique needs.
+              Gamma Neutral was founded on a simple observation: too many organizations invest in data and AI
+              technology without the engineering discipline to make it work. Our team brings hands-on experience
+              from financial services, government, and healthcare technology programs — and we built this firm
+              to deliver the focused, senior-level attention that large consultancies cannot.
             </p>
 
-            <!-- Mission Statement -->
+            <!-- Point of View -->
             <div class="bg-white bg-opacity-10 rounded-3 p-4 mb-4 mx-auto" style="max-width: 900px;">
               <h3 class="h5 text-white fw-bold mb-2">
-                <i class="bi bi-compass text-gradient me-2"></i>Our Mission
+                <i class="bi bi-compass text-gradient me-2"></i>Our Point of View
               </h3>
               <p class="text-white-50 mb-0">
-                At Gamma Neutral Consulting, we empower businesses to harness the full potential of their data.
-                Our mission is to deliver innovative, secure, and scalable solutions that drive informed
-                decision-making and operational excellence.
+                We believe that the gap between a promising AI prototype and a production-ready system is where
+                most data initiatives fail. Gamma Neutral exists to close that gap — with rigorous engineering,
+                pragmatic architecture decisions, and a commitment to solutions your team can actually maintain
+                after we leave.
               </p>
             </div>
 
@@ -55,19 +58,19 @@
     <!-- Company Overview -->
     <section class="py-5">
       <div class="container py-4">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-5" data-aos="fade-up">
           <div class="col-lg-6">
             <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-              <i class="bi bi-building me-2"></i>Company Overview
+              <i class="bi bi-building me-2"></i>Who We Are
             </div>
             <h2 class="h2 fw-bold mb-4">
-              Your trusted partner in data transformation
+              Engineering discipline for data and AI
             </h2>
             <p class="fs-6 text-muted mb-4 lh-base">
-              <strong>Gamma Neutral Consulting Inc.</strong> is a Canadian technology consulting firm
-              specializing in data solutions, artificial intelligence, and cloud computing.
-              We help businesses unlock the power of their data through innovative,
-              secure, and scalable solutions.
+              <strong>Gamma Neutral Consulting Inc.</strong> is a Toronto-based consulting firm
+              focused on AI systems, data engineering, and cloud architecture. We work with
+              financial institutions, healthcare organizations, and government agencies to design,
+              build, and deploy data solutions that deliver measurable outcomes in production.
             </p>
 
             <!-- Company Details -->
@@ -105,7 +108,7 @@
 
     <!-- Core Capabilities - Clean Grid -->
     <section class="py-5 bg-light">
-      <div class="container py-4">
+      <div class="container py-4" data-aos="fade-up">
         <div class="text-center mb-4">
           <h2 class="h2 fw-bold mb-3">How we help you win</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
@@ -216,7 +219,7 @@
     <!-- Simple Process -->
     <section class="py-5">
       <div class="container py-4">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-5" data-aos="fade-up">
           <div class="col-lg-6">
             <h2 class="h2 fw-bold mb-4">
               Our proven approach delivers results
@@ -290,7 +293,7 @@
 
     <!-- Founder Section -->
     <section class="py-5 bg-light">
-      <div class="container py-4">
+      <div class="container py-4" data-aos="fade-up">
         <div class="text-center mb-4">
           <h2 class="h2 fw-bold mb-3">Leadership</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">

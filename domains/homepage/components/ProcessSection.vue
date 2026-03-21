@@ -12,7 +12,7 @@
 
       <!-- Process Steps using ProcessStepCard -->
       <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-4" v-for="(step, index) in processSteps" :key="step.title">
+        <div class="col-md-6 col-lg-4" v-for="(step, index) in processSteps" :key="step.title" data-aos="fade-up" :data-aos-delay="index * 100">
           <ProcessStepCard
             :stepNumber="index + 1"
             :title="step.title"

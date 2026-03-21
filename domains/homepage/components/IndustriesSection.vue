@@ -18,7 +18,7 @@
 
       <!-- Industries Grid using IndustryCard -->
       <div v-else class="row g-4">
-        <div class="col-md-6 col-lg-4" v-for="industry in displayIndustries" :key="industry.title">
+        <div class="col-md-6 col-lg-4" v-for="(industry, index) in displayIndustries" :key="industry.title" data-aos="fade-up" :data-aos-delay="index * 100">
           <IndustryCard
             :title="industry.title"
             :description="industry.description"
