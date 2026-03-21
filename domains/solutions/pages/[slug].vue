@@ -1,5 +1,22 @@
 <template>
   <div>
+    <!-- Loading State -->
+    <div v-if="loading && !solution" class="d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+      <div class="text-center">
+        <div class="spinner-border text-primary mb-3" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="text-muted">Loading solution details...</p>
+      </div>
+    </div>
+
+    <!-- Error Banner (shown above content when API fails but static data available) -->
+    <div v-if="apiError && solution" class="alert alert-warning alert-dismissible fade show m-0 rounded-0 text-center" role="alert">
+      <small><i class="bi bi-exclamation-triangle me-1"></i> Some data may be outdated. Live data temporarily unavailable.</small>
+      <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <template v-if="solution">
     <!-- Hero Section with Parallax Background -->
     <section class="position-relative bg-dark text-white overflow-hidden" style="min-height: 500px;">
       <!-- Background overlay -->
@@ -210,45 +227,111 @@
       <div class="container py-4">
         <div class="row align-items-center">
           <div class="col-lg-8 mb-4 mb-lg-0">
-            <h2 class="display-5 fw-bold mb-3">{{ solution?.cta.title }}</h2>
-            <p class="fs-lg mb-0 text-white-50">{{ solution?.cta.description }}</p>
+            <h2 class="display-5 fw-bold mb-3">{{ solution?.cta?.title ?? 'Get Started' }}</h2>
+            <p class="fs-lg mb-0 text-white-50">{{ solution?.cta?.description ?? 'Contact us to learn more about this solution.' }}</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <NuxtLink to="/contact" class="btn btn-primary btn-lg px-5">
-              {{ solution?.cta.buttonText }}
+              {{ solution?.cta?.buttonText ?? 'Contact Us' }}
               <i class="bi bi-arrow-right ms-2"></i>
             </NuxtLink>
           </div>
         </div>
       </div>
     </section>
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
 import { getSolutionBySlug, type Solution } from '~/domains/solutions/data/solutions'
+import { useSolutionsStore } from '~/domains/solutions/stores/useSolutionsStore'
 
 const route = useRoute()
-const solution = ref<Solution | undefined>()
-
-// Load solution data immediately
+const solutionsStore = useSolutionsStore()
 const slug = route.params.slug as string
-solution.value = getSolutionBySlug(slug)
 
-// Redirect if solution not found
-if (!solution.value) {
-  navigateTo('/solutions')
+// Start with static data as immediate fallback
+const staticSolution = getSolutionBySlug(slug)
+const solution = ref<Solution | undefined>(staticSolution)
+const loading = ref(true)
+const apiError = ref<string | null>(null)
+
+// Fetch from API and merge with static data
+onMounted(async () => {
+  try {
+    await solutionsStore.fetchSolutionBySlug(slug)
+    const apiData = solutionsStore.currentSolution
+
+    if (apiData) {
+      // Merge API data with static data for fields not in the API
+      const base = staticSolution ?? {
+        id: apiData.id,
+        slug: apiData.slug,
+        title: apiData.title,
+        subtitle: apiData.description,
+        description: apiData.description,
+        icon: 'fa-chart-line',
+        iconColor: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+        heroImage: '/img/solutions/default-hero.jpg',
+        features: [],
+        benefits: [],
+        useCases: [],
+        technologies: [],
+        processSteps: [],
+        cta: {
+          title: 'Get Started',
+          description: 'Contact us to learn more about this solution.',
+          buttonText: 'Contact Us',
+        },
+      }
+
+      solution.value = {
+        ...base,
+        // Override with API data (source of truth)
+        title: apiData.title,
+        description: apiData.description,
+        features: apiData.features.length > 0
+          ? apiData.features.map((f) => ({ title: f.title, description: f.description, icon: '' }))
+          : base.features,
+        benefits: apiData.benefits.length > 0
+          ? apiData.benefits.map((b) => ({ title: b.title, description: b.description, icon: '' }))
+          : base.benefits,
+      }
+    }
+
+    if (solutionsStore.error) {
+      apiError.value = solutionsStore.error
+    }
+  } catch {
+    // Static data remains as fallback — no action needed
+  } finally {
+    loading.value = false
+  }
+})
+
+// Redirect if no data from any source
+if (!staticSolution) {
+  // Wait for API before redirecting (static miss doesn't mean API miss)
+  onMounted(async () => {
+    await nextTick()
+    if (!solution.value) {
+      navigateTo('/solutions')
+    }
+  })
 }
 
 // SEO
 useHead({
-  title: solution.value ? `${solution.value.title} - Gamma Neutral` : 'Solution - Gamma Neutral',
+  title: computed(() =>
+    solution.value ? `${solution.value.title} - Gamma Neutral` : 'Solution - Gamma Neutral'
+  ),
   meta: [
     {
       name: 'description',
-      content: solution.value?.description || 'Gamma Neutral data solutions'
-    }
-  ]
+      content: computed(() => solution.value?.description || 'Gamma Neutral data solutions'),
+    },
+  ],
 })
 </script>
 
