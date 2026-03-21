@@ -155,7 +155,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useHead } from '#imports'
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
