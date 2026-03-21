@@ -127,165 +127,27 @@
             <div class="card-body p-4">
               <h3 class="h5 mb-4">Apply for this Position</h3>
 
-              <form @submit.prevent="submitApplication" v-if="!applicationSubmitted">
-                <!-- Name -->
-                <div class="mb-3">
-                  <label for="name" class="form-label">Full Name *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    v-model="applicationForm.name"
-                    required
-                    placeholder="John Doe"
-                  >
+              <div class="text-center">
+                <div class="mb-4">
+                  <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle" style="width: 72px; height: 72px;">
+                    <i class="bi bi-envelope-paper text-primary fs-2"></i>
+                  </div>
                 </div>
-
-                <!-- Email -->
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email Address *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    v-model="applicationForm.email"
-                    required
-                    placeholder="john@example.com"
-                  >
-                </div>
-
-                <!-- Phone -->
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone Number *</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="phone"
-                    v-model="applicationForm.phone"
-                    required
-                    placeholder="+1 (416) 555-1234"
-                  >
-                </div>
-
-                <!-- LinkedIn -->
-                <div class="mb-3">
-                  <label for="linkedin" class="form-label">LinkedIn Profile</label>
-                  <input
-                    type="url"
-                    class="form-control"
-                    id="linkedin"
-                    v-model="applicationForm.linkedin"
-                    placeholder="https://linkedin.com/in/yourprofile"
-                  >
-                </div>
-
-                <!-- Resume Upload -->
-                <div class="mb-3">
-                  <label for="resume" class="form-label">Resume/CV *</label>
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="resume"
-                    @change="handleResumeUpload"
-                    accept=".pdf,.doc,.docx"
-                    required
-                  >
-                  <small class="text-muted">PDF, DOC, or DOCX (Max 5MB)</small>
-                </div>
-
-                <!-- Cover Letter -->
-                <div class="mb-3">
-                  <label for="coverLetter" class="form-label">Cover Letter</label>
-                  <textarea
-                    class="form-control"
-                    id="coverLetter"
-                    rows="4"
-                    v-model="applicationForm.coverLetter"
-                    placeholder="Tell us why you're interested in this position..."
-                  ></textarea>
-                </div>
-
-                <!-- Portfolio -->
-                <div class="mb-3">
-                  <label for="portfolio" class="form-label">Portfolio/GitHub</label>
-                  <input
-                    type="url"
-                    class="form-control"
-                    id="portfolio"
-                    v-model="applicationForm.portfolio"
-                    placeholder="https://github.com/username"
-                  >
-                </div>
-
-                <!-- Availability -->
-                <div class="mb-3">
-                  <label for="availability" class="form-label">When can you start? *</label>
-                  <select class="form-select" v-model="applicationForm.availability" required>
-                    <option value="">Select...</option>
-                    <option value="immediately">Immediately</option>
-                    <option value="2-weeks">2 weeks</option>
-                    <option value="1-month">1 month</option>
-                    <option value="2-months">2 months</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <!-- Salary Expectation -->
-                <div class="mb-3">
-                  <label for="salary" class="form-label">Salary Expectations</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="salary"
-                    v-model="applicationForm.salaryExpectation"
-                    placeholder="e.g., $120,000 - $140,000"
-                  >
-                </div>
-
-                <!-- Privacy Consent -->
-                <div class="form-check mb-3">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="consent"
-                    v-model="applicationForm.consent"
-                    required
-                  >
-                  <label class="form-check-label small" for="consent">
-                    I consent to Gamma Neutral storing my data for recruitment purposes
-                  </label>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary w-100" :disabled="isSubmitting">
-                  <span v-if="!isSubmitting">
-                    <i class="bi bi-send me-2"></i>
-                    Submit Application
-                  </span>
-                  <span v-else>
-                    <span class="spinner-border spinner-border-sm me-2"></span>
-                    Submitting...
-                  </span>
-                </button>
-
-                <p class="text-muted small mt-3 mb-0">
-                  * Required fields. We'll review your application and get back to you within 5 business days.
+                <h5 class="mb-3">Apply via Email</h5>
+                <p class="text-muted mb-4">
+                  To apply for the <strong>{{ position.title }}</strong> position, please send your resume and cover letter to our careers team.
                 </p>
-              </form>
-
-              <!-- Success Message -->
-              <div v-else class="text-center">
-                <div class="mb-3">
-                  <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
-                </div>
-                <h5 class="text-success mb-3">Application Submitted!</h5>
-                <p class="text-muted">
-                  Thank you for applying to the {{ position.title }} position.
-                  We'll review your application and contact you soon.
+                <a
+                  :href="mailtoLink"
+                  class="btn btn-primary w-100 mb-3"
+                >
+                  <i class="bi bi-envelope me-2"></i>
+                  Send Application
+                </a>
+                <p class="text-muted small mb-0">
+                  Include your resume (PDF), a brief cover letter, and your LinkedIn profile link.
+                  We'll review your application and get back to you within 5 business days.
                 </p>
-                <NuxtLink to="/careers" class="btn btn-outline-primary">
-                  View Other Positions
-                </NuxtLink>
               </div>
             </div>
           </div>
@@ -339,66 +201,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPositionById, type JobPosition } from '~/domains/careers/data/positions'
 
 const route = useRoute()
 const position = ref<JobPosition | undefined>()
-const applicationSubmitted = ref(false)
-const isSubmitting = ref(false)
 
 // Get position data
 position.value = getPositionById(route.params.id as string)
 
-// Application form data
-const applicationForm = reactive({
-  name: '',
-  email: '',
-  phone: '',
-  linkedin: '',
-  resume: null as File | null,
-  coverLetter: '',
-  portfolio: '',
-  availability: '',
-  salaryExpectation: '',
-  consent: false
+// Build mailto link with pre-filled subject and body
+const mailtoLink = computed(() => {
+  if (!position.value) return 'mailto:careers@gammaneutral.com'
+  const subject = encodeURIComponent(`Application: ${position.value.title}`)
+  const body = encodeURIComponent(
+    `Hi Gamma Neutral Careers Team,\n\nI am writing to express my interest in the ${position.value.title} position (${position.value.department}).\n\nPlease find my resume attached.\n\nBest regards`
+  )
+  return `mailto:careers@gammaneutral.com?subject=${subject}&body=${body}`
 })
-
-// Handle resume upload
-const handleResumeUpload = (event: Event) => {
-  const target = event.target as HTMLInputElement
-  if (target.files && target.files[0]) {
-    const file = target.files[0]
-    if (file.size > 5 * 1024 * 1024) {
-      alert('File size must be less than 5MB')
-      target.value = ''
-      return
-    }
-    applicationForm.resume = file
-  }
-}
-
-// Submit application
-const submitApplication = async () => {
-  isSubmitting.value = true
-
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 2000))
-
-  // In a real application, you would:
-  // 1. Upload the resume to a storage service
-  // 2. Send the application data to your backend
-  // 3. Send confirmation email to the applicant
-
-  // Application data would be sent to the API here
-
-  isSubmitting.value = false
-  applicationSubmitted.value = true
-
-  // Scroll to top to show success message
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
 
 // SEO
 useHead({
