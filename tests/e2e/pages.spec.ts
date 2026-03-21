@@ -26,7 +26,7 @@ function trackConsoleErrors(page: Page): string[] {
 }
 
 // ──────────────────────────────────────────────
-// Page tests
+// Page tests — 7 main pages + legal pages
 // ──────────────────────────────────────────────
 
 test.describe('All public pages load correctly', () => {
@@ -48,24 +48,6 @@ test.describe('All public pages load correctly', () => {
     expect(errors).toEqual([])
   })
 
-  test('/about/team — Team page', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/about/team')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
-
-  test('/about/methodology — Methodology page', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/about/methodology')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
-
   test('/services — Services listing', async ({ page }) => {
     const errors = trackConsoleErrors(page)
     const response = await page.goto('/services')
@@ -75,38 +57,18 @@ test.describe('All public pages load correctly', () => {
     expect(errors).toEqual([])
   })
 
-  test('/solutions — Solutions listing', async ({ page }) => {
+  test('/contact — Contact page', async ({ page }) => {
     const errors = trackConsoleErrors(page)
-    const response = await page.goto('/solutions')
+    const response = await page.goto('/contact')
     expect(response?.status()).toBe(200)
     await expect(page.locator('header').first()).toBeVisible()
     await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
-
-  test('/solutions/financial-services — Solution detail page', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/solutions/financial-services')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    // Verify solution content loaded
-    await expect(page.locator('h1')).toContainText('Financial Services')
     expect(errors).toEqual([])
   })
 
   test('/careers — Careers listing', async ({ page }) => {
     const errors = trackConsoleErrors(page)
     const response = await page.goto('/careers')
-    expect(response?.status()).toBe(200)
-    await expect(page.locator('header').first()).toBeVisible()
-    await expect(page.locator('footer').first()).toBeVisible()
-    expect(errors).toEqual([])
-  })
-
-  test('/contact — Contact page', async ({ page }) => {
-    const errors = trackConsoleErrors(page)
-    const response = await page.goto('/contact')
     expect(response?.status()).toBe(200)
     await expect(page.locator('header').first()).toBeVisible()
     await expect(page.locator('footer').first()).toBeVisible()
@@ -139,8 +101,26 @@ test.describe('All public pages load correctly', () => {
     await expect(page.locator('footer').first()).toBeVisible()
     expect(errors).toEqual([])
   })
+})
 
+// ──────────────────────────────────────────────
+// Redirect tests — removed pages redirect
+// ──────────────────────────────────────────────
 
+test.describe('Removed pages redirect correctly', () => {
+  test('/about/team redirects to /about', async ({ page }) => {
+    await page.goto('/about/team')
+    await page.waitForURL('**/about')
+    expect(page.url()).toContain('/about')
+    expect(page.url()).not.toContain('/team')
+  })
+
+  test('/about/methodology redirects to /about', async ({ page }) => {
+    await page.goto('/about/methodology')
+    await page.waitForURL('**/about')
+    expect(page.url()).toContain('/about')
+    expect(page.url()).not.toContain('/methodology')
+  })
 })
 
 // ──────────────────────────────────────────────
@@ -150,7 +130,6 @@ test.describe('All public pages load correctly', () => {
 test.describe('Navigation works', () => {
   test('homepage links to about page', async ({ page }) => {
     await page.goto('/')
-    // Find any link pointing to /about and click it
     const aboutLink = page.locator('a[href="/about"]').first()
     if (await aboutLink.isVisible()) {
       await aboutLink.click()
@@ -166,16 +145,6 @@ test.describe('Navigation works', () => {
       await servicesLink.click()
       await page.waitForURL('**/services')
       expect(page.url()).toContain('/services')
-    }
-  })
-
-  test('solutions listing links to detail page', async ({ page }) => {
-    await page.goto('/solutions')
-    const detailLink = page.locator('a[href*="/solutions/"]').first()
-    if (await detailLink.isVisible()) {
-      await detailLink.click()
-      await page.waitForURL('**/solutions/**')
-      expect(page.url()).toContain('/solutions/')
     }
   })
 })
