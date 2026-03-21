@@ -214,7 +214,7 @@ const services = ref([
       'Computer Vision',
       'Deep Learning Models'
     ],
-    link: '/services/ai'
+    link: '/contact'
   },
   {
     title: 'Data Engineering',
@@ -227,7 +227,7 @@ const services = ref([
       'Data Lake Design',
       'Data Quality Management'
     ],
-    link: '/services/data-engineering'
+    link: '/contact'
   },
   {
     title: 'Cloud Computing',
@@ -240,7 +240,7 @@ const services = ref([
       'Cost Optimization',
       'Multi-Cloud Strategy'
     ],
-    link: '/services/cloud'
+    link: '/contact'
   },
   {
     title: 'Cybersecurity',
@@ -253,7 +253,7 @@ const services = ref([
       '24/7 Security Monitoring',
       'Penetration Testing'
     ],
-    link: '/services/security'
+    link: '/contact'
   },
   {
     title: 'Business Intelligence',
@@ -266,7 +266,7 @@ const services = ref([
       'Strategic Reporting',
       'Self-Service Analytics'
     ],
-    link: '/services/bi'
+    link: '/contact'
   },
   {
     title: 'Big Data Solutions',
@@ -279,7 +279,7 @@ const services = ref([
       'Data Lake Architecture',
       'Stream Processing'
     ],
-    link: '/services/bigdata'
+    link: '/contact'
   },
   {
     title: 'Project Management',
@@ -292,7 +292,7 @@ const services = ref([
       'End-to-End Execution',
       'Risk Mitigation'
     ],
-    link: '/services/project-management'
+    link: '/contact'
   }
 ]);
 

@@ -26,37 +26,37 @@
           <h6 class="text-white fw-bold mb-3">Services</h6>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/artificial-intelligence">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 AI Solutions
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/data-engineering">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Data Engineering
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/cybersecurity">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Cybersecurity
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/business-intelligence">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Business Intelligence
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/cloud-computing">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Cloud Computing
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/big-data">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Big Data
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services/project-management">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
                 Project Management
               </NuxtLink>
             </li>
@@ -68,33 +68,33 @@
           <h6 class="text-white fw-bold mb-3">Industries</h6>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/banking">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/financial-services">
                 Banks & Financial Services
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/healthcare">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/healthcare-analytics">
                 Healthcare Services
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/government">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/smart-government">
                 Governments & Public Services
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/education">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/education-analytics">
                 Education & Training
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/business">
-                Business Management
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/retail-intelligence">
+                Retail & Business
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/industries/ngo">
-                NGOs
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/solutions/manufacturing-4-0">
+                Manufacturing
               </NuxtLink>
             </li>
           </ul>
@@ -110,13 +110,13 @@
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/resources/careers">
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/careers">
                 Careers
               </NuxtLink>
             </li>
             <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/resources/case-studies">
-                Case Studies
+              <NuxtLink class="text-light text-decoration-none hover-primary" to="/faq">
+                FAQ
               </NuxtLink>
             </li>
             <li class="mb-2">
@@ -166,8 +166,8 @@
               <NuxtLink class="nav-link text-light small hover-primary px-2" to="/terms-of-service">
                 Terms of Service
               </NuxtLink>
-              <NuxtLink class="nav-link text-light small hover-primary px-2" to="/cookie-policy">
-                Cookie Policy
+              <NuxtLink class="nav-link text-light small hover-primary px-2" to="/faq">
+                FAQ
               </NuxtLink>
             </nav>
           </div>

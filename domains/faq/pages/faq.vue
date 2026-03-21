@@ -19,7 +19,7 @@
           </div>
           <h3 class="h5">{{ $t('faq.noAnswerTitle') }}</h3>
           <p class="mb-sm-4">{{ $t('faq.noAnswerDescription') }}</p>
-          <NuxtLink class="btn btn-primary" to="contact">{{ $t('faq.contactUsButton') }}</NuxtLink>
+          <NuxtLink class="btn btn-primary" to="/contact">{{ $t('faq.contactUsButton') }}</NuxtLink>
         </div>
         <div class="col-md-8 col-lg-7">
           <div class="ps-md-3 ps-lg-4 ps-xl-5">

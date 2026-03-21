@@ -149,9 +149,9 @@
                 Schedule a Consultation
                 <i class="bi bi-calendar-check ms-2"></i>
               </NuxtLink>
-              <NuxtLink to="/resources" class="btn btn-outline-light btn-lg px-5">
-                Download Resources
-                <i class="bi bi-download ms-2"></i>
+              <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5">
+                Learn More About Us
+                <i class="bi bi-arrow-right ms-2"></i>
               </NuxtLink>
             </div>
           </div>

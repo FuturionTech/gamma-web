@@ -237,7 +237,7 @@ solution.value = getSolutionBySlug(slug)
 
 // Redirect if solution not found
 if (!solution.value) {
-  navigateTo('/404')
+  navigateTo('/solutions')
 }
 
 // SEO

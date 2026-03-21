@@ -428,8 +428,8 @@
               Get Started
               <i class="bi bi-arrow-right ms-2"></i>
             </NuxtLink>
-            <NuxtLink to="/resources/case-studies" class="btn btn-outline-light btn-lg px-5">
-              View Case Studies
+            <NuxtLink to="/solutions" class="btn btn-outline-light btn-lg px-5">
+              View Our Solutions
             </NuxtLink>
           </div>
         </div>
