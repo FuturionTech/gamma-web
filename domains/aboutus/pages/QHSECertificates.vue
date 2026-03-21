@@ -90,7 +90,7 @@ onMounted(async () => {
     certificationsStore.certifications = []; // Réinitialiser les certifications pour forcer le chargement
     await certificationsStore.getCertifications(); // Charger les certifications à chaque affichage de la page
   } catch (err) {
-    console.error("❌ Erreur lors de la récupération des certifications :", err);
+    // Certifications fetch failed — loading state will show
   }
 });
 
@@ -112,14 +112,6 @@ const closeImageModal = () => {
   isModalOpen.value = false;
 };
 
-onMounted(() => {
-  if (!sessionStorage.getItem("reloaded")) {
-    sessionStorage.setItem("reloaded", "true");
-    window.location.reload();
-  } else {
-    sessionStorage.removeItem("reloaded");
-  }
-});
 </script>
 
 <style scoped>

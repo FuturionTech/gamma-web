@@ -49,7 +49,7 @@ onMounted(async () => {
   try {
     await getPatners(50);
   } catch (error) {
-    console.error('Erreur lors de la récupération des partenaires:', error);
+    // Partners fetch failed silently — loading state will show
   } finally {
     loading.value = false;
   }

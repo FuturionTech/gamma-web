@@ -44,7 +44,7 @@
                   :id="'question' + (index + 1)"
                 >
                   <div class="accordion-body fs-sm">
-                    <p v-html="$t(`faq.question${index + 1}.description`, formatParams(index))"></p>
+                    <p v-html="sanitize($t(`faq.question${index + 1}.description`, formatParams(index)))"></p>
                   </div>
                 </div>
               </div>
@@ -62,6 +62,7 @@ import { ref } from 'vue'
 import { useHead } from '#imports'
 
 const { t } = useI18n()
+const { sanitize } = useSanitize()
 
 // Métadonnées pour la page
 useHead({
@@ -69,7 +70,7 @@ useHead({
   meta: [
     { name: 'description', content: t('meta.faq.description') },
     { name: 'keywords', content: t('meta.faq.keywords') },
-    { name: 'author', content: 'COBUTAM' },
+    { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
   ]
 });
@@ -88,8 +89,8 @@ const toggleQuestion = (index) => {
 // Formatage des paramètres pour l'affichage dynamique
 const formatParams = (index) => {
   return {
-    link: `<a href='https://maps.app.goo.gl/JG9BbxKpUkQNVgus8' target='_blank'>Voir sur Google Maps</a>`,
-    contact: `<a href='mailto:commercial.cobutam@cobutam.com'>commercial.cobutam@cobutam.com</a>`
+    link: `<a href='https://www.google.com/maps/place/Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada' target='_blank' rel='noopener noreferrer'>View on Google Maps</a>`,
+    contact: `<a href='mailto:info@gammaneutral.ca'>info@gammaneutral.ca</a>`
   };
 };
 </script>

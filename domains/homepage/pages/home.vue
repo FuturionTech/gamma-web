@@ -80,7 +80,7 @@ if (process.env.NODE_ENV === 'development') {
     const handleKeydown = (e) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'D') {
         debugMode.value = !debugMode.value
-        console.log('Debug mode:', debugMode.value ? 'ON' : 'OFF')
+        // Debug mode toggled
       }
     }
     document.addEventListener('keydown', handleKeydown)

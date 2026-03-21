@@ -82,7 +82,7 @@ const loadCertifications = async () => {
   try {
     await certificationsStore.getCertifications();
   } catch (err) {
-    console.error("❌ Erreur lors de la récupération des certifications :", err);
+    // Certifications fetch failed — loading state will show
   } finally {
     certificationsStore.loading = false; // Assurer l'arrêt du loading
   }
@@ -117,14 +117,6 @@ const closeImageModal = () => {
   currentImageUrl.value = ""; // Clear the image URL when closing the modal
 };
 
-onMounted(() => {
-  if (!sessionStorage.getItem("reloaded")) {
-    sessionStorage.setItem("reloaded", "true");
-    window.location.reload();
-  } else {
-    sessionStorage.removeItem("reloaded");
-  }
-});
 </script>
 
 <style scoped>

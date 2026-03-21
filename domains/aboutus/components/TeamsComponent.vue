@@ -65,7 +65,7 @@
     try {
       await getTeams(50);
     } catch (error) {
-      console.error("Error fetching teams:", error);
+      // Teams fetch failed — loading state will show
     } finally {
       isLoading.value = false;
     }

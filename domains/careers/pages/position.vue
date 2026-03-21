@@ -391,7 +391,7 @@ const submitApplication = async () => {
   // 2. Send the application data to your backend
   // 3. Send confirmation email to the applicant
 
-  console.log('Application submitted:', applicationForm)
+  // Application data would be sent to the API here
 
   isSubmitting.value = false
   applicationSubmitted.value = true

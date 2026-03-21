@@ -183,7 +183,7 @@ const handleSubmit = async () => {
     }, 5000)
 
   } catch (error) {
-    console.error('Form submission error:', error)
+    // Error is captured and displayed to the user via showError
     errorMessage.value = error instanceof Error ? error.message : 'Failed to send your message. Please try again.'
     showError.value = true
 
