@@ -70,7 +70,7 @@ const iconBootstrapMap = {
   server: 'bi bi-hdd-stack',
 }
 
-// Static fallback data — top 3 services for homepage
+// Static fallback data — 6 core services for homepage
 const staticServices = [
   {
     title: 'Artificial Intelligence',
@@ -95,13 +95,37 @@ const staticServices = [
     icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
     link: '/services'
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'We assess your security posture, identify vulnerabilities, and implement controls that satisfy regulatory requirements in financial services, healthcare, and government.',
+    features: ['Security architecture assessment', 'Compliance frameworks (SOC 2, PIPEDA)', 'Threat detection and IAM'],
+    icon: 'bi bi-shield-check',
+    gradientClass: 'bg-gradient-danger',
+    link: '/services'
+  },
+  {
+    title: 'Business Intelligence',
+    description: 'Dashboards are only valuable when they answer the questions your team actually asks. We design BI solutions connected to your data infrastructure.',
+    features: ['Executive dashboard design', 'Self-service analytics', 'Power BI / Tableau / Looker'],
+    icon: 'bi bi-bar-chart',
+    gradientClass: 'bg-gradient-warning',
+    link: '/services'
+  },
+  {
+    title: 'Data Platform & Big Data',
+    description: 'When your data volumes outgrow traditional databases, you need architecture designed for scale with modern distributed processing tools.',
+    features: ['Distributed processing (Spark)', 'Data lakehouse design', 'Stream processing'],
+    icon: 'bi bi-hdd-stack',
+    gradientClass: 'bg-gradient-purple',
+    link: '/services'
   }
 ]
 
-// Prefer API data (top 3), fall back to static
+// Prefer API data (top 6), fall back to static
 const displayServices = computed(() => {
   if (homepageStore.services.length > 0) {
-    return homepageStore.services.slice(0, 3).map(s => ({
+    return homepageStore.services.slice(0, 6).map(s => ({
       title: s.title,
       description: s.short_description || s.description,
       features: s.features.map(f => f.title),

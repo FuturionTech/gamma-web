@@ -32,7 +32,7 @@
                 Schedule Consultation
                 <i class="bi bi-arrow-right ms-2"></i>
               </a>
-              <a href="/about" class="btn btn-link text-primary text-decoration-none">
+              <a href="/about" class="btn btn-link text-decoration-none learn-more-link">
                 Learn more about us
                 <i class="bi bi-arrow-right ms-1"></i>
               </a>
@@ -205,5 +205,13 @@ const benefits = [
   .lead {
     font-size: 1.1rem;
   }
+}
+
+/* Learn more link - visible in both modes */
+.learn-more-link {
+  color: #8b5cf6 !important;
+}
+.learn-more-link:hover {
+  color: #7c3aed !important;
 }
 </style>
