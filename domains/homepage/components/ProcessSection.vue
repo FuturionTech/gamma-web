@@ -63,8 +63,9 @@
 
       <!-- CTA Button -->
       <div class="text-center">
-        <a href="/contact" class="btn btn-primary btn-lg px-5 py-3">
-          {{ $t('process.cta') }} →
+        <a href="/contact" class="btn btn-primary btn-lg px-4 px-sm-5 py-3 rounded-pill">
+          {{ $t('process.cta') }}
+          <i class="bi bi-arrow-right ms-2"></i>
         </a>
       </div>
     </div>

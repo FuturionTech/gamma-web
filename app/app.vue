@@ -17,6 +17,12 @@
 </script>
 
 <style>
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* Page transition — smooth fade + subtle slide */
 .page-enter-active,
 .page-leave-active {

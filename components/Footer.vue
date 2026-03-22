@@ -90,6 +90,7 @@
 .footer {
   background: #000000 !important;
   padding: 4rem 0 2rem;
+  overflow-x: hidden;
 }
 
 /* ================================
@@ -265,6 +266,17 @@
 
   .footer-links li {
     margin-bottom: 0.75rem;
+  }
+
+  .footer-email-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+    word-break: break-all;
+    max-width: 100%;
+  }
+
+  .footer-contact a {
+    word-break: break-all;
   }
 }
 

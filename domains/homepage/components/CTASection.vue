@@ -19,7 +19,7 @@
           <p class="text-white text-opacity-75 fs-lg pb-4 pb-lg-5 mb-2 mb-sm-3 mb-lg-0 mb-xl-2">
             {{ $t('cta.subtitle') }}
           </p>
-          <a class="btn btn-lg btn-secondary text-white px-5 py-3" href="/contact">
+          <a class="btn btn-lg btn-secondary text-white px-4 px-sm-5 py-3 rounded-pill" href="/contact">
             {{ $t('cta.button') }}
             <i class="bi bi-arrow-right ms-2"></i>
           </a>
