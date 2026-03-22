@@ -153,18 +153,9 @@
       </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="position-relative">
-      <div class="ratio ratio-21x9">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5771935582853!2d-79.39169842346238!3d43.70667535109786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b32d6e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sRedpath%20Ave%2C%20Toronto%2C%20ON%20M4S%202J7%2C%20Canada!5e0!3m2!1sen!2sca!4v1634567890123!5m2!1sen!2sca"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
+    <!-- Map section removed: embedded map used a placeholder place ID that
+         rendered as empty dark space. The "Get Directions" link in the sidebar
+         provides the same functionality without layout issues. -->
   </div>
 </template>
 
@@ -303,12 +294,6 @@ useHead({
   .card-body.p-5 {
     padding: 2rem !important;
   }
-}
-
-/* Map section */
-.ratio {
-  border: 0;
-  overflow: hidden;
 }
 
 /* Dark mode support */
