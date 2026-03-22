@@ -20,10 +20,10 @@
         <ul class="navbar-nav mx-auto" style="--ar-scroll-height: 520px;">
           <HomeMenu/>
           <li class="nav-item">
-            <NuxtLink class="nav-link fw-semibold" to="/about">About</NuxtLink>
+            <NuxtLink class="nav-link fw-semibold" to="/about">{{ $t('nav.about') }}</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink class="nav-link fw-semibold" to="/careers">Careers</NuxtLink>
+            <NuxtLink class="nav-link fw-semibold" to="/careers">{{ $t('nav.careers') }}</NuxtLink>
           </li>
         </ul>
 
@@ -33,14 +33,14 @@
           <LanguageSelector class="me-3"/>
           <NuxtLink class="btn btn-primary" to="/contact">
             <i class="ai-phone-call fs-sm me-2"></i>
-            Book a Call
+            {{ $t('nav.bookCall') }}
           </NuxtLink>
         </div>
         <!-- Mobile CTA -->
         <div class="d-lg-none p-3 mt-n3">
           <NuxtLink class="btn btn-primary w-100" to="/contact">
             <i class="ai-phone-call fs-xl me-2 ms-n1"></i>
-            Book a Call
+            {{ $t('nav.bookCall') }}
           </NuxtLink>
         </div>
       </nav>

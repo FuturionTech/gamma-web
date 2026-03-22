@@ -9,19 +9,18 @@
             <nav aria-label="breadcrumb">
               <ol class="pt-2 pb-2 breadcrumb">
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/" class="text-white-50">Home</NuxtLink>
+                  <NuxtLink to="/" class="text-white-50">{{ $t('breadcrumbs.home') }}</NuxtLink>
                 </li>
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/about" class="text-white-50">About</NuxtLink>
+                  <NuxtLink to="/about" class="text-white-50">{{ $t('careers.breadcrumbAbout') }}</NuxtLink>
                 </li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Careers</li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{{ $t('careers.breadcrumbCareers') }}</li>
               </ol>
             </nav>
 
-            <h1 class="h1 text-white pb-2">Join Gamma Neutral</h1>
+            <h1 class="h1 text-white pb-2">{{ $t('careers.pageTitle') }}</h1>
             <p class="fs-5 text-white-50 pb-3 mb-0" style="max-width: 700px;">
-              Build your career at the forefront of data science and AI innovation.
-              We're looking for passionate individuals who want to make a real impact.
+              {{ $t('careers.subtitle') }}
             </p>
           </div>
         </div>
@@ -31,11 +30,10 @@
     <!-- Why Join Us -->
     <section class="container py-5">
       <div class="text-center mb-5 pb-lg-4">
-        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-3 py-2 mb-3">WHY JOIN US</div>
-        <h2 class="h2 mb-3">Build Your Future With Gamma Neutral</h2>
+        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-3 py-2 mb-3">{{ $t('careers.whyJoin.badge') }}</div>
+        <h2 class="h2 mb-3">{{ $t('careers.whyJoin.title') }}</h2>
         <p class="fs-lg text-muted mx-auto" style="max-width: 700px;">
-          At Gamma Neutral, you'll work on challenging projects, learn from industry experts,
-          and grow your career in a supportive, innovative environment.
+          {{ $t('careers.whyJoin.subtitle') }}
         </p>
       </div>
 
@@ -48,9 +46,9 @@
                   <i class="bi bi-graph-up text-primary fs-4"></i>
                 </div>
               </div>
-              <h5 class="mb-3">Career Growth</h5>
+              <h5 class="mb-3">{{ $t('careers.whyJoin.careerGrowth.title') }}</h5>
               <p class="text-muted mb-0">
-                Clear advancement paths with mentorship programs and continuous learning opportunities.
+                {{ $t('careers.whyJoin.careerGrowth.description') }}
               </p>
             </div>
           </div>
@@ -64,9 +62,9 @@
                   <i class="bi bi-heart text-success fs-4"></i>
                 </div>
               </div>
-              <h5 class="mb-3">Work-Life Balance</h5>
+              <h5 class="mb-3">{{ $t('careers.whyJoin.workLife.title') }}</h5>
               <p class="text-muted mb-0">
-                Flexible working arrangements, generous PTO, and wellness programs.
+                {{ $t('careers.whyJoin.workLife.description') }}
               </p>
             </div>
           </div>
@@ -80,9 +78,9 @@
                   <i class="bi bi-trophy text-warning fs-4"></i>
                 </div>
               </div>
-              <h5 class="mb-3">Impactful Work</h5>
+              <h5 class="mb-3">{{ $t('careers.whyJoin.impactful.title') }}</h5>
               <p class="text-muted mb-0">
-                Work on cutting-edge projects that transform businesses and industries.
+                {{ $t('careers.whyJoin.impactful.description') }}
               </p>
             </div>
           </div>
@@ -98,17 +96,16 @@
             <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-4" style="width: 80px; height: 80px;">
               <i class="bi bi-briefcase text-primary fs-2"></i>
             </div>
-            <h2 class="h2 mb-3">No Current Openings</h2>
+            <h2 class="h2 mb-3">{{ $t('careers.noOpenings.title') }}</h2>
             <p class="fs-5 text-muted mb-4 mx-auto" style="max-width: 600px;">
-              We're always looking for talented people. While we don't have open positions
-              at this time, we'd love to hear from you.
+              {{ $t('careers.noOpenings.description') }}
             </p>
             <p class="text-muted mb-4">
-              Send us your resume and we'll keep you in mind for future opportunities.
+              {{ $t('careers.noOpenings.resumePrompt') }}
             </p>
             <a href="mailto:careers@gammaneutral.com" class="btn btn-primary btn-lg px-5">
               <i class="bi bi-envelope me-2"></i>
-              Send Us Your Resume
+              {{ $t('careers.noOpenings.sendResume') }}
             </a>
           </div>
         </div>
@@ -119,17 +116,17 @@
     <section class="py-5 bg-primary bg-gradient text-white">
       <div class="container py-4">
         <div class="text-center">
-          <h2 class="h2 text-white mb-3">Stay Connected</h2>
+          <h2 class="h2 text-white mb-3">{{ $t('careers.stayConnected.title') }}</h2>
           <p class="fs-lg text-white-50 mb-4 mx-auto" style="max-width: 600px;">
-            Interested in working with us? Send us your resume and we'll reach out when a role that fits your skills becomes available.
+            {{ $t('careers.stayConnected.subtitle') }}
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
             <a href="mailto:careers@gammaneutral.com" class="btn btn-light btn-lg px-5">
-              Send Your Resume
+              {{ $t('careers.stayConnected.sendResume') }}
               <i class="bi bi-envelope ms-2"></i>
             </a>
             <NuxtLink to="/contact" class="btn btn-outline-light btn-lg px-5">
-              Book a Call
+              {{ $t('careers.stayConnected.bookCall') }}
             </NuxtLink>
           </div>
         </div>

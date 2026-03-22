@@ -4,17 +4,17 @@
     <section class="hero-section">
       <div class="container position-relative" style="z-index: 2;">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
-          <NuxtLink to="/" class="breadcrumb-link">Home</NuxtLink>
+          <NuxtLink to="/" class="breadcrumb-link">{{ $t('breadcrumbs.home') }}</NuxtLink>
           <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Privacy Policy</span>
+          <span class="breadcrumb-current">{{ $t('privacy.breadcrumb') }}</span>
         </nav>
 
-        <h1 class="page-title">Privacy Policy</h1>
+        <h1 class="page-title">{{ $t('privacy.pageTitle') }}</h1>
         <p class="page-subtitle">
-          Your privacy is important to us. This policy outlines how Gamma Neutral Consulting Inc. collects, uses, and protects your personal information.
+          {{ $t('privacy.subtitle') }}
         </p>
         <p class="page-meta">
-          Effective Date: June 16, 2025 · Last Updated: November 9, 2024
+          {{ $t('privacy.effectiveDate') }}
         </p>
       </div>
     </section>

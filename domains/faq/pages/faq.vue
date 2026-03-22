@@ -5,8 +5,8 @@
       <div style="padding-top: 70px;">
         <nav aria-label="breadcrumb">
         <ol class="pt-lg-3 breadcrumb">
-          <li class="breadcrumb-item"><NuxtLink to="/">Home</NuxtLink></li>
-          <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+          <li class="breadcrumb-item"><NuxtLink to="/">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ $t('breadcrumbs.faq') }}</li>
         </ol>
       </nav>
       </div>
@@ -17,20 +17,20 @@
           <div class="position-relative mb-sm-2">
             <div class="bg-light d-flex align-items-center justify-content-center" style="height: 200px; border-radius: 5%;"><i class="ai-circle-help h1 text-muted"></i></div>
           </div>
-          <h3 class="h5">Can't find the answer you're looking for?</h3>
-          <p class="mb-sm-4">Reach out to our team and we'll get back to you as soon as possible.</p>
-          <NuxtLink class="btn btn-primary" to="/contact">Book a Discovery Call</NuxtLink>
+          <h3 class="h5">{{ $t('faq.sidebar.title') }}</h3>
+          <p class="mb-sm-4">{{ $t('faq.sidebar.description') }}</p>
+          <NuxtLink class="btn btn-primary" to="/contact">{{ $t('faq.sidebar.button') }}</NuxtLink>
         </div>
         <div class="col-md-8 col-lg-7">
           <div class="ps-md-3 ps-lg-4 ps-xl-5">
-            <h2 class="h1 pb-sm-1 pb-md-3">Frequently Asked Questions</h2>
+            <h2 class="h1 pb-sm-1 pb-md-3">{{ $t('faq.pageTitle') }}</h2>
 
             <!-- Loading State -->
             <div v-if="faqStore.loading" class="text-center py-5">
               <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
-              <p class="text-muted mt-3">Loading FAQs...</p>
+              <p class="text-muted mt-3">{{ $t('faq.loading') }}</p>
             </div>
 
             <!-- Error State -->
@@ -41,7 +41,7 @@
 
             <!-- No FAQs -->
             <div v-else-if="faqStore.faqs.length === 0" class="text-center py-5">
-              <p class="text-muted">No FAQs available at this time.</p>
+              <p class="text-muted">{{ $t('faq.noFaqs') }}</p>
             </div>
 
             <!-- Accordion -->

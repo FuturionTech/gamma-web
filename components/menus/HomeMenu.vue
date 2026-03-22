@@ -1,12 +1,12 @@
 <template>
   <li class="nav-item">
     <NuxtLink class="nav-link fw-semibold" to="/" exact>
-      Home
+      {{ $t('nav.home') }}
     </NuxtLink>
   </li>
   <li class="nav-item">
     <NuxtLink class="nav-link fw-semibold" to="/services">
-      Services
+      {{ $t('nav.services') }}
     </NuxtLink>
   </li>
 </template>

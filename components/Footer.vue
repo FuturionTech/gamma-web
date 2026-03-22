@@ -8,7 +8,7 @@
           <div class="mb-4">
             <HeaderLogo :theme="'dark'" class="mb-3"/>
             <p class="text-light mb-4">
-              Transform data into opportunity. Empower businesses to harness data potential with expert consulting in AI, cybersecurity, and business intelligence.
+              {{ $t('footer.tagline') }}
             </p>
             <!-- Social media links removed - to be added when accounts are created -->
             <div class="d-flex gap-3">
@@ -23,41 +23,41 @@
 
         <!-- Services -->
         <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">Services</h6>
+          <h6 class="text-white fw-bold mb-3">{{ $t('footer.services') }}</h6>
           <ul class="list-unstyled">
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                AI Solutions
+                {{ $t('footer.servicesItems.ai') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Data Engineering
+                {{ $t('footer.servicesItems.dataEngineering') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Cybersecurity
+                {{ $t('footer.servicesItems.cybersecurity') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Business Intelligence
+                {{ $t('footer.servicesItems.bi') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Cloud Computing
+                {{ $t('footer.servicesItems.cloud') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Data Platform &amp; Big Data
+                {{ $t('footer.servicesItems.bigData') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                Delivery &amp; Program Management
+                {{ $t('footer.servicesItems.delivery') }}
               </NuxtLink>
             </li>
           </ul>
@@ -65,34 +65,34 @@
 
         <!-- Industries -->
         <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">Industries</h6>
-          <p class="text-light small mb-1">Financial Services</p>
-          <p class="text-light small mb-1">Healthcare</p>
-          <p class="text-light small mb-0">Government &amp; Public Sector</p>
+          <h6 class="text-white fw-bold mb-3">{{ $t('footer.industries') }}</h6>
+          <p class="text-light small mb-1">{{ $t('footer.industriesItems.financial') }}</p>
+          <p class="text-light small mb-1">{{ $t('footer.industriesItems.healthcare') }}</p>
+          <p class="text-light small mb-0">{{ $t('footer.industriesItems.government') }}</p>
         </div>
 
         <!-- Company -->
         <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">Company</h6>
+          <h6 class="text-white fw-bold mb-3">{{ $t('footer.company') }}</h6>
           <ul class="list-unstyled">
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/about">
-                About Us
+                {{ $t('footer.companyItems.about') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/careers">
-                Careers
+                {{ $t('footer.companyItems.careers') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/faq">
-                FAQ
+                {{ $t('footer.companyItems.faq') }}
               </NuxtLink>
             </li>
             <li class="mb-2">
               <NuxtLink class="text-light text-decoration-none hover-primary" to="/contact">
-                Contact Us
+                {{ $t('footer.companyItems.contact') }}
               </NuxtLink>
             </li>
           </ul>
@@ -100,7 +100,7 @@
 
         <!-- Contact Info -->
         <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">Contact Info</h6>
+          <h6 class="text-white fw-bold mb-3">{{ $t('footer.contactInfo') }}</h6>
           <div class="mb-3">
             <div class="d-flex align-items-start mb-2">
               <i class="bi bi-geo-alt-fill text-primary me-2 mt-1"></i>
@@ -125,20 +125,19 @@
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start">
             <p class="text-light mb-0 small">
-              &copy; {{ new Date().getFullYear() }} Gamma Neutral Consulting Inc.
-              All rights reserved.
+              &copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
             <nav class="nav justify-content-center justify-content-md-end">
               <NuxtLink class="nav-link text-light small hover-primary px-2" to="/privacy-policy">
-                Privacy Policy
+                {{ $t('footer.privacyPolicy') }}
               </NuxtLink>
               <NuxtLink class="nav-link text-light small hover-primary px-2" to="/terms-of-service">
-                Terms of Service
+                {{ $t('footer.termsOfService') }}
               </NuxtLink>
               <NuxtLink class="nav-link text-light small hover-primary px-2" to="/faq">
-                FAQ
+                {{ $t('footer.companyItems.faq') }}
               </NuxtLink>
             </nav>
           </div>

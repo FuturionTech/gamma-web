@@ -4,17 +4,17 @@
     <section class="hero-section">
       <div class="container position-relative" style="z-index: 2;">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
-          <NuxtLink to="/" class="breadcrumb-link">Home</NuxtLink>
+          <NuxtLink to="/" class="breadcrumb-link">{{ $t('breadcrumbs.home') }}</NuxtLink>
           <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Terms and Conditions</span>
+          <span class="breadcrumb-current">{{ $t('terms.breadcrumb') }}</span>
         </nav>
 
-        <h1 class="page-title">Terms and Conditions</h1>
+        <h1 class="page-title">{{ $t('terms.pageTitle') }}</h1>
         <p class="page-subtitle">
-          These Terms and Conditions govern your use of Gamma Neutral Consulting Inc.'s services and website. Please read them carefully before engaging with our services.
+          {{ $t('terms.subtitle') }}
         </p>
         <p class="page-meta">
-          Effective Date: June 16, 2025 · Last Updated: November 9, 2024
+          {{ $t('terms.effectiveDate') }}
         </p>
       </div>
     </section>
