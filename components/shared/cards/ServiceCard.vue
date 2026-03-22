@@ -31,7 +31,7 @@
       :href="link"
       class="btn-link fw-semibold mt-auto d-inline-flex align-items-center"
     >
-      {{ linkText || 'Learn More' }}
+      {{ linkText || $t('services.learnMore') }}
       <i class="bi bi-arrow-right ms-1"></i>
     </a>
   </div>
