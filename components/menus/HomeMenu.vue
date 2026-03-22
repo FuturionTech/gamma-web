@@ -1,5 +1,10 @@
 <template>
   <li class="nav-item">
+    <NuxtLink class="nav-link fw-semibold" to="/" exact>
+      Home
+    </NuxtLink>
+  </li>
+  <li class="nav-item">
     <NuxtLink class="nav-link fw-semibold" to="/services">
       Services
     </NuxtLink>
@@ -7,22 +12,12 @@
 </template>
 
 <script setup>
-// Primary nav link — links to services page
+// Primary nav links — Home + Services
 </script>
 
-<style scoped>
-.nav-link {
-  color: white !important;
+<style>
+/* HomeMenu nav styles — unscoped so they apply to multi-root li elements */
+.nav-item .nav-link {
   transition: color 0.2s ease-in-out;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: #8b5cf6 !important;
-}
-
-.nav-link.router-link-active {
-  color: #8b5cf6 !important;
-  font-weight: 600;
 }
 </style>

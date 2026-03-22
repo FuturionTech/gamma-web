@@ -2,7 +2,7 @@
   <section class="tech-partners-bar py-4">
     <div class="container">
       <!-- Section Title -->
-      <p class="text-center text-muted text-uppercase fw-semibold small mb-4 tracking-wide">
+      <p class="text-center tech-heading text-uppercase fw-semibold small mb-4 tracking-wide">
         Technologies We Specialize In
       </p>
 
@@ -44,6 +44,10 @@ const technologies = [
   background: linear-gradient(180deg, #f8f7fc 0%, #f9fafb 100%);
   border-top: 1px solid rgba(0, 0, 0, 0.04);
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.tech-heading {
+  color: #6b7280;
 }
 
 .tracking-wide {
@@ -108,12 +112,16 @@ const technologies = [
   border-color: rgba(139, 92, 246, 0.3);
 }
 
+:global([data-bs-theme="dark"]) .tech-heading {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 :global([data-bs-theme="dark"]) .tech-icon {
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 :global([data-bs-theme="dark"]) .tech-name {
-  color: #d1d5db;
+  color: #e5e7eb;
 }
 
 /* Responsive */

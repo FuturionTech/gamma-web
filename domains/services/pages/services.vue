@@ -626,7 +626,7 @@ const approachSteps = ref([
 }
 
 :global([data-bs-theme="dark"]) .industry-heading {
-  color: #f9fafb;
+  color: #ffffff !important;
 }
 
 .industry-subtitle {
@@ -634,7 +634,7 @@ const approachSteps = ref([
 }
 
 :global([data-bs-theme="dark"]) .industry-subtitle {
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .industry-text {
@@ -642,6 +642,6 @@ const approachSteps = ref([
 }
 
 :global([data-bs-theme="dark"]) .industry-text {
-  color: #d1d5db;
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 </style>

@@ -158,14 +158,38 @@ const benefits = [
 }
 
 /* Dark mode support */
+:global([data-bs-theme="dark"]) .display-5 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .lead.text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
 :global([data-bs-theme="dark"]) .card {
-  background-color: var(--bs-body-bg) !important;
-  border-color: var(--bs-border-color) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   color: var(--bs-body-color) !important;
 }
 
+:global([data-bs-theme="dark"]) .card h6 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .card .text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+:global([data-bs-theme="dark"]) .card p.text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
 :global([data-bs-theme="dark"]) .chart-container.bg-light {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+:global([data-bs-theme="dark"]) .chart-container .small.text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 :global([data-bs-theme="dark"]) .shadow-lg {

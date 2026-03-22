@@ -114,12 +114,21 @@ const badgeColorClass = computed(() => {
 
 /* Dark mode support */
 :global([data-bs-theme="dark"]) .process-step-card {
-  background: #1a1a1a !important;
-  border: 1px solid rgba(139, 92, 246, 0.2) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 :global([data-bs-theme="dark"]) .process-step-card:hover {
   box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+:global([data-bs-theme="dark"]) .process-step-card h4 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .process-step-card .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 /* Accessibility */

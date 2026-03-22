@@ -12,12 +12,33 @@
 [data-bs-theme="dark"] {
 
   // ========================================
+  // Global heading override — headings pure white
+  // ========================================
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  .display-1, .display-2, .display-3,
+  .display-4, .display-5, .display-6 {
+    color: #ffffff !important;
+  }
+
+  // ========================================
+  // Body text — at least 85% white for readability
+  // ========================================
+  p, li {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .lead {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  // ========================================
   // Global card override — forces ALL cards dark
   // ========================================
   .card {
-    background-color: var(--bs-body-bg) !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
     color: var(--bs-body-color) !important;
-    border-color: var(--bs-border-color) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
   // ========================================
@@ -74,8 +95,8 @@
   // ServiceCard — override scoped background: #ffffff
   // ========================================
   .service-card {
-    background: var(--bs-body-bg) !important;
-    border-color: var(--bs-border-color) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
   // ========================================
@@ -173,18 +194,43 @@
   // Text color fixes — Bootstrap text utilities
   // ========================================
   .text-muted {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+  }
+
+  // Section headers — ensure titles/subtitles are visible
+  .section-header h2 {
+    color: #ffffff !important;
+  }
+
+  .section-header .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
   }
 
   // IndustryCard scoped override
   .industry-card {
-    background: var(--bs-body-bg) !important;
-    border-color: var(--bs-border-color) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+
+    h4 {
+      color: #ffffff !important;
+    }
+
+    .text-muted {
+      color: rgba(255, 255, 255, 0.78) !important;
+    }
   }
 
   // ProcessStepCard scoped override
   .process-step-card {
-    background: var(--bs-body-bg) !important;
-    border-color: var(--bs-border-color) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+
+    h4 {
+      color: #ffffff !important;
+    }
+
+    .text-muted {
+      color: rgba(255, 255, 255, 0.75) !important;
+    }
   }
 }

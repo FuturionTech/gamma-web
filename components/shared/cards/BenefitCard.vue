@@ -77,9 +77,17 @@ const iconColorClass = computed(() => {
   transform: scale(1.1);
 }
 
-/* Dark mode support — maintain distinct colors per icon type */
+/* Dark mode support */
 :global([data-bs-theme="dark"]) .benefit-icon-wrapper {
   opacity: 0.9;
+}
+
+:global([data-bs-theme="dark"]) .benefit-card h4 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .benefit-card .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 /* Reduced motion */

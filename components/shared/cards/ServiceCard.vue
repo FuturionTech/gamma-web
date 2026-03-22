@@ -159,30 +159,35 @@ const props = defineProps({
 
 /* Dark Mode Support */
 :global([data-bs-theme="dark"]) .service-card {
-  background: #1a1a2e !important;
-  border-color: rgba(139, 92, 246, 0.12) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: none !important;
 }
 
 :global([data-bs-theme="dark"]) .service-card:hover {
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.2) !important;
   border-color: rgba(139, 92, 246, 0.4) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
 }
 
 :global([data-bs-theme="dark"]) .card-title-text {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 :global([data-bs-theme="dark"]) .card-desc-text {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:global([data-bs-theme="dark"]) .feature-check {
+  color: #a78bfa !important;
 }
 
 :global([data-bs-theme="dark"]) .feature-text {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 :global([data-bs-theme="dark"]) .icon-wrapper {
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(139, 92, 246, 0.2);
 }
 
 /* Accessibility */
