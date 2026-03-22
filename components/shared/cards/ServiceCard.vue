@@ -1,5 +1,5 @@
 <template>
-  <div class="service-card card h-100 p-4 rounded-4 border-0">
+  <div class="service-card card h-100 p-4 rounded-4 border-0" @click="onCardClick">
     <!-- Icon -->
     <div class="service-icon mb-4">
       <div class="icon-wrapper">
@@ -27,7 +27,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const { $trackEvent } = useNuxtApp()
+
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -53,6 +55,10 @@ defineProps({
     default: 'bg-gradient-primary',
   },
 })
+
+const onCardClick = () => {
+  $trackEvent('service_card_click', { service: props.title })
+}
 </script>
 
 <style scoped>

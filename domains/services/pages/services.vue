@@ -187,7 +187,7 @@
               {{ $t('services.page.ctaSubtitle') }}
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
-              <NuxtLink to="/contact" class="btn btn-white btn-lg px-4 px-sm-5 py-3 rounded-pill fw-semibold">
+              <NuxtLink to="/contact" class="btn btn-white btn-lg px-4 px-sm-5 py-3 rounded-pill fw-semibold" @click="$trackEvent('cta_click', { location: 'services_cta', label: 'schedule_consultation' })">
                 <i class="bi bi-calendar-check me-2"></i>
                 {{ $t('services.page.ctaPrimary') }}
               </NuxtLink>
@@ -211,6 +211,7 @@ import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import { useServicesStore } from '~/domains/services/stores/useServicesStore'
 
+const { $trackEvent } = useNuxtApp()
 const { t, tm, locale } = useI18n()
 const servicesStore = useServicesStore()
 

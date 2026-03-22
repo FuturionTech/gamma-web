@@ -137,6 +137,8 @@
 import { ref } from 'vue'
 import { useContactStore } from '../stores/useContactStore'
 
+const { $trackEvent } = useNuxtApp()
+
 interface ContactFormData {
   first_name: string
   last_name: string
@@ -198,6 +200,12 @@ const handleSubmit = async () => {
 
     form.classList.remove('was-validated')
     showSuccess.value = true
+
+    // Analytics: track successful contact form submission
+    $trackEvent('contact_form_submit', {
+      subject: formData.value.subject || null,
+      project_type: formData.value.project_type || null,
+    })
 
     // Hide success message after 5 seconds
     setTimeout(() => {

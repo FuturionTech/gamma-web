@@ -136,6 +136,13 @@
 </template>
 
 <script setup lang="ts">
+const { $trackEvent } = useNuxtApp()
+
+// Track careers page visit with extra intent signal
+onMounted(() => {
+  $trackEvent('careers_page_view')
+})
+
 // SEO
 useHead({
   title: 'Careers | Gamma Neutral Consulting',
