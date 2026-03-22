@@ -8,7 +8,7 @@
           <div class="pe-lg-5">
             <h2 class="display-5 fw-bold mb-4">
               {{ $t('whyChooseUs.title') }}
-              <span class="text-primary">{{ $t('whyChooseUs.brandName') }}</span>
+              <span class="text-primary brand-text">{{ $t('whyChooseUs.brandName') }}</span>
             </h2>
             <p class="lead text-muted mb-5">
               {{ $t('whyChooseUs.subtitle') }}
@@ -162,6 +162,10 @@ const benefits = computed(() => [
 /* Dark mode support */
 :global([data-bs-theme="dark"]) .display-5 {
   color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .brand-text {
+  color: #a78bfa !important;
 }
 
 :global([data-bs-theme="dark"]) .lead.text-muted {

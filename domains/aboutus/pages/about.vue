@@ -466,6 +466,14 @@ useHead({
   transition: all 0.3s ease;
 }
 
+.value-card h5 {
+  color: #1f2937;
+}
+
+.value-card p.text-muted {
+  color: #4b5563 !important;
+}
+
 .value-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -477,8 +485,16 @@ useHead({
 }
 
 :global([data-bs-theme="dark"]) .value-card {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+:global([data-bs-theme="dark"]) .value-card h5 {
+  color: #f9fafb !important;
+}
+
+:global([data-bs-theme="dark"]) .value-card p.text-muted {
+  color: #d1d5db !important;
 }
 
 :global([data-bs-theme="dark"]) .value-card:hover {

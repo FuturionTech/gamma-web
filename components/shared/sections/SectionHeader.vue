@@ -100,4 +100,32 @@ const subtitleClass = computed(() => {
   background: rgba(139, 92, 246, 0.2) !important;
   color: #a78bfa !important;
 }
+
+/* Enforce explicit text colors for the headings and subtitles */
+.section-header h1,
+.section-header h2,
+.section-header h3,
+.section-header h4,
+.section-header h5,
+.section-header h6 {
+  color: var(--bs-heading-color, #212529) !important;
+}
+
+.section-header .text-muted {
+  color: rgba(108, 117, 125, 1) !important; /* Bootstrap gray-600 */
+}
+
+/* Dark mode overrides */
+:global([data-bs-theme="dark"]) .section-header h1,
+:global([data-bs-theme="dark"]) .section-header h2,
+:global([data-bs-theme="dark"]) .section-header h3,
+:global([data-bs-theme="dark"]) .section-header h4,
+:global([data-bs-theme="dark"]) .section-header h5,
+:global([data-bs-theme="dark"]) .section-header h6 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .section-header .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
 </style>

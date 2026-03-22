@@ -237,6 +237,12 @@ const handleSubmit = async () => {
   box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
 }
 
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
 .form-check-input {
   width: 1.25rem;
   height: 1.25rem;
@@ -341,6 +347,11 @@ const handleSubmit = async () => {
   background-color: #1a1a2e;
   border-color: #8b5cf6;
   color: var(--bs-body-color);
+}
+
+:global([data-bs-theme="dark"]) .form-control::placeholder,
+:global([data-bs-theme="dark"]) .form-select::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 :global([data-bs-theme="dark"]) .form-label {
