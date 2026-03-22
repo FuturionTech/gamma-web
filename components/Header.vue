@@ -9,7 +9,7 @@
       <!-- Navbar brand (Logo) -->
       <HeaderLogo/>
 
-      <!-- Mobile: hamburger only (theme + language inside overlay) -->
+      <!-- Mobile: hamburger only -->
       <button
         class="mobile-menu-toggle d-lg-none"
         type="button"
@@ -51,15 +51,18 @@
   <!-- Fullscreen Mobile Menu Overlay -->
   <Teleport to="body">
     <Transition name="mobile-menu">
-      <div v-if="isMobileOpen" class="mobile-overlay" @click.self="isMobileOpen = false">
-        <div class="mobile-overlay-content">
-          <!-- Theme + Language controls -->
-          <div class="d-flex justify-content-center gap-3 mb-4 mobile-controls">
-            <ThemeToggle />
-            <LanguageSelector />
-          </div>
+      <div v-if="isMobileOpen" class="mobile-overlay">
+        <!-- Top bar: logo + close -->
+        <div class="mobile-overlay-header">
+          <span class="mobile-overlay-logo">Gamma<span class="fw-light">Neutral</span></span>
+          <button class="mobile-close-btn" @click="isMobileOpen = false" aria-label="Close menu">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
 
-          <!-- Nav Links — staggered -->
+        <!-- Content -->
+        <div class="mobile-overlay-content">
+          <!-- Nav Links -->
           <nav class="mobile-nav">
             <NuxtLink
               v-for="(link, i) in mobileLinks"
@@ -81,11 +84,20 @@
               {{ $t('nav.bookCall') }}
             </NuxtLink>
           </div>
+        </div>
 
-          <!-- Tagline -->
-          <p class="mobile-tagline" :style="{ animationDelay: `${0.1 + mobileLinks.length * 0.07}s` }">
-            Gamma Neutral Consulting Inc.
-          </p>
+        <!-- Bottom: theme + language + tagline -->
+        <div class="mobile-overlay-footer">
+          <div class="mobile-preferences">
+            <div class="mobile-pref-item" @click.stop>
+              <ThemeToggle />
+            </div>
+            <div class="mobile-pref-divider"></div>
+            <div class="mobile-pref-item" @click.stop>
+              <LanguageSelector />
+            </div>
+          </div>
+          <p class="mobile-tagline">Gamma Neutral Consulting Inc.</p>
         </div>
       </div>
     </Transition>
@@ -239,7 +251,7 @@ watch(isMobileOpen, (open) => {
 }
 
 /* ================================
-   ANIMATED HAMBURGER TOGGLE
+   HAMBURGER TOGGLE
    ================================ */
 .mobile-menu-toggle {
   width: 44px;
@@ -290,7 +302,6 @@ watch(isMobileOpen, (open) => {
   top: 6px;
 }
 
-/* Animate to X — bigger, bolder, white */
 .toggle-bar.open {
   background: transparent;
 }
@@ -318,28 +329,18 @@ watch(isMobileOpen, (open) => {
   position: fixed;
   inset: 0;
   z-index: 1050;
-  background: rgba(10, 10, 20, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #0a0a14;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.mobile-overlay-content {
-  text-align: center;
-  width: 100%;
-  max-width: 320px;
-  padding: 0 1.5rem;
-}
-
-/* Transition for the overlay */
+/* Transition */
 .mobile-menu-enter-active {
   transition: opacity 0.3s ease;
 }
 
 .mobile-menu-leave-active {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.2s ease;
 }
 
 .mobile-menu-enter-from,
@@ -348,12 +349,62 @@ watch(isMobileOpen, (open) => {
 }
 
 /* ================================
-   MOBILE CONTROLS (theme + language)
+   OVERLAY HEADER — logo + close
    ================================ */
-.mobile-controls {
-  animation: mobileSlideIn 0.3s ease-out forwards;
+.mobile-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  animation: mobileSlideIn 0.25s ease-out forwards;
   opacity: 0;
-  transform: translateY(12px);
+}
+
+.mobile-overlay-logo {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mobile-overlay-logo .fw-light {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mobile-close-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-close-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+   OVERLAY CONTENT — nav + CTA
+   ================================ */
+.mobile-overlay-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5rem;
+  max-width: 360px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ================================
@@ -370,13 +421,12 @@ watch(isMobileOpen, (open) => {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  padding: 0.875rem 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  border-radius: 16px;
+  border-radius: 14px;
   transition: all 0.2s ease;
   animation: mobileSlideIn 0.4s ease-out forwards;
   opacity: 0;
@@ -386,27 +436,28 @@ watch(isMobileOpen, (open) => {
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
   color: #ffffff;
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(139, 92, 246, 0.1);
 }
 
 .mobile-nav-link.router-link-active {
   color: #ffffff;
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(139, 92, 246, 0.12);
 }
 
 .mobile-nav-link.router-link-active .mobile-nav-icon {
-  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.25);
+  color: #a78bfa;
 }
 
 .mobile-nav-icon {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 1.1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 1rem;
   flex-shrink: 0;
   transition: all 0.2s ease;
 }
@@ -416,35 +467,65 @@ watch(isMobileOpen, (open) => {
   color: #c4b5fd;
 }
 
-/* CTA in mobile overlay */
+/* CTA */
 .mobile-cta {
   animation: mobileSlideIn 0.4s ease-out forwards;
   opacity: 0;
   transform: translateY(12px);
-  margin-bottom: 2rem;
 }
 
 .mobile-cta .btn-primary {
   background: #8b5cf6;
   border: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .mobile-cta .btn-primary:hover {
   background: #7c3aed;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* Tagline */
-.mobile-tagline {
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  animation: mobileSlideIn 0.4s ease-out forwards;
+/* ================================
+   OVERLAY FOOTER — preferences + tagline
+   ================================ */
+.mobile-overlay-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  animation: mobileSlideIn 0.4s ease-out 0.3s forwards;
   opacity: 0;
-  transform: translateY(12px);
+}
+
+.mobile-preferences {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-pref-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+}
+
+.mobile-pref-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-tagline {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin: 0;
 }
 
 @keyframes mobileSlideIn {
@@ -457,7 +538,8 @@ watch(isMobileOpen, (open) => {
 /* ================================
    ACCESSIBILITY
    ================================ */
-.mobile-nav-link:focus-visible {
+.mobile-nav-link:focus-visible,
+.mobile-close-btn:focus-visible {
   outline: 2px solid #8b5cf6;
   outline-offset: 2px;
 }
@@ -465,6 +547,8 @@ watch(isMobileOpen, (open) => {
 @media (prefers-reduced-motion: reduce) {
   .mobile-nav-link,
   .mobile-cta,
+  .mobile-overlay-header,
+  .mobile-overlay-footer,
   .mobile-tagline,
   .toggle-bar,
   .toggle-bar::before,
