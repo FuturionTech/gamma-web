@@ -512,38 +512,108 @@ useHead({
 }
 
 /* ================================
-   DARK MODE SUPPORT
+   DARK MODE SUPPORT — comprehensive
    ================================ */
 
-:global([data-bs-theme="dark"]) .capability-card {
-  background-color: var(--bs-body-bg) !important;
-  border-color: var(--bs-border-color) !important;
+/* Headings */
+:global([data-bs-theme="dark"]) h2.display-6,
+:global([data-bs-theme="dark"]) h2.h2,
+:global([data-bs-theme="dark"]) h4,
+:global([data-bs-theme="dark"]) h5 {
+  color: #f9fafb !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-card:hover {
-  border-color: rgba(139, 92, 246, 0.3) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+/* Badge */
+:global([data-bs-theme="dark"]) .badge.bg-primary.bg-opacity-10 {
+  background: rgba(139, 92, 246, 0.2) !important;
+  color: #c4b5fd !important;
 }
 
-:global([data-bs-theme="dark"]) .team-card {
-  background-color: var(--bs-body-bg) !important;
-  border-color: var(--bs-border-color) !important;
+/* Body text in dark mode */
+:global([data-bs-theme="dark"]) .fs-5,
+:global([data-bs-theme="dark"]) p {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-:global([data-bs-theme="dark"]) .team-card:hover {
-  border-color: rgba(139, 92, 246, 0.3) !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+/* Strong text */
+:global([data-bs-theme="dark"]) strong {
+  color: #f3f4f6 !important;
 }
 
+/* Text muted */
+:global([data-bs-theme="dark"]) .text-muted,
+:global([data-bs-theme="dark"]) small.text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* bg-light sections */
 :global([data-bs-theme="dark"]) .bg-light {
   background-color: rgba(255, 255, 255, 0.04) !important;
 }
 
+/* Cards */
+:global([data-bs-theme="dark"]) .capability-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:global([data-bs-theme="dark"]) .capability-card h4 {
+  color: #ffffff !important;
+}
+
+:global([data-bs-theme="dark"]) .capability-card .text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+:global([data-bs-theme="dark"]) .capability-card:hover {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Team card */
+:global([data-bs-theme="dark"]) .team-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+:global([data-bs-theme="dark"]) .team-card .text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+:global([data-bs-theme="dark"]) .team-card:hover {
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Growing team section */
+:global([data-bs-theme="dark"]) .bg-light h5 {
+  color: #f9fafb !important;
+}
+
+:global([data-bs-theme="dark"]) .bg-light .text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Icon colors in dark mode */
+:global([data-bs-theme="dark"]) .text-primary {
+  color: #a78bfa !important;
+}
+
+/* Shadows */
 :global([data-bs-theme="dark"]) .shadow-sm {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 :global([data-bs-theme="dark"]) .shadow-lg {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Founder bio */
+:global([data-bs-theme="dark"]) .team-card .card-body p {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+:global([data-bs-theme="dark"]) .team-card .text-primary.fw-semibold {
+  color: #a78bfa !important;
 }
 </style>
