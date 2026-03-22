@@ -19,7 +19,7 @@
           <p class="text-white-50 fs-lg pb-4 pb-lg-5 mb-2 mb-sm-3 mb-lg-0 mb-xl-2">
             Every engagement starts with a conversation. Tell us about your data challenges and we will outline a practical path forward.
           </p>
-          <a class="btn btn-lg btn-secondary px-5 py-3" href="/contact">
+          <a class="btn btn-lg btn-secondary text-white px-5 py-3" href="/contact">
             Ready to Move Forward?
             <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -34,14 +34,16 @@
 </script>
 
 <style scoped>
-/* Button hover effect */
+/* Button styling */
 .btn-secondary {
   transition: all 0.3s ease;
+  color: #fff !important;
 }
 
 .btn-secondary:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  color: #fff !important;
 }
 
 /* Responsive text sizing */
