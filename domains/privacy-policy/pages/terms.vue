@@ -2,20 +2,17 @@
   <div class="privacy-page">
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="container position-relative" style="z-index: 2;">
-        <nav aria-label="breadcrumb" class="breadcrumb-nav">
-          <NuxtLink to="/" class="breadcrumb-link">{{ $t('breadcrumbs.home') }}</NuxtLink>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">{{ $t('terms.breadcrumb') }}</span>
-        </nav>
-
-        <h1 class="page-title">{{ $t('terms.pageTitle') }}</h1>
-        <p class="page-subtitle">
-          {{ $t('terms.subtitle') }}
-        </p>
-        <p class="page-meta">
-          {{ $t('terms.effectiveDate') }}
-        </p>
+      <div class="hero-gradient py-5">
+        <div class="container" style="padding-top: 80px;">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><NuxtLink to="/" class="text-white text-opacity-75">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
+              <li class="breadcrumb-item active text-white">{{ $t('terms.breadcrumb') }}</li>
+            </ol>
+          </nav>
+          <h1 class="display-4 fw-bold text-white">{{ $t('terms.pageTitle') }}</h1>
+          <p class="text-white-50 lead mb-0">{{ $t('terms.effectiveDate') }}</p>
+        </div>
       </div>
     </section>
 
@@ -591,58 +588,29 @@ useHead({
 
 /* === HERO SECTION === */
 .hero-section {
-  padding-top: 140px;
-  padding-bottom: 3rem;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  position: relative;
 }
 
-.breadcrumb-nav {
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.hero-section .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-section .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.breadcrumb-link {
-  color: #8b5cf6;
+.hero-section .breadcrumb-item a {
   text-decoration: none;
 }
 
-.breadcrumb-link:hover {
+.hero-section .breadcrumb-item a:hover {
   text-decoration: underline;
-  color: #a78bfa;
-}
-
-.breadcrumb-separator {
-  margin: 0 0.5rem;
-}
-
-.breadcrumb-current {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
-}
-
-.page-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 1rem 0;
-  max-width: 700px;
-}
-
-.page-meta {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0;
 }
 
 /* === CONTENT SECTION === */
