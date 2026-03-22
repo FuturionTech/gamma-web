@@ -1,6 +1,6 @@
 <template>
   <!-- Services Grid Section -->
-  <section class="py-5 my-5">
+  <section class="py-5">
     <div class="container">
       <!-- Loading State -->
       <div v-if="homepageStore.loadingServices" class="row g-4">
@@ -34,11 +34,11 @@
       </div>
 
       <!-- CTA -->
-      <div class="text-center mt-5">
-        <a href="/services" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+      <div class="text-center mt-4 pt-2">
+        <NuxtLink to="/services" class="btn btn-outline-primary btn-lg px-4 py-2 rounded-pill">
           View All Services
           <i class="bi bi-arrow-right ms-2"></i>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>
