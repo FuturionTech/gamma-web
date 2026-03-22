@@ -91,6 +91,11 @@ const subtitleClass = computed(() => {
 }
 
 /* Dark mode support for badge */
+/* Badge text — use darker purple for AA contrast on light bg */
+.badge.text-primary {
+  color: #6d28d9 !important;
+}
+
 :global([data-bs-theme="dark"]) .badge {
   background: rgba(139, 92, 246, 0.2) !important;
   color: #a78bfa !important;

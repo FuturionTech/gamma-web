@@ -47,7 +47,7 @@ const technologies = [
 }
 
 .tech-heading {
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .tracking-wide {
@@ -71,7 +71,7 @@ const technologies = [
 
 .tech-icon {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #4b5563;
   transition: color 0.3s ease;
 }
 

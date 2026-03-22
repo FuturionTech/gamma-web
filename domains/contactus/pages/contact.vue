@@ -8,21 +8,21 @@
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><NuxtLink to="/" class="text-white-50">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
+                <li class="breadcrumb-item"><NuxtLink to="/" class="text-white text-opacity-75">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
                 <li class="breadcrumb-item active text-white" aria-current="page">{{ $t('breadcrumbs.contact') }}</li>
               </ol>
             </nav>
 
             <!-- Page Title -->
             <h1 class="display-4 fw-bold text-white mb-4">{{ $t('contact.pageTitle') }}</h1>
-            <p class="lead text-white-50 mb-5">
+            <p class="lead text-white text-opacity-75 mb-5">
               {{ $t('contact.subtitle') }}
             </p>
 
             <!-- Quick Contact Info -->
             <div class="d-flex flex-column flex-sm-row gap-4">
               <div>
-                <p class="text-white-50 mb-1">{{ $t('contact.emailUs') }}</p>
+                <p class="text-white text-opacity-75 mb-1">{{ $t('contact.emailUs') }}</p>
                 <a href="mailto:info@gammaneutral.ca" class="text-white text-decoration-none fs-5">info@gammaneutral.ca</a>
               </div>
             </div>
@@ -238,7 +238,7 @@ useHead({
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .breadcrumb-item a {

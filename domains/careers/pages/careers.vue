@@ -9,17 +9,17 @@
             <nav aria-label="breadcrumb">
               <ol class="pt-2 pb-2 breadcrumb">
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/" class="text-white-50">{{ $t('breadcrumbs.home') }}</NuxtLink>
+                  <NuxtLink to="/" class="text-white text-opacity-75">{{ $t('breadcrumbs.home') }}</NuxtLink>
                 </li>
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/about" class="text-white-50">{{ $t('careers.breadcrumbAbout') }}</NuxtLink>
+                  <NuxtLink to="/about" class="text-white text-opacity-75">{{ $t('careers.breadcrumbAbout') }}</NuxtLink>
                 </li>
                 <li class="breadcrumb-item text-white active" aria-current="page">{{ $t('careers.breadcrumbCareers') }}</li>
               </ol>
             </nav>
 
             <h1 class="h1 text-white pb-2">{{ $t('careers.pageTitle') }}</h1>
-            <p class="fs-5 text-white-50 pb-3 mb-0" style="max-width: 700px;">
+            <p class="fs-5 text-white text-opacity-75 pb-3 mb-0" style="max-width: 700px;">
               {{ $t('careers.subtitle') }}
             </p>
           </div>
@@ -117,7 +117,7 @@
       <div class="container py-4">
         <div class="text-center">
           <h2 class="h2 text-white mb-3">{{ $t('careers.stayConnected.title') }}</h2>
-          <p class="fs-lg text-white-50 mb-4 mx-auto" style="max-width: 600px;">
+          <p class="fs-lg text-white text-opacity-75 mb-4 mx-auto" style="max-width: 600px;">
             {{ $t('careers.stayConnected.subtitle') }}
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -161,7 +161,7 @@ useHead({
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .breadcrumb-item a {

@@ -18,7 +18,7 @@
               {{ $t('about.badge') }}
             </p>
 
-            <p class="fs-5 text-white-50 mb-4 mx-auto" style="max-width: 700px;">
+            <p class="fs-5 text-white text-opacity-75 mb-4 mx-auto" style="max-width: 700px;">
               {{ $t('about.intro') }}
             </p>
 
@@ -27,7 +27,7 @@
               <h3 class="h5 text-white fw-bold mb-2">
                 <i class="bi bi-compass text-gradient me-2"></i>{{ $t('about.pointOfView.title') }}
               </h3>
-              <p class="text-white-50 mb-0">
+              <p class="text-white text-opacity-75 mb-0">
                 {{ $t('about.pointOfView.content') }}
               </p>
             </div>
@@ -264,7 +264,7 @@
             <h2 class="h2 fw-bold text-white mb-3">
               {{ $t('about.ctaBottom.title') }}
             </h2>
-            <p class="fs-6 text-white-50 mb-4">
+            <p class="fs-6 text-white text-opacity-75 mb-4">
               {{ $t('about.ctaBottom.subtitle') }}
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
@@ -277,7 +277,7 @@
                 {{ $t('about.ctaBottom.ctaSecondary') }}
               </NuxtLink>
             </div>
-            <p class="text-white-50 mt-4 small">
+            <p class="text-white text-opacity-75 mt-4 small">
               {{ $t('about.ctaBottom.noCommitment') }}
             </p>
           </div>

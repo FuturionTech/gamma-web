@@ -9,10 +9,10 @@
             <nav aria-label="breadcrumb">
               <ol class="pt-2 pb-2 breadcrumb">
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/" class="text-white-50">{{ $t('breadcrumbs.home') }}</NuxtLink>
+                  <NuxtLink to="/" class="text-white text-opacity-75">{{ $t('breadcrumbs.home') }}</NuxtLink>
                 </li>
                 <li class="breadcrumb-item">
-                  <NuxtLink to="/careers" class="text-white-50">{{ $t('breadcrumbs.careers') }}</NuxtLink>
+                  <NuxtLink to="/careers" class="text-white text-opacity-75">{{ $t('breadcrumbs.careers') }}</NuxtLink>
                 </li>
                 <li class="breadcrumb-item text-white active" aria-current="page">{{ position?.title || $t('careers.position.title') }}</li>
               </ol>
@@ -20,7 +20,7 @@
 
             <div v-if="position">
               <h1 class="h1 text-white mb-3">{{ position.title }}</h1>
-              <div class="d-flex flex-wrap gap-3 text-white-50">
+              <div class="d-flex flex-wrap gap-3 text-white text-opacity-75">
                 <span><i class="bi bi-briefcase me-2"></i>{{ position.department }}</span>
                 <span><i class="bi bi-geo-alt me-2"></i>{{ position.location }}</span>
                 <span><i class="bi bi-clock me-2"></i>{{ position.type }}</span>
@@ -234,7 +234,7 @@ useHead({
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .breadcrumb-item a {

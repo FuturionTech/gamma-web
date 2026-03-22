@@ -27,7 +27,7 @@
             </h1>
 
             <!-- Subtitle -->
-            <p class="fs-6 fs-md-5 text-white-50 mb-0 mx-auto" style="max-width: 680px;">
+            <p class="fs-6 fs-md-5 text-white text-opacity-75 mb-0 mx-auto" style="max-width: 680px;">
               {{ $t('services.page.subtitle') }}
             </p>
           </div>
@@ -183,7 +183,7 @@
             <h2 class="display-5 fw-bold text-white mb-3 mb-md-4">
               {{ $t('services.page.ctaTitle') }}
             </h2>
-            <p class="fs-6 fs-md-5 text-white-50 mb-4 mb-md-5">
+            <p class="fs-6 fs-md-5 text-white text-opacity-75 mb-4 mb-md-5">
               {{ $t('services.page.ctaSubtitle') }}
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
@@ -195,7 +195,7 @@
                 {{ $t('services.page.ctaSecondary') }}
               </NuxtLink>
             </div>
-            <p class="text-white-50 mt-4 small mb-0">
+            <p class="text-white text-opacity-75 mt-4 small mb-0">
               {{ $t('services.page.ctaNoCommitment') }}
             </p>
           </div>
@@ -339,7 +339,7 @@ const approachSteps = computed(() =>
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* ================================

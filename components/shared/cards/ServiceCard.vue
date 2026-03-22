@@ -107,7 +107,7 @@ defineProps({
 }
 
 .feature-check {
-  color: #8b5cf6;
+  color: #7c3aed;
   font-size: 0.85rem;
 }
 

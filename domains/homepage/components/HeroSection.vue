@@ -56,7 +56,7 @@
 
           <!-- Trust Indicators -->
           <div class="animate-fade-in-up animation-delay-3">
-            <p class="text-white-50 mb-3">{{ $t('hero.tagline') }}</p>
+            <p class="text-white text-opacity-75 mb-3">{{ $t('hero.tagline') }}</p>
           </div>
         </div>
 

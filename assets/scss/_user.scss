@@ -45,6 +45,17 @@ body {
   }
 
 // ====================================
+// Text-safe primary — #8b5cf6 fails AA on white (3.9:1), #7c3aed passes (5.6:1)
+// ====================================
+a:not(.btn):not(.nav-link) {
+  color: #7c3aed;
+}
+
+a:not(.btn):not(.nav-link):hover {
+  color: #6d28d9;
+}
+
+// ====================================
 // Dark Mode Fixes (centralized)
 // ====================================
 @import "dark-mode-fixes";

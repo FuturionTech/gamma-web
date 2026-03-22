@@ -27,7 +27,7 @@
             </h1>
 
             <!-- Subtitle -->
-            <p class="fs-5 text-white-50 mb-4 mx-auto" style="max-width: 600px;">
+            <p class="fs-5 text-white text-opacity-75 mb-4 mx-auto" style="max-width: 600px;">
               {{ $t('faq.subtitle') }}
             </p>
 
@@ -266,7 +266,7 @@ onMounted(() => {
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .search-input {
@@ -279,7 +279,7 @@ onMounted(() => {
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .search-input:focus {

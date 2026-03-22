@@ -105,7 +105,7 @@ const iconColorClass = computed(() => {
 
 /* Button Link */
 .btn-link {
-  color: #8b5cf6;
+  color: #7c3aed;
   text-decoration: none;
   transition: all 0.3s ease;
   gap: 0.5rem;

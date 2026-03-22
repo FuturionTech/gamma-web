@@ -415,7 +415,7 @@ watch(isMobileOpen, (open) => {
 
 /* Tagline */
 .mobile-tagline {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   animation: mobileSlideIn 0.4s ease-out forwards;

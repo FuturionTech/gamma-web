@@ -211,9 +211,9 @@ const benefits = computed(() => [
 
 /* Learn more link - visible in both modes */
 .learn-more-link {
-  color: #8b5cf6 !important;
+  color: #7c3aed !important;
 }
 .learn-more-link:hover {
-  color: #7c3aed !important;
+  color: #6d28d9 !important;
 }
 </style>

@@ -87,7 +87,7 @@
    FOOTER BASE
    ================================ */
 .footer {
-  background: #0f0f13;
+  background: #000000;
   padding: 4rem 0 2rem;
 }
 

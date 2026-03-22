@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center">
           <div class="logo-text">
             <span class="fw-bold fs-3 text-dark">Gamma</span>
-            <span class="fw-light fs-3 text-muted">Neutral</span>
+            <span class="fw-light fs-3" style="color: rgba(255,255,255,0.8);">Neutral</span>
           </div>
         </div>
       </span>

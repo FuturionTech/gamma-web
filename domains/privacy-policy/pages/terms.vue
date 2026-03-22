@@ -11,7 +11,7 @@
             </ol>
           </nav>
           <h1 class="display-4 fw-bold text-white">{{ $t('terms.pageTitle') }}</h1>
-          <p class="text-white-50 lead mb-0">{{ $t('terms.effectiveDate') }}</p>
+          <p class="text-white text-opacity-75 lead mb-0">{{ $t('terms.effectiveDate') }}</p>
         </div>
       </div>
     </section>
@@ -602,7 +602,7 @@ useHead({
 }
 
 .hero-section .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .hero-section .breadcrumb-item a {
@@ -658,7 +658,7 @@ useHead({
 }
 
 .toc-link {
-  color: #8b5cf6;
+  color: #7c3aed;
   text-decoration: none;
   font-size: 0.9375rem;
 }
