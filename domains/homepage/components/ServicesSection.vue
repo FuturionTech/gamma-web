@@ -72,7 +72,7 @@ const iconBootstrapMap: Record<string, string> = {
   server: 'bi bi-hdd-stack',
 }
 
-// Service translation keys mapped to icons/gradients
+// Service translation keys mapped to icons/gradients (i18n fallback)
 const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData'] as const
 const serviceIcons: Record<string, string> = {
   ai: 'bi bi-cpu',
@@ -91,16 +91,17 @@ const serviceGradients: Record<string, string> = {
   bigData: 'bg-gradient-purple',
 }
 
-const isFr = computed(() => locale.value === 'fr')
+// Re-fetch when locale changes (API returns correct language)
+watch(locale, () => {
+  homepageStore.fetchServices(6, locale.value)
+})
 
 // Prefer API data (top 6), fall back to i18n static
 const displayServices = computed(() => {
   if (homepageStore.services.length > 0) {
     return homepageStore.services.slice(0, 6).map(s => ({
-      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
-      description: isFr.value
-        ? (s.short_description_fr || s.description_fr || s.short_description || s.description)
-        : (s.short_description || s.description),
+      title: s.title,
+      description: s.short_description || s.description,
       features: s.features.map(f => f.title),
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',

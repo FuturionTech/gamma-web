@@ -75,7 +75,7 @@ const homepageStore = useHomepageStore()
 
 // Fetch all homepage data from GraphQL in parallel
 onMounted(() => {
-  homepageStore.fetchAll()
+  homepageStore.fetchAll(locale.value)
 })
 
 // Debug mode for development - helps identify empty sections

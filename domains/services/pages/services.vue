@@ -187,7 +187,12 @@ const servicesStore = useServicesStore()
 
 // Fetch services from API
 onMounted(async () => {
-  await servicesStore.fetchServices(20)
+  await servicesStore.fetchServices(20, locale.value)
+})
+
+// Re-fetch when locale changes (API returns correct language)
+watch(locale, () => {
+  servicesStore.fetchServices(20, locale.value)
 })
 
 useHead({
@@ -281,16 +286,12 @@ const staticServices = [
   }
 ]
 
-const isFr = computed(() => locale.value === 'fr')
-
 // Prefer API data, fall back to static
 const services = computed(() => {
   if (servicesStore.services.length > 0) {
     return servicesStore.services.map(s => ({
-      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
-      description: isFr.value
-        ? (s.short_description_fr || s.description_fr || s.short_description || s.description)
-        : (s.short_description || s.description),
+      title: s.title,
+      description: s.short_description || s.description,
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       features: s.features.map(f => f.title),

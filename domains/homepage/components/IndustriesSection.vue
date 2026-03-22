@@ -62,16 +62,17 @@ const industryKeys = ['banking', 'healthcare', 'government', 'education', 'busin
 const industryIcons = ['bi-bank', 'bi-heart-pulse', 'bi-building', 'bi-mortarboard', 'bi-briefcase', 'bi-globe2'] as const
 const industryColors = ['primary', 'danger', 'info', 'success', 'warning', 'secondary'] as const
 
-const isFr = computed(() => locale.value === 'fr')
+// Re-fetch when locale changes (API returns correct language)
+watch(locale, () => {
+  homepageStore.fetchSolutions(6, locale.value)
+})
 
 // Prefer API data, fall back to i18n static
 const displayIndustries = computed(() => {
   if (homepageStore.solutions.length > 0) {
     return homepageStore.solutions.slice(0, 6).map(s => ({
-      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
-      description: isFr.value
-        ? (s.description_fr || s.description || '')
-        : (s.description || ''),
+      title: s.title,
+      description: s.description || '',
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi-gear',
       iconColor: iconColorMap[s.icon_color ?? ''] || 'primary',
     }))

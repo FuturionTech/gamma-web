@@ -3,13 +3,10 @@ import { defineStore } from 'pinia'
 interface Service {
   id: string
   title: string
-  title_fr: string | null
   description: string
-  description_fr: string | null
   slug: string
   icon: string | null
   short_description: string | null
-  short_description_fr: string | null
   category: string | null
   is_active: boolean
   order: number
@@ -19,11 +16,8 @@ interface Service {
 interface Solution {
   id: string
   title: string
-  title_fr: string | null
   subtitle: string | null
-  subtitle_fr: string | null
   description: string | null
-  description_fr: string | null
   slug: string
   icon: string | null
   icon_color: string | null
@@ -102,18 +96,18 @@ export const useHomepageStore = defineStore('homepageStore', {
   }),
 
   actions: {
-    async fetchServices(limit = 6) {
+    async fetchServices(limit = 6, locale = 'en') {
       this.loadingServices = true
       try {
         const { query } = useGraphql()
         const data = await query<{ services: Service[] }>(`
-          query Services($limit: Int, $is_active: Boolean) {
-            services(limit: $limit, is_active: $is_active) {
-              id title title_fr description description_fr slug icon short_description short_description_fr category is_active order
+          query Services($limit: Int, $is_active: Boolean, $locale: String) {
+            services(limit: $limit, is_active: $is_active, locale: $locale) {
+              id title description slug icon short_description category is_active order
               features { id title description }
             }
           }
-        `, { limit, is_active: true })
+        `, { limit, is_active: true, locale })
         this.services = data.services ?? []
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch services.'
@@ -122,17 +116,17 @@ export const useHomepageStore = defineStore('homepageStore', {
       }
     },
 
-    async fetchSolutions(limit = 6) {
+    async fetchSolutions(limit = 6, locale = 'en') {
       this.loadingSolutions = true
       try {
         const { query } = useGraphql()
         const data = await query<{ solutions: Solution[] }>(`
-          query Solutions($limit: Int, $is_active: Boolean) {
-            solutions(limit: $limit, is_active: $is_active) {
-              id title title_fr subtitle subtitle_fr description description_fr slug icon icon_color is_active order
+          query Solutions($limit: Int, $is_active: Boolean, $locale: String) {
+            solutions(limit: $limit, is_active: $is_active, locale: $locale) {
+              id title subtitle description slug icon icon_color is_active order
             }
           }
-        `, { limit, is_active: true })
+        `, { limit, is_active: true, locale })
         this.solutions = data.solutions ?? []
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch solutions.'
@@ -238,10 +232,10 @@ export const useHomepageStore = defineStore('homepageStore', {
     },
 
     /** Fetch all homepage data in parallel */
-    async fetchAll() {
+    async fetchAll(locale = 'en') {
       await Promise.allSettled([
-        this.fetchServices(6),
-        this.fetchSolutions(6),
+        this.fetchServices(6, locale),
+        this.fetchSolutions(6, locale),
         this.fetchStats(10),
         this.fetchTestimonials(10),
         this.fetchPartners(10),
