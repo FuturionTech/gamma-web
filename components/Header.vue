@@ -9,15 +9,24 @@
       <!-- Navbar brand (Logo) -->
       <HeaderLogo/>
 
-      <!-- Mobile menu toggler (Hamburger) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-label="Toggle navigation" :aria-expanded="isMenuOpen.toString()" @click="toggleMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Mobile controls: theme + language + hamburger -->
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <ThemeToggle />
+        <LanguageSelector />
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          :aria-expanded="isMobileOpen"
+          aria-label="Toggle navigation"
+          @click="isMobileOpen = !isMobileOpen"
+        >
+          <span class="toggle-bar" :class="{ open: isMobileOpen }"></span>
+        </button>
+      </div>
 
-      <!-- Navbar collapse (Main navigation) -->
-      <nav class="collapse navbar-collapse" id="navbarNav" ref="navbarNav">
-        <ul class="navbar-nav mx-auto" style="--ar-scroll-height: 520px;">
+      <!-- Desktop navigation -->
+      <nav class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
           <HomeMenu/>
           <li class="nav-item">
             <NuxtLink class="nav-link fw-semibold" to="/about">{{ $t('nav.about') }}</NuxtLink>
@@ -36,16 +45,46 @@
             {{ $t('nav.bookCall') }}
           </NuxtLink>
         </div>
-        <!-- Mobile CTA -->
-        <div class="d-lg-none p-3 mt-n3">
-          <NuxtLink class="btn btn-primary w-100" to="/contact">
-            <i class="ai-phone-call fs-xl me-2 ms-n1"></i>
-            {{ $t('nav.bookCall') }}
-          </NuxtLink>
-        </div>
       </nav>
     </div>
   </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <Teleport to="body">
+    <Transition name="mobile-menu">
+      <div v-if="isMobileOpen" class="mobile-overlay" @click.self="isMobileOpen = false">
+        <div class="mobile-overlay-content">
+          <!-- Nav Links — centered, staggered -->
+          <nav class="mobile-nav">
+            <NuxtLink
+              v-for="(link, i) in mobileLinks"
+              :key="link.to"
+              :to="link.to"
+              class="mobile-nav-link"
+              :style="{ animationDelay: `${0.05 + i * 0.07}s` }"
+              @click="isMobileOpen = false"
+            >
+              <span class="mobile-nav-icon"><i :class="link.icon"></i></span>
+              <span>{{ $t(link.label) }}</span>
+            </NuxtLink>
+          </nav>
+
+          <!-- CTA -->
+          <div class="mobile-cta" :style="{ animationDelay: `${0.05 + mobileLinks.length * 0.07}s` }">
+            <NuxtLink class="btn btn-primary btn-lg rounded-pill px-5 py-3 w-100" to="/contact" @click="isMobileOpen = false">
+              <i class="bi bi-calendar-check me-2"></i>
+              {{ $t('nav.bookCall') }}
+            </NuxtLink>
+          </div>
+
+          <!-- Tagline -->
+          <p class="mobile-tagline" :style="{ animationDelay: `${0.1 + mobileLinks.length * 0.07}s` }">
+            Gamma Neutral Consulting Inc.
+          </p>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup>
@@ -55,8 +94,17 @@ import ThemeToggle from "./selectors/ThemeToggle.vue";
 import HeaderLogo from "./logo/HeaderLogo.vue";
 
 const { isScrolled, isMenuOpen, toggleMenu, closeMenu } = useNavbar()
-const navbarNav = ref(null)
 const route = useRoute()
+
+const isMobileOpen = ref(false)
+
+const mobileLinks = [
+  { to: '/', label: 'nav.home', icon: 'bi bi-house' },
+  { to: '/services', label: 'nav.services', icon: 'bi bi-grid' },
+  { to: '/about', label: 'nav.about', icon: 'bi bi-people' },
+  { to: '/careers', label: 'nav.careers', icon: 'bi bi-briefcase' },
+  { to: '/faq', label: 'breadcrumbs.faq', icon: 'bi bi-chat-dots' },
+]
 
 // Check if current page is homepage
 const isHomePage = computed(() => route.path === '/')
@@ -68,15 +116,15 @@ const navbarClasses = computed(() => {
     : 'navbar-scrolled navbar-solid'
 })
 
-// No smart scroll — header stays visible at all times via fixed-top
-
-// Watch for route changes to close menu
+// Close mobile menu on route change
 watch(() => route.path, () => {
-  if (navbarNav.value?.classList.contains('show')) {
-    navbarNav.value.classList.remove('show')
-  }
+  isMobileOpen.value = false
   closeMenu()
-  // Menu closes on navigation
+})
+
+// Lock body scroll when mobile menu is open
+watch(isMobileOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
 })
 </script>
 
@@ -88,7 +136,6 @@ watch(() => route.path, () => {
 }
 
 /* Global styles for navbar states */
-/* Only apply transparent on homepage */
 .navbar.navbar-transparent {
   background-color: rgba(0, 0, 0, 0.7) !important;
   backdrop-filter: blur(12px);
@@ -97,7 +144,6 @@ watch(() => route.path, () => {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ensure solid overrides transparent in all cases */
 .navbar.navbar-solid {
   background-color: #1a1a1a !important;
   background: #1a1a1a !important;
@@ -113,7 +159,6 @@ watch(() => route.path, () => {
   color: white !important;
 }
 
-/* Ensure dropdown toggle arrow is visible */
 .navbar-transparent .dropdown-toggle::after {
   border-top-color: white !important;
 }
@@ -148,7 +193,6 @@ watch(() => route.path, () => {
   -webkit-backdrop-filter: none !important;
 }
 
-/* Force solid background on non-homepage routes - highest specificity */
 .navbar.navbar-scrolled.navbar-solid {
   background-color: #1a1a1a !important;
   background: #1a1a1a !important;
@@ -164,7 +208,6 @@ watch(() => route.path, () => {
   color: white !important;
 }
 
-/* Ensure dropdown toggle arrow is visible in scrolled state */
 .navbar-scrolled .dropdown-toggle::after {
   border-top-color: white !important;
 }
@@ -190,14 +233,221 @@ watch(() => route.path, () => {
   color: white !important;
 }
 
-/* Fix navbar toggler for dark theme */
-.navbar-transparent .navbar-toggler,
-.navbar-scrolled .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
+/* ================================
+   ANIMATED HAMBURGER TOGGLE
+   ================================ */
+.mobile-menu-toggle {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1060;
 }
 
-.navbar-transparent .navbar-toggler-icon,
-.navbar-scrolled .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.toggle-bar {
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.toggle-bar::before,
+.toggle-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.toggle-bar::before {
+  top: -7px;
+}
+
+.toggle-bar::after {
+  top: 7px;
+}
+
+/* Animate to X */
+.toggle-bar.open {
+  background: transparent;
+}
+
+.toggle-bar.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.toggle-bar.open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* ================================
+   FULLSCREEN MOBILE OVERLAY
+   ================================ */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(10, 10, 20, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay-content {
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  padding: 0 1.5rem;
+}
+
+/* Transition for the overlay */
+.mobile-menu-enter-active {
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+}
+
+/* ================================
+   MOBILE NAV LINKS
+   ================================ */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  animation: mobileSlideIn 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.mobile-nav-link.router-link-active {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.mobile-nav-link.router-link-active .mobile-nav-icon {
+  color: #8b5cf6;
+}
+
+.mobile-nav-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover .mobile-nav-icon {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+}
+
+/* CTA in mobile overlay */
+.mobile-cta {
+  animation: mobileSlideIn 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateY(12px);
+  margin-bottom: 2rem;
+}
+
+.mobile-cta .btn-primary {
+  background: #8b5cf6;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mobile-cta .btn-primary:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+/* Tagline */
+.mobile-tagline {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  animation: mobileSlideIn 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+@keyframes mobileSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+.mobile-nav-link:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav-link,
+  .mobile-cta,
+  .mobile-tagline,
+  .toggle-bar,
+  .toggle-bar::before,
+  .toggle-bar::after,
+  .mobile-menu-enter-active,
+  .mobile-menu-leave-active {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>

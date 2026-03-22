@@ -77,9 +77,7 @@
       "approachSubtitle": "Une méthodologie structurée en cinq étapes qui assure une livraison réussie et des résultats durables",
       "industryFocusTitle": "Spécialisation sectorielle",
       "industryFocusSubtitle": "Expertise approfondie dans les secteurs réglementés et à forte intensité de données",
-      "industryFocusText1": "Nous nous concentrons sur les industries réglementées et à forte intensité de données : services financiers, santé et gouvernement. Notre équipe apporte une expertise sectorielle en cadres de conformité (BSIF, LPRPDE, LPRPS), gouvernance des données et architectures infonuagiques sécurisées requises par ces secteurs.",
-      "industryFocusText2": "Cette spécialisation signifie que nous comprenons les contraintes uniques de votre industrie avant même la première rencontre — des exigences de résidence des données aux pistes d'audit et contrôles d'accès attendus par les régulateurs.",
-      "industryFocusText3": "Que vous modernisiez une plateforme bancaire centrale, intégriez des systèmes de données cliniques ou construisiez un lac de données sécurisé pour une agence fédérale, nous apportons la sensibilité réglementaire et la discipline d'ingénierie que le projet exige.",
+      "complianceLabel": "Cadres de conformité avec lesquels nous travaillons",
       "ctaTitle": "Prêt à discuter de votre projet ?",
       "ctaSubtitle": "Chaque mandat commence par une conversation. Parlez-nous de vos défis en matière de données et nous vous proposerons un plan d'action concret.",
       "ctaNoCommitment": "Aucun engagement requis — obtenez des conseils d'experts dès votre première rencontre."
@@ -198,6 +196,16 @@
     },
     "ctaPrimary": "Planifier une consultation",
     "ctaSecondary": "Explorer les services",
+    "values": {
+      "rigor": "Rigueur",
+      "rigorDesc": "Discipline d'ingénierie avant les raccourcis",
+      "clarity": "Clarté",
+      "clarityDesc": "Réponses franches, échéanciers honnêtes",
+      "partnership": "Partenariat",
+      "partnershipDesc": "Votre équipe réussit après notre départ",
+      "impact": "Impact",
+      "impactDesc": "Résultats mesurables en production"
+    },
     "companyOverview": {
       "badge": "Qui sommes-nous",
       "title": "Discipline d'ingénierie pour les données et l'IA",
@@ -378,13 +386,20 @@
   "faq": {
     "breadcrumb": "FAQ",
     "pageTitle": "Foire aux questions",
+    "subtitle": "Tout ce que vous devez savoir sur nos services de consultation, notre processus de mandat et notre façon de travailler avec les clients.",
+    "searchPlaceholder": "Rechercher une question...",
+    "allCategories": "Toutes",
     "sidebar": {
       "title": "Vous ne trouvez pas la réponse que vous cherchez ?",
       "description": "Communiquez avec notre équipe et nous vous répondrons dans les plus brefs délais.",
       "button": "Réserver un appel découverte"
     },
     "loading": "Chargement des FAQ...",
-    "noFaqs": "Aucune FAQ disponible pour le moment."
+    "noFaqs": "Aucune FAQ disponible pour le moment.",
+    "noResults": "Aucune question ne correspond à votre recherche.",
+    "clearSearch": "Effacer les filtres",
+    "retry": "Réessayer",
+    "showingCount": "Affichage de {count} sur {total} questions"
   },
   "privacy": {
     "breadcrumb": "Politique de confidentialité",

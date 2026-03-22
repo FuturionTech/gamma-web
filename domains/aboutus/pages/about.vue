@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero Section - Compact and Inspiring -->
-    <section class="hero-gradient position-relative py-4 overflow-hidden" style="margin-top: 80px;">
+    <section class="hero-gradient position-relative py-4 overflow-hidden hero-offset">
       <div class="container position-relative z-2 py-4">
         <div class="row align-items-center">
           <div class="col-lg-10 mx-auto text-center">
@@ -89,9 +89,38 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <img src="https://images.unsplash.com/photo-1517090504332-af2e820c4882?w=600&h=400&fit=crop"
-                 alt="Toronto skyline"
-                 class="img-fluid rounded-3 shadow">
+            <div class="values-visual rounded-4 p-4 p-lg-5">
+              <div class="row g-4">
+                <div class="col-6">
+                  <div class="value-card text-center p-3 rounded-3">
+                    <i class="bi bi-shield-check fs-2 text-primary mb-2 d-block"></i>
+                    <h5 class="fw-bold mb-1">{{ $t('about.values.rigor') }}</h5>
+                    <p class="text-muted small mb-0">{{ $t('about.values.rigorDesc') }}</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="value-card text-center p-3 rounded-3">
+                    <i class="bi bi-lightbulb fs-2 text-warning mb-2 d-block"></i>
+                    <h5 class="fw-bold mb-1">{{ $t('about.values.clarity') }}</h5>
+                    <p class="text-muted small mb-0">{{ $t('about.values.clarityDesc') }}</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="value-card text-center p-3 rounded-3">
+                    <i class="bi bi-people fs-2 text-success mb-2 d-block"></i>
+                    <h5 class="fw-bold mb-1">{{ $t('about.values.partnership') }}</h5>
+                    <p class="text-muted small mb-0">{{ $t('about.values.partnershipDesc') }}</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="value-card text-center p-3 rounded-3">
+                    <i class="bi bi-graph-up-arrow fs-2 text-info mb-2 d-block"></i>
+                    <h5 class="fw-bold mb-1">{{ $t('about.values.impact') }}</h5>
+                    <p class="text-muted small mb-0">{{ $t('about.values.impactDesc') }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -417,6 +446,49 @@ useHead({
 
 :global([data-bs-theme="dark"]) .about-body-text {
   color: #d1d5db;
+}
+
+/* Hero offset */
+.hero-offset {
+  margin-top: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .hero-offset {
+    margin-top: 64px;
+  }
+}
+
+/* Values Visual */
+.values-visual {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+:global([data-bs-theme="dark"]) .values-visual {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+:global([data-bs-theme="dark"]) .value-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-bs-theme="dark"]) .value-card:hover {
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.25);
 }
 
 /* Clean shadows */

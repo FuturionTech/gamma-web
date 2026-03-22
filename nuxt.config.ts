@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         autoImport: true,
     },
     app: {
+        pageTransition: { name: 'page', mode: 'out-in' },
         head: {
             title: 'Gamma Neutral Consulting Inc.',
             meta: [

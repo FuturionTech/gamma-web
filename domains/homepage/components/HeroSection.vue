@@ -39,17 +39,17 @@
           </h1>
 
           <!-- Subheading -->
-          <p class="lead text-professional text-white opacity-75 mb-5 animate-fade-in-up animation-delay-1">
+          <p class="lead text-professional text-white opacity-75 mb-4 mb-lg-5 animate-fade-in-up animation-delay-1" style="max-width: 600px;">
             {{ $t('hero.subtitle') }}
           </p>
 
           <!-- CTA Buttons -->
-          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5 animate-fade-in-up animation-delay-2">
-            <a href="/contact" class="btn btn-secondary btn-lg px-5 py-3 rounded-pill">
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4 mb-lg-5 animate-fade-in-up animation-delay-2">
+            <a href="/contact" class="btn btn-secondary btn-lg px-4 px-sm-5 py-3 rounded-pill">
               {{ $t('hero.ctaPrimary') }}
               <i class="bi bi-arrow-right ms-2"></i>
             </a>
-            <a href="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">
+            <a href="/about" class="btn btn-outline-light btn-lg px-4 px-sm-5 py-3 rounded-pill">
               {{ $t('hero.ctaSecondary') }}
             </a>
           </div>

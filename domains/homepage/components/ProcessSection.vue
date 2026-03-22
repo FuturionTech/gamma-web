@@ -75,7 +75,7 @@
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const stepKeys = ['discovery', 'solutionDesign', 'development', 'deployment', 'support'] as const
 const stepColors = ['primary', 'gradient', 'info', 'warning', 'success'] as const
@@ -84,7 +84,7 @@ const processSteps = computed(() =>
   stepKeys.map((key, i) => ({
     title: t(`process.${key}.title`),
     description: t(`process.${key}.description`),
-    items: t(`process.${key}.items`) as unknown as string[],
+    items: tm(`process.${key}.items`) as string[],
     badgeColor: stepColors[i],
   }))
 )

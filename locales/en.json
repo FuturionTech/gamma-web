@@ -77,9 +77,7 @@
       "approachSubtitle": "A structured five-step methodology that ensures successful delivery and lasting results",
       "industryFocusTitle": "Industry Focus",
       "industryFocusSubtitle": "Deep domain expertise in regulated, data-intensive sectors",
-      "industryFocusText1": "We focus on regulated, data-intensive industries: financial services, healthcare, and government. Our team brings domain expertise in compliance frameworks (OSFI, PIPEDA, PHIPA), data governance, and secure cloud architectures required by these sectors.",
-      "industryFocusText2": "This focus means we understand the unique constraints of your industry before the first meeting — from data residency requirements to audit trails and access controls that regulators expect.",
-      "industryFocusText3": "Whether you are modernizing a core banking platform, integrating clinical data systems, or building a secure data lake for a federal agency, we bring the regulatory awareness and engineering discipline the project demands.",
+      "complianceLabel": "Compliance Frameworks We Work With",
       "ctaTitle": "Ready to discuss your project?",
       "ctaSubtitle": "Every engagement starts with a conversation. Tell us about your data challenges and we will outline a practical path forward.",
       "ctaNoCommitment": "No commitment required — get expert insights in your first meeting."
@@ -198,6 +196,16 @@
     },
     "ctaPrimary": "Schedule a Consultation",
     "ctaSecondary": "Explore Services",
+    "values": {
+      "rigor": "Rigor",
+      "rigorDesc": "Engineering discipline over quick fixes",
+      "clarity": "Clarity",
+      "clarityDesc": "Plain answers, honest timelines",
+      "partnership": "Partnership",
+      "partnershipDesc": "Your team succeeds after we leave",
+      "impact": "Impact",
+      "impactDesc": "Measurable results in production"
+    },
     "companyOverview": {
       "badge": "Who We Are",
       "title": "Engineering discipline for data and AI",
@@ -378,13 +386,20 @@
   "faq": {
     "breadcrumb": "FAQ",
     "pageTitle": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our consulting services, engagement process, and how we work with clients.",
+    "searchPlaceholder": "Search questions...",
+    "allCategories": "All",
     "sidebar": {
       "title": "Can't find the answer you're looking for?",
       "description": "Reach out to our team and we'll get back to you as soon as possible.",
       "button": "Book a Discovery Call"
     },
     "loading": "Loading FAQs...",
-    "noFaqs": "No FAQs available at this time."
+    "noFaqs": "No FAQs available at this time.",
+    "noResults": "No questions match your search.",
+    "clearSearch": "Clear filters",
+    "retry": "Try Again",
+    "showingCount": "Showing {count} of {total} questions"
   },
   "privacy": {
     "breadcrumb": "Privacy Policy",

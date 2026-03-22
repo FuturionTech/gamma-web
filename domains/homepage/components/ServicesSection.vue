@@ -49,7 +49,7 @@
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
-const { t, locale } = useI18n()
+const { t, tm, locale } = useI18n()
 const homepageStore = useHomepageStore()
 
 // Icon-to-gradient mapping for API services
@@ -112,7 +112,7 @@ const displayServices = computed(() => {
   return serviceKeys.map(key => ({
     title: t(`services.${key}.title`),
     description: t(`services.${key}.description`),
-    features: (t(`services.${key}.features`) as unknown as string[]),
+    features: tm(`services.${key}.features`) as string[],
     icon: serviceIcons[key],
     gradientClass: serviceGradients[key],
     link: '',

@@ -156,7 +156,7 @@
             <div class="card-body p-4">
               <h5 class="mb-3">{{ $t('careers.position.whyJoinTitle') }}</h5>
               <ul class="list-unstyled mb-0">
-                <li v-for="(item, idx) in ($t('careers.position.whyJoinItems') as unknown as string[])" :key="idx" :class="{ 'mb-2': idx < 4, 'mb-0': idx === 4 }">
+                <li v-for="(item, idx) in (tm('careers.position.whyJoinItems') as string[])" :key="idx" :class="{ 'mb-2': idx < 4, 'mb-0': idx === 4 }">
                   <i class="bi bi-check text-primary me-2"></i>
                   {{ item }}
                 </li>
@@ -194,6 +194,7 @@ import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { getPositionById, type JobPosition } from '~/domains/careers/data/positions'
 
+const { tm } = useI18n()
 const route = useRoute()
 const position = ref<JobPosition | undefined>()
 
