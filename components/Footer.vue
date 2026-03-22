@@ -65,6 +65,13 @@
       <!-- Divider -->
       <div class="footer-divider"></div>
 
+      <!-- Powered By -->
+      <div class="footer-powered-by">
+        <a href="https://futurion.tech" target="_blank" rel="noopener noreferrer" class="powered-by-pill">
+          Powered by <span class="powered-by-brand">Futurion</span>
+        </a>
+      </div>
+
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p class="footer-copyright">
@@ -198,6 +205,40 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.12);
   margin-bottom: 1.5rem;
+}
+
+/* ================================
+   POWERED BY PILL
+   ================================ */
+.footer-powered-by {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.powered-by-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.powered-by-pill:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.powered-by-brand {
+  color: #8b5cf6;
+  font-weight: 700;
 }
 
 .footer-bottom {
