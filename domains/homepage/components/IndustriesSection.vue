@@ -62,9 +62,10 @@ const industryKeys = ['banking', 'healthcare', 'government', 'education', 'busin
 const industryIcons = ['bi-bank', 'bi-heart-pulse', 'bi-building', 'bi-mortarboard', 'bi-briefcase', 'bi-globe2'] as const
 const industryColors = ['primary', 'danger', 'info', 'success', 'warning', 'secondary'] as const
 
-// Re-fetch when locale changes (API returns correct language)
+// Re-fetch when locale changes — the Accept-Language header
+// in useGraphql picks up the new locale automatically
 watch(locale, () => {
-  homepageStore.fetchSolutions(6, locale.value)
+  homepageStore.fetchSolutions(6)
 })
 
 // Prefer API data, fall back to i18n static

@@ -187,12 +187,13 @@ const servicesStore = useServicesStore()
 
 // Fetch services from API
 onMounted(async () => {
-  await servicesStore.fetchServices(20, locale.value)
+  await servicesStore.fetchServices(20)
 })
 
-// Re-fetch when locale changes (API returns correct language)
+// Re-fetch when locale changes — the Accept-Language header
+// in useGraphql picks up the new locale automatically
 watch(locale, () => {
-  servicesStore.fetchServices(20, locale.value)
+  servicesStore.fetchServices(20)
 })
 
 useHead({

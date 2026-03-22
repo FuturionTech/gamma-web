@@ -91,9 +91,10 @@ const serviceGradients: Record<string, string> = {
   bigData: 'bg-gradient-purple',
 }
 
-// Re-fetch when locale changes (API returns correct language)
+// Re-fetch when locale changes — the Accept-Language header
+// in useGraphql picks up the new locale automatically
 watch(locale, () => {
-  homepageStore.fetchServices(6, locale.value)
+  homepageStore.fetchServices(6)
 })
 
 // Prefer API data (top 6), fall back to i18n static

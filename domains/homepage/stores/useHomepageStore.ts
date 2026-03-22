@@ -96,18 +96,18 @@ export const useHomepageStore = defineStore('homepageStore', {
   }),
 
   actions: {
-    async fetchServices(limit = 6, locale = 'en') {
+    async fetchServices(limit = 6) {
       this.loadingServices = true
       try {
         const { query } = useGraphql()
         const data = await query<{ services: Service[] }>(`
-          query Services($limit: Int, $is_active: Boolean, $locale: String) {
-            services(limit: $limit, is_active: $is_active, locale: $locale) {
+          query Services($limit: Int, $is_active: Boolean) {
+            services(limit: $limit, is_active: $is_active) {
               id title description slug icon short_description category is_active order
               features { id title description }
             }
           }
-        `, { limit, is_active: true, locale })
+        `, { limit, is_active: true })
         this.services = data.services ?? []
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch services.'
@@ -116,17 +116,17 @@ export const useHomepageStore = defineStore('homepageStore', {
       }
     },
 
-    async fetchSolutions(limit = 6, locale = 'en') {
+    async fetchSolutions(limit = 6) {
       this.loadingSolutions = true
       try {
         const { query } = useGraphql()
         const data = await query<{ solutions: Solution[] }>(`
-          query Solutions($limit: Int, $is_active: Boolean, $locale: String) {
-            solutions(limit: $limit, is_active: $is_active, locale: $locale) {
+          query Solutions($limit: Int, $is_active: Boolean) {
+            solutions(limit: $limit, is_active: $is_active) {
               id title subtitle description slug icon icon_color is_active order
             }
           }
-        `, { limit, is_active: true, locale })
+        `, { limit, is_active: true })
         this.solutions = data.solutions ?? []
       } catch (e: any) {
         this.error = e.message || 'Failed to fetch solutions.'
@@ -232,10 +232,10 @@ export const useHomepageStore = defineStore('homepageStore', {
     },
 
     /** Fetch all homepage data in parallel */
-    async fetchAll(locale = 'en') {
+    async fetchAll() {
       await Promise.allSettled([
-        this.fetchServices(6, locale),
-        this.fetchSolutions(6, locale),
+        this.fetchServices(6),
+        this.fetchSolutions(6),
         this.fetchStats(10),
         this.fetchTestimonials(10),
         this.fetchPartners(10),
