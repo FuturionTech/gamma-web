@@ -67,22 +67,22 @@
     },
     "page": {
       "badge": "Services de consultation en IA et données",
-      "title": "L'ingénierie qui fait passer",
-      "titleHighlight": "pilote à la production",
-      "titlePrefix": "l'IA du",
-      "subtitle": "De l'IA et l'ingénierie des données à l'architecture infonuagique et la cybersécurité, nous offrons une consultation ciblée qui résout des problèmes d'affaires concrets pour les institutions financières, les organismes de santé et les agences gouvernementales.",
+      "title": "Nos services",
+      "subtitle": "Consultation ciblée en IA, ingénierie des données, architecture infonuagique et cybersécurité — de la stratégie à la production.",
       "ctaPrimary": "Discuter de votre projet",
       "ctaSecondary": "Découvrir notre approche",
-      "coreServicesTitle": "Nos services principaux",
-      "coreServicesSubtitle": "Des solutions complètes adaptées aux défis uniques de votre entreprise",
+      "coreServicesTitle": "Ce que nous livrons",
+      "coreServicesSubtitle": "Des services de consultation de bout en bout conçus pour les organisations réglementées et à forte intensité de données",
       "approachTitle": "Notre approche",
-      "approachSubtitle": "Une méthodologie éprouvée qui assure une livraison réussie et des résultats durables",
+      "approachSubtitle": "Une méthodologie structurée en cinq étapes qui assure une livraison réussie et des résultats durables",
       "industryFocusTitle": "Spécialisation sectorielle",
       "industryFocusSubtitle": "Expertise approfondie dans les secteurs réglementés et à forte intensité de données",
       "industryFocusText1": "Nous nous concentrons sur les industries réglementées et à forte intensité de données : services financiers, santé et gouvernement. Notre équipe apporte une expertise sectorielle en cadres de conformité (BSIF, LPRPDE, LPRPS), gouvernance des données et architectures infonuagiques sécurisées requises par ces secteurs.",
       "industryFocusText2": "Cette spécialisation signifie que nous comprenons les contraintes uniques de votre industrie avant même la première rencontre — des exigences de résidence des données aux pistes d'audit et contrôles d'accès attendus par les régulateurs.",
-      "ctaTitle": "Prêt à transformer vos données ?",
-      "ctaSubtitle": "Discutons de la façon dont nos solutions de données complètes peuvent propulser votre entreprise. Notre équipe est prête à vous aider à exploiter le plein potentiel de vos données."
+      "industryFocusText3": "Que vous modernisiez une plateforme bancaire centrale, intégriez des systèmes de données cliniques ou construisiez un lac de données sécurisé pour une agence fédérale, nous apportons la sensibilité réglementaire et la discipline d'ingénierie que le projet exige.",
+      "ctaTitle": "Prêt à discuter de votre projet ?",
+      "ctaSubtitle": "Chaque mandat commence par une conversation. Parlez-nous de vos défis en matière de données et nous vous proposerons un plan d'action concret.",
+      "ctaNoCommitment": "Aucun engagement requis — obtenez des conseils d'experts dès votre première rencontre."
     }
   },
   "whyChooseUs": {

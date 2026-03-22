@@ -3,7 +3,6 @@
     <!-- Icon -->
     <div class="service-icon mb-4">
       <div class="icon-wrapper">
-        <!-- Support both SVG component and Bootstrap icons -->
         <component v-if="svgIcon" :is="svgIcon" />
         <i v-else-if="icon" :class="icon" class="service-icon-i"></i>
       </div>
@@ -14,7 +13,7 @@
     <p class="card-desc-text mb-4">{{ description }}</p>
 
     <!-- Feature List -->
-    <ul v-if="features && features.length > 0" class="list-unstyled mb-4">
+    <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto">
       <li
         class="d-flex align-items-center mb-2"
         v-for="(feature, idx) in features"
@@ -24,62 +23,35 @@
         <span class="small feature-text">{{ feature }}</span>
       </li>
     </ul>
-
-    <!-- Learn More Link -->
-    <a
-      v-if="link"
-      :href="link"
-      class="btn-link fw-semibold mt-auto d-inline-flex align-items-center"
-    >
-      {{ linkText || $t('services.learnMore') }}
-      <i class="bi bi-arrow-right ms-1"></i>
-    </a>
   </div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
-
-const props = defineProps({
-  // Content props
+<script setup lang="ts">
+defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   features: {
-    type: Array,
-    default: () => []
+    type: Array as () => string[],
+    default: () => [],
   },
-
-  // Icon props - supports both SVG component and Bootstrap icons
   svgIcon: {
-    type: [Object, Function],
-    default: null
+    type: [Object, Function] as any,
+    default: null,
   },
   icon: {
     type: String,
-    default: ''
+    default: '',
   },
-
-  // Styling props (kept for backward compat but no longer drives card bg)
   gradientClass: {
     type: String,
-    default: 'bg-gradient-primary'
+    default: 'bg-gradient-primary',
   },
-
-  // Link props
-  link: {
-    type: String,
-    default: ''
-  },
-  linkText: {
-    type: String,
-    default: 'Learn More'
-  }
 })
 </script>
 
@@ -88,8 +60,7 @@ const props = defineProps({
 .service-card {
   background: var(--bs-body-bg, #ffffff);
   border: 1px solid var(--bs-border-color, #e5e7eb) !important;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -121,7 +92,7 @@ const props = defineProps({
 
 .service-card:hover .icon-wrapper {
   transform: scale(1.08);
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(139, 92, 246, 0.18);
 }
 
 /* Text Colors — use CSS vars so they adapt to theme */
@@ -142,19 +113,6 @@ const props = defineProps({
 
 .feature-text {
   color: var(--bs-body-color, #4b5563);
-}
-
-/* Button Link */
-.btn-link {
-  color: #8b5cf6;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  gap: 0.5rem;
-}
-
-.btn-link:hover {
-  color: #7c3aed;
-  gap: 0.75rem;
 }
 
 /* Dark Mode Support */
@@ -199,8 +157,7 @@ const props = defineProps({
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .service-card,
-  .icon-wrapper,
-  .btn-link {
+  .icon-wrapper {
     transition: none !important;
   }
 }

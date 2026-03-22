@@ -67,22 +67,22 @@
     },
     "page": {
       "badge": "AI & Data Consulting Services",
-      "title": "Engineering That Moves",
-      "titleHighlight": "Pilot to Production",
-      "titlePrefix": "AI From",
-      "subtitle": "From AI and data engineering to cloud architecture and cybersecurity, we deliver focused consulting that solves specific business problems for financial institutions, healthcare organizations, and government agencies.",
+      "title": "Our Services",
+      "subtitle": "Focused consulting in AI, data engineering, cloud architecture, and cybersecurity — from strategy to production.",
       "ctaPrimary": "Discuss Your Project",
       "ctaSecondary": "See How We Work",
-      "coreServicesTitle": "Our Core Services",
-      "coreServicesSubtitle": "Comprehensive solutions tailored to your unique business challenges",
+      "coreServicesTitle": "What We Deliver",
+      "coreServicesSubtitle": "End-to-end consulting services designed for regulated, data-intensive organizations",
       "approachTitle": "Our Approach",
-      "approachSubtitle": "A proven methodology that ensures successful delivery and lasting results",
+      "approachSubtitle": "A structured five-step methodology that ensures successful delivery and lasting results",
       "industryFocusTitle": "Industry Focus",
       "industryFocusSubtitle": "Deep domain expertise in regulated, data-intensive sectors",
       "industryFocusText1": "We focus on regulated, data-intensive industries: financial services, healthcare, and government. Our team brings domain expertise in compliance frameworks (OSFI, PIPEDA, PHIPA), data governance, and secure cloud architectures required by these sectors.",
       "industryFocusText2": "This focus means we understand the unique constraints of your industry before the first meeting — from data residency requirements to audit trails and access controls that regulators expect.",
-      "ctaTitle": "Ready to Transform Your Data?",
-      "ctaSubtitle": "Let's discuss how our comprehensive data solutions can drive your business forward. Our team is ready to help you unlock the full potential of your data."
+      "industryFocusText3": "Whether you are modernizing a core banking platform, integrating clinical data systems, or building a secure data lake for a federal agency, we bring the regulatory awareness and engineering discipline the project demands.",
+      "ctaTitle": "Ready to discuss your project?",
+      "ctaSubtitle": "Every engagement starts with a conversation. Tell us about your data challenges and we will outline a practical path forward.",
+      "ctaNoCommitment": "No commitment required — get expert insights in your first meeting."
     }
   },
   "whyChooseUs": {
