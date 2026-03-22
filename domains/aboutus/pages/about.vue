@@ -262,7 +262,13 @@
 import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
 import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
 
+const { locale } = useI18n()
 const aboutStore = useAboutusStore()
+
+// Re-fetch when locale changes
+watch(locale, () => {
+  aboutStore.fetchTeams(1)
+})
 
 onMounted(async () => {
   await aboutStore.fetchTeams(1)

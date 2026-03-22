@@ -76,11 +76,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useHead } from '#imports'
 import { useFaqStore } from '~/domains/faq/stores/useFaqStore'
 
 const { sanitize } = useSanitize()
+const { locale } = useI18n()
 const faqStore = useFaqStore()
 
 useHead({
@@ -97,6 +98,11 @@ const activeIndex = ref(null)
 const toggleQuestion = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
+
+// Re-fetch FAQs when locale changes
+watch(locale, () => {
+  faqStore.fetchFaqs()
+})
 
 onMounted(() => {
   faqStore.fetchFaqs()

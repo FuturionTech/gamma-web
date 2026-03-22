@@ -1,18 +1,21 @@
 import { useI18n as useVueI18n } from 'vue-i18n'
 
+const AVAILABLE_LOCALES = ['en', 'fr'] as const
+type SupportedLocale = (typeof AVAILABLE_LOCALES)[number]
+
 export const useI18n = () => {
   // Simple fallback for SSR
   if (process.server) {
-    const locale = ref('en')
-    const t = (key: string, params?: any) => key
+    const locale = ref<string>('en')
+    const t = (key: string, _params?: any) => key
     const setLocale = (newLocale: string) => {
       locale.value = newLocale
     }
-    const availableLocales = computed(() => ['en', 'fr'])
+    const availableLocales = computed(() => [...AVAILABLE_LOCALES])
     const initializeLocale = () => {}
 
     return {
-      locale: readonly(locale),
+      locale,
       t,
       rt: t,
       d: t,
@@ -21,7 +24,7 @@ export const useI18n = () => {
       te: () => true,
       setLocale,
       availableLocales,
-      initializeLocale
+      initializeLocale,
     }
   }
 
@@ -31,25 +34,24 @@ export const useI18n = () => {
   const setLocale = (newLocale: string) => {
     locale.value = newLocale
 
-    // Optional: Persist locale to localStorage
+    // Persist locale to localStorage
     if (process.client) {
       localStorage.setItem('locale', newLocale)
     }
   }
 
-  // Get available locales
-  const availableLocales = computed(() => ['en', 'fr'])
+  // Available locales
+  const availableLocales = computed(() => [...AVAILABLE_LOCALES])
 
-  // Initialize locale from localStorage or browser
+  // Initialize locale from localStorage or browser preference
   const initializeLocale = () => {
     if (process.client) {
       const savedLocale = localStorage.getItem('locale')
-      if (savedLocale && availableLocales.value.includes(savedLocale)) {
+      if (savedLocale && (AVAILABLE_LOCALES as readonly string[]).includes(savedLocale)) {
         locale.value = savedLocale
       } else {
-        // Detect browser language
         const browserLocale = navigator.language.split('-')[0]
-        if (availableLocales.value.includes(browserLocale)) {
+        if ((AVAILABLE_LOCALES as readonly string[]).includes(browserLocale)) {
           locale.value = browserLocale
         }
       }
@@ -57,7 +59,7 @@ export const useI18n = () => {
   }
 
   return {
-    locale: readonly(locale),
+    locale,
     t,
     rt,
     d,
@@ -66,6 +68,6 @@ export const useI18n = () => {
     te,
     setLocale,
     availableLocales,
-    initializeLocale
+    initializeLocale,
   }
 }

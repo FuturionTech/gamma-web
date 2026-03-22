@@ -73,6 +73,11 @@ import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 const { t, locale } = useI18n();
 const homepageStore = useHomepageStore()
 
+// Re-fetch all homepage data when locale changes
+watch(locale, () => {
+  homepageStore.fetchAll()
+})
+
 // Fetch all homepage data from GraphQL in parallel
 onMounted(() => {
   homepageStore.fetchAll()

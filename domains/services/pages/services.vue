@@ -227,67 +227,28 @@ const iconBootstrapMap: Record<string, string> = {
   clipboard: 'bi bi-clipboard-data',
 }
 
-// Static fallback services
-const staticServices = [
-  {
-    title: 'Artificial Intelligence',
-    description: 'We build AI systems that move past the pilot stage. From fraud detection models for financial institutions to patient risk scoring for healthcare providers, our ML engineering team designs, trains, and deploys models that integrate with your existing systems and deliver measurable outcomes in production.',
-    icon: 'bi bi-cpu',
-    gradientClass: 'bg-gradient-primary',
-    features: ['Custom ML model development', 'NLP and document intelligence', 'Computer vision pipelines', 'MLOps and model monitoring'],
-    link: '/contact'
-  },
-  {
-    title: 'Data Engineering',
-    description: 'The foundation of every data initiative is reliable, well-governed data. We design and build the pipelines, warehouses, and lake architectures that turn scattered, siloed information into a unified, queryable asset.',
-    icon: 'bi bi-database',
-    gradientClass: 'bg-gradient-info',
-    features: ['ETL/ELT pipeline design', 'Data warehouse/lakehouse architecture', 'Real-time streaming', 'Data quality frameworks'],
-    link: '/contact'
-  },
-  {
-    title: 'Cloud Computing',
-    description: 'We help organizations move to the cloud with a strategy that balances performance, cost, and compliance.',
-    icon: 'bi bi-cloud',
-    gradientClass: 'bg-gradient-success',
-    features: ['Cloud migration (AWS, Azure, GCP)', 'Infrastructure as code', 'Cost optimization and FinOps', 'Multi-cloud architecture'],
-    link: '/contact'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Data-intensive organizations face unique security challenges. We assess your current posture, identify vulnerabilities, and implement security controls that satisfy regulatory requirements in financial services, healthcare, and government.',
-    icon: 'bi bi-shield-check',
-    gradientClass: 'bg-gradient-danger',
-    features: ['Security architecture assessment', 'Compliance frameworks (SOC 2, ISO 27001, PIPEDA)', 'Threat detection', 'Identity and access management'],
-    link: '/contact'
-  },
-  {
-    title: 'Business Intelligence',
-    description: 'Dashboards are only valuable when they answer the questions your team actually asks.',
-    icon: 'bi bi-bar-chart',
-    gradientClass: 'bg-gradient-warning',
-    features: ['Executive dashboard design', 'Self-service analytics', 'KPI framework development', 'Power BI/Tableau/Looker'],
-    link: '/contact'
-  },
-  {
-    title: 'Data Platform & Big Data',
-    description: 'When your data volumes outgrow traditional databases, you need architecture designed for scale.',
-    icon: 'bi bi-hdd-stack',
-    gradientClass: 'bg-gradient-purple',
-    features: ['Distributed processing (Spark, Databricks)', 'Data lakehouse', 'Stream processing', 'Performance optimization'],
-    link: '/contact'
-  },
-  {
-    title: 'Delivery & Program Management',
-    description: 'Technology projects fail more often from poor execution than poor ideas.',
-    icon: 'bi bi-clipboard-data',
-    gradientClass: 'bg-gradient-dark',
-    features: ['Agile delivery management', 'Program governance', 'Vendor coordination', 'Risk assessment'],
-    link: '/contact'
-  }
-]
+// i18n-driven service keys for the static fallback
+const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData', 'delivery'] as const
+const serviceIconMap: Record<string, string> = {
+  ai: 'bi bi-cpu',
+  dataEngineering: 'bi bi-database',
+  cloud: 'bi bi-cloud',
+  cybersecurity: 'bi bi-shield-check',
+  bi: 'bi bi-bar-chart',
+  bigData: 'bi bi-hdd-stack',
+  delivery: 'bi bi-clipboard-data',
+}
+const serviceGradientMap: Record<string, string> = {
+  ai: 'bg-gradient-primary',
+  dataEngineering: 'bg-gradient-info',
+  cloud: 'bg-gradient-success',
+  cybersecurity: 'bg-gradient-danger',
+  bi: 'bg-gradient-warning',
+  bigData: 'bg-gradient-purple',
+  delivery: 'bg-gradient-dark',
+}
 
-// Prefer API data, fall back to static
+// Prefer API data, fall back to i18n static translations
 const services = computed(() => {
   if (servicesStore.services.length > 0) {
     return servicesStore.services.map(s => ({
@@ -299,7 +260,14 @@ const services = computed(() => {
       link: '/contact',
     }))
   }
-  return staticServices
+  return serviceKeys.map(key => ({
+    title: t(`services.${key}.title`),
+    description: t(`services.${key}.description`),
+    icon: serviceIconMap[key],
+    gradientClass: serviceGradientMap[key],
+    features: t(`services.${key}.features`) as unknown as string[],
+    link: '/contact',
+  }))
 });
 
 const approachKeys = ['discovery', 'design', 'development', 'deployment', 'support'] as const
