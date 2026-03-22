@@ -25,6 +25,7 @@
           <h6 class="footer-heading">{{ $t('footer.services') }}</h6>
           <ul class="footer-links">
             <li><NuxtLink to="/services">{{ $t('footer.servicesItems.ai') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">Artificial Intelligence</NuxtLink></li>
             <li><NuxtLink to="/services">{{ $t('footer.servicesItems.dataEngineering') }}</NuxtLink></li>
             <li><NuxtLink to="/services">{{ $t('footer.servicesItems.cybersecurity') }}</NuxtLink></li>
             <li><NuxtLink to="/services">{{ $t('footer.servicesItems.bi') }}</NuxtLink></li>
@@ -50,11 +51,11 @@
           <h6 class="footer-heading">{{ $t('footer.contactInfo') }}</h6>
           <ul class="footer-links footer-contact">
             <li>
-              <i class="bi bi-geo-alt me-2 text-primary"></i>
+              <i class="bi bi-geo-alt me-2 footer-icon"></i>
               <span>Redpath Avenue<br>Toronto, ON M4S 2J7</span>
             </li>
             <li>
-              <i class="bi bi-envelope me-2 text-primary"></i>
+              <i class="bi bi-envelope me-2 footer-icon"></i>
               <a href="mailto:info@gammaneutral.ca">info@gammaneutral.ca</a>
             </li>
           </ul>
@@ -84,15 +85,15 @@
 
 <style scoped>
 /* ================================
-   FOOTER BASE
+   FOOTER BASE — pure black for max contrast
    ================================ */
 .footer {
-  background: #000000;
+  background: #000000 !important;
   padding: 4rem 0 2rem;
 }
 
 /* ================================
-   TYPOGRAPHY
+   TYPOGRAPHY — high contrast text
    ================================ */
 .footer-heading {
   color: #ffffff;
@@ -104,13 +105,13 @@
 }
 
 .footer-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
   line-height: 1.7;
 }
 
 /* ================================
-   LINKS
+   LINKS — visible on black
    ================================ */
 .footer-links {
   list-style: none;
@@ -123,7 +124,7 @@
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -131,29 +132,29 @@
 }
 
 .footer-links a:hover {
-  color: #c4b5fd;
+  color: #ffffff;
   transform: translateX(3px);
 }
 
-/* Contact list special styling */
+/* Contact list */
 .footer-contact li {
   display: flex;
   align-items: flex-start;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
 .footer-contact a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-contact a:hover {
-  color: #c4b5fd;
+  color: #ffffff;
 }
 
-.footer-contact .text-primary {
-  color: #8b5cf6 !important;
+.footer-icon {
+  color: #a78bfa;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -162,19 +163,19 @@
    EMAIL CTA
    ================================ */
 .footer-email-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .footer-email-link:hover {
   color: #ffffff;
-  border-color: rgba(139, 92, 246, 0.4);
-  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.1);
 }
 
 .footer-email-icon {
@@ -184,8 +185,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(139, 92, 246, 0.15);
-  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
   font-size: 0.8rem;
 }
 
@@ -194,7 +195,7 @@
    ================================ */
 .footer-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  background: rgba(255, 255, 255, 0.12);
   margin-bottom: 1.5rem;
 }
 
@@ -207,7 +208,7 @@
 }
 
 .footer-copyright {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
   margin: 0;
 }
@@ -218,14 +219,14 @@
 }
 
 .footer-bottom-nav a {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   font-size: 0.8rem;
   transition: color 0.2s ease;
 }
 
 .footer-bottom-nav a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ================================

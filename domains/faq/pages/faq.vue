@@ -34,7 +34,7 @@
             <!-- Search Bar -->
             <div class="mx-auto" style="max-width: 520px;">
               <div class="position-relative">
-                <i class="bi bi-search position-absolute top-50 translate-middle-y ms-3 text-muted"></i>
+                <i class="bi bi-search position-absolute top-50 translate-middle-y text-muted" style="left: 1.25rem; z-index: 1;"></i>
                 <input
                   v-model="searchQuery"
                   type="text"
@@ -417,12 +417,14 @@ onMounted(() => {
   border-left: 3px solid #8b5cf6 !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-question {
-  color: #e5e7eb;
+:global([data-bs-theme="dark"]) .faq-question,
+:global([data-bs-theme="dark"]) .faq-question .fw-semibold {
+  color: #e5e7eb !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-question:hover {
-  color: #c4b5fd;
+:global([data-bs-theme="dark"]) .faq-question:hover,
+:global([data-bs-theme="dark"]) .faq-question:hover .fw-semibold {
+  color: #c4b5fd !important;
 }
 
 :global([data-bs-theme="dark"]) .faq-answer .text-muted {
