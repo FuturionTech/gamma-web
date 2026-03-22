@@ -1,147 +1,78 @@
 <template>
-  <footer class="footer bg-dark py-5" data-bs-theme="dark">
+  <footer class="footer" data-bs-theme="dark">
     <div class="container">
       <!-- Main Footer Content -->
-      <div class="row g-4 pb-5">
-        <!-- Company Info -->
-        <div class="col-lg-4 col-md-6">
-          <div class="mb-4">
-            <HeaderLogo :theme="'dark'" class="mb-3"/>
-            <p class="text-light mb-4">
-              {{ $t('footer.tagline') }}
-            </p>
-            <!-- Social media links removed - to be added when accounts are created -->
-            <div class="d-flex gap-3">
-              <a class="btn btn-sm btn-outline-light rounded-circle social-icon-btn"
-                 href="mailto:info@gammaneutral.ca"
-                 aria-label="Email">
-                <i class="bi bi-envelope-fill"></i>
-              </a>
-            </div>
-          </div>
+      <div class="row g-4 g-lg-5 pb-5">
+        <!-- Company Info — Brand + tagline + email -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <HeaderLogo :theme="'dark'" class="mb-3"/>
+          <p class="footer-text mb-4" style="max-width: 300px;">
+            {{ $t('footer.tagline') }}
+          </p>
+
+          <!-- Email CTA -->
+          <a href="mailto:info@gammaneutral.ca"
+             class="footer-email-link d-inline-flex align-items-center gap-2">
+            <span class="footer-email-icon">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <span>info@gammaneutral.ca</span>
+          </a>
         </div>
 
         <!-- Services -->
-        <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">{{ $t('footer.services') }}</h6>
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.ai') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.dataEngineering') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.cybersecurity') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.bi') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.cloud') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.bigData') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/services">
-                {{ $t('footer.servicesItems.delivery') }}
-              </NuxtLink>
-            </li>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading">{{ $t('footer.services') }}</h6>
+          <ul class="footer-links">
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.ai') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.dataEngineering') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.cybersecurity') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.bi') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.cloud') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.bigData') }}</NuxtLink></li>
           </ul>
-        </div>
-
-        <!-- Industries -->
-        <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">{{ $t('footer.industries') }}</h6>
-          <p class="text-light small mb-1">{{ $t('footer.industriesItems.financial') }}</p>
-          <p class="text-light small mb-1">{{ $t('footer.industriesItems.healthcare') }}</p>
-          <p class="text-light small mb-0">{{ $t('footer.industriesItems.government') }}</p>
         </div>
 
         <!-- Company -->
-        <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">{{ $t('footer.company') }}</h6>
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/about">
-                {{ $t('footer.companyItems.about') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/careers">
-                {{ $t('footer.companyItems.careers') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/faq">
-                {{ $t('footer.companyItems.faq') }}
-              </NuxtLink>
-            </li>
-            <li class="mb-2">
-              <NuxtLink class="text-light text-decoration-none hover-primary" to="/contact">
-                {{ $t('footer.companyItems.contact') }}
-              </NuxtLink>
-            </li>
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-heading">{{ $t('footer.company') }}</h6>
+          <ul class="footer-links">
+            <li><NuxtLink to="/about">{{ $t('footer.companyItems.about') }}</NuxtLink></li>
+            <li><NuxtLink to="/services">{{ $t('footer.services') }}</NuxtLink></li>
+            <li><NuxtLink to="/careers">{{ $t('footer.companyItems.careers') }}</NuxtLink></li>
+            <li><NuxtLink to="/faq">{{ $t('footer.companyItems.faq') }}</NuxtLink></li>
+            <li><NuxtLink to="/contact">{{ $t('footer.companyItems.contact') }}</NuxtLink></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
-        <div class="col-lg-2 col-md-6">
-          <h6 class="text-white fw-bold mb-3">{{ $t('footer.contactInfo') }}</h6>
-          <div class="mb-3">
-            <div class="d-flex align-items-start mb-2">
-              <i class="bi bi-geo-alt-fill text-primary me-2 mt-1"></i>
-              <small class="text-light">
-                Redpath Avenue<br>Toronto, ON M4S 2J7<br>Canada
-              </small>
-            </div>
-            <div class="d-flex align-items-center">
-              <i class="bi bi-envelope-fill text-primary me-2"></i>
-              <small class="text-light">
-                <a href="mailto:info@gammaneutral.ca" class="text-light text-decoration-none hover-primary">
-                  info@gammaneutral.ca
-                </a>
-              </small>
-            </div>
-          </div>
+        <!-- Contact -->
+        <div class="col-lg-3 col-6">
+          <h6 class="footer-heading">{{ $t('footer.contactInfo') }}</h6>
+          <ul class="footer-links footer-contact">
+            <li>
+              <i class="bi bi-geo-alt me-2 text-primary"></i>
+              <span>Redpath Avenue<br>Toronto, ON M4S 2J7</span>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-2 text-primary"></i>
+              <a href="mailto:info@gammaneutral.ca">info@gammaneutral.ca</a>
+            </li>
+          </ul>
         </div>
       </div>
 
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
       <!-- Footer Bottom -->
-      <div class="border-top border-secondary pt-4">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="text-light mb-0 small">
-              &copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-            <nav class="nav justify-content-center justify-content-md-end">
-              <NuxtLink class="nav-link text-light small hover-primary px-2" to="/privacy-policy">
-                {{ $t('footer.privacyPolicy') }}
-              </NuxtLink>
-              <NuxtLink class="nav-link text-light small hover-primary px-2" to="/terms-of-service">
-                {{ $t('footer.termsOfService') }}
-              </NuxtLink>
-              <NuxtLink class="nav-link text-light small hover-primary px-2" to="/faq">
-                {{ $t('footer.companyItems.faq') }}
-              </NuxtLink>
-            </nav>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}
+        </p>
+        <nav class="footer-bottom-nav">
+          <NuxtLink to="/privacy-policy">{{ $t('footer.privacyPolicy') }}</NuxtLink>
+          <NuxtLink to="/terms-of-service">{{ $t('footer.termsOfService') }}</NuxtLink>
+        </nav>
       </div>
     </div>
   </footer>
@@ -152,59 +83,206 @@
 </script>
 
 <style scoped>
-.hover-primary {
-  transition: color 0.2s ease-in-out;
-}
-
-.hover-primary:hover {
-  color: var(--bs-primary) !important;
-}
-
+/* ================================
+   FOOTER BASE
+   ================================ */
 .footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+  background: #0f0f13;
+  padding: 4rem 0 2rem;
 }
 
-/* Override Bootstrap's bg-dark to ensure dark footer always */
-.footer.bg-dark {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+.footer-heading {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
 }
 
-/* Ensure footer stays dark in all theme modes */
-:global([data-bs-theme="light"]) .footer,
-:global([data-bs-theme="dark"]) .footer {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+.footer-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
-.nav-link {
-  transition: color 0.2s ease-in-out;
+/* ================================
+   LINKS
+   ================================ */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Social icon button */
-.social-icon-btn {
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #c4b5fd;
+  transform: translateX(3px);
+}
+
+/* Contact list special styling */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-contact a:hover {
+  color: #c4b5fd;
+}
+
+.footer-contact .text-primary {
+  color: #8b5cf6 !important;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ================================
+   EMAIL CTA
+   ================================ */
+.footer-email-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-email-link:hover {
+  color: #ffffff;
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.footer-email-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  font-size: 0.875rem;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+  font-size: 0.8rem;
 }
 
-.btn-outline-light:hover {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  transform: translateY(-2px);
+/* ================================
+   DIVIDER + BOTTOM
+   ================================ */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.footer-bottom-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-nav a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-nav a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+@media (max-width: 991.98px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .footer .col-lg-4,
-  .footer .col-lg-2 {
+  .footer-bottom {
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 2rem;
   }
 
-  .footer .d-flex {
+  .footer-bottom-nav {
     justify-content: center;
+  }
+
+  .footer-text {
+    max-width: none !important;
+  }
+
+  .footer-email-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-links a {
+    font-size: 0.9rem;
+    padding: 0.15rem 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+.footer-links a:focus-visible,
+.footer-email-link:focus-visible,
+.footer-bottom-nav a:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-links a,
+  .footer-email-link,
+  .footer-bottom-nav a {
+    transition: none !important;
   }
 }
 </style>
