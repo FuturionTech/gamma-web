@@ -67,16 +67,17 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-white animate-bounce" style="z-index: 10;">
-      <div class="mouse-icon">
-        <div class="mouse-wheel"></div>
-      </div>
-    </div>
+    <a href="#services" class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-white text-decoration-none animate-bounce" style="z-index: 10;" @click.prevent="scrollToServices">
+      <i class="bi bi-chevron-double-down fs-4"></i>
+    </a>
   </section>
 </template>
 
 <script setup>
-// Hero section component - navbar management is handled globally
+const scrollToServices = () => {
+  const el = document.getElementById('services')
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <style scoped>

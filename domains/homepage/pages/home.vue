@@ -3,9 +3,6 @@
     <!-- Hero Section - Full viewport -->
     <HeroSection/>
 
-    <!-- Technologies Trust Bar -->
-    <TechPartnersBar/>
-
     <!-- Core Services - Professional spacing -->
     <SectionWrapper
       spacing="lg"
