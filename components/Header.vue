@@ -9,20 +9,16 @@
       <!-- Navbar brand (Logo) -->
       <HeaderLogo/>
 
-      <!-- Mobile controls: theme + language + hamburger -->
-      <div class="d-flex d-lg-none align-items-center gap-2">
-        <ThemeToggle />
-        <LanguageSelector />
-        <button
-          class="mobile-menu-toggle"
-          type="button"
-          :aria-expanded="isMobileOpen"
-          aria-label="Toggle navigation"
-          @click="isMobileOpen = !isMobileOpen"
-        >
-          <span class="toggle-bar" :class="{ open: isMobileOpen }"></span>
-        </button>
-      </div>
+      <!-- Mobile: hamburger only (theme + language inside overlay) -->
+      <button
+        class="mobile-menu-toggle d-lg-none"
+        type="button"
+        :aria-expanded="isMobileOpen"
+        aria-label="Toggle navigation"
+        @click="isMobileOpen = !isMobileOpen"
+      >
+        <span class="toggle-bar" :class="{ open: isMobileOpen }"></span>
+      </button>
 
       <!-- Desktop navigation -->
       <nav class="collapse navbar-collapse" id="navbarNav">
@@ -57,7 +53,13 @@
     <Transition name="mobile-menu">
       <div v-if="isMobileOpen" class="mobile-overlay" @click.self="isMobileOpen = false">
         <div class="mobile-overlay-content">
-          <!-- Nav Links — centered, staggered -->
+          <!-- Theme + Language controls -->
+          <div class="d-flex justify-content-center gap-3 mb-4 mobile-controls">
+            <ThemeToggle />
+            <LanguageSelector />
+          </div>
+
+          <!-- Nav Links — staggered -->
           <nav class="mobile-nav">
             <NuxtLink
               v-for="(link, i) in mobileLinks"
@@ -343,6 +345,15 @@ watch(isMobileOpen, (open) => {
 .mobile-menu-enter-from,
 .mobile-menu-leave-to {
   opacity: 0;
+}
+
+/* ================================
+   MOBILE CONTROLS (theme + language)
+   ================================ */
+.mobile-controls {
+  animation: mobileSlideIn 0.3s ease-out forwards;
+  opacity: 0;
+  transform: translateY(12px);
 }
 
 /* ================================
