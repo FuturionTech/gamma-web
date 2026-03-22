@@ -13,14 +13,14 @@
     "title1": "Your Data Has Answers.",
     "title2": "We Ask the Right {highlight}",
     "titleHighlight": "Questions.",
-    "subtitle": "Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that solve specific business problems — not just generate dashboards.",
+    "subtitle": "Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design Artificial Intelligence (AI) systems, data architectures, and analytics platforms that solve specific business problems — not just generate dashboards.",
     "ctaPrimary": "Book a Discovery Call",
     "ctaSecondary": "See How We Work",
     "tagline": "Toronto-based AI & data consulting firm"
   },
   "homepage": {
     "servicesTitle": "What We Do",
-    "servicesSubtitle": "Focused consulting in AI, data engineering, and cloud — from strategy to production",
+    "servicesSubtitle": "Focused consulting in Artificial Intelligence, data engineering, and cloud — from strategy to production",
     "whyChooseTitle": "Why Choose Gamma Neutral",
     "whyChooseSubtitle": "Experience the advantages of working with a dedicated data consulting firm",
     "industriesTitle": "Industries We Serve",
@@ -32,7 +32,7 @@
     "learnMore": "Learn More",
     "ai": {
       "title": "Artificial Intelligence",
-      "description": "We build AI systems that move past the pilot stage — from fraud detection to patient risk scoring — delivering measurable outcomes in production.",
+      "description": "We build Artificial Intelligence (AI) systems that move past the pilot stage — from fraud detection to patient risk scoring — delivering measurable outcomes in production.",
       "features": ["Custom ML model development", "NLP and document intelligence", "MLOps and model monitoring"]
     },
     "dataEngineering": {
@@ -68,7 +68,7 @@
     "page": {
       "badge": "AI & Data Consulting Services",
       "title": "Our Services",
-      "subtitle": "Focused consulting in AI, data engineering, cloud architecture, and cybersecurity — from strategy to production.",
+      "subtitle": "Focused consulting in Artificial Intelligence (AI), data engineering, cloud architecture, and cybersecurity — from strategy to production.",
       "ctaPrimary": "Discuss Your Project",
       "ctaSecondary": "See How We Work",
       "coreServicesTitle": "What We Deliver",
@@ -161,7 +161,7 @@
     },
     "healthcare": {
       "title": "Healthcare Services",
-      "description": "Developing AI and big data solutions to improve patient care and operational efficiency."
+      "description": "Developing Artificial Intelligence and big data solutions to improve patient care and operational efficiency."
     },
     "government": {
       "title": "Governments & Public Services",
@@ -169,7 +169,7 @@
     },
     "education": {
       "title": "Education & Training",
-      "description": "Developing AI-driven platforms for personalized learning experiences."
+      "description": "Developing Artificial Intelligence-driven platforms for personalized learning experiences."
     },
     "business": {
       "title": "Business Management",
@@ -189,7 +189,7 @@
     "heroBadge": "Toronto, Canada - Incorporated 2025",
     "pageTitle": "Gamma Neutral Consulting Inc.",
     "badge": "AI & Data Consulting",
-    "intro": "Gamma Neutral was founded on a simple observation: too many organizations invest in data and AI technology without the engineering discipline to make it work. Our team brings hands-on experience from financial services, government, and healthcare technology programs — and we built this firm to deliver the focused, senior-level attention that large consultancies cannot.",
+    "intro": "Gamma Neutral was founded on a simple observation: too many organizations invest in data and Artificial Intelligence (AI) technology without the engineering discipline to make it work. Our team brings hands-on experience from financial services, government, and healthcare technology programs — and we built this firm to deliver the focused, senior-level attention that large consultancies cannot.",
     "pointOfView": {
       "title": "Our Point of View",
       "content": "We believe that the gap between a promising AI prototype and a production-ready system is where most data initiatives fail. Gamma Neutral exists to close that gap — with rigorous engineering, pragmatic architecture decisions, and a commitment to solutions your team can actually maintain after we leave."
@@ -209,7 +209,7 @@
     "companyOverview": {
       "badge": "Who We Are",
       "title": "Engineering discipline for data and AI",
-      "description": "{company} is a Toronto-based consulting firm focused on AI systems, data engineering, and cloud architecture. We work with financial institutions, healthcare organizations, and government agencies to design, build, and deploy data solutions that deliver measurable outcomes in production.",
+      "description": "{company} is a Toronto-based consulting firm focused on Artificial Intelligence (AI) systems, data engineering, and cloud architecture. We work with financial institutions, healthcare organizations, and government agencies to design, build, and deploy data solutions that deliver measurable outcomes in production.",
       "company": "Gamma Neutral Consulting Inc.",
       "headquarters": "Headquarters",
       "incorporated": "Incorporated",
@@ -324,7 +324,7 @@
     "breadcrumbAbout": "About",
     "breadcrumbCareers": "Careers",
     "pageTitle": "Join Gamma Neutral",
-    "subtitle": "Build your career at the forefront of data science and AI innovation. We're looking for passionate individuals who want to make a real impact.",
+    "subtitle": "Build your career at the forefront of data science and Artificial Intelligence (AI) innovation. We're looking for passionate individuals who want to make a real impact.",
     "whyJoin": {
       "badge": "WHY JOIN US",
       "title": "Build Your Future With Gamma Neutral",
@@ -414,7 +414,7 @@
     "effectiveDate": "Effective Date: June 16, 2025 | Last Updated: March 2026"
   },
   "footer": {
-    "tagline": "Transform data into opportunity. Empower businesses to harness data potential with expert consulting in AI, cybersecurity, and business intelligence.",
+    "tagline": "Transform data into opportunity. Empower businesses to harness data potential with expert consulting in Artificial Intelligence, cybersecurity, and business intelligence.",
     "services": "Services",
     "servicesItems": {
       "ai": "AI Solutions",

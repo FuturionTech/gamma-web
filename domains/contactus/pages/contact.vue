@@ -169,11 +169,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Book a discovery call with Gamma Neutral Consulting. Tell us about your data and AI challenges — we will outline a practical path forward.'
+      content: 'Book a discovery call with Gamma Neutral Consulting. Tell us about your data and Artificial Intelligence (AI) challenges — we will outline a practical path forward.'
     },
     {
       name: 'keywords',
-      content: 'contact Gamma Neutral, AI consulting Toronto, data consulting discovery call, book consultation'
+      content: 'contact Gamma Neutral, Artificial Intelligence consulting Toronto, AI consulting, data consulting discovery call, book consultation'
     },
     {
       name: 'author',

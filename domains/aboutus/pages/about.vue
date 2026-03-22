@@ -326,11 +326,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Gamma Neutral was founded to close the gap between AI prototypes and production-ready systems. We bring engineering discipline to data and AI consulting for financial services, healthcare, and government.'
+      content: 'Gamma Neutral was founded to close the gap between Artificial Intelligence (AI) prototypes and production-ready systems. We bring engineering discipline to data and AI consulting for financial services, healthcare, and government.'
     },
     {
       name: 'keywords',
-      content: 'AI consulting Toronto, data engineering firm, about Gamma Neutral, data consulting Canada'
+      content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering firm, about Gamma Neutral, data consulting Canada'
     }
   ]
 })

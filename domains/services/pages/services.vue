@@ -227,8 +227,8 @@ watch(locale, () => {
 useHead({
   title: 'Our Services | AI, Data Engineering & Cloud Consulting | Gamma Neutral',
   meta: [
-    { name: 'description', content: 'From AI and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting services that move from pilot to production.' },
-    { name: 'keywords', content: 'AI consulting, data engineering, cloud migration, cybersecurity, business intelligence, MLOps, data architecture, Toronto' },
+    { name: 'description', content: 'From Artificial Intelligence (AI) and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting services that move from pilot to production.' },
+    { name: 'keywords', content: 'Artificial Intelligence consulting, AI consulting, data engineering, cloud migration, cybersecurity, business intelligence, MLOps, data architecture, Toronto' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 })

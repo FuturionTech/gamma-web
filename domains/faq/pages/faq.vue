@@ -188,7 +188,7 @@ useHead({
   title: 'Frequently Asked Questions | Gamma Neutral Consulting',
   meta: [
     { name: 'description', content: 'Answers to common questions about Gamma Neutral Consulting — our services, engagement process, pricing, and how we work with clients.' },
-    { name: 'keywords', content: 'FAQ, frequently asked questions, AI consulting, data engineering, Gamma Neutral' },
+    { name: 'keywords', content: 'FAQ, frequently asked questions, Artificial Intelligence consulting, AI consulting, data engineering, Gamma Neutral' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ]
 })

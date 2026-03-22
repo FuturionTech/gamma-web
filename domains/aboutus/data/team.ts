@@ -14,7 +14,7 @@ export const teamMembers: TeamMember[] = [
     id: 'founder',
     name: 'Philip Savane',
     role: 'Founder & CEO',
-    bio: 'Founder of Gamma Neutral Consulting with extensive experience in technology consulting, data engineering, and AI strategy across financial services and government sectors.',
+    bio: 'Founder of Gamma Neutral Consulting with extensive experience in technology consulting, data engineering, and Artificial Intelligence (AI) strategy across financial services and government sectors.',
     image: 'https://ui-avatars.com/api/?name=Philip+Savane&size=400&background=8b5cf6&color=fff',
     socialLinks: {
     }

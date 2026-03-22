@@ -13,14 +13,14 @@
     "title1": "Vos données ont des réponses.",
     "title2": "Nous posons les bonnes {highlight}",
     "titleHighlight": "questions.",
-    "subtitle": "Gamma Neutral accompagne les institutions financières, les organismes de santé et les agences gouvernementales dans la conception de systèmes d'IA, d'architectures de données et de plateformes analytiques qui résolvent des problèmes d'affaires concrets — pas seulement générer des tableaux de bord.",
+    "subtitle": "Gamma Neutral accompagne les institutions financières, les organismes de santé et les agences gouvernementales dans la conception de systèmes d'Intelligence Artificielle (IA), d'architectures de données et de plateformes analytiques qui résolvent des problèmes d'affaires concrets — pas seulement générer des tableaux de bord.",
     "ctaPrimary": "Réserver un appel découverte",
     "ctaSecondary": "Découvrir notre approche",
     "tagline": "Cabinet de consultation en IA et données, basé à Toronto"
   },
   "homepage": {
     "servicesTitle": "Ce que nous faisons",
-    "servicesSubtitle": "Consultation ciblée en IA, ingénierie des données et infonuagique — de la stratégie à la production",
+    "servicesSubtitle": "Consultation ciblée en Intelligence Artificielle, ingénierie des données et infonuagique — de la stratégie à la production",
     "whyChooseTitle": "Pourquoi choisir Gamma Neutral",
     "whyChooseSubtitle": "Découvrez les avantages de travailler avec un cabinet de consultation dédié aux données",
     "industriesTitle": "Industries que nous desservons",
@@ -32,7 +32,7 @@
     "learnMore": "En savoir plus",
     "ai": {
       "title": "Intelligence artificielle",
-      "description": "Nous concevons des systèmes d'IA qui dépassent le stade pilote — de la détection de fraude à l'évaluation du risque patient — pour des résultats mesurables en production.",
+      "description": "Nous concevons des systèmes d'Intelligence Artificielle (IA) qui dépassent le stade pilote — de la détection de fraude à l'évaluation du risque patient — pour des résultats mesurables en production.",
       "features": ["Développement de modèles ML sur mesure", "Traitement du langage naturel et intelligence documentaire", "MLOps et surveillance des modèles"]
     },
     "dataEngineering": {
@@ -68,7 +68,7 @@
     "page": {
       "badge": "Services de consultation en IA et données",
       "title": "Nos services",
-      "subtitle": "Consultation ciblée en IA, ingénierie des données, architecture infonuagique et cybersécurité — de la stratégie à la production.",
+      "subtitle": "Consultation ciblée en Intelligence Artificielle (IA), ingénierie des données, architecture infonuagique et cybersécurité — de la stratégie à la production.",
       "ctaPrimary": "Discuter de votre projet",
       "ctaSecondary": "Découvrir notre approche",
       "coreServicesTitle": "Ce que nous livrons",
@@ -161,7 +161,7 @@
     },
     "healthcare": {
       "title": "Services de santé",
-      "description": "Développer des solutions d'IA et de données massives pour améliorer les soins aux patients et l'efficacité opérationnelle."
+      "description": "Développer des solutions d'Intelligence Artificielle et de données massives pour améliorer les soins aux patients et l'efficacité opérationnelle."
     },
     "government": {
       "title": "Gouvernements et services publics",
@@ -169,7 +169,7 @@
     },
     "education": {
       "title": "Éducation et formation",
-      "description": "Développer des plateformes d'apprentissage personnalisé pilotées par l'IA."
+      "description": "Développer des plateformes d'apprentissage personnalisé pilotées par l'Intelligence Artificielle."
     },
     "business": {
       "title": "Gestion d'entreprise",
@@ -189,7 +189,7 @@
     "heroBadge": "Toronto, Canada - Constituée en 2025",
     "pageTitle": "Gamma Neutral Consulting Inc.",
     "badge": "Consultation en IA et données",
-    "intro": "Gamma Neutral a été fondée sur un constat simple : trop d'organisations investissent dans les technologies de données et d'IA sans la discipline d'ingénierie nécessaire pour les faire fonctionner. Notre équipe apporte une expérience concrète des programmes technologiques en services financiers, gouvernement et santé — et nous avons bâti ce cabinet pour offrir l'attention ciblée et expérimentée que les grands cabinets ne peuvent pas fournir.",
+    "intro": "Gamma Neutral a été fondée sur un constat simple : trop d'organisations investissent dans les technologies de données et d'Intelligence Artificielle (IA) sans la discipline d'ingénierie nécessaire pour les faire fonctionner. Notre équipe apporte une expérience concrète des programmes technologiques en services financiers, gouvernement et santé — et nous avons bâti ce cabinet pour offrir l'attention ciblée et expérimentée que les grands cabinets ne peuvent pas fournir.",
     "pointOfView": {
       "title": "Notre point de vue",
       "content": "Nous croyons que l'écart entre un prototype d'IA prometteur et un système prêt pour la production est là où la plupart des initiatives de données échouent. Gamma Neutral existe pour combler cet écart — avec une ingénierie rigoureuse, des décisions d'architecture pragmatiques et un engagement envers des solutions que votre équipe peut réellement maintenir après notre départ."
@@ -209,7 +209,7 @@
     "companyOverview": {
       "badge": "Qui sommes-nous",
       "title": "Discipline d'ingénierie pour les données et l'IA",
-      "description": "{company} est un cabinet de consultation basé à Toronto, spécialisé en systèmes d'IA, ingénierie des données et architecture infonuagique. Nous travaillons avec des institutions financières, des organismes de santé et des agences gouvernementales pour concevoir, construire et déployer des solutions de données qui produisent des résultats mesurables en production.",
+      "description": "{company} est un cabinet de consultation basé à Toronto, spécialisé en systèmes d'Intelligence Artificielle (IA), ingénierie des données et architecture infonuagique. Nous travaillons avec des institutions financières, des organismes de santé et des agences gouvernementales pour concevoir, construire et déployer des solutions de données qui produisent des résultats mesurables en production.",
       "company": "Gamma Neutral Consulting Inc.",
       "headquarters": "Siège social",
       "incorporated": "Constitution",
@@ -324,7 +324,7 @@
     "breadcrumbAbout": "À propos",
     "breadcrumbCareers": "Carrières",
     "pageTitle": "Rejoindre Gamma Neutral",
-    "subtitle": "Bâtissez votre carrière à la fine pointe de la science des données et de l'innovation en IA. Nous recherchons des personnes passionnées qui souhaitent avoir un impact réel.",
+    "subtitle": "Bâtissez votre carrière à la fine pointe de la science des données et de l'innovation en Intelligence Artificielle (IA). Nous recherchons des personnes passionnées qui souhaitent avoir un impact réel.",
     "whyJoin": {
       "badge": "POURQUOI NOUS REJOINDRE",
       "title": "Bâtissez votre avenir avec Gamma Neutral",
@@ -414,7 +414,7 @@
     "effectiveDate": "Date d'entrée en vigueur : 16 juin 2025 | Dernière mise à jour : mars 2026"
   },
   "footer": {
-    "tagline": "Transformer les données en opportunités. Permettre aux entreprises d'exploiter le potentiel de leurs données grâce à une consultation experte en IA, cybersécurité et intelligence d'affaires.",
+    "tagline": "Transformer les données en opportunités. Permettre aux entreprises d'exploiter le potentiel de leurs données grâce à une consultation experte en Intelligence Artificielle, cybersécurité et intelligence d'affaires.",
     "services": "Services",
     "servicesItems": {
       "ai": "Solutions d'IA",
