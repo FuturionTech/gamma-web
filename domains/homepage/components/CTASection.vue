@@ -15,12 +15,12 @@
 
         <!-- Content -->
         <div class="position-relative z-3 text-center px-3 px-sm-0 pb-2 py-sm-3 py-md-4 py-lg-5">
-          <h2 class="display-3 text-white pt-xl-2">Let's Talk About Your Data</h2>
+          <h2 class="display-3 text-white pt-xl-2">{{ $t('cta.title') }}</h2>
           <p class="text-white-50 fs-lg pb-4 pb-lg-5 mb-2 mb-sm-3 mb-lg-0 mb-xl-2">
-            Every engagement starts with a conversation. Tell us about your data challenges and we will outline a practical path forward.
+            {{ $t('cta.subtitle') }}
           </p>
           <a class="btn btn-lg btn-secondary text-white px-5 py-3" href="/contact">
-            Ready to Move Forward?
+            {{ $t('cta.button') }}
             <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </div>

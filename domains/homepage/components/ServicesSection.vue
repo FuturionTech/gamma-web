@@ -4,16 +4,17 @@
     <div class="container">
       <!-- Loading State -->
       <div v-if="homepageStore.loadingServices" class="row g-4">
-        <div class="col-lg-4 col-md-6" v-for="n in 3" :key="n">
+        <div class="col-lg-4 col-md-6" v-for="n in 6" :key="n">
           <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
             <div class="placeholder-glow">
-              <div class="placeholder bg-secondary rounded-3 mb-4" style="width: 64px; height: 64px;"></div>
-              <div class="placeholder bg-secondary col-8 mb-3" style="height: 24px;"></div>
-              <div class="placeholder bg-secondary col-12 mb-2" style="height: 16px;"></div>
-              <div class="placeholder bg-secondary col-10 mb-4" style="height: 16px;"></div>
-              <div class="placeholder bg-secondary col-6 mb-2" style="height: 14px;"></div>
-              <div class="placeholder bg-secondary col-7 mb-2" style="height: 14px;"></div>
-              <div class="placeholder bg-secondary col-5" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary rounded-circle mb-3" style="width: 56px; height: 56px;"></div>
+              <div class="placeholder bg-secondary col-8 mb-3" style="height: 20px;"></div>
+              <div class="placeholder bg-secondary col-12 mb-2" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-10 mb-2" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-8 mb-4" style="height: 14px;"></div>
+              <div class="placeholder bg-secondary col-6 mb-2" style="height: 12px;"></div>
+              <div class="placeholder bg-secondary col-7 mb-2" style="height: 12px;"></div>
+              <div class="placeholder bg-secondary col-5" style="height: 12px;"></div>
             </div>
           </div>
         </div>
@@ -36,7 +37,7 @@
       <!-- CTA -->
       <div class="text-center mt-5">
         <NuxtLink to="/services" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold">
-          View All Services
+          {{ t('services.viewAll') }}
           <i class="bi bi-arrow-right ms-2"></i>
         </NuxtLink>
       </div>
@@ -44,14 +45,15 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
+const { t, locale } = useI18n()
 const homepageStore = useHomepageStore()
 
 // Icon-to-gradient mapping for API services
-const iconGradientMap = {
+const iconGradientMap: Record<string, string> = {
   brain: 'bg-gradient-primary',
   database: 'bg-gradient-info',
   cloud: 'bg-gradient-success',
@@ -61,7 +63,7 @@ const iconGradientMap = {
 }
 
 // Bootstrap icon mapping from API icon names
-const iconBootstrapMap = {
+const iconBootstrapMap: Record<string, string> = {
   brain: 'bi bi-cpu',
   database: 'bi bi-database',
   cloud: 'bi bi-cloud',
@@ -70,71 +72,49 @@ const iconBootstrapMap = {
   server: 'bi bi-hdd-stack',
 }
 
-// Static fallback data — 6 core services for homepage
-const staticServices = [
-  {
-    title: 'Artificial Intelligence',
-    description: 'We build AI systems that move past the pilot stage — from fraud detection to patient risk scoring — delivering measurable outcomes in production.',
-    features: ['Custom ML model development', 'NLP and document intelligence', 'MLOps and model monitoring'],
-    icon: 'bi bi-cpu',
-    gradientClass: 'bg-gradient-primary',
-    link: ''
-  },
-  {
-    title: 'Data Engineering',
-    description: 'The foundation of every data initiative is reliable, well-governed data. We build the pipelines and architectures that turn siloed information into a unified asset.',
-    features: ['ETL/ELT pipeline design', 'Data warehouse/lakehouse architecture', 'Data quality frameworks'],
-    icon: 'bi bi-database',
-    gradientClass: 'bg-gradient-info',
-    link: ''
-  },
-  {
-    title: 'Cloud Computing',
-    description: 'We help organizations move to the cloud with a strategy that balances performance, cost, and compliance across AWS, Azure, and GCP.',
-    features: ['Cloud migration strategy', 'Infrastructure as code', 'Cost optimization and FinOps'],
-    icon: 'bi bi-cloud',
-    gradientClass: 'bg-gradient-success',
-    link: ''
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'We assess your security posture, identify vulnerabilities, and implement controls that satisfy regulatory requirements in financial services, healthcare, and government.',
-    features: ['Security architecture assessment', 'Compliance frameworks (SOC 2, PIPEDA)', 'Threat detection and IAM'],
-    icon: 'bi bi-shield-check',
-    gradientClass: 'bg-gradient-danger',
-    link: ''
-  },
-  {
-    title: 'Business Intelligence',
-    description: 'Dashboards are only valuable when they answer the questions your team actually asks. We design BI solutions connected to your data infrastructure.',
-    features: ['Executive dashboard design', 'Self-service analytics', 'Power BI / Tableau / Looker'],
-    icon: 'bi bi-bar-chart',
-    gradientClass: 'bg-gradient-warning',
-    link: ''
-  },
-  {
-    title: 'Data Platform & Big Data',
-    description: 'When your data volumes outgrow traditional databases, you need architecture designed for scale with modern distributed processing tools.',
-    features: ['Distributed processing (Spark)', 'Data lakehouse design', 'Stream processing'],
-    icon: 'bi bi-hdd-stack',
-    gradientClass: 'bg-gradient-purple',
-    link: ''
-  }
-]
+// Service translation keys mapped to icons/gradients
+const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData'] as const
+const serviceIcons: Record<string, string> = {
+  ai: 'bi bi-cpu',
+  dataEngineering: 'bi bi-database',
+  cloud: 'bi bi-cloud',
+  cybersecurity: 'bi bi-shield-check',
+  bi: 'bi bi-bar-chart',
+  bigData: 'bi bi-hdd-stack',
+}
+const serviceGradients: Record<string, string> = {
+  ai: 'bg-gradient-primary',
+  dataEngineering: 'bg-gradient-info',
+  cloud: 'bg-gradient-success',
+  cybersecurity: 'bg-gradient-danger',
+  bi: 'bg-gradient-warning',
+  bigData: 'bg-gradient-purple',
+}
 
-// Prefer API data (top 6), fall back to static
+const isFr = computed(() => locale.value === 'fr')
+
+// Prefer API data (top 6), fall back to i18n static
 const displayServices = computed(() => {
   if (homepageStore.services.length > 0) {
     return homepageStore.services.slice(0, 6).map(s => ({
-      title: s.title,
-      description: s.short_description || s.description,
+      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
+      description: isFr.value
+        ? (s.short_description_fr || s.description_fr || s.short_description || s.description)
+        : (s.short_description || s.description),
       features: s.features.map(f => f.title),
-      icon: iconBootstrapMap[s.icon] || 'bi bi-gear',
-      gradientClass: iconGradientMap[s.icon] || 'bg-gradient-primary',
+      icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
+      gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       link: '',
     }))
   }
-  return staticServices
+  return serviceKeys.map(key => ({
+    title: t(`services.${key}.title`),
+    description: t(`services.${key}.description`),
+    features: (t(`services.${key}.features`) as unknown as string[]),
+    icon: serviceIcons[key],
+    gradientClass: serviceGradients[key],
+    link: '',
+  }))
 })
 </script>
 

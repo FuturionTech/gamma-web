@@ -3,14 +3,32 @@ import { defineStore } from 'pinia'
 interface Service {
   id: string
   title: string
+  title_fr: string | null
   description: string
+  description_fr: string | null
   slug: string
   icon: string | null
   short_description: string | null
+  short_description_fr: string | null
   category: string | null
   is_active: boolean
   order: number
   features: { id: string; title: string; description: string | null }[]
+}
+
+interface Solution {
+  id: string
+  title: string
+  title_fr: string | null
+  subtitle: string | null
+  subtitle_fr: string | null
+  description: string | null
+  description_fr: string | null
+  slug: string
+  icon: string | null
+  icon_color: string | null
+  is_active: boolean
+  order: number
 }
 
 interface Partner {
@@ -67,12 +85,14 @@ interface BlogPost {
 export const useHomepageStore = defineStore('homepageStore', {
   state: () => ({
     services: [] as Service[],
+    solutions: [] as Solution[],
     partners: [] as Partner[],
     clients: [] as Client[],
     testimonials: [] as Testimonial[],
     stats: [] as Stat[],
     blogPosts: [] as BlogPost[],
     loadingServices: false,
+    loadingSolutions: false,
     loadingPartners: false,
     loadingClients: false,
     loadingTestimonials: false,
@@ -89,7 +109,7 @@ export const useHomepageStore = defineStore('homepageStore', {
         const data = await query<{ services: Service[] }>(`
           query Services($limit: Int, $is_active: Boolean) {
             services(limit: $limit, is_active: $is_active) {
-              id title description slug icon short_description category is_active order
+              id title title_fr description description_fr slug icon short_description short_description_fr category is_active order
               features { id title description }
             }
           }
@@ -99,6 +119,25 @@ export const useHomepageStore = defineStore('homepageStore', {
         this.error = e.message || 'Failed to fetch services.'
       } finally {
         this.loadingServices = false
+      }
+    },
+
+    async fetchSolutions(limit = 6) {
+      this.loadingSolutions = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ solutions: Solution[] }>(`
+          query Solutions($limit: Int, $is_active: Boolean) {
+            solutions(limit: $limit, is_active: $is_active) {
+              id title title_fr subtitle subtitle_fr description description_fr slug icon icon_color is_active order
+            }
+          }
+        `, { limit, is_active: true })
+        this.solutions = data.solutions ?? []
+      } catch (e: any) {
+        this.error = e.message || 'Failed to fetch solutions.'
+      } finally {
+        this.loadingSolutions = false
       }
     },
 
@@ -202,6 +241,7 @@ export const useHomepageStore = defineStore('homepageStore', {
     async fetchAll() {
       await Promise.allSettled([
         this.fetchServices(6),
+        this.fetchSolutions(6),
         this.fetchStats(10),
         this.fetchTestimonials(10),
         this.fetchPartners(10),

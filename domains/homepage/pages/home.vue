@@ -13,9 +13,9 @@
       :debug-mode="debugMode"
     >
       <template #header>
-        <h2 class="h1 mb-4">What We Do</h2>
+        <h2 class="h1 mb-4">{{ $t('homepage.servicesTitle') }}</h2>
         <p class="fs-lg text-muted mb-0">
-          Focused consulting in AI, data engineering, and cloud — from strategy to production
+          {{ $t('homepage.servicesSubtitle') }}
         </p>
       </template>
       <ServicesSection/>
@@ -30,9 +30,9 @@
       :debug-mode="debugMode"
     >
       <template #header>
-        <h2 class="h1 mb-4">Why Choose Gamma Neutral</h2>
+        <h2 class="h1 mb-4">{{ $t('homepage.whyChooseTitle') }}</h2>
         <p class="fs-lg text-muted mb-0">
-          Experience the advantages of working with a dedicated data consulting firm
+          {{ $t('homepage.whyChooseSubtitle') }}
         </p>
       </template>
       <WhyChooseUsSection/>
@@ -52,9 +52,9 @@
       :debug-mode="debugMode"
     >
       <template #header>
-        <h2 class="h1 mb-2">Industries We Serve</h2>
+        <h2 class="h1 mb-2">{{ $t('homepage.industriesTitle') }}</h2>
         <p class="fs-lg text-muted mb-0">
-          Deep domain expertise in regulated, data-intensive sectors
+          {{ $t('homepage.industriesSubtitle') }}
         </p>
       </template>
       <IndustriesSection/>

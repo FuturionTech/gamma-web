@@ -7,11 +7,11 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="pe-lg-5">
             <h2 class="display-5 fw-bold mb-4">
-              Why teams choose
-              <span class="text-primary">Gamma Neutral</span>
+              {{ $t('whyChooseUs.title') }}
+              <span class="text-primary">{{ $t('whyChooseUs.brandName') }}</span>
             </h2>
             <p class="lead text-muted mb-5">
-              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+              {{ $t('whyChooseUs.subtitle') }}
             </p>
 
             <!-- Benefits List using BenefitCard -->
@@ -29,11 +29,11 @@
             <!-- CTA -->
             <div class="mt-5">
               <a href="/contact" class="btn btn-primary btn-lg me-3">
-                Schedule Consultation
+                {{ $t('whyChooseUs.ctaPrimary') }}
                 <i class="bi bi-arrow-right ms-2"></i>
               </a>
               <a href="/about" class="btn btn-link text-decoration-none learn-more-link">
-                Learn more about us
+                {{ $t('whyChooseUs.ctaSecondary') }}
                 <i class="bi bi-arrow-right ms-1"></i>
               </a>
             </div>
@@ -50,8 +50,8 @@
                     <i class="bi bi-award fs-4"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0">Our Consulting Approach</h6>
-                    <small class="text-muted">What sets us apart</small>
+                    <h6 class="mb-0">{{ $t('whyChooseUs.approach.title') }}</h6>
+                    <small class="text-muted">{{ $t('whyChooseUs.approach.subtitle') }}</small>
                   </div>
                 </div>
 
@@ -60,30 +60,30 @@
                   <div class="d-flex align-items-end justify-content-around" style="height: 120px;">
                     <div class="text-center">
                       <i class="bi bi-cpu fs-3 text-primary"></i>
-                      <div class="small text-muted mt-1">AI</div>
+                      <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.ai') }}</div>
                     </div>
                     <div class="text-center">
                       <i class="bi bi-database fs-3 text-info"></i>
-                      <div class="small text-muted mt-1">Data</div>
+                      <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.data') }}</div>
                     </div>
                     <div class="text-center">
                       <i class="bi bi-cloud fs-3 text-success"></i>
-                      <div class="small text-muted mt-1">Cloud</div>
+                      <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.cloud') }}</div>
                     </div>
                     <div class="text-center">
                       <i class="bi bi-shield-check fs-3 text-danger"></i>
-                      <div class="small text-muted mt-1">Security</div>
+                      <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.security') }}</div>
                     </div>
                     <div class="text-center">
                       <i class="bi bi-diagram-3 fs-3 text-warning"></i>
-                      <div class="small text-muted mt-1">BI</div>
+                      <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.bi') }}</div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Focus Areas -->
                 <p class="text-muted mb-0">
-                  We focus on regulated, data-intensive industries: financial services, healthcare, and government &mdash; where engineering rigour matters most.
+                  {{ $t('whyChooseUs.approach.description') }}
                 </p>
               </div>
             </div>
@@ -97,32 +97,34 @@
 <script setup>
 import BenefitCard from '~/components/shared/cards/BenefitCard.vue'
 
-const benefits = [
+const { t } = useI18n()
+
+const benefits = computed(() => [
   {
-    title: 'Expert Team',
-    description: 'Certified data professionals with proven expertise',
+    title: t('whyChooseUs.expertTeam.title'),
+    description: t('whyChooseUs.expertTeam.description'),
     icon: 'bi-people',
     iconColor: 'success'
   },
   {
-    title: 'Tailored Solutions',
-    description: 'Custom strategies designed for your specific needs',
+    title: t('whyChooseUs.tailoredSolutions.title'),
+    description: t('whyChooseUs.tailoredSolutions.description'),
     icon: 'bi-gear',
     iconColor: 'primary'
   },
   {
-    title: 'Industry Expertise',
-    description: 'Deep knowledge across banking, healthcare, and more',
+    title: t('whyChooseUs.industryExpertise.title'),
+    description: t('whyChooseUs.industryExpertise.description'),
     icon: 'bi-building',
     iconColor: 'warning'
   },
   {
-    title: 'Proven Methodologies',
-    description: 'Structured 5-step approach to deliver results',
+    title: t('whyChooseUs.provenMethodologies.title'),
+    description: t('whyChooseUs.provenMethodologies.description'),
     icon: 'bi-clipboard-check',
     iconColor: 'info'
   }
-]
+])
 </script>
 
 <style scoped>

@@ -4,8 +4,8 @@
     <div class="container">
       <!-- Section Header -->
       <div class="text-center mb-4">
-        <h2 class="display-5 fw-bold">Our Proven Process</h2>
-        <p class="text-muted">We follow a structured methodology to deliver exceptional results</p>
+        <h2 class="display-5 fw-bold">{{ $t('process.title') }}</h2>
+        <p class="text-muted">{{ $t('process.subtitle') }}</p>
       </div>
 
       <!-- Process Steps using ProcessStepCard -->
@@ -29,31 +29,31 @@
                 <span class="badge bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3 d-flex align-items-center justify-content-center badge-icon">
                   ★
                 </span>
-                <h4 class="mb-0">Results</h4>
+                <h4 class="mb-0">{{ $t('process.results.title') }}</h4>
               </div>
 
               <!-- Description -->
               <p class="text-muted mb-3">
-                Our proven process delivers:
+                {{ $t('process.results.description') }}
               </p>
 
               <!-- Features -->
               <div class="small">
                 <div class="d-flex align-items-start mb-2">
                   <span class="text-primary me-2">→</span>
-                  <span>Faster Time to Market</span>
+                  <span>{{ $t('process.results.fasterTime') }}</span>
                 </div>
                 <div class="d-flex align-items-start mb-2">
                   <span class="text-primary me-2">→</span>
-                  <span>Reduced Operational Costs</span>
+                  <span>{{ $t('process.results.reducedCosts') }}</span>
                 </div>
                 <div class="d-flex align-items-start mb-2">
                   <span class="text-primary me-2">→</span>
-                  <span>Improved Data Quality</span>
+                  <span>{{ $t('process.results.improvedQuality') }}</span>
                 </div>
                 <div class="d-flex align-items-start">
                   <span class="text-primary me-2">→</span>
-                  <span>Competitive Advantage</span>
+                  <span>{{ $t('process.results.competitiveAdvantage') }}</span>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@
       <!-- CTA Button -->
       <div class="text-center">
         <a href="/contact" class="btn btn-primary btn-lg px-5 py-3">
-          Start Your Data Transformation →
+          {{ $t('process.cta') }} →
         </a>
       </div>
     </div>
@@ -75,38 +75,19 @@
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
 
-const processSteps = [
-  {
-    title: 'Discovery',
-    description: 'We begin by understanding your unique challenges, data landscape, and business objectives.',
-    items: ['Requirements Analysis', 'Current State Assessment', 'Stakeholder Interviews'],
-    badgeColor: 'primary'
-  },
-  {
-    title: 'Solution Design',
-    description: 'Our experts architect comprehensive solutions aligned with your goals and industry best practices.',
-    items: ['Architecture Planning', 'Technology Selection', 'Roadmap Creation'],
-    badgeColor: 'gradient'
-  },
-  {
-    title: 'Development',
-    description: 'Using agile methodologies, we build robust solutions with continuous testing and refinement.',
-    items: ['Agile Development', 'Quality Assurance', 'CI/CD Pipeline'],
-    badgeColor: 'info'
-  },
-  {
-    title: 'Deployment',
-    description: 'Seamless deployment with comprehensive training ensures your team maximizes value.',
-    items: ['Production Release', 'User Training', 'Documentation'],
-    badgeColor: 'warning'
-  },
-  {
-    title: 'Support',
-    description: 'Our partnership continues with dedicated support and optimization for sustained success.',
-    items: ['Ongoing Monitoring', 'Performance Tuning', 'Regular Updates'],
-    badgeColor: 'success'
-  }
-]
+const { t } = useI18n()
+
+const stepKeys = ['discovery', 'solutionDesign', 'development', 'deployment', 'support'] as const
+const stepColors = ['primary', 'gradient', 'info', 'warning', 'success'] as const
+
+const processSteps = computed(() =>
+  stepKeys.map((key, i) => ({
+    title: t(`process.${key}.title`),
+    description: t(`process.${key}.description`),
+    items: t(`process.${key}.items`) as unknown as string[],
+    badgeColor: stepColors[i],
+  }))
+)
 </script>
 
 <style scoped>

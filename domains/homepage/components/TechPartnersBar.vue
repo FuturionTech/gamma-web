@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Title -->
       <p class="text-center tech-heading text-uppercase fw-semibold small mb-4 tracking-wide">
-        Technologies We Specialize In
+        {{ $t('homepage.techPartnersHeading') }}
       </p>
 
       <!-- Technology Badges -->
