@@ -21,7 +21,7 @@
 
     <!-- Main Content -->
     <div class="container position-relative" style="z-index: 10;">
-      <div class="row min-vh-100 align-items-center py-5">
+      <div class="row min-vh-100 align-items-center py-5 hero-content-row">
         <div class="col-12 col-lg-8 col-xl-7 text-center text-lg-start">
 
           <!-- Badge -->
@@ -241,14 +241,21 @@ const scrollToServices = () => {
   }
 }
 
-/* Responsive */
+/* Responsive — push hero content below fixed navbar */
 @media (max-width: 991px) {
+  .hero-content-row {
+    padding-top: 5rem;
+  }
+
   .display-2 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 576px) {
+  .hero-content-row {
+    padding-top: 4.5rem;
+  }
   .display-2 {
     font-size: 2.5rem;
   }
