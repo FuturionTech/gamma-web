@@ -45,12 +45,22 @@ const otherLocales = computed(() =>
 const switchLocale = (code: string) => {
   setLocale(code)
 
-  // Programmatically close the Bootstrap dropdown
+  // Close the Bootstrap dropdown reliably
   if (dropdownEl.value) {
-    const bsDropdown = (window as any).bootstrap?.Dropdown?.getInstance(
-      dropdownEl.value.querySelector('[data-bs-toggle="dropdown"]')
-    )
-    bsDropdown?.hide()
+    const toggleBtn = dropdownEl.value.querySelector('[data-bs-toggle="dropdown"]') as HTMLElement
+    if (toggleBtn) {
+      const Bootstrap = (window as any).bootstrap
+      if (Bootstrap?.Dropdown) {
+        const instance = Bootstrap.Dropdown.getOrCreateInstance(toggleBtn)
+        instance?.hide()
+      } else {
+        // Fallback: manually remove the show classes
+        toggleBtn.classList.remove('show')
+        toggleBtn.setAttribute('aria-expanded', 'false')
+        const menu = dropdownEl.value.querySelector('.dropdown-menu')
+        menu?.classList.remove('show')
+      }
+    }
   }
 }
 </script>
