@@ -52,9 +52,9 @@
   <Teleport to="body">
     <Transition name="mobile-menu">
       <div v-if="isMobileOpen" class="mobile-overlay">
-        <!-- Top bar: logo + close -->
+        <!-- Top bar: close button only -->
         <div class="mobile-overlay-header">
-          <span class="mobile-overlay-logo">Gamma<span class="fw-light">Neutral</span></span>
+          <div></div>
           <button class="mobile-close-btn" @click="isMobileOpen = false" aria-label="Close menu">
             <i class="bi bi-x-lg"></i>
           </button>
