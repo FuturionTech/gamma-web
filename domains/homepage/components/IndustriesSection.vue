@@ -34,7 +34,7 @@
 import IndustryCard from '~/components/shared/cards/IndustryCard.vue'
 import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const homepageStore = useHomepageStore()
 
 // Map API icon names to Bootstrap Icons
@@ -57,19 +57,21 @@ const iconColorMap: Record<string, string> = {
   '#EF4444': 'danger',
 }
 
-const { t } = useI18n()
-
 // i18n-driven static fallback
 const industryKeys = ['banking', 'healthcare', 'government', 'education', 'business', 'ngo'] as const
 const industryIcons = ['bi-bank', 'bi-heart-pulse', 'bi-building', 'bi-mortarboard', 'bi-briefcase', 'bi-globe2'] as const
 const industryColors = ['primary', 'danger', 'info', 'success', 'warning', 'secondary'] as const
 
+const isFr = computed(() => locale.value === 'fr')
+
 // Prefer API data, fall back to i18n static
 const displayIndustries = computed(() => {
   if (homepageStore.solutions.length > 0) {
     return homepageStore.solutions.slice(0, 6).map(s => ({
-      title: s.title,
-      description: s.description || '',
+      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
+      description: isFr.value
+        ? (s.description_fr || s.description || '')
+        : (s.description || ''),
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi-gear',
       iconColor: iconColorMap[s.icon_color ?? ''] || 'primary',
     }))

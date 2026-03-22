@@ -71,7 +71,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
 
