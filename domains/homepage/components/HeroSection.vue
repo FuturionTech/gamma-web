@@ -21,11 +21,11 @@
 
     <!-- Main Content -->
     <div class="container position-relative" style="z-index: 10;">
-      <div class="row min-vh-100 align-items-center py-5 hero-content-row">
+      <div class="row min-vh-100 align-items-center py-5">
         <div class="col-12 col-lg-8 col-xl-7 text-center text-lg-start">
 
-          <!-- Badge -->
-          <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
+          <!-- Badge — hidden on mobile where it clips behind the fixed navbar -->
+          <div class="d-none d-lg-inline-flex align-items-center mb-4 animate-fade-in">
             <span class="badge bg-secondary text-white px-4 py-2 rounded-pill">
               <span class="pulse-dot me-2"></span>
               {{ $t('hero.badge') }}
@@ -241,21 +241,14 @@ const scrollToServices = () => {
   }
 }
 
-/* Responsive — push hero content below fixed navbar */
+/* Responsive */
 @media (max-width: 991px) {
-  .hero-content-row {
-    padding-top: 5rem;
-  }
-
   .display-2 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 576px) {
-  .hero-content-row {
-    padding-top: 4.5rem;
-  }
   .display-2 {
     font-size: 2.5rem;
   }
