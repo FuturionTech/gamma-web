@@ -99,8 +99,9 @@ const toggleQuestion = (index) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
 
-// Re-fetch FAQs when locale changes
+// Re-fetch FAQs when locale changes, reset active accordion
 watch(locale, () => {
+  activeIndex.value = null
   faqStore.fetchFaqs()
 })
 
