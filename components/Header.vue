@@ -345,7 +345,6 @@ watch(isMobileOpen, (open) => {
 .mobile-nav-link {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
   color: rgba(255, 255, 255, 0.7);
