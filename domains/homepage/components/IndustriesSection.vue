@@ -9,8 +9,6 @@
             :description="industry.description"
             :icon="industry.icon"
             :iconColor="industry.iconColor"
-            :link="industry.link"
-            linkText="Talk to a Specialist"
           />
         </div>
       </div>

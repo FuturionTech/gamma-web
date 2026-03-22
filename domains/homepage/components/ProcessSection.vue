@@ -1,14 +1,12 @@
 <template>
   <!-- Process Section - Clean and Simple -->
-  <section class="py-5 bg-light">
+  <section class="pt-3 pb-5 bg-light">
     <div class="container">
-      <!-- Section Header using shared component -->
-      <SectionHeader
-        title="Our Proven Process"
-        subtitle="We follow a structured methodology to deliver exceptional results"
-        headingSize="display-5"
-        maxWidth="600px"
-      />
+      <!-- Section Header -->
+      <div class="text-center mb-4">
+        <h2 class="display-5 fw-bold">Our Proven Process</h2>
+        <p class="text-muted">We follow a structured methodology to deliver exceptional results</p>
+      </div>
 
       <!-- Process Steps using ProcessStepCard -->
       <div class="row g-4 mb-5">
