@@ -3,7 +3,7 @@
   <div>
     <!-- Loading State -->
     <div v-if="homepageStore.loadingSolutions" class="row g-4">
-      <div class="col-md-6 col-lg-4" v-for="n in 6" :key="n">
+      <div class="col-sm-6 col-lg-4" v-for="n in 6" :key="n">
         <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
           <div class="placeholder-glow">
             <div class="placeholder bg-secondary rounded-circle mb-3" style="width: 56px; height: 56px;"></div>
@@ -18,7 +18,7 @@
 
     <!-- Industries Grid -->
     <div v-else class="row g-4">
-      <div class="col-md-6 col-lg-4" v-for="industry in displayIndustries" :key="industry.title">
+      <div class="col-sm-6 col-lg-4" v-for="industry in displayIndustries" :key="industry.title">
         <IndustryCard
           :title="industry.title"
           :description="industry.description"

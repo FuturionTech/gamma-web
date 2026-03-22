@@ -155,40 +155,22 @@ const customStyles = computed(() => {
 })
 </script>
 
-<style scoped>
-/* Professional spacing based on Around template */
+<style>
+/* Custom spacing utilities — must be unscoped for dynamic class binding */
 .py-6 {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
 }
 
-.py-lg-7 {
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
+  .py-lg-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .py-lg-7 {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
   }
-}
-
-/* Ensure consistent spacing between sections */
-section + section {
-  margin-top: 0;
-}
-
-/* Debug mode styling */
-[style*="border: 2px dashed"] {
-  position: relative;
-}
-
-[style*="border: 2px dashed"]::before {
-  content: 'DEBUG: ' attr(class);
-  position: absolute;
-  top: -30px;
-  left: 0;
-  background: #ff6b6b;
-  color: white;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
-  z-index: 1000;
 }
 </style>

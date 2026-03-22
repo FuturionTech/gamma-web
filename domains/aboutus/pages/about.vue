@@ -434,11 +434,6 @@ useHead({
   }
 }
 
-/* Remove excessive animations */
-* {
-  animation-duration: 0.3s !important;
-}
-
 /* About body text — readable contrast */
 .about-body-text {
   color: #374151;

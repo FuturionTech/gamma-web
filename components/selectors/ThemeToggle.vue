@@ -200,8 +200,15 @@ onMounted(() => {
   color: #e5e7eb !important;
 }
 
-/* Smooth transitions for theme changes */
-* {
+/* Smooth transitions for theme changes — scoped to key elements */
+body,
+.navbar,
+.card,
+.btn,
+.footer,
+.mobile-overlay,
+.faq-item,
+.badge {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 </style>

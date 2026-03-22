@@ -27,8 +27,8 @@
             </div>
 
             <!-- CTA -->
-            <div class="mt-5">
-              <a href="/contact" class="btn btn-primary btn-lg me-3">
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-5">
+              <a href="/contact" class="btn btn-primary btn-lg">
                 {{ $t('whyChooseUs.ctaPrimary') }}
                 <i class="bi bi-arrow-right ms-2"></i>
               </a>
@@ -44,7 +44,7 @@
         <div class="col-lg-6">
           <div class="position-relative">
             <div class="card border-0 shadow-lg">
-              <div class="card-body p-5">
+              <div class="card-body p-3 p-sm-4 p-lg-5">
                 <div class="d-flex align-items-center mb-4">
                   <div class="avatar-circle bg-primary text-white me-3">
                     <i class="bi bi-award fs-4"></i>
@@ -57,7 +57,7 @@
 
                 <!-- Service Icons -->
                 <div class="chart-container bg-light rounded p-3 mb-4">
-                  <div class="d-flex align-items-end justify-content-around" style="height: 120px;">
+                  <div class="d-flex flex-wrap align-items-end justify-content-around gap-2" style="min-height: 120px;">
                     <div class="text-center">
                       <i class="bi bi-cpu fs-3 text-primary"></i>
                       <div class="small text-muted mt-1">{{ $t('whyChooseUs.approach.ai') }}</div>

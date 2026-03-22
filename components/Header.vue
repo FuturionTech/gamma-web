@@ -34,6 +34,9 @@
           <li class="nav-item">
             <NuxtLink class="nav-link fw-semibold" to="/careers">{{ $t('nav.careers') }}</NuxtLink>
           </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link fw-semibold" to="/faq">{{ $t('breadcrumbs.faq') }}</NuxtLink>
+          </li>
         </ul>
 
         <!-- Desktop CTA and Language -->
