@@ -16,8 +16,8 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="pt-4">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><NuxtLink to="/" class="text-white text-opacity-75 text-decoration-none">Home</NuxtLink></li>
-            <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+            <li class="breadcrumb-item"><NuxtLink to="/" class="text-white text-opacity-75 text-decoration-none">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">{{ $t('breadcrumbs.services') }}</li>
           </ol>
         </nav>
 
@@ -27,29 +27,29 @@
             <div class="d-inline-flex align-items-center mb-4 animate-fade-in">
               <span class="badge bg-white bg-opacity-20 text-white px-4 py-2 rounded-pill backdrop-blur">
                 <span class="pulse-dot me-2"></span>
-                AI &amp; Data Consulting Services
+                {{ $t('services.page.badge') }}
               </span>
             </div>
 
             <!-- Main Heading -->
             <h1 class="display-3 fw-bold text-white mb-4 animate-fade-in-up">
-              Engineering That Moves<br/>
-              AI From <span class="text-gradient">Pilot to Production</span>
+              {{ $t('services.page.title') }}<br/>
+              {{ $t('services.page.titlePrefix') }} <span class="text-gradient">{{ $t('services.page.titleHighlight') }}</span>
             </h1>
 
             <!-- Subheading -->
             <p class="lead text-white text-opacity-90 mb-5 mx-auto animate-fade-in-up animation-delay-1" style="max-width: 700px;">
-              From AI and data engineering to cloud architecture and cybersecurity, we deliver focused consulting that solves specific business problems for financial institutions, healthcare organizations, and government agencies.
+              {{ $t('services.page.subtitle') }}
             </p>
 
             <!-- CTA Buttons -->
             <div class="d-flex flex-wrap gap-3 justify-content-center animate-fade-in-up animation-delay-2">
               <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                Discuss Your Project
+                {{ $t('services.page.ctaPrimary') }}
                 <i class="bi bi-arrow-right ms-2"></i>
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                See How We Work
+                {{ $t('services.page.ctaSecondary') }}
               </NuxtLink>
             </div>
           </div>
@@ -68,8 +68,8 @@
     <section class="py-5 my-5">
       <div class="container">
         <SectionHeader
-          title="Our Core Services"
-          subtitle="Comprehensive solutions tailored to your unique business challenges"
+          :title="$t('services.page.coreServicesTitle')"
+          :subtitle="$t('services.page.coreServicesSubtitle')"
           headingSize="h1"
           maxWidth="600px"
         />
@@ -108,8 +108,8 @@
     <section class="bg-light py-5 my-5">
       <div class="container">
         <SectionHeader
-          title="Our Approach"
-          subtitle="A proven methodology that ensures successful delivery and lasting results"
+          :title="$t('services.page.approachTitle')"
+          :subtitle="$t('services.page.approachSubtitle')"
           headingSize="h1"
           maxWidth="600px"
         />
@@ -133,18 +133,15 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <h2 class="display-6 fw-bold mb-3 industry-heading">Industry Focus</h2>
-            <p class="fs-5 mb-4 industry-subtitle">Deep domain expertise in regulated, data-intensive sectors</p>
+            <h2 class="display-6 fw-bold mb-3 industry-heading">{{ $t('services.page.industryFocusTitle') }}</h2>
+            <p class="fs-5 mb-4 industry-subtitle">{{ $t('services.page.industryFocusSubtitle') }}</p>
           </div>
           <div class="col-lg-8">
             <p class="industry-text fs-5 lh-lg mb-3">
-              We focus on regulated, data-intensive industries: financial services, healthcare, and government.
-              Our team brings domain expertise in compliance frameworks (OSFI, PIPEDA, PHIPA), data governance,
-              and secure cloud architectures required by these sectors.
+              {{ $t('services.page.industryFocusText1') }}
             </p>
             <p class="industry-text fs-5 lh-lg">
-              This focus means we understand the unique constraints of your industry before the first meeting
-              &mdash; from data residency requirements to audit trails and access controls that regulators expect.
+              {{ $t('services.page.industryFocusText2') }}
             </p>
           </div>
         </div>
@@ -157,18 +154,18 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
             <h2 class="display-5 fw-bold text-white mb-4">
-              Ready to Transform Your Data?
+              {{ $t('services.page.ctaTitle') }}
             </h2>
             <p class="lead text-white text-opacity-90 mb-5">
-              Let's discuss how our comprehensive data solutions can drive your business forward. Our team is ready to help you unlock the full potential of your data.
+              {{ $t('services.page.ctaSubtitle') }}
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
               <NuxtLink to="/contact" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-semibold">
                 <i class="bi bi-telephone-fill me-2"></i>
-                Discuss Your Project
+                {{ $t('services.page.ctaPrimary') }}
               </NuxtLink>
               <NuxtLink to="/about" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-semibold">
-                See How We Work
+                {{ $t('services.page.ctaSecondary') }}
               </NuxtLink>
             </div>
           </div>
@@ -284,12 +281,16 @@ const staticServices = [
   }
 ]
 
+const isFr = computed(() => locale.value === 'fr')
+
 // Prefer API data, fall back to static
 const services = computed(() => {
   if (servicesStore.services.length > 0) {
     return servicesStore.services.map(s => ({
-      title: s.title,
-      description: s.short_description || s.description,
+      title: (isFr.value && s.title_fr) ? s.title_fr : s.title,
+      description: isFr.value
+        ? (s.short_description_fr || s.description_fr || s.short_description || s.description)
+        : (s.short_description || s.description),
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       features: s.features.map(f => f.title),
@@ -299,33 +300,16 @@ const services = computed(() => {
   return staticServices
 });
 
-const approachSteps = ref([
-  {
-    title: 'Discovery',
-    description: 'Understanding your business challenges, goals, and technical requirements.',
-    icon: 'bi-search'
-  },
-  {
-    title: 'Design',
-    description: 'Crafting customized solutions that address your specific needs and objectives.',
-    icon: 'bi-palette'
-  },
-  {
-    title: 'Development',
-    description: 'Building and implementing the solution with precision and best practices.',
-    icon: 'bi-code-slash'
-  },
-  {
-    title: 'Deployment',
-    description: 'Ensuring smooth integration, testing, and adoption across your organization.',
-    icon: 'bi-rocket-takeoff'
-  },
-  {
-    title: 'Support',
-    description: 'Providing ongoing assistance, monitoring, and optimization for sustained success.',
-    icon: 'bi-headset'
-  }
-]);
+const approachKeys = ['discovery', 'design', 'development', 'deployment', 'support'] as const
+const approachIcons = ['bi-search', 'bi-palette', 'bi-code-slash', 'bi-rocket-takeoff', 'bi-headset'] as const
+
+const approachSteps = computed(() =>
+  approachKeys.map((key, i) => ({
+    title: t(`approach.${key}.title`),
+    description: t(`approach.${key}.description`),
+    icon: approachIcons[i],
+  }))
+)
 
 </script>
 

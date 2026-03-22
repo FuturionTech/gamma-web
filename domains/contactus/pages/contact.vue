@@ -8,21 +8,21 @@
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><NuxtLink to="/" class="text-white-50">Home</NuxtLink></li>
-                <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                <li class="breadcrumb-item"><NuxtLink to="/" class="text-white-50">{{ $t('breadcrumbs.home') }}</NuxtLink></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">{{ $t('breadcrumbs.contact') }}</li>
               </ol>
             </nav>
 
             <!-- Page Title -->
-            <h1 class="display-4 fw-bold text-white mb-4">Let's Connect</h1>
+            <h1 class="display-4 fw-bold text-white mb-4">{{ $t('contact.pageTitle') }}</h1>
             <p class="lead text-white-50 mb-5">
-              Ready to transform your data into competitive advantage? Our team of experts is here to help you navigate your digital transformation journey.
+              {{ $t('contact.subtitle') }}
             </p>
 
             <!-- Quick Contact Info -->
             <div class="d-flex flex-column flex-sm-row gap-4">
               <div>
-                <p class="text-white-50 mb-1">Email us</p>
+                <p class="text-white-50 mb-1">{{ $t('contact.emailUs') }}</p>
                 <a href="mailto:info@gammaneutral.ca" class="text-white text-decoration-none fs-5">info@gammaneutral.ca</a>
               </div>
             </div>
@@ -39,7 +39,7 @@
           <div class="col-lg-8">
             <div class="card shadow-sm border-0">
               <div class="card-body p-5">
-                <h2 class="h3 mb-4">Send us a message</h2>
+                <h2 class="h3 mb-4">{{ $t('contact.form.title') }}</h2>
                 <ContactForm />
               </div>
             </div>
@@ -50,15 +50,15 @@
             <!-- What to Expect Card -->
             <div class="card shadow-sm border-0 mb-4 what-to-expect-card">
               <div class="card-body p-4">
-                <h3 class="h5 fw-bold mb-4">What to Expect</h3>
+                <h3 class="h5 fw-bold mb-4">{{ $t('contact.whatToExpect.title') }}</h3>
                 <ul class="list-unstyled mb-0">
                   <li class="d-flex align-items-start mb-3">
                     <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
                       <i class="bi bi-clock text-primary"></i>
                     </div>
                     <div>
-                      <strong class="d-block small">Quick Response</strong>
-                      <span class="text-muted small">We respond within 1 business day</span>
+                      <strong class="d-block small">{{ $t('contact.whatToExpect.quickResponse') }}</strong>
+                      <span class="text-muted small">{{ $t('contact.whatToExpect.quickResponseDesc') }}</span>
                     </div>
                   </li>
                   <li class="d-flex align-items-start mb-3">
@@ -66,8 +66,8 @@
                       <i class="bi bi-chat-dots text-success"></i>
                     </div>
                     <div>
-                      <strong class="d-block small">Free Consultation</strong>
-                      <span class="text-muted small">Your initial consultation is complimentary</span>
+                      <strong class="d-block small">{{ $t('contact.whatToExpect.freeConsultation') }}</strong>
+                      <span class="text-muted small">{{ $t('contact.whatToExpect.freeConsultationDesc') }}</span>
                     </div>
                   </li>
                   <li class="d-flex align-items-start mb-3">
@@ -75,8 +75,8 @@
                       <i class="bi bi-shield-check text-info"></i>
                     </div>
                     <div>
-                      <strong class="d-block small">30-45 Minute Conversation</strong>
-                      <span class="text-muted small">We take the time to understand your needs</span>
+                      <strong class="d-block small">{{ $t('contact.whatToExpect.duration') }}</strong>
+                      <span class="text-muted small">{{ $t('contact.whatToExpect.durationDesc') }}</span>
                     </div>
                   </li>
                   <li class="d-flex align-items-start">
@@ -84,8 +84,8 @@
                       <i class="bi bi-heart text-warning"></i>
                     </div>
                     <div>
-                      <strong class="d-block small">No Obligation</strong>
-                      <span class="text-muted small">Just an honest assessment of how we can help</span>
+                      <strong class="d-block small">{{ $t('contact.whatToExpect.noObligation') }}</strong>
+                      <span class="text-muted small">{{ $t('contact.whatToExpect.noObligationDesc') }}</span>
                     </div>
                   </li>
                 </ul>
@@ -99,12 +99,12 @@
                   <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-building text-primary fs-5"></i>
                   </div>
-                  <h3 class="h5 mb-0">Office</h3>
+                  <h3 class="h5 mb-0">{{ $t('contact.office.title') }}</h3>
                 </div>
                 <p class="mb-2">Redpath Avenue</p>
                 <p class="mb-3">Toronto, ON M4S 2J7, Canada</p>
                 <a href="https://www.google.com/maps/place/Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
-                  <i class="bi bi-map me-1"></i> Get Directions
+                  <i class="bi bi-map me-1"></i> {{ $t('contact.office.getDirections') }}
                 </a>
               </div>
             </div>
@@ -116,18 +116,18 @@
                   <div class="bg-success bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-clock text-success fs-5"></i>
                   </div>
-                  <h3 class="h5 mb-0">Working Hours</h3>
+                  <h3 class="h5 mb-0">{{ $t('contact.hours.title') }}</h3>
                 </div>
                 <div class="mb-2">
                   <div class="d-flex justify-content-between">
-                    <span>Monday - Friday</span>
-                    <strong>9:00 - 18:00</strong>
+                    <span>{{ $t('contact.hours.weekdays') }}</span>
+                    <strong>{{ $t('contact.hours.weekdaysTime') }}</strong>
                   </div>
                 </div>
                 <div>
                   <div class="d-flex justify-content-between">
-                    <span>Saturday - Sunday</span>
-                    <strong class="text-muted">Closed</strong>
+                    <span>{{ $t('contact.hours.weekends') }}</span>
+                    <strong class="text-muted">{{ $t('contact.hours.closed') }}</strong>
                   </div>
                 </div>
               </div>
@@ -140,10 +140,10 @@
                   <div class="bg-info bg-opacity-10 rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; min-width: 48px;">
                     <i class="bi bi-headset text-info fs-5"></i>
                   </div>
-                  <h3 class="h5 mb-0">Support</h3>
+                  <h3 class="h5 mb-0">{{ $t('contact.support.title') }}</h3>
                 </div>
                 <p class="mb-0">
-                  <small class="text-muted d-block">Support Email</small>
+                  <small class="text-muted d-block">{{ $t('contact.support.emailLabel') }}</small>
                   <a href="mailto:support@gammaneutral.ca" class="text-decoration-none">support@gammaneutral.ca</a>
                 </p>
               </div>

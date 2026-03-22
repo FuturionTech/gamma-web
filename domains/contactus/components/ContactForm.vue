@@ -3,101 +3,101 @@
     <div class="row g-4">
       <!-- First Name -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="first_name">First Name</label>
+        <label class="form-label fs-base" for="first_name">{{ $t('contact.form.firstName') }}</label>
         <input
           v-model="formData.first_name"
           type="text"
           class="form-control form-control-lg"
           id="first_name"
-          placeholder="Your first name"
+          :placeholder="$t('contact.form.firstNamePlaceholder')"
           required
         >
-        <div class="invalid-feedback">Please enter your first name!</div>
+        <div class="invalid-feedback">{{ $t('contact.form.validation.firstName') }}</div>
       </div>
 
       <!-- Last Name -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="last_name">Last Name</label>
+        <label class="form-label fs-base" for="last_name">{{ $t('contact.form.lastName') }}</label>
         <input
           v-model="formData.last_name"
           type="text"
           class="form-control form-control-lg"
           id="last_name"
-          placeholder="Your last name"
+          :placeholder="$t('contact.form.lastNamePlaceholder')"
           required
         >
-        <div class="invalid-feedback">Please enter your last name!</div>
+        <div class="invalid-feedback">{{ $t('contact.form.validation.lastName') }}</div>
       </div>
 
       <!-- Email -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="email">Email</label>
+        <label class="form-label fs-base" for="email">{{ $t('contact.form.email') }}</label>
         <input
           v-model="formData.email"
           type="email"
           class="form-control form-control-lg"
           id="email"
-          placeholder="Email address"
+          :placeholder="$t('contact.form.emailPlaceholder')"
           required
         >
-        <div class="invalid-feedback">Please provide a valid email address!</div>
+        <div class="invalid-feedback">{{ $t('contact.form.validation.email') }}</div>
       </div>
 
       <!-- Phone -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="phone">Phone</label>
+        <label class="form-label fs-base" for="phone">{{ $t('contact.form.phone') }}</label>
         <input
           v-model="formData.phone"
           type="text"
           class="form-control form-control-lg"
           id="phone"
-          placeholder="Phone number"
+          :placeholder="$t('contact.form.phonePlaceholder')"
         >
       </div>
 
       <!-- Subject -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="subject">Subject <span class="text-muted">(Optional)</span></label>
+        <label class="form-label fs-base" for="subject">{{ $t('contact.form.subject') }} <span class="text-muted">{{ $t('contact.form.subjectOptional') }}</span></label>
         <input
           v-model="formData.subject"
           type="text"
           class="form-control form-control-lg"
           id="subject"
-          placeholder="Subject of your inquiry"
+          :placeholder="$t('contact.form.subjectPlaceholder')"
         >
       </div>
 
       <!-- Project Description -->
       <div class="col-sm-12">
-        <label class="form-label fs-base" for="project_description">Tell us about your project <span class="text-muted">(Optional)</span></label>
+        <label class="form-label fs-base" for="project_description">{{ $t('contact.form.projectType') }} <span class="text-muted">{{ $t('contact.form.subjectOptional') }}</span></label>
         <select
           v-model="formData.project_type"
           class="form-select form-select-lg"
           id="project_description"
         >
-          <option value="" disabled selected>Select a project type</option>
-          <option value="ai-ml">AI / Machine Learning</option>
-          <option value="data-engineering">Data Engineering</option>
-          <option value="cloud-migration">Cloud Migration</option>
-          <option value="cybersecurity">Cybersecurity</option>
-          <option value="business-intelligence">Business Intelligence</option>
-          <option value="big-data">Big Data / Data Platform</option>
-          <option value="other">Other / Not sure yet</option>
+          <option value="" disabled selected>{{ $t('contact.form.projectTypePlaceholder') }}</option>
+          <option value="ai-ml">{{ $t('contact.form.projectOptions.aiMl') }}</option>
+          <option value="data-engineering">{{ $t('contact.form.projectOptions.dataEngineering') }}</option>
+          <option value="cloud-migration">{{ $t('contact.form.projectOptions.cloudMigration') }}</option>
+          <option value="cybersecurity">{{ $t('contact.form.projectOptions.cybersecurity') }}</option>
+          <option value="business-intelligence">{{ $t('contact.form.projectOptions.bi') }}</option>
+          <option value="big-data">{{ $t('contact.form.projectOptions.bigData') }}</option>
+          <option value="other">{{ $t('contact.form.projectOptions.other') }}</option>
         </select>
       </div>
 
       <!-- Message -->
       <div class="col-sm-12">
-        <label class="form-label fs-base" for="message">How can we help?</label>
+        <label class="form-label fs-base" for="message">{{ $t('contact.form.message') }}</label>
         <textarea
           v-model="formData.message"
           class="form-control form-control-lg"
           id="message"
           rows="6"
-          placeholder="Enter your message here..."
+          :placeholder="$t('contact.form.messagePlaceholder')"
           required
         ></textarea>
-        <div class="invalid-feedback">Please enter your message!</div>
+        <div class="invalid-feedback">{{ $t('contact.form.validation.message') }}</div>
       </div>
 
       <!-- Submit Button -->
@@ -108,12 +108,12 @@
           :disabled="isSubmitting"
         >
           <span v-if="!isSubmitting">
-            Send Message
+            {{ $t('contact.form.send') }}
             <i class="bi bi-send ms-2"></i>
           </span>
           <span v-else>
             <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-            Sending...
+            {{ $t('contact.form.sending') }}
           </span>
         </button>
       </div>
@@ -122,13 +122,13 @@
     <!-- Success Message -->
     <div v-if="showSuccess" class="alert alert-success mt-4" role="alert">
       <i class="bi bi-check-circle me-2"></i>
-      Thank you for your message! We'll get back to you within 24 hours.
+      {{ $t('contact.form.success') }}
     </div>
 
     <!-- Error Message -->
     <div v-if="showError" class="alert alert-danger mt-4" role="alert">
       <i class="bi bi-exclamation-triangle me-2"></i>
-      {{ errorMessage || 'Something went wrong. Please try again or email us directly at info@gammaneutral.ca' }}
+      {{ errorMessage || $t('contact.form.error') }}
     </div>
   </form>
 </template>
