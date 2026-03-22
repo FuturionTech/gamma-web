@@ -43,16 +43,16 @@
     <!-- Our Process - Clean white -->
     <ProcessSection/>
 
-    <!-- Industries We Serve - Subtle background -->
+    <!-- Industries We Serve -->
     <SectionWrapper
-      spacing="lg"
+      spacing="md"
       backgroundColor="light"
       has-header
       header-width="lg"
       :debug-mode="debugMode"
     >
       <template #header>
-        <h2 class="h1 mb-4">Industries We Serve</h2>
+        <h2 class="h1 mb-2">Industries We Serve</h2>
         <p class="fs-lg text-muted mb-0">
           Deep domain expertise in regulated, data-intensive sectors
         </p>
