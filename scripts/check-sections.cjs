@@ -34,7 +34,7 @@ console.log(`${hasDebugMode ? '✅' : '❌'} Debug mode ${hasDebugMode ? 'enable
 const requiredComponents = [
     'HeroSection',
     'ServicesSection',
-    'BenefitsSection',
+    'WhyChooseUsSection',
     'StatsSection',
     'ProcessSection',
     'IndustriesSection',

@@ -35,7 +35,7 @@
           Experience the advantages of working with a dedicated data consulting firm
         </p>
       </template>
-      <BenefitsSection/>
+      <WhyChooseUsSection/>
     </SectionWrapper>
 
     <!-- Statistics section removed - company is newly incorporated -->

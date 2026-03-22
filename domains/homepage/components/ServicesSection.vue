@@ -78,7 +78,7 @@ const staticServices = [
     features: ['Custom ML model development', 'NLP and document intelligence', 'MLOps and model monitoring'],
     icon: 'bi bi-cpu',
     gradientClass: 'bg-gradient-primary',
-    link: '/services'
+    link: ''
   },
   {
     title: 'Data Engineering',
@@ -86,7 +86,7 @@ const staticServices = [
     features: ['ETL/ELT pipeline design', 'Data warehouse/lakehouse architecture', 'Data quality frameworks'],
     icon: 'bi bi-database',
     gradientClass: 'bg-gradient-info',
-    link: '/services'
+    link: ''
   },
   {
     title: 'Cloud Computing',
@@ -94,7 +94,7 @@ const staticServices = [
     features: ['Cloud migration strategy', 'Infrastructure as code', 'Cost optimization and FinOps'],
     icon: 'bi bi-cloud',
     gradientClass: 'bg-gradient-success',
-    link: '/services'
+    link: ''
   },
   {
     title: 'Cybersecurity',
@@ -102,7 +102,7 @@ const staticServices = [
     features: ['Security architecture assessment', 'Compliance frameworks (SOC 2, PIPEDA)', 'Threat detection and IAM'],
     icon: 'bi bi-shield-check',
     gradientClass: 'bg-gradient-danger',
-    link: '/services'
+    link: ''
   },
   {
     title: 'Business Intelligence',
@@ -110,7 +110,7 @@ const staticServices = [
     features: ['Executive dashboard design', 'Self-service analytics', 'Power BI / Tableau / Looker'],
     icon: 'bi bi-bar-chart',
     gradientClass: 'bg-gradient-warning',
-    link: '/services'
+    link: ''
   },
   {
     title: 'Data Platform & Big Data',
@@ -118,7 +118,7 @@ const staticServices = [
     features: ['Distributed processing (Spark)', 'Data lakehouse design', 'Stream processing'],
     icon: 'bi bi-hdd-stack',
     gradientClass: 'bg-gradient-purple',
-    link: '/services'
+    link: ''
   }
 ]
 
@@ -131,7 +131,7 @@ const displayServices = computed(() => {
       features: s.features.map(f => f.title),
       icon: iconBootstrapMap[s.icon] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon] || 'bg-gradient-primary',
-      link: '/services',
+      link: '',
     }))
   }
   return staticServices
