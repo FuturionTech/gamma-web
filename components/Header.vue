@@ -240,21 +240,28 @@ watch(isMobileOpen, (open) => {
    ANIMATED HAMBURGER TOGGLE
    ================================ */
 .mobile-menu-toggle {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: none;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   z-index: 1060;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .toggle-bar {
   position: relative;
-  width: 22px;
+  width: 20px;
   height: 2px;
   background: #ffffff;
   border-radius: 2px;
@@ -274,25 +281,31 @@ watch(isMobileOpen, (open) => {
 }
 
 .toggle-bar::before {
-  top: -7px;
+  top: -6px;
 }
 
 .toggle-bar::after {
-  top: 7px;
+  top: 6px;
 }
 
-/* Animate to X */
+/* Animate to X — bigger, bolder, white */
 .toggle-bar.open {
   background: transparent;
 }
 
 .toggle-bar.open::before {
   top: 0;
+  width: 22px;
+  height: 2.5px;
+  background: #ffffff;
   transform: rotate(45deg);
 }
 
 .toggle-bar.open::after {
   top: 0;
+  width: 22px;
+  height: 2.5px;
+  background: #ffffff;
   transform: rotate(-45deg);
 }
 
