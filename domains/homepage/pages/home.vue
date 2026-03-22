@@ -5,6 +5,7 @@
 
     <!-- Core Services - Professional spacing -->
     <SectionWrapper
+      id="services"
       spacing="lg"
       backgroundColor="transparent"
       has-header

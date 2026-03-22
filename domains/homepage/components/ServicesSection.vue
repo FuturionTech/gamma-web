@@ -1,6 +1,6 @@
 <template>
   <!-- Services Grid Section -->
-  <section id="services" class="py-5">
+  <section class="py-5">
     <div class="container">
       <!-- Loading State -->
       <div v-if="homepageStore.loadingServices" class="row g-4">
