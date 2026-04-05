@@ -140,15 +140,15 @@ onMounted(() => {
 }
 
 /* Light mode styles */
-:global(.light-mode) .theme-toggle-btn,
-:global(.navbar-scrolled) .theme-toggle-btn {
+.light-mode .theme-toggle-btn,
+.navbar-scrolled .theme-toggle-btn {
   background: rgba(139, 92, 246, 0.1);
   border: 2px solid rgba(139, 92, 246, 0.3);
   color: #8b5cf6;
 }
 
-:global(.light-mode) .theme-toggle-btn:hover,
-:global(.navbar-scrolled) .theme-toggle-btn:hover {
+.light-mode .theme-toggle-btn:hover,
+.navbar-scrolled .theme-toggle-btn:hover {
   background: rgba(139, 92, 246, 0.2);
   border-color: rgba(139, 92, 246, 0.5);
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);

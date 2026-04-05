@@ -1,21 +1,22 @@
 <template>
   <div class="benefit-card">
-    <!-- Icon -->
-    <div class="benefit-icon-wrapper mb-3" :class="iconBgClass">
-      <i v-if="icon" :class="`${icon} ${iconColorClass}`"></i>
+    <!-- Icon with gradient + glow -->
+    <div class="benefit-icon-wrapper mb-3" :class="`gradient-${iconColor}`">
+      <i v-if="icon" :class="icon"></i>
       <component v-else-if="svgIcon" :is="svgIcon" />
+      <span class="icon-glow"></span>
     </div>
 
     <!-- Title -->
-    <h4 class="h5 fw-bold mb-2">{{ title }}</h4>
+    <h4 class="h6 fw-bold mb-2 benefit-title">{{ title }}</h4>
 
     <!-- Description -->
-    <p class="text-muted small mb-0">{{ description }}</p>
+    <p class="text-muted small mb-0 benefit-desc">{{ description }}</p>
   </div>
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps({
   // Content
@@ -41,25 +42,17 @@ const props = defineProps({
   // Styling
   iconColor: {
     type: String,
-    default: 'primary', // primary, success, warning, danger, info
+    default: 'primary',
     validator: (value) => {
       return ['primary', 'success', 'warning', 'danger', 'info', 'secondary'].includes(value)
     }
   }
 })
-
-const iconBgClass = computed(() => {
-  return `bg-${props.iconColor} bg-opacity-10`
-})
-
-const iconColorClass = computed(() => {
-  return `text-${props.iconColor}`
-})
 </script>
 
 <style scoped>
 .benefit-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
   padding: 1rem;
   margin: -1rem;
   border-radius: 16px;
@@ -71,71 +64,112 @@ const iconColorClass = computed(() => {
   transform: translateY(-4px);
 }
 
+/* ========================================
+   WORLD-CLASS ICON WRAPPER
+   ======================================== */
 .benefit-icon-wrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px; /* Squircle looks more modern than pure circle */
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 1.35rem;
+  color: #ffffff;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
   position: relative;
   z-index: 1;
+  overflow: visible;
+}
+
+/* Gradient variations matching brand system */
+.gradient-primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.gradient-success {
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.gradient-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #fb923c 100%);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.gradient-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #ec4899 100%);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.gradient-info {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.gradient-secondary {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  box-shadow: 0 8px 20px rgba(100, 116, 139, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Ambient glow behind the icon */
-.benefit-icon-wrapper::after {
-  content: '';
+.icon-glow {
   position: absolute;
-  top: 10%; left: 10%; right: 10%; bottom: 10%;
-  border-radius: 16px;
+  inset: -4px;
+  border-radius: 18px;
   background: inherit;
-  filter: blur(12px);
+  filter: blur(16px);
   opacity: 0;
   z-index: -1;
-  transition: all 0.4s ease;
+  transition: opacity 0.35s ease;
 }
+
+.gradient-primary .icon-glow  { background: #7c3aed; }
+.gradient-success .icon-glow  { background: #10b981; }
+.gradient-warning .icon-glow  { background: #f59e0b; }
+.gradient-danger .icon-glow   { background: #ef4444; }
+.gradient-info .icon-glow     { background: #0ea5e9; }
+.gradient-secondary .icon-glow { background: #64748b; }
 
 .benefit-card:hover .benefit-icon-wrapper {
-  transform: scale(1.1) rotate(-5deg);
+  transform: scale(1.08) translateY(-2px);
 }
 
-.benefit-card:hover .benefit-icon-wrapper::after {
-  opacity: 0.6;
-  transform: scale(1.2) translateY(4px);
+.benefit-card:hover .icon-glow {
+  opacity: 0.45;
 }
 
-/* Dark mode support */
+/* Typography */
+.benefit-title {
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.benefit-desc {
+  color: #64748b;
+  line-height: 1.55;
+  font-size: 0.85rem;
+}
+
+/* Dark mode */
 [data-bs-theme="dark"] .benefit-card:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-[data-bs-theme="dark"] .benefit-icon-wrapper {
-  opacity: 0.9;
-}
-
-[data-bs-theme="dark"] .benefit-card h4 {
+[data-bs-theme="dark"] .benefit-title {
   color: #ffffff !important;
-  font-weight: 600;
-  letter-spacing: -0.02em;
 }
 
-[data-bs-theme="dark"] .benefit-card .text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
-  line-height: 1.6;
+[data-bs-theme="dark"] .benefit-desc {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .benefit-card,
   .benefit-icon-wrapper,
-  .benefit-icon-wrapper::after {
+  .icon-glow {
     transition: none !important;
   }
-  .benefit-card:hover {
-    transform: none;
-  }
+  .benefit-card:hover,
   .benefit-card:hover .benefit-icon-wrapper {
     transform: none;
   }

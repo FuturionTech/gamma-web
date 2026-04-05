@@ -32,14 +32,14 @@
           </div>
 
           <!-- CTA -->
-          <div class="d-flex flex-column flex-sm-row gap-3">
-            <a href="/contact" class="btn btn-primary btn-lg interactive-btn">
-              <span>{{ $t('whyChooseUs.ctaPrimary') }}</span>
-              <i class="bi bi-arrow-right ms-2 btn-icon"></i>
+          <div class="d-flex flex-column flex-sm-row gap-3 align-items-sm-center">
+            <a href="/contact" class="btn interactive-btn">
+              <span class="btn-text">{{ $t('whyChooseUs.ctaPrimary') }}</span>
+              <i class="bi bi-arrow-right btn-icon" aria-hidden="true"></i>
             </a>
-            <a href="/about" class="btn btn-link link-hover-fx text-decoration-none learn-more-link">
+            <a href="/about" class="link-hover-fx text-decoration-none learn-more-link">
               <span>{{ $t('whyChooseUs.ctaSecondary') }}</span>
-              <i class="bi bi-arrow-right ms-1 link-icon"></i>
+              <i class="bi bi-arrow-right link-icon" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -118,25 +118,25 @@ const benefits = computed(() => [
   {
     title: t('whyChooseUs.expertTeam.title'),
     description: t('whyChooseUs.expertTeam.description'),
-    icon: 'bi-people',
+    icon: 'bi-people-fill',
     iconColor: 'success'
   },
   {
     title: t('whyChooseUs.tailoredSolutions.title'),
     description: t('whyChooseUs.tailoredSolutions.description'),
-    icon: 'bi-gear',
+    icon: 'bi-sliders2',
     iconColor: 'primary'
   },
   {
     title: t('whyChooseUs.industryExpertise.title'),
     description: t('whyChooseUs.industryExpertise.description'),
-    icon: 'bi-building',
+    icon: 'bi-building-fill-check',
     iconColor: 'warning'
   },
   {
     title: t('whyChooseUs.provenMethodologies.title'),
     description: t('whyChooseUs.provenMethodologies.description'),
-    icon: 'bi-clipboard-check',
+    icon: 'bi-patch-check-fill',
     iconColor: 'info'
   }
 ])
@@ -327,17 +327,26 @@ const benefits = computed(() => [
   }
 }
 
-/* Interactive Buttons */
+/* Interactive Button — Dark Solid CTA */
 .interactive-btn {
-  background: linear-gradient(135deg, #000000 0%, #1f2937 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
   border: none;
   font-weight: 600;
-  padding: 14px 32px;
+  font-size: 0.95rem;
+  padding: 0.875rem 1.75rem;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.25;
 }
 
 .interactive-btn::before {
@@ -345,33 +354,48 @@ const benefits = computed(() => [
   position: absolute;
   top: 0; left: -100%;
   width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
   transition: left 0.6s ease;
+  pointer-events: none;
 }
 
 .interactive-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #111827 0%, #374151 100%);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ffffff;
 }
 
 .interactive-btn:hover::before {
   left: 100%;
 }
 
+.interactive-btn .btn-text {
+  line-height: 1;
+  display: inline-block;
+}
+
 .interactive-btn .btn-icon {
+  font-size: 1.1rem;
+  line-height: 1;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .interactive-btn:hover .btn-icon {
   transform: translateX(4px);
 }
 
+/* Secondary Link */
 .link-hover-fx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   color: #7c3aed !important;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 14px 0;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  line-height: 1;
 }
 
 .link-hover-fx:hover {
@@ -379,11 +403,13 @@ const benefits = computed(() => [
 }
 
 .link-hover-fx .link-icon {
+  font-size: 1rem;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .link-hover-fx:hover .link-icon {
-  transform: translateX(6px);
+  transform: translateX(4px);
 }
 
 /* Dark Mode Overrides */
@@ -432,12 +458,14 @@ const benefits = computed(() => [
 
 [data-bs-theme="dark"] .interactive-btn {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  color: #0f172a;
+  color: #0f172a !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 [data-bs-theme="dark"] .interactive-btn:hover {
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-  color: #000000;
+  color: #000000 !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 [data-bs-theme="dark"] .link-hover-fx {
