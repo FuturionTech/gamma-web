@@ -103,7 +103,7 @@
             <p class="text-muted mb-4">
               {{ $t('careers.noOpenings.resumePrompt') }}
             </p>
-            <a href="mailto:careers@gammaneutral.com" class="btn btn-primary btn-lg px-5">
+            <a :href="company.mailtoHref" class="btn btn-primary btn-lg px-5">
               <i class="bi bi-envelope me-2"></i>
               {{ $t('careers.noOpenings.sendResume') }}
             </a>
@@ -121,7 +121,7 @@
             {{ $t('careers.stayConnected.subtitle') }}
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="mailto:careers@gammaneutral.com" class="btn btn-light btn-lg px-5">
+            <a :href="company.mailtoHref" class="btn btn-light btn-lg px-5">
               {{ $t('careers.stayConnected.sendResume') }}
               <i class="bi bi-envelope ms-2"></i>
             </a>
@@ -137,6 +137,7 @@
 
 <script setup lang="ts">
 const { $trackEvent } = useNuxtApp()
+const company = useCompanyInfo()
 
 // Track careers page visit with extra intent signal
 onMounted(() => {

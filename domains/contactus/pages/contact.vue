@@ -23,7 +23,7 @@
             <div class="d-flex flex-column flex-sm-row gap-4">
               <div>
                 <p class="text-white text-opacity-75 mb-1">{{ $t('contact.emailUs') }}</p>
-                <a href="mailto:info@gammaneutral.ca" class="text-white text-decoration-none fs-5">info@gammaneutral.ca</a>
+                <a :href="company.mailtoHref" class="text-white text-decoration-none fs-5">{{ company.email }}</a>
               </div>
             </div>
           </div>
@@ -101,9 +101,9 @@
                   </div>
                   <h3 class="h5 mb-0">{{ $t('contact.office.title') }}</h3>
                 </div>
-                <p class="mb-2">Redpath Avenue</p>
-                <p class="mb-3">Toronto, ON M4S 2J7, Canada</p>
-                <a href="https://www.google.com/maps/place/Redpath+Ave,+Toronto,+ON+M4S+2J7,+Canada" target="_blank" class="btn btn-sm btn-outline-primary">
+                <p class="mb-2">{{ company.address.line1 }}</p>
+                <p class="mb-3">{{ company.address.line2 }}, {{ company.address.country }}</p>
+                <a :href="company.address.googleMapsUrl" target="_blank" class="btn btn-sm btn-outline-primary">
                   <i class="bi bi-map me-1"></i> {{ $t('contact.office.getDirections') }}
                 </a>
               </div>
@@ -144,7 +144,7 @@
                 </div>
                 <p class="mb-0">
                   <small class="text-muted d-block">{{ $t('contact.support.emailLabel') }}</small>
-                  <a href="mailto:support@gammaneutral.ca" class="text-decoration-none">support@gammaneutral.ca</a>
+                  <a :href="company.mailtoHref" class="text-decoration-none">{{ company.email }}</a>
                 </p>
               </div>
             </div>
@@ -162,6 +162,8 @@
 <script setup>
 import { useHead } from '#imports'
 import ContactForm from '~/domains/contactus/components/ContactForm'
+
+const company = useCompanyInfo()
 
 // SEO Meta tags
 useHead({

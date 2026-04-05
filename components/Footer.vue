@@ -11,12 +11,12 @@
           </p>
 
           <!-- Email CTA -->
-          <a href="mailto:info@gammaneutral.ca"
+          <a :href="company.mailtoHref"
              class="footer-email-link d-inline-flex align-items-center gap-2">
             <span class="footer-email-icon">
               <i class="bi bi-envelope"></i>
             </span>
-            <span>info@gammaneutral.ca</span>
+            <span>{{ company.email }}</span>
           </a>
         </div>
 
@@ -24,13 +24,12 @@
         <div class="col-lg-3 col-md-6">
           <h6 class="footer-heading">{{ $t('footer.services') }}</h6>
           <ul class="footer-links">
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.ai') }}</NuxtLink></li>
-            <li><NuxtLink to="/services">Artificial Intelligence</NuxtLink></li>
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.dataEngineering') }}</NuxtLink></li>
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.cybersecurity') }}</NuxtLink></li>
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.bi') }}</NuxtLink></li>
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.cloud') }}</NuxtLink></li>
-            <li><NuxtLink to="/services">{{ $t('footer.servicesItems.bigData') }}</NuxtLink></li>
+            <li
+              v-for="item in serviceNavItems"
+              :key="item.key"
+            >
+              <NuxtLink :to="item.link">{{ item.label }}</NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -52,11 +51,11 @@
           <ul class="footer-links footer-contact">
             <li>
               <i class="bi bi-geo-alt me-2 footer-icon"></i>
-              <span>Redpath Avenue<br>Toronto, ON M4S 2J7</span>
+              <span>{{ company.address.line1 }}<br>{{ company.address.line2 }}</span>
             </li>
             <li>
               <i class="bi bi-envelope me-2 footer-icon"></i>
-              <a href="mailto:info@gammaneutral.ca">info@gammaneutral.ca</a>
+              <a :href="company.mailtoHref">{{ company.email }}</a>
             </li>
           </ul>
         </div>
@@ -68,7 +67,7 @@
       <!-- Powered By -->
       <div class="footer-powered-by">
         <a href="https://futurion.tech" target="_blank" rel="noopener noreferrer" class="powered-by-pill">
-          Powered by <span class="powered-by-brand">Futurion</span>
+          {{ $t('footer.poweredBy') }} <span class="powered-by-brand">Futurion</span>
         </a>
       </div>
 
@@ -87,7 +86,21 @@
 </template>
 
 <script setup>
-// Components auto-imported in Nuxt 3
+import { computed } from 'vue'
+
+const { t } = useI18n()
+const company = useCompanyInfo()
+
+// Service nav items linking to individual service detail pages
+const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData']
+
+const serviceNavItems = computed(() =>
+  serviceKeys.map((key) => ({
+    key,
+    label: t(`footer.servicesItems.${key}`),
+    link: `/services/${t(`services.${key}.slug`)}`,
+  }))
+)
 </script>
 
 <style scoped>

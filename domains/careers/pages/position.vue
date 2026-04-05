@@ -176,7 +176,7 @@
           {{ $t('careers.position.notFoundDescription') }}
         </p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="mailto:careers@gammaneutral.com" class="btn btn-primary">
+          <a :href="company.mailtoHref" class="btn btn-primary">
             <i class="bi bi-envelope me-2"></i>
             {{ $t('careers.position.sendUsResume') }}
           </a>
@@ -197,18 +197,19 @@ import { getPositionById, type JobPosition } from '~/domains/careers/data/positi
 const { tm } = useI18n()
 const route = useRoute()
 const position = ref<JobPosition | undefined>()
+const company = useCompanyInfo()
 
 // Get position data
 position.value = getPositionById(route.params.id as string)
 
 // Build mailto link with pre-filled subject and body
 const mailtoLink = computed(() => {
-  if (!position.value) return 'mailto:careers@gammaneutral.com'
+  if (!position.value) return company.mailtoHref
   const subject = encodeURIComponent(`Application: ${position.value.title}`)
   const body = encodeURIComponent(
     `Hi Gamma Neutral Careers Team,\n\nI am writing to express my interest in the ${position.value.title} position (${position.value.department}).\n\nPlease find my resume attached.\n\nBest regards`
   )
-  return `mailto:careers@gammaneutral.com?subject=${subject}&body=${body}`
+  return `${company.mailtoHref}?subject=${subject}&body=${body}`
 })
 
 // SEO

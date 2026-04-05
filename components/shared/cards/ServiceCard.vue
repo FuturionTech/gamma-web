@@ -1,5 +1,11 @@
 <template>
-  <div class="service-card card h-100 p-4 rounded-4 border-0" @click="onCardClick">
+  <component
+    :is="link ? 'NuxtLink' : 'div'"
+    :to="link || undefined"
+    class="service-card card h-100 p-4 rounded-4 border-0 text-decoration-none"
+    :class="{ 'service-card-linkable': !!link }"
+    @click="onCardClick"
+  >
     <!-- Icon -->
     <div class="service-icon mb-4">
       <div class="icon-wrapper">
@@ -23,7 +29,15 @@
         <span class="small feature-text">{{ feature }}</span>
       </li>
     </ul>
-  </div>
+
+    <!-- Learn More Link -->
+    <div v-if="link" class="learn-more-link mt-4 pt-3">
+      <span class="learn-more-text">
+        {{ learnMoreLabel || $t('services.learnMore') }}
+        <i class="bi bi-arrow-right ms-2 learn-more-arrow"></i>
+      </span>
+    </div>
+  </component>
 </template>
 
 <script setup lang="ts">
@@ -54,6 +68,14 @@ const props = defineProps({
     type: String,
     default: 'bg-gradient-primary',
   },
+  link: {
+    type: String,
+    default: '',
+  },
+  learnMoreLabel: {
+    type: String,
+    default: '',
+  },
 })
 
 const onCardClick = () => {
@@ -70,12 +92,56 @@ const onCardClick = () => {
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  color: inherit;
+}
+
+.service-card-linkable {
+  cursor: pointer;
 }
 
 .service-card:hover {
   transform: translateY(-3px);
   border-color: rgba(139, 92, 246, 0.3) !important;
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
+}
+
+/* Learn More Link */
+.learn-more-link {
+  border-top: 1px solid var(--bs-border-color, #e5e7eb);
+}
+
+.learn-more-text {
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.learn-more-arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.service-card:hover .learn-more-arrow {
+  transform: translateX(4px);
+}
+
+.service-card:hover .learn-more-text {
+  color: #7c3aed;
+}
+
+:global([data-bs-theme="dark"]) .learn-more-link {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+:global([data-bs-theme="dark"]) .learn-more-text {
+  color: #a78bfa;
+}
+
+:global([data-bs-theme="dark"]) .service-card:hover .learn-more-text {
+  color: #c4b5fd;
 }
 
 /* Icon Wrapper — Purple accent circle */

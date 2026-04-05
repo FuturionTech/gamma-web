@@ -31,6 +31,17 @@ export default defineNuxtModule({
                 name: 'services___en',
                 path: '/en/services',
                 file: resolve(__dirname, 'pages/services.vue'),
+            },
+            // Individual service detail pages (Learn More)
+            {
+                name: 'service-detail___fr',
+                path: '/services/:slug',
+                file: resolve(__dirname, 'pages/service-detail.vue'),
+            },
+            {
+                name: 'service-detail___en',
+                path: '/en/services/:slug',
+                file: resolve(__dirname, 'pages/service-detail.vue'),
             })
         },
 

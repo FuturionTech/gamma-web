@@ -31,39 +31,448 @@
     "viewAll": "View All Services",
     "learnMore": "Learn More",
     "ai": {
-      "title": "Artificial Intelligence",
-      "description": "We build Artificial Intelligence (AI) systems that move past the pilot stage — from fraud detection to patient risk scoring — delivering measurable outcomes in production.",
-      "features": ["Custom ML model development", "NLP and document intelligence", "MLOps and model monitoring"]
+      "title": "AI & Intelligent Systems",
+      "slug": "ai-intelligent-systems",
+      "description": "Deploy advanced artificial intelligence solutions to predict outcomes, automate operations, enhance decision-making, and unlock value from your data.",
+      "features": ["Machine Learning / Deep Learning", "Natural Language Processing (NLP)", "Computer Vision", "Generative AI", "Expert Systems & Decision Intelligence", "Recommendation Systems & Personalization"]
     },
     "dataEngineering": {
-      "title": "Data Engineering",
-      "description": "The foundation of every data initiative is reliable, well-governed data. We build the pipelines and architectures that turn siloed information into a unified asset.",
-      "features": ["ETL/ELT pipeline design", "Data warehouse/lakehouse architecture", "Data quality frameworks"]
+      "title": "Data Engineering & Modern Data Platforms",
+      "slug": "data-engineering-platforms",
+      "description": "Build scalable data ecosystems that enable reliable data flow, real-time insights, and advanced analytics across your organization.",
+      "features": ["ETL / ELT Pipelines & Data Integration", "Real-Time & batch data processing", "Data Lake & Data Warehouse Architecture", "Data Modeling & Transformation", "Data Quality, Governance & Security"]
     },
     "cloud": {
-      "title": "Cloud Computing",
-      "description": "We help organizations move to the cloud with a strategy that balances performance, cost, and compliance across AWS, Azure, and GCP.",
-      "features": ["Cloud migration strategy", "Infrastructure as code", "Cost optimization and FinOps"]
+      "title": "Cloud Strategy & Engineering",
+      "slug": "cloud-strategy-engineering",
+      "description": "Enable digital transformation through cloud-native architectures and scalable infrastructure platforms.",
+      "features": ["Multi-Cloud Architecture (AWS, Azure, GCP)", "Cloud Migration & Application Modernization", "Serverless, Containers & Kubernetes", "DevOps & Infrastructure as Code (IaC)", "Security, Compliance & Governance", "Cost Management & FinOps"]
     },
     "cybersecurity": {
       "title": "Cybersecurity",
+      "slug": "cybersecurity",
       "description": "We assess your security posture, identify vulnerabilities, and implement controls that satisfy regulatory requirements in financial services, healthcare, and government.",
       "features": ["Security architecture assessment", "Compliance frameworks (SOC 2, PIPEDA)", "Threat detection and IAM"]
     },
     "bi": {
       "title": "Business Intelligence",
+      "slug": "business-intelligence",
       "description": "Dashboards are only valuable when they answer the questions your team actually asks. We design BI solutions connected to your data infrastructure.",
       "features": ["Executive dashboard design", "Self-service analytics", "Power BI / Tableau / Looker"]
     },
     "bigData": {
       "title": "Data Platform & Big Data",
+      "slug": "big-data",
       "description": "When your data volumes outgrow traditional databases, you need architecture designed for scale with modern distributed processing tools.",
       "features": ["Distributed processing (Spark)", "Data lakehouse design", "Stream processing"]
     },
     "delivery": {
       "title": "Delivery & Program Management",
+      "slug": "delivery",
       "description": "Technology projects fail more often from poor execution than poor ideas.",
       "features": ["Agile delivery management", "Program governance", "Vendor coordination", "Risk assessment"]
+    },
+    "details": {
+      "backToServices": "Back to Services",
+      "sectionHeadings": {
+        "howWeDeliver": "How We Deliver",
+        "keyUseCases": "Key Use Cases",
+        "ourApproach": "Our Approach",
+        "technologies": "Technologies & Platforms",
+        "businessImpact": "Business Impact"
+      },
+      "ctaReady": "Ready to get started?",
+      "ctaContact": "Schedule a Consultation",
+      "ctaLearnAll": "View All Services",
+      "items": {
+        "ai-intelligent-systems": {
+          "name": "AI & Intelligent Systems",
+          "icon": "bi-cpu",
+          "howWeDeliver": {
+            "title": "How We Deliver AI Solutions",
+            "description": "We take a practical, business-first approach to AI—focusing on measurable outcomes.",
+            "items": [
+              "Identify high-impact AI opportunities",
+              "Build and train custom machine learning models",
+              "Integrate AI into your existing systems and workflows",
+              "Deploy scalable, production-ready solutions",
+              "Continuously monitor and improve model performance"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "We help organizations apply AI where it creates real value:",
+            "items": [
+              "Predict customer behavior and reduce churn",
+              "Automate customer support with AI assistants",
+              "Detect fraud and anomalies in real time",
+              "Extract insights from documents and unstructured data",
+              "Analyze images and video for quality and security",
+              "Personalize products, services, and user experiences"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "From idea to deployment, we support the full AI lifecycle:",
+            "items": [
+              "Discovery & Use Case Definition",
+              "Data Preparation & Feature Engineering",
+              "Model Development & Validation",
+              "Deployment & Integration (MLOps)",
+              "Monitoring, Optimization & Scaling"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Platforms",
+            "description": "We leverage modern AI and cloud ecosystems:",
+            "items": [
+              "Python, TensorFlow, PyTorch",
+              "Cloud AI services (AWS, Azure, GCP)",
+              "Data platforms and APIs",
+              "MLOps and automation tools"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our AI solutions are designed to deliver:",
+            "items": [
+              "Increased operational efficiency",
+              "Faster and better decision-making",
+              "Reduced costs and risks",
+              "Enhanced customer experience",
+              "Competitive advantage through data"
+            ]
+          },
+          "closing": {
+            "title": "Ready to unlock the power of AI in your organization?",
+            "subtitle": "Let's discuss how we can help you identify and implement high-impact AI solutions."
+          }
+        },
+        "data-engineering-platforms": {
+          "name": "Data Engineering & Modern Data Platforms",
+          "icon": "bi-database",
+          "howWeDeliver": {
+            "title": "How We Build Modern Data Platforms",
+            "description": "We design and implement scalable data architectures that transform raw data into trusted, analytics-ready assets.",
+            "items": [
+              "Assess your current data landscape and define a target architecture",
+              "Build robust data pipelines for batch and real-time processing",
+              "Integrate data across multiple systems and sources",
+              "Ensure high data quality, reliability, and consistency",
+              "Enable seamless access for analytics, BI, and AI use cases"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "We help organizations unlock the full value of their data:",
+            "items": [
+              "Create a unified data platform (single source of truth)",
+              "Enable real-time dashboards and operational insights",
+              "Support AI and machine learning initiatives",
+              "Modernize legacy data warehouses and infrastructure",
+              "Improve reporting accuracy and data reliability",
+              "Ensure compliance with data governance and security standards"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "We cover the full data lifecycle—from ingestion to insight:",
+            "items": [
+              "Data Strategy & Architecture Design",
+              "Data Ingestion & Integration (ETL/ELT)",
+              "Data Modeling & Transformation",
+              "Platform Deployment (Cloud Data Platforms)",
+              "Data Governance, Quality & Security",
+              "Monitoring, Optimization & Scaling"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Platforms",
+            "description": "We leverage modern data stack and cloud-native tools:",
+            "items": [
+              "SQL, Python, Spark",
+              "Cloud platforms (AWS, Azure, GCP)",
+              "Data warehouses (Snowflake, BigQuery, Redshift)",
+              "Orchestration tools (Airflow, Prefect)",
+              "Streaming technologies (Kafka, real-time pipelines)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our data solutions are designed to deliver:",
+            "items": [
+              "Faster access to reliable data",
+              "Improved decision-making and reporting",
+              "Scalable infrastructure for growth",
+              "Reduced data silos and operational inefficiencies",
+              "Strong governance, security, and compliance"
+            ]
+          },
+          "closing": {
+            "title": "Ready to build a modern data platform that scales with your business?",
+            "subtitle": "Let's design a data architecture that turns your data into a strategic asset."
+          }
+        },
+        "cloud-strategy-engineering": {
+          "name": "Cloud Strategy & Engineering",
+          "icon": "bi-cloud",
+          "howWeDeliver": {
+            "title": "How We Deliver Cloud Solutions",
+            "description": "We help organizations adopt and scale cloud technologies with a focus on performance, security, and cost efficiency.",
+            "items": [
+              "Assess current infrastructure and define a cloud strategy",
+              "Design scalable, cloud-native architectures",
+              "Migrate applications and workloads with minimal disruption",
+              "Implement DevOps and automation for faster delivery",
+              "Continuously optimize performance, reliability, and costs"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "We enable cloud transformation across critical business needs:",
+            "items": [
+              "Migrate legacy systems to modern cloud platforms",
+              "Build scalable, resilient applications and APIs",
+              "Enable faster software delivery with CI/CD pipelines",
+              "Support data and AI platforms with cloud infrastructure",
+              "Improve disaster recovery and business continuity",
+              "Optimize cloud usage and reduce operational costs"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "We support the full cloud lifecycle from strategy to operations:",
+            "items": [
+              "Cloud Strategy & Roadmap",
+              "Architecture Design & Platform Selection",
+              "Migration & Modernization",
+              "DevOps Enablement & Automation (IaC)",
+              "Security, Compliance & Governance",
+              "Monitoring, Optimization & FinOps"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Platforms",
+            "description": "We leverage leading cloud and DevOps ecosystems:",
+            "items": [
+              "AWS, Azure, GCP (multi-cloud & hybrid architectures)",
+              "Kubernetes, Docker, serverless frameworks",
+              "Terraform, CloudFormation (Infrastructure as Code)",
+              "CI/CD tools (GitHub Actions, GitLab CI, Jenkins)",
+              "Monitoring & observability platforms"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our cloud solutions are designed to deliver:",
+            "items": [
+              "Increased agility and faster time-to-market",
+              "Scalable and resilient infrastructure",
+              "Reduced infrastructure and operational costs",
+              "Enhanced security and regulatory compliance",
+              "Strong foundation for data and AI initiatives"
+            ]
+          },
+          "closing": {
+            "title": "Ready to modernize your infrastructure and accelerate your cloud journey?",
+            "subtitle": "Let's design a cloud strategy tailored to your business goals."
+          }
+        },
+        "cybersecurity": {
+          "name": "Cybersecurity",
+          "icon": "bi-shield-check",
+          "howWeDeliver": {
+            "title": "How We Secure Your Organization",
+            "description": "We take a proactive, risk-based approach to cybersecurity—protecting your systems, data, and operations against evolving threats.",
+            "items": [
+              "Assess your current security posture and identify vulnerabilities",
+              "Design and implement enterprise-grade security architectures",
+              "Deploy advanced threat detection and response capabilities",
+              "Establish continuous monitoring and incident response processes",
+              "Ensure compliance with industry standards and regulations"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "We help organizations strengthen security across critical areas:",
+            "items": [
+              "Detect and respond to cyber threats in real time",
+              "Secure cloud environments and applications",
+              "Protect sensitive data and customer information",
+              "Achieve and maintain regulatory compliance",
+              "Reduce risk of breaches, downtime, and financial loss",
+              "Enhance security visibility across systems and networks"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "We cover the full cybersecurity lifecycle:",
+            "items": [
+              "Security Assessment & Risk Analysis",
+              "Security Architecture & Controls Implementation",
+              "Threat Detection & Incident Response",
+              "Identity & Access Management (IAM)",
+              "Compliance, Governance & Risk Management",
+              "Continuous Monitoring & Improvement"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Frameworks",
+            "description": "We leverage modern security tools and industry frameworks:",
+            "items": [
+              "SIEM & threat detection platforms",
+              "Cloud security tools (AWS, Azure, GCP)",
+              "Identity & access management solutions",
+              "Endpoint and network security tools",
+              "Compliance frameworks (ISO 27001, NIST, SOC 2)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our cybersecurity solutions are designed to deliver:",
+            "items": [
+              "Reduced risk of cyberattacks and data breaches",
+              "Stronger protection of critical assets and data",
+              "Improved compliance and audit readiness",
+              "Increased customer trust and brand reputation",
+              "Resilient and secure business operations"
+            ]
+          },
+          "closing": {
+            "title": "Ready to strengthen your security posture and protect your business?",
+            "subtitle": "Let's build a cybersecurity strategy tailored to your risks and goals."
+          }
+        },
+        "business-intelligence": {
+          "name": "Business Intelligence",
+          "icon": "bi-bar-chart",
+          "howWeDeliver": {
+            "title": "How We Deliver BI Solutions",
+            "description": "We help organizations turn raw data into actionable insights that drive smarter decisions and measurable outcomes.",
+            "items": [
+              "Assess business goals and identify key metrics",
+              "Design and implement interactive dashboards and reporting frameworks",
+              "Integrate data from multiple sources for a unified view",
+              "Automate reporting and KPI tracking for real-time visibility",
+              "Enable predictive and scenario-based analytics for strategic planning"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "We empower businesses to act on insights quickly:",
+            "items": [
+              "Monitor sales, operations, and financial performance in real time",
+              "Track KPIs and set alerts for critical thresholds",
+              "Generate executive-ready strategic reports automatically",
+              "Analyze customer behavior and trends",
+              "Evaluate marketing campaign performance",
+              "Support decision-making with predictive analytics"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "From data to insight, we manage the full BI lifecycle:",
+            "items": [
+              "Requirements gathering & KPI definition",
+              "Data integration & transformation",
+              "Dashboard & report design",
+              "Automation & scheduling",
+              "User training & adoption support",
+              "Continuous improvement & optimization"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Platforms",
+            "description": "We leverage modern BI tools and platforms:",
+            "items": [
+              "Power BI, Tableau, Looker, Qlik",
+              "SQL, Python, and ETL integration",
+              "Cloud data platforms (AWS, Azure, GCP)",
+              "Automated reporting and visualization pipelines"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our BI solutions deliver:",
+            "items": [
+              "Faster access to actionable insights",
+              "Improved decision-making and strategic planning",
+              "Greater transparency across departments",
+              "Reduced time spent on manual reporting",
+              "Enhanced ability to spot trends and seize opportunities"
+            ]
+          },
+          "closing": {
+            "title": "Ready to transform your data into insights that drive results?",
+            "subtitle": "Let's build a BI solution tailored to your business goals."
+          }
+        },
+        "big-data": {
+          "name": "Data Platform & Big Data",
+          "icon": "bi-hdd-stack",
+          "howWeDeliver": {
+            "title": "How We Deliver Big Data Solutions",
+            "description": "We help organizations process, store, and analyze massive datasets to uncover insights and support data-driven decision-making.",
+            "items": [
+              "Design and implement scalable distributed computing architectures",
+              "Integrate and process structured and unstructured data at scale",
+              "Optimize performance for high-volume, real-time, and batch data processing",
+              "Build modern data lakes and analytics-ready platforms",
+              "Enable AI and advanced analytics on massive datasets"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Key Use Cases",
+            "description": "Our Big Data solutions unlock value across industries:",
+            "items": [
+              "Real-time analytics for operational efficiency",
+              "Customer behavior and trend analysis",
+              "Predictive maintenance and IoT data monitoring",
+              "Fraud detection and risk analysis",
+              "Marketing optimization through large-scale data analysis",
+              "Supporting AI and machine learning initiatives with big datasets"
+            ]
+          },
+          "ourApproach": {
+            "title": "Our Approach",
+            "description": "We manage the full lifecycle of Big Data projects:",
+            "items": [
+              "Requirements gathering & architecture planning",
+              "Data ingestion and integration (batch & streaming)",
+              "Distributed processing with Spark, Hadoop, and modern frameworks",
+              "Data lake and data warehouse design",
+              "Optimization, monitoring, and scalability planning",
+              "Governance, security, and compliance"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies & Platforms",
+            "description": "We leverage leading Big Data tools and frameworks:",
+            "items": [
+              "Apache Spark, Hadoop, Flink",
+              "Data Lakes & Lakehouses (AWS, Azure, GCP)",
+              "ETL/ELT pipelines and orchestration tools",
+              "Distributed storage and analytics platforms",
+              "Real-time streaming (Kafka, Kinesis)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "description": "Our Big Data solutions deliver:",
+            "items": [
+              "Faster processing and analysis of massive datasets",
+              "Improved operational and business decision-making",
+              "Scalable infrastructure for growing data volumes",
+              "Support for advanced analytics and AI/ML initiatives",
+              "Strong data governance and reliability"
+            ]
+          },
+          "closing": {
+            "title": "Ready to unlock insights from your massive datasets?",
+            "subtitle": "Let's design a Big Data solution that scales with your business needs."
+          }
+        }
+      }
     },
     "page": {
       "badge": "AI & Data Consulting Services",
@@ -168,8 +577,8 @@
       "description": "Building secure data infrastructures for public sector organizations."
     },
     "education": {
-      "title": "Education & Training",
-      "description": "Developing Artificial Intelligence-driven platforms for personalized learning experiences."
+      "title": "Education & Learning",
+      "description": "Empowering educators with adaptive learning platforms and personalized student pathways that improve engagement, retention, and learning outcomes."
     },
     "business": {
       "title": "Business Management",
@@ -235,13 +644,18 @@
         "description": "Documentation and training are deliverables, not afterthoughts. Your team should be able to maintain and extend every system we build."
       }
     },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Specialists in data engineering, AI, and cloud architecture — assembled for each engagement"
+    },
     "leadership": {
       "title": "Leadership",
       "subtitle": "Hands-on expertise in data engineering, AI, and cloud architecture"
     },
     "growingTeam": {
       "title": "A Growing Team",
-      "description": "Gamma Neutral brings together experienced consultants for each engagement. Our network includes specialists in data engineering, ML operations, cloud architecture, and cybersecurity — assembled based on the specific needs of your project."
+      "description": "Gamma Neutral brings together experienced consultants for each engagement. Our network includes specialists in data engineering, ML operations, cloud architecture, and cybersecurity — assembled based on the specific needs of your project.",
+      "cta": "Join Our Team"
     },
     "ctaBottom": {
       "title": "Ready to move forward?",
@@ -285,7 +699,7 @@
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Thank you for your message! We'll get back to you within 24 hours.",
-      "error": "Something went wrong. Please try again or email us directly at info{'@'}gammaneutral.ca",
+      "error": "Something went wrong. Please try again or email us directly at info{'@'}gammaneutral.com",
       "validation": {
         "firstName": "Please enter your first name!",
         "lastName": "Please enter your last name!",
@@ -417,11 +831,11 @@
     "tagline": "Transform data into opportunity. Empower businesses to harness data potential with expert consulting in Artificial Intelligence, cybersecurity, and business intelligence.",
     "services": "Services",
     "servicesItems": {
-      "ai": "AI Solutions",
-      "dataEngineering": "Data Engineering",
+      "ai": "AI & Intelligent Systems",
+      "dataEngineering": "Data Engineering & Modern Data Platforms",
       "cybersecurity": "Cybersecurity",
       "bi": "Business Intelligence",
-      "cloud": "Cloud Computing",
+      "cloud": "Cloud Strategy & Engineering",
       "bigData": "Data Platform & Big Data",
       "delivery": "Delivery & Program Management"
     },
@@ -441,7 +855,8 @@
     "contactInfo": "Contact Info",
     "copyright": "Gamma Neutral Consulting Inc. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "poweredBy": "Powered by"
   },
   "breadcrumbs": {
     "home": "Home",

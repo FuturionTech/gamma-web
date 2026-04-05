@@ -72,7 +72,7 @@
                     <i class="bi bi-pin-map text-primary me-3 mt-1"></i>
                     <div>
                       <small class="text-muted d-block">{{ $t('about.companyOverview.headquarters') }}</small>
-                      <strong class="fs-6">Redpath Avenue<br/>Toronto, ON M4S 2J7</strong>
+                      <strong class="fs-6">{{ company.address.line1 }}<br/>{{ company.address.line2 }}</strong>
                     </div>
                   </div>
                 </div>
@@ -200,56 +200,30 @@
       </div>
     </section>
 
-    <!-- Founder Section -->
+    <!-- Team / Growing Team Section -->
     <section class="py-5">
       <div class="container py-4">
         <div class="text-center mb-4">
-          <h2 class="h2 fw-bold mb-3">{{ $t('about.leadership.title') }}</h2>
+          <h2 class="h2 fw-bold mb-3">{{ $t('about.team.title') }}</h2>
           <p class="fs-6 text-muted mx-auto" style="max-width: 600px;">
-            {{ $t('about.leadership.subtitle') }}
+            {{ $t('about.team.subtitle') }}
           </p>
         </div>
 
+        <!-- Growing Team Callout -->
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="card border-0 shadow-sm team-card">
-              <div class="row g-0 align-items-center">
-                <div class="col-md-4 text-center p-4">
-                  <img
-                    :src="founder.image"
-                    :alt="founder.name"
-                    class="rounded-circle img-fluid shadow"
-                    style="width: 180px; height: 180px; object-fit: cover;"
-                  >
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body p-4">
-                    <h4 class="mb-1">{{ founder.name }}</h4>
-                    <p class="text-primary fw-semibold mb-3">{{ founder.role }}</p>
-                    <p class="text-muted mb-3">{{ founder.bio }}</p>
-                    <div class="d-flex gap-2">
-                      <a v-if="founder.socialLinks.linkedin" :href="founder.socialLinks.linkedin" target="_blank"
-                         class="btn btn-sm btn-outline-primary btn-icon rounded-circle">
-                        <i class="bi bi-linkedin"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div class="growing-team-card rounded-4 p-4 p-lg-5 text-center">
+              <div class="growing-team-icon mb-3">
+                <i class="bi bi-people"></i>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Growing Team -->
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-8">
-            <div class="bg-light rounded-3 p-4 text-center">
-              <h5 class="fw-bold mb-3">
-                <i class="bi bi-people text-primary me-2"></i>{{ $t('about.growingTeam.title') }}
-              </h5>
-              <p class="text-muted mb-0">
+              <h3 class="h4 fw-bold mb-3">{{ $t('about.growingTeam.title') }}</h3>
+              <p class="text-muted fs-6 mb-4 mx-auto" style="max-width: 560px;">
                 {{ $t('about.growingTeam.description') }}
               </p>
+              <NuxtLink to="/careers" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                <i class="bi bi-briefcase me-2"></i>{{ $t('about.growingTeam.cta') }}
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -288,37 +262,7 @@
 </template>
 
 <script setup lang="ts">
-import { teamMembers as staticTeamMembers } from '~/domains/aboutus/data/team'
-import { useAboutusStore } from '~/domains/aboutus/stores/useAboutusStore'
-
-const { locale } = useI18n()
-const aboutStore = useAboutusStore()
-
-// Re-fetch when locale changes
-watch(locale, () => {
-  aboutStore.fetchTeams(1)
-})
-
-onMounted(async () => {
-  await aboutStore.fetchTeams(1)
-})
-
-// Prefer API data for the founder, fall back to static
-const founder = computed(() => {
-  if (aboutStore.teams.length > 0) {
-    const m = aboutStore.teams[0]
-    return {
-      name: m.name,
-      role: m.role,
-      bio: m.biography || '',
-      image: m.profile_picture_url || staticTeamMembers[0].image,
-      socialLinks: {
-        linkedin: m.socialMediaLinks?.find(l => l.platform_name?.toLowerCase() === 'linkedin')?.url || null,
-      },
-    }
-  }
-  return staticTeamMembers[0]
-})
+const company = useCompanyInfo()
 
 // SEO
 useHead({
@@ -372,18 +316,30 @@ useHead({
   border-color: rgba(102, 126, 234, 0.2) !important;
 }
 
-/* Team Card Hover */
-.team-card {
+/* Growing Team Card */
+.growing-team-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.04) 0%, rgba(59, 130, 246, 0.04) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.15);
   transition: all 0.3s ease;
-  border: 1px solid var(--bs-border-color, transparent) !important;
-  background-color: var(--bs-body-bg, #ffffff);
-  color: var(--bs-body-color, inherit);
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
-  border-color: rgba(102, 126, 234, 0.2) !important;
+.growing-team-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.1);
+}
+
+.growing-team-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
 }
 
 /* Button Improvements */
@@ -570,19 +526,24 @@ useHead({
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1) !important;
 }
 
-/* Team card */
-:global([data-bs-theme="dark"]) .team-card {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+/* Growing team card — dark */
+:global([data-bs-theme="dark"]) .growing-team-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+  border-color: rgba(139, 92, 246, 0.25);
 }
 
-:global([data-bs-theme="dark"]) .team-card .text-muted {
-  color: rgba(255, 255, 255, 0.65) !important;
+:global([data-bs-theme="dark"]) .growing-team-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.15);
 }
 
-:global([data-bs-theme="dark"]) .team-card:hover {
-  border-color: rgba(139, 92, 246, 0.3) !important;
-  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1) !important;
+:global([data-bs-theme="dark"]) .growing-team-card .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+:global([data-bs-theme="dark"]) .growing-team-icon {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
 }
 
 /* Growing team section */
@@ -608,12 +569,4 @@ useHead({
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Founder bio */
-:global([data-bs-theme="dark"]) .team-card .card-body p {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
-:global([data-bs-theme="dark"]) .team-card .text-primary.fw-semibold {
-  color: #a78bfa !important;
-}
 </style>

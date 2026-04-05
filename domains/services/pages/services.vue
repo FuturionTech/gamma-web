@@ -75,6 +75,7 @@
               :features="service.features"
               :icon="service.icon"
               :gradientClass="service.gradientClass"
+              :link="service.link"
             />
           </div>
         </div>
@@ -277,6 +278,12 @@ const serviceGradientMap: Record<string, string> = {
   delivery: 'bg-gradient-dark',
 }
 
+// Build the URL for the learn-more detail page from a slug
+const buildServiceLink = (slug: string | undefined | null) => {
+  if (!slug) return ''
+  return `/services/${slug}`
+}
+
 // Prefer API data, fall back to i18n static translations
 const services = computed(() => {
   if (servicesStore.services.length > 0) {
@@ -286,6 +293,7 @@ const services = computed(() => {
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       features: s.features.map((f) => f.title),
+      link: buildServiceLink(s.slug),
     }))
   }
   return serviceKeys.map((key) => ({
@@ -294,6 +302,7 @@ const services = computed(() => {
     icon: serviceIconMap[key],
     gradientClass: serviceGradientMap[key],
     features: tm(`services.${key}.features`) as string[],
+    link: buildServiceLink(t(`services.${key}.slug`)),
   }))
 })
 

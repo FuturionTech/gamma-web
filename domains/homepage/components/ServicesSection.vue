@@ -97,6 +97,12 @@ watch(locale, () => {
   homepageStore.fetchServices(6)
 })
 
+// Build the URL for the learn-more detail page from a slug
+const buildServiceLink = (slug: string | undefined | null) => {
+  if (!slug) return ''
+  return `/services/${slug}`
+}
+
 // Prefer API data (top 6), fall back to i18n static
 const displayServices = computed(() => {
   if (homepageStore.services.length > 0) {
@@ -106,7 +112,7 @@ const displayServices = computed(() => {
       features: s.features.map(f => f.title),
       icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
-      link: '',
+      link: buildServiceLink(s.slug),
     }))
   }
   return serviceKeys.map(key => ({
@@ -115,7 +121,7 @@ const displayServices = computed(() => {
     features: tm(`services.${key}.features`) as string[],
     icon: serviceIcons[key],
     gradientClass: serviceGradients[key],
-    link: '',
+    link: buildServiceLink(t(`services.${key}.slug`)),
   }))
 })
 </script>

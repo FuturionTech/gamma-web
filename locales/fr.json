@@ -31,39 +31,448 @@
     "viewAll": "Voir tous les services",
     "learnMore": "En savoir plus",
     "ai": {
-      "title": "Intelligence artificielle",
-      "description": "Nous concevons des systèmes d'Intelligence Artificielle (IA) qui dépassent le stade pilote — de la détection de fraude à l'évaluation du risque patient — pour des résultats mesurables en production.",
-      "features": ["Développement de modèles ML sur mesure", "Traitement du langage naturel et intelligence documentaire", "MLOps et surveillance des modèles"]
+      "title": "IA et systèmes intelligents",
+      "slug": "ai-intelligent-systems",
+      "description": "Déployez des solutions avancées d'intelligence artificielle pour prédire les résultats, automatiser les opérations, améliorer la prise de décision et libérer la valeur de vos données.",
+      "features": ["Apprentissage machine / Apprentissage profond", "Traitement du langage naturel (TLN)", "Vision par ordinateur", "IA générative", "Systèmes experts et intelligence décisionnelle", "Systèmes de recommandation et personnalisation"]
     },
     "dataEngineering": {
-      "title": "Ingénierie des données",
-      "description": "Le fondement de toute initiative de données est une information fiable et bien gouvernée. Nous construisons les pipelines et architectures qui transforment les silos en un actif unifié.",
-      "features": ["Conception de pipelines ETL/ELT", "Architecture entrepôt / lakehouse", "Cadres de qualité des données"]
+      "title": "Ingénierie des données et plateformes modernes",
+      "slug": "data-engineering-platforms",
+      "description": "Bâtissez des écosystèmes de données évolutifs qui permettent un flux de données fiable, des insights en temps réel et des analyses avancées dans toute votre organisation.",
+      "features": ["Pipelines ETL / ELT et intégration de données", "Traitement temps réel et par lots", "Architecture Data Lake et entrepôt de données", "Modélisation et transformation de données", "Qualité, gouvernance et sécurité des données"]
     },
     "cloud": {
-      "title": "Infonuagique",
-      "description": "Nous aidons les organisations à migrer vers le nuage avec une stratégie qui équilibre performance, coûts et conformité sur AWS, Azure et GCP.",
-      "features": ["Stratégie de migration infonuagique", "Infrastructure en tant que code", "Optimisation des coûts et FinOps"]
+      "title": "Stratégie et ingénierie infonuagique",
+      "slug": "cloud-strategy-engineering",
+      "description": "Permettez la transformation numérique grâce à des architectures natives infonuagiques et des plateformes d'infrastructure évolutives.",
+      "features": ["Architecture multi-nuages (AWS, Azure, GCP)", "Migration infonuagique et modernisation d'applications", "Serverless, conteneurs et Kubernetes", "DevOps et infrastructure en tant que code (IaC)", "Sécurité, conformité et gouvernance", "Gestion des coûts et FinOps"]
     },
     "cybersecurity": {
       "title": "Cybersécurité",
+      "slug": "cybersecurity",
       "description": "Nous évaluons votre posture de sécurité, identifions les vulnérabilités et mettons en place des contrôles conformes aux exigences réglementaires des services financiers, de la santé et du gouvernement.",
       "features": ["Évaluation de l'architecture de sécurité", "Cadres de conformité (SOC 2, LPRPDE)", "Détection des menaces et GIA"]
     },
     "bi": {
       "title": "Intelligence d'affaires",
+      "slug": "business-intelligence",
       "description": "Les tableaux de bord n'ont de valeur que lorsqu'ils répondent aux questions que votre équipe se pose réellement. Nous concevons des solutions BI connectées à votre infrastructure de données.",
       "features": ["Conception de tableaux de bord exécutifs", "Analytique en libre-service", "Power BI / Tableau / Looker"]
     },
     "bigData": {
       "title": "Plateforme de données et Big Data",
+      "slug": "big-data",
       "description": "Lorsque vos volumes de données dépassent les bases de données traditionnelles, vous avez besoin d'une architecture conçue pour l'échelle avec des outils de traitement distribué modernes.",
       "features": ["Traitement distribué (Spark)", "Architecture lakehouse", "Traitement en flux continu"]
     },
     "delivery": {
       "title": "Livraison et gestion de programmes",
+      "slug": "delivery",
       "description": "Les projets technologiques échouent plus souvent par manque d'exécution que par manque d'idées.",
       "features": ["Gestion agile de la livraison", "Gouvernance de programme", "Coordination des fournisseurs", "Évaluation des risques"]
+    },
+    "details": {
+      "backToServices": "Retour aux services",
+      "sectionHeadings": {
+        "howWeDeliver": "Comment nous livrons",
+        "keyUseCases": "Cas d'usage clés",
+        "ourApproach": "Notre approche",
+        "technologies": "Technologies et plateformes",
+        "businessImpact": "Impact d'affaires"
+      },
+      "ctaReady": "Prêt à commencer ?",
+      "ctaContact": "Planifier une consultation",
+      "ctaLearnAll": "Voir tous les services",
+      "items": {
+        "ai-intelligent-systems": {
+          "name": "IA et systèmes intelligents",
+          "icon": "bi-cpu",
+          "howWeDeliver": {
+            "title": "Comment nous livrons les solutions d'IA",
+            "description": "Nous adoptons une approche pratique et orientée affaires de l'IA — axée sur des résultats mesurables.",
+            "items": [
+              "Identifier les opportunités d'IA à fort impact",
+              "Concevoir et entraîner des modèles d'apprentissage machine sur mesure",
+              "Intégrer l'IA à vos systèmes et flux de travail existants",
+              "Déployer des solutions évolutives et prêtes pour la production",
+              "Surveiller et améliorer continuellement la performance des modèles"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nous aidons les organisations à appliquer l'IA là où elle crée une valeur réelle :",
+            "items": [
+              "Prédire le comportement client et réduire l'attrition",
+              "Automatiser le support client avec des assistants IA",
+              "Détecter la fraude et les anomalies en temps réel",
+              "Extraire des insights de documents et de données non structurées",
+              "Analyser images et vidéos pour la qualité et la sécurité",
+              "Personnaliser produits, services et expériences utilisateurs"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "De l'idée au déploiement, nous couvrons le cycle de vie complet de l'IA :",
+            "items": [
+              "Découverte et définition des cas d'usage",
+              "Préparation des données et ingénierie de caractéristiques",
+              "Développement et validation de modèles",
+              "Déploiement et intégration (MLOps)",
+              "Surveillance, optimisation et mise à l'échelle"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et plateformes",
+            "description": "Nous exploitons les écosystèmes modernes d'IA et infonuagiques :",
+            "items": [
+              "Python, TensorFlow, PyTorch",
+              "Services IA infonuagiques (AWS, Azure, GCP)",
+              "Plateformes de données et API",
+              "Outils MLOps et d'automatisation"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions d'IA sont conçues pour offrir :",
+            "items": [
+              "Une efficacité opérationnelle accrue",
+              "Des décisions plus rapides et mieux informées",
+              "Des coûts et risques réduits",
+              "Une expérience client améliorée",
+              "Un avantage concurrentiel grâce aux données"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à libérer la puissance de l'IA dans votre organisation ?",
+            "subtitle": "Discutons de la façon dont nous pouvons vous aider à identifier et déployer des solutions d'IA à fort impact."
+          }
+        },
+        "data-engineering-platforms": {
+          "name": "Ingénierie des données et plateformes modernes",
+          "icon": "bi-database",
+          "howWeDeliver": {
+            "title": "Comment nous bâtissons des plateformes de données modernes",
+            "description": "Nous concevons et mettons en œuvre des architectures de données évolutives qui transforment les données brutes en actifs fiables et prêts pour l'analyse.",
+            "items": [
+              "Évaluer votre paysage de données actuel et définir une architecture cible",
+              "Construire des pipelines robustes pour le traitement par lots et en temps réel",
+              "Intégrer les données entre plusieurs systèmes et sources",
+              "Assurer une qualité, fiabilité et cohérence élevées des données",
+              "Permettre un accès fluide pour l'analyse, la BI et les cas d'usage IA"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nous aidons les organisations à exploiter pleinement la valeur de leurs données :",
+            "items": [
+              "Créer une plateforme de données unifiée (source unique de vérité)",
+              "Activer des tableaux de bord temps réel et des insights opérationnels",
+              "Soutenir les initiatives d'IA et d'apprentissage machine",
+              "Moderniser les entrepôts et infrastructures de données hérités",
+              "Améliorer la précision des rapports et la fiabilité des données",
+              "Assurer la conformité avec les normes de gouvernance et de sécurité"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "Nous couvrons tout le cycle de vie des données — de l'ingestion à l'insight :",
+            "items": [
+              "Stratégie de données et conception d'architecture",
+              "Ingestion et intégration de données (ETL/ELT)",
+              "Modélisation et transformation des données",
+              "Déploiement de plateforme (plateformes infonuagiques)",
+              "Gouvernance, qualité et sécurité des données",
+              "Surveillance, optimisation et mise à l'échelle"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et plateformes",
+            "description": "Nous exploitons une pile de données moderne et des outils natifs infonuagiques :",
+            "items": [
+              "SQL, Python, Spark",
+              "Plateformes infonuagiques (AWS, Azure, GCP)",
+              "Entrepôts de données (Snowflake, BigQuery, Redshift)",
+              "Outils d'orchestration (Airflow, Prefect)",
+              "Technologies de streaming (Kafka, pipelines temps réel)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions de données sont conçues pour offrir :",
+            "items": [
+              "Un accès plus rapide à des données fiables",
+              "Une meilleure prise de décision et des rapports améliorés",
+              "Une infrastructure évolutive pour la croissance",
+              "Une réduction des silos et des inefficacités opérationnelles",
+              "Une gouvernance, sécurité et conformité solides"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à bâtir une plateforme de données moderne qui évolue avec votre entreprise ?",
+            "subtitle": "Concevons une architecture de données qui transforme vos données en actif stratégique."
+          }
+        },
+        "cloud-strategy-engineering": {
+          "name": "Stratégie et ingénierie infonuagique",
+          "icon": "bi-cloud",
+          "howWeDeliver": {
+            "title": "Comment nous livrons les solutions infonuagiques",
+            "description": "Nous aidons les organisations à adopter et à faire évoluer les technologies infonuagiques en mettant l'accent sur la performance, la sécurité et l'efficacité des coûts.",
+            "items": [
+              "Évaluer l'infrastructure actuelle et définir une stratégie infonuagique",
+              "Concevoir des architectures évolutives et natives infonuagiques",
+              "Migrer applications et charges de travail avec un minimum de perturbations",
+              "Implémenter DevOps et automatisation pour une livraison plus rapide",
+              "Optimiser continuellement performance, fiabilité et coûts"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nous permettons la transformation infonuagique pour vos besoins critiques :",
+            "items": [
+              "Migrer les systèmes hérités vers des plateformes infonuagiques modernes",
+              "Construire des applications et API évolutives et résilientes",
+              "Accélérer la livraison logicielle avec des pipelines CI/CD",
+              "Soutenir les plateformes de données et d'IA avec une infrastructure infonuagique",
+              "Améliorer la reprise après sinistre et la continuité des affaires",
+              "Optimiser l'utilisation du nuage et réduire les coûts opérationnels"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "Nous soutenons tout le cycle de vie infonuagique, de la stratégie aux opérations :",
+            "items": [
+              "Stratégie et feuille de route infonuagique",
+              "Conception d'architecture et choix de plateforme",
+              "Migration et modernisation",
+              "Activation DevOps et automatisation (IaC)",
+              "Sécurité, conformité et gouvernance",
+              "Surveillance, optimisation et FinOps"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et plateformes",
+            "description": "Nous exploitons les principaux écosystèmes infonuagiques et DevOps :",
+            "items": [
+              "AWS, Azure, GCP (architectures multi-nuages et hybrides)",
+              "Kubernetes, Docker, frameworks serverless",
+              "Terraform, CloudFormation (Infrastructure as Code)",
+              "Outils CI/CD (GitHub Actions, GitLab CI, Jenkins)",
+              "Plateformes de surveillance et d'observabilité"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions infonuagiques sont conçues pour offrir :",
+            "items": [
+              "Une agilité accrue et un délai de mise en marché plus rapide",
+              "Une infrastructure évolutive et résiliente",
+              "Des coûts d'infrastructure et opérationnels réduits",
+              "Une sécurité et une conformité réglementaire renforcées",
+              "Une base solide pour les initiatives de données et d'IA"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à moderniser votre infrastructure et accélérer votre parcours infonuagique ?",
+            "subtitle": "Concevons une stratégie infonuagique adaptée à vos objectifs d'affaires."
+          }
+        },
+        "cybersecurity": {
+          "name": "Cybersécurité",
+          "icon": "bi-shield-check",
+          "howWeDeliver": {
+            "title": "Comment nous sécurisons votre organisation",
+            "description": "Nous adoptons une approche proactive et basée sur le risque en matière de cybersécurité — protégeant vos systèmes, données et opérations contre les menaces évolutives.",
+            "items": [
+              "Évaluer votre posture de sécurité actuelle et identifier les vulnérabilités",
+              "Concevoir et déployer des architectures de sécurité de niveau entreprise",
+              "Déployer des capacités avancées de détection et de réponse aux menaces",
+              "Établir des processus continus de surveillance et de réponse aux incidents",
+              "Assurer la conformité aux normes et réglementations de l'industrie"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nous aidons les organisations à renforcer la sécurité dans des domaines critiques :",
+            "items": [
+              "Détecter et répondre aux cybermenaces en temps réel",
+              "Sécuriser les environnements et applications infonuagiques",
+              "Protéger les données sensibles et les informations clients",
+              "Atteindre et maintenir la conformité réglementaire",
+              "Réduire le risque de violations, d'arrêts et de pertes financières",
+              "Améliorer la visibilité de la sécurité sur les systèmes et réseaux"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "Nous couvrons tout le cycle de vie de la cybersécurité :",
+            "items": [
+              "Évaluation de la sécurité et analyse des risques",
+              "Architecture de sécurité et mise en œuvre des contrôles",
+              "Détection des menaces et réponse aux incidents",
+              "Gestion des identités et des accès (IAM)",
+              "Conformité, gouvernance et gestion des risques",
+              "Surveillance continue et amélioration"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et cadres",
+            "description": "Nous exploitons des outils de sécurité modernes et des cadres reconnus :",
+            "items": [
+              "Plateformes SIEM et de détection des menaces",
+              "Outils de sécurité infonuagique (AWS, Azure, GCP)",
+              "Solutions de gestion des identités et des accès",
+              "Outils de sécurité des points terminaux et réseau",
+              "Cadres de conformité (ISO 27001, NIST, SOC 2)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions de cybersécurité sont conçues pour offrir :",
+            "items": [
+              "Un risque réduit de cyberattaques et de violations de données",
+              "Une protection renforcée des actifs critiques et des données",
+              "Une meilleure conformité et une préparation aux audits",
+              "Une confiance client accrue et une réputation de marque améliorée",
+              "Des opérations d'affaires résilientes et sécurisées"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à renforcer votre posture de sécurité et protéger votre entreprise ?",
+            "subtitle": "Bâtissons une stratégie de cybersécurité adaptée à vos risques et objectifs."
+          }
+        },
+        "business-intelligence": {
+          "name": "Intelligence d'affaires",
+          "icon": "bi-bar-chart",
+          "howWeDeliver": {
+            "title": "Comment nous livrons les solutions BI",
+            "description": "Nous aidons les organisations à transformer des données brutes en insights actionnables qui guident des décisions intelligentes et des résultats mesurables.",
+            "items": [
+              "Évaluer les objectifs d'affaires et identifier les indicateurs clés",
+              "Concevoir et déployer des tableaux de bord interactifs et des cadres de reporting",
+              "Intégrer les données de sources multiples pour une vue unifiée",
+              "Automatiser le reporting et le suivi des KPI pour une visibilité en temps réel",
+              "Permettre l'analyse prédictive et par scénarios pour la planification stratégique"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nous permettons aux entreprises d'agir rapidement sur les insights :",
+            "items": [
+              "Suivre les ventes, opérations et performance financière en temps réel",
+              "Suivre les KPI et configurer des alertes pour les seuils critiques",
+              "Générer automatiquement des rapports stratégiques pour la direction",
+              "Analyser le comportement et les tendances des clients",
+              "Évaluer la performance des campagnes marketing",
+              "Soutenir la prise de décision avec l'analyse prédictive"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "Des données aux insights, nous gérons tout le cycle de vie BI :",
+            "items": [
+              "Recueil des besoins et définition des KPI",
+              "Intégration et transformation des données",
+              "Conception de tableaux de bord et rapports",
+              "Automatisation et planification",
+              "Formation et support à l'adoption",
+              "Amélioration et optimisation continues"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et plateformes",
+            "description": "Nous exploitons des outils et plateformes BI modernes :",
+            "items": [
+              "Power BI, Tableau, Looker, Qlik",
+              "SQL, Python et intégration ETL",
+              "Plateformes de données infonuagiques (AWS, Azure, GCP)",
+              "Pipelines automatisés de reporting et de visualisation"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions BI livrent :",
+            "items": [
+              "Un accès plus rapide à des insights actionnables",
+              "Une meilleure prise de décision et une planification stratégique améliorée",
+              "Une transparence accrue entre les départements",
+              "Une réduction du temps consacré au reporting manuel",
+              "Une capacité renforcée à repérer les tendances et saisir les opportunités"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à transformer vos données en insights qui génèrent des résultats ?",
+            "subtitle": "Bâtissons une solution BI adaptée à vos objectifs d'affaires."
+          }
+        },
+        "big-data": {
+          "name": "Plateforme de données et Big Data",
+          "icon": "bi-hdd-stack",
+          "howWeDeliver": {
+            "title": "Comment nous livrons les solutions Big Data",
+            "description": "Nous aidons les organisations à traiter, stocker et analyser des ensembles de données massifs pour révéler des insights et soutenir la prise de décision basée sur les données.",
+            "items": [
+              "Concevoir et déployer des architectures de calcul distribué évolutives",
+              "Intégrer et traiter des données structurées et non structurées à grande échelle",
+              "Optimiser la performance pour le traitement haute volumétrie, temps réel et par lots",
+              "Bâtir des lacs de données modernes et des plateformes prêtes pour l'analyse",
+              "Activer l'IA et l'analyse avancée sur des ensembles de données massifs"
+            ]
+          },
+          "keyUseCases": {
+            "title": "Cas d'usage clés",
+            "description": "Nos solutions Big Data créent de la valeur dans toutes les industries :",
+            "items": [
+              "Analyse en temps réel pour l'efficacité opérationnelle",
+              "Analyse du comportement et des tendances clients",
+              "Maintenance prédictive et surveillance des données IoT",
+              "Détection de fraude et analyse de risque",
+              "Optimisation marketing par analyse de données à grande échelle",
+              "Soutien aux initiatives d'IA et d'apprentissage machine avec des ensembles volumineux"
+            ]
+          },
+          "ourApproach": {
+            "title": "Notre approche",
+            "description": "Nous gérons tout le cycle de vie des projets Big Data :",
+            "items": [
+              "Recueil des besoins et planification de l'architecture",
+              "Ingestion et intégration des données (lots et streaming)",
+              "Traitement distribué avec Spark, Hadoop et frameworks modernes",
+              "Conception de lac de données et d'entrepôt de données",
+              "Optimisation, surveillance et planification de l'évolutivité",
+              "Gouvernance, sécurité et conformité"
+            ]
+          },
+          "technologies": {
+            "title": "Technologies et plateformes",
+            "description": "Nous exploitons les principaux outils et cadres Big Data :",
+            "items": [
+              "Apache Spark, Hadoop, Flink",
+              "Lacs de données et Lakehouses (AWS, Azure, GCP)",
+              "Pipelines ETL/ELT et outils d'orchestration",
+              "Stockage distribué et plateformes d'analyse",
+              "Streaming temps réel (Kafka, Kinesis)"
+            ]
+          },
+          "businessImpact": {
+            "title": "Impact d'affaires",
+            "description": "Nos solutions Big Data livrent :",
+            "items": [
+              "Un traitement et une analyse plus rapides d'ensembles de données massifs",
+              "Une meilleure prise de décision opérationnelle et d'affaires",
+              "Une infrastructure évolutive pour des volumes de données croissants",
+              "Un soutien pour l'analyse avancée et les initiatives IA/ML",
+              "Une gouvernance et une fiabilité des données solides"
+            ]
+          },
+          "closing": {
+            "title": "Prêt à révéler les insights de vos ensembles de données massifs ?",
+            "subtitle": "Concevons une solution Big Data qui évolue avec les besoins de votre entreprise."
+          }
+        }
+      }
     },
     "page": {
       "badge": "Services de consultation en IA et données",
@@ -168,8 +577,8 @@
       "description": "Construire des infrastructures de données sécurisées pour les organisations du secteur public."
     },
     "education": {
-      "title": "Éducation et formation",
-      "description": "Développer des plateformes d'apprentissage personnalisé pilotées par l'Intelligence Artificielle."
+      "title": "Éducation et apprentissage",
+      "description": "Outiller les éducateurs avec des plateformes d'apprentissage adaptatives et des parcours étudiants personnalisés qui améliorent l'engagement, la rétention et les résultats d'apprentissage."
     },
     "business": {
       "title": "Gestion d'entreprise",
@@ -235,13 +644,18 @@
         "description": "La documentation et la formation sont des livrables, pas des ajouts. Votre équipe devrait être en mesure de maintenir et d'étendre chaque système que nous construisons."
       }
     },
+    "team": {
+      "title": "Notre équipe",
+      "subtitle": "Des spécialistes en ingénierie des données, IA et architecture infonuagique — assemblés pour chaque mandat"
+    },
     "leadership": {
       "title": "Direction",
       "subtitle": "Expertise pratique en ingénierie des données, IA et architecture infonuagique"
     },
     "growingTeam": {
       "title": "Une équipe en croissance",
-      "description": "Gamma Neutral rassemble des consultants expérimentés pour chaque mandat. Notre réseau comprend des spécialistes en ingénierie des données, opérations ML, architecture infonuagique et cybersécurité — assemblés selon les besoins spécifiques de votre projet."
+      "description": "Gamma Neutral rassemble des consultants expérimentés pour chaque mandat. Notre réseau comprend des spécialistes en ingénierie des données, opérations ML, architecture infonuagique et cybersécurité — assemblés selon les besoins spécifiques de votre projet.",
+      "cta": "Rejoindre notre équipe"
     },
     "ctaBottom": {
       "title": "Prêt à aller de l'avant ?",
@@ -285,7 +699,7 @@
       "send": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": "Merci pour votre message ! Nous vous répondrons dans les 24 heures.",
-      "error": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à info{'@'}gammaneutral.ca",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à info{'@'}gammaneutral.com",
       "validation": {
         "firstName": "Veuillez entrer votre prénom !",
         "lastName": "Veuillez entrer votre nom de famille !",
@@ -417,11 +831,11 @@
     "tagline": "Transformer les données en opportunités. Permettre aux entreprises d'exploiter le potentiel de leurs données grâce à une consultation experte en Intelligence Artificielle, cybersécurité et intelligence d'affaires.",
     "services": "Services",
     "servicesItems": {
-      "ai": "Solutions d'IA",
-      "dataEngineering": "Ingénierie des données",
+      "ai": "IA et systèmes intelligents",
+      "dataEngineering": "Ingénierie des données et plateformes modernes",
       "cybersecurity": "Cybersécurité",
       "bi": "Intelligence d'affaires",
-      "cloud": "Infonuagique",
+      "cloud": "Stratégie et ingénierie infonuagique",
       "bigData": "Plateforme de données et Big Data",
       "delivery": "Livraison et gestion de programmes"
     },
@@ -441,7 +855,8 @@
     "contactInfo": "Coordonnées",
     "copyright": "Gamma Neutral Consulting Inc. Tous droits réservés.",
     "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation"
+    "termsOfService": "Conditions d'utilisation",
+    "poweredBy": "Propulsé par"
   },
   "breadcrumbs": {
     "home": "Accueil",
