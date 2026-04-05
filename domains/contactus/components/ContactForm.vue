@@ -1,41 +1,72 @@
 <template>
   <form @submit.prevent="handleSubmit" class="needs-validation" novalidate>
     <div class="row g-4">
-      <!-- First Name -->
-      <div class="col-sm-6">
-        <label class="form-label fs-base" for="first_name">{{ $t('contact.form.firstName') }}</label>
-        <input
-          v-model="formData.first_name"
-          type="text"
-          class="form-control form-control-lg"
-          id="first_name"
-          :placeholder="$t('contact.form.firstNamePlaceholder')"
-          required
-        >
-        <div class="invalid-feedback">{{ $t('contact.form.validation.firstName') }}</div>
-      </div>
+      <!-- Name Inputs - Locale Aware Order -->
+      <template v-if="locale === 'fr'">
+        <!-- Nom de famille (Last Name) first for French -->
+        <div class="col-sm-6">
+          <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="last_name">{{ $t('contact.form.lastName') }}</label>
+          <input
+            v-model="formData.last_name"
+            type="text"
+            class="form-control premium-input shadow-none"
+            id="last_name"
+            :placeholder="$t('contact.form.lastNamePlaceholder')"
+            required
+          >
+          <div class="invalid-feedback">{{ $t('contact.form.validation.lastName') }}</div>
+        </div>
 
-      <!-- Last Name -->
-      <div class="col-sm-6">
-        <label class="form-label fs-base" for="last_name">{{ $t('contact.form.lastName') }}</label>
-        <input
-          v-model="formData.last_name"
-          type="text"
-          class="form-control form-control-lg"
-          id="last_name"
-          :placeholder="$t('contact.form.lastNamePlaceholder')"
-          required
-        >
-        <div class="invalid-feedback">{{ $t('contact.form.validation.lastName') }}</div>
-      </div>
+        <div class="col-sm-6">
+          <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="first_name">{{ $t('contact.form.firstName') }}</label>
+          <input
+            v-model="formData.first_name"
+            type="text"
+            class="form-control premium-input shadow-none"
+            id="first_name"
+            :placeholder="$t('contact.form.firstNamePlaceholder')"
+            required
+          >
+          <div class="invalid-feedback">{{ $t('contact.form.validation.firstName') }}</div>
+        </div>
+      </template>
+
+      <template v-else>
+        <!-- First Name first for English/Others -->
+        <div class="col-sm-6">
+          <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="first_name">{{ $t('contact.form.firstName') }}</label>
+          <input
+            v-model="formData.first_name"
+            type="text"
+            class="form-control premium-input shadow-none"
+            id="first_name"
+            :placeholder="$t('contact.form.firstNamePlaceholder')"
+            required
+          >
+          <div class="invalid-feedback">{{ $t('contact.form.validation.firstName') }}</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="last_name">{{ $t('contact.form.lastName') }}</label>
+          <input
+            v-model="formData.last_name"
+            type="text"
+            class="form-control premium-input shadow-none"
+            id="last_name"
+            :placeholder="$t('contact.form.lastNamePlaceholder')"
+            required
+          >
+          <div class="invalid-feedback">{{ $t('contact.form.validation.lastName') }}</div>
+        </div>
+      </template>
 
       <!-- Email -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="email">{{ $t('contact.form.email') }}</label>
+        <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="email">{{ $t('contact.form.email') }}</label>
         <input
           v-model="formData.email"
           type="email"
-          class="form-control form-control-lg"
+          class="form-control premium-input shadow-none"
           id="email"
           :placeholder="$t('contact.form.emailPlaceholder')"
           required
@@ -45,11 +76,11 @@
 
       <!-- Phone -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="phone">{{ $t('contact.form.phone') }}</label>
+        <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="phone">{{ $t('contact.form.phone') }}</label>
         <input
           v-model="formData.phone"
           type="text"
-          class="form-control form-control-lg"
+          class="form-control premium-input shadow-none"
           id="phone"
           :placeholder="$t('contact.form.phonePlaceholder')"
         >
@@ -57,22 +88,28 @@
 
       <!-- Subject -->
       <div class="col-sm-6">
-        <label class="form-label fs-base" for="subject">{{ $t('contact.form.subject') }} <span class="text-muted">{{ $t('contact.form.subjectOptional') }}</span></label>
+        <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="subject">
+          {{ $t('contact.form.subject') }} 
+          <span class="text-muted text-lowercase fw-normal">({{ $t('contact.form.subjectOptional') }})</span>
+        </label>
         <input
           v-model="formData.subject"
           type="text"
-          class="form-control form-control-lg"
+          class="form-control premium-input shadow-none"
           id="subject"
           :placeholder="$t('contact.form.subjectPlaceholder')"
         >
       </div>
 
-      <!-- Project Description -->
-      <div class="col-sm-12">
-        <label class="form-label fs-base" for="project_description">{{ $t('contact.form.projectType') }} <span class="text-muted">{{ $t('contact.form.subjectOptional') }}</span></label>
+      <!-- Project Selection -->
+      <div class="col-sm-6">
+        <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="project_description">
+          {{ $t('contact.form.projectType') }}
+          <span class="text-muted text-lowercase fw-normal">({{ $t('contact.form.subjectOptional') }})</span>
+        </label>
         <select
           v-model="formData.project_type"
-          class="form-select form-select-lg"
+          class="form-select premium-input shadow-none"
           id="project_description"
         >
           <option value="" disabled selected>{{ $t('contact.form.projectTypePlaceholder') }}</option>
@@ -88,12 +125,12 @@
 
       <!-- Message -->
       <div class="col-sm-12">
-        <label class="form-label fs-base" for="message">{{ $t('contact.form.message') }}</label>
+        <label class="form-label fs-small fw-bold text-uppercase ls-1 mb-2" for="message">{{ $t('contact.form.message') }}</label>
         <textarea
           v-model="formData.message"
-          class="form-control form-control-lg"
+          class="form-control premium-input shadow-none"
           id="message"
-          rows="6"
+          rows="5"
           :placeholder="$t('contact.form.messagePlaceholder')"
           required
         ></textarea>
@@ -101,15 +138,15 @@
       </div>
 
       <!-- Submit Button -->
-      <div class="col-sm-12 pt-4">
+      <div class="col-sm-12 pt-3">
         <button
           type="submit"
-          class="btn btn-primary btn-lg w-100"
+          class="btn btn-primary-premium w-100 py-3 rounded-pill fw-bold shadow-lg"
           :disabled="isSubmitting"
         >
           <span v-if="!isSubmitting">
             {{ $t('contact.form.send') }}
-            <i class="bi bi-send ms-2"></i>
+            <i class="bi bi-send-fill ms-2"></i>
           </span>
           <span v-else>
             <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
@@ -120,15 +157,25 @@
     </div>
 
     <!-- Success Message -->
-    <div v-if="showSuccess" class="alert alert-success mt-4" role="alert">
-      <i class="bi bi-check-circle me-2"></i>
-      {{ $t('contact.form.success') }}
+    <div v-if="showSuccess" class="alert-premium-success mt-4 d-flex align-items-center" role="alert">
+      <div class="alert-icon me-3">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+      <div>
+        <h5 class="h6 fw-bold mb-1">Message envoyé !</h5>
+        <p class="small mb-0 opacity-80">{{ $t('contact.form.success') }}</p>
+      </div>
     </div>
 
     <!-- Error Message -->
-    <div v-if="showError" class="alert alert-danger mt-4" role="alert">
-      <i class="bi bi-exclamation-triangle me-2"></i>
-      {{ errorMessage || $t('contact.form.error') }}
+    <div v-if="showError" class="alert-premium-danger mt-4 d-flex align-items-center" role="alert">
+      <div class="alert-icon me-3">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+      </div>
+      <div>
+        <h5 class="h6 fw-bold mb-1">Erreur</h5>
+        <p class="small mb-0 opacity-80">{{ errorMessage || $t('contact.form.error') }}</p>
+      </div>
     </div>
   </form>
 </template>
@@ -138,6 +185,7 @@ import { ref } from 'vue'
 import { useContactStore } from '../stores/useContactStore'
 
 const { $trackEvent } = useNuxtApp()
+const { locale } = useI18n()
 
 interface ContactFormData {
   first_name: string
@@ -229,144 +277,108 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-/* Clean form styles */
-.form-control,
-.form-select {
-  border: 1px solid var(--bs-border-color, #dee2e6);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  background-color: var(--bs-body-bg, #ffffff);
-  color: var(--bs-body-color, #212529);
+/* ================================
+   PREMIUM INPUTS
+   ================================ */
+.premium-input {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #0f172a;
 }
 
-.form-control:focus,
-.form-select:focus {
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
-}
-
-.form-control::placeholder,
-.form-select::placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-
-.form-check-input {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-top: 0.125rem;
-  border: 2px solid var(--bs-border-color, #dee2e6);
-  transition: all 0.3s ease;
-}
-
-.form-check-input:checked {
-  background-color: #8b5cf6;
-  border-color: #8b5cf6;
-}
-
-.form-check-input:focus {
-  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
-}
-
-/* Button styles */
-.btn-primary {
-  background-color: #8b5cf6;
-  border-color: #8b5cf6;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  padding: 0.75rem 2rem;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background-color: #7c3aed;
+.premium-input:focus {
   border-color: #7c3aed;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.08) !important;
 }
 
-.btn-primary:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
+.premium-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
 }
 
-/* Labels */
-.form-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: var(--bs-body-color, #495057);
-}
-
-/* Validation */
-.invalid-feedback {
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-  color: #dc3545;
-}
-
-/* Alerts */
-.alert {
-  border-radius: 0.5rem;
+/* ================================
+   BUTTONS & ACTIONS
+   ================================ */
+.btn-primary-premium {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
   border: none;
-  padding: 1rem 1.25rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
-.alert-success {
-  background-color: var(--bs-success-bg-subtle, #d1fae5);
-  color: var(--bs-success-text-emphasis, #065f46);
-  border: 1px solid var(--bs-success-border-subtle, #a7f3d0);
+.btn-primary-premium:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25) !important;
+  color: #ffffff;
 }
 
-.alert-danger {
-  background-color: var(--bs-danger-bg-subtle, #fee2e2);
-  color: var(--bs-danger-text-emphasis, #991b1b);
-  border: 1px solid var(--bs-danger-border-subtle, #fecaca);
+.btn-primary-premium:active {
+  transform: translateY(0);
 }
 
-/* Checkboxes inline layout */
-.form-check-inline {
-  margin-right: 2rem;
-  margin-bottom: 0.75rem;
+/* ================================
+   ALERTS & VALIDATION
+   ================================ */
+.alert-premium-success {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem;
+  color: #065f46;
 }
 
-/* Responsive */
-@media (max-width: 575.98px) {
-  .form-check-inline {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 0.75rem;
-  }
-
-  .btn-lg {
-    padding: 0.75rem 1.5rem;
-  }
+.alert-premium-danger {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem;
+  color: #991b1b;
 }
 
-/* Dark mode support */
-:global([data-bs-theme="dark"]) .form-control,
-:global([data-bs-theme="dark"]) .form-select {
-  background-color: #1a1a2e;
-  border-color: var(--bs-border-color);
-  color: var(--bs-body-color);
+.alert-icon {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
-:global([data-bs-theme="dark"]) .form-control:focus,
-:global([data-bs-theme="dark"]) .form-select:focus {
-  background-color: #1a1a2e;
-  border-color: #8b5cf6;
-  color: var(--bs-body-color);
+.invalid-feedback {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-left: 4px;
 }
 
-:global([data-bs-theme="dark"]) .form-control::placeholder,
-:global([data-bs-theme="dark"]) .form-select::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+/* ================================
+   UTILS
+   ================================ */
+.fs-small { font-size: 0.75rem; }
+.ls-1 { letter-spacing: 0.05em; }
+
+/* ================================
+   DARK MODE
+   ================================ */
+:global([data-bs-theme="dark"]) .premium-input {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
-:global([data-bs-theme="dark"]) .form-label {
-  color: var(--bs-body-color);
+:global([data-bs-theme="dark"]) .premium-input:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #a78bfa;
 }
 
-:global([data-bs-theme="dark"]) .form-check-label {
-  color: var(--bs-body-color);
+:global([data-bs-theme="dark"]) .alert-premium-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+
+:global([data-bs-theme="dark"]) .alert-premium-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
 }
 </style>

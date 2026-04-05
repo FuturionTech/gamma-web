@@ -2,40 +2,44 @@
   <component
     :is="link ? 'NuxtLink' : 'div'"
     :to="link || undefined"
-    class="service-card card h-100 p-4 rounded-4 border-0 text-decoration-none"
+    class="service-card h-100 p-4 rounded-5 border-0 text-decoration-none"
     :class="{ 'service-card-linkable': !!link }"
     @click="onCardClick"
   >
-    <!-- Icon -->
-    <div class="service-icon mb-4">
-      <div class="icon-wrapper">
-        <component v-if="svgIcon" :is="svgIcon" />
-        <i v-else-if="icon" :class="icon" class="service-icon-i"></i>
+    <!-- Card Inner Base -->
+    <div class="service-card-inner h-100 d-flex flex-column">
+      <!-- Icon with Ambient Glow -->
+      <div class="service-icon mb-4">
+        <div class="icon-orb" :class="gradientClass">
+          <component v-if="svgIcon" :is="svgIcon" />
+          <i v-else-if="icon" :class="icon" class="service-icon-i"></i>
+          <div class="orb-glow"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Title & Description -->
-    <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
-    <p class="card-desc-text mb-4">{{ description }}</p>
+      <!-- Title & Description -->
+      <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
+      <p class="card-desc-text mb-4">{{ description }}</p>
 
-    <!-- Feature List -->
-    <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto">
-      <li
-        class="d-flex align-items-center mb-2"
-        v-for="(feature, idx) in features"
-        :key="idx"
-      >
-        <i class="bi bi-check2 feature-check me-2 flex-shrink-0"></i>
-        <span class="small feature-text">{{ feature }}</span>
-      </li>
-    </ul>
+      <!-- Feature List -->
+      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto pt-2">
+        <li
+          class="d-flex align-items-center mb-2"
+          v-for="(feature, idx) in features"
+          :key="idx"
+        >
+          <div class="feature-dot me-2 flex-shrink-0"></div>
+          <span class="feature-text">{{ feature }}</span>
+        </li>
+      </ul>
 
-    <!-- Learn More Link -->
-    <div v-if="link" class="learn-more-link mt-4 pt-3">
-      <span class="learn-more-text">
-        {{ learnMoreLabel || $t('services.learnMore') }}
-        <i class="bi bi-arrow-right ms-2 learn-more-arrow"></i>
-      </span>
+      <!-- Learn More Link -->
+      <div v-if="link" class="learn-more-box mt-4 pt-4">
+        <span class="learn-more-btn">
+          {{ learnMoreLabel || $t('services.learnMore') }}
+          <i class="bi bi-arrow-right-short ms-1 learn-more-arrow"></i>
+        </span>
+      </div>
     </div>
   </component>
 </template>
@@ -84,15 +88,13 @@ const onCardClick = () => {
 </script>
 
 <style scoped>
-/* Service Card — uses CSS vars for theme-aware colors */
+/* Card Base — Glassmorphic Surface */
 .service-card {
-  background: var(--bs-body-bg, #ffffff);
-  border: 1px solid var(--bs-border-color, #e5e7eb) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  color: inherit;
+  background: #ffffff;
+  border: 1px solid #f1f5f9 !important;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  cursor: default;
 }
 
 .service-card-linkable {
@@ -100,136 +102,143 @@ const onCardClick = () => {
 }
 
 .service-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(139, 92, 246, 0.3) !important;
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
+  transform: translateY(-10px);
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(124, 58, 237, 0.15) !important;
 }
 
-/* Learn More Link */
-.learn-more-link {
-  border-top: 1px solid var(--bs-border-color, #e5e7eb);
+/* Icon Orb — Professional Gradients & Glow */
+.icon-orb {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.5s ease;
+  z-index: 1;
 }
 
-.learn-more-text {
-  color: #8b5cf6;
-  font-weight: 600;
-  font-size: 0.875rem;
+.service-icon-i {
+  font-size: 1.75rem;
+  line-height: 1;
+  z-index: 2;
+}
+
+.orb-glow {
+  position: absolute;
+  inset: -10px;
+  background: inherit;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.service-card:hover .icon-orb {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card:hover .orb-glow {
+  opacity: 0.35;
+}
+
+/* Gradients Matching Design Token */
+.bg-gradient-primary { background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%); }
+.bg-gradient-info    { background: linear-gradient(135deg, #0ea4e9 0%, #6366f1 100%); }
+.bg-gradient-success { background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); }
+.bg-gradient-danger  { background: linear-gradient(135deg, #ef4444 0%, #7c3aed 100%); }
+.bg-gradient-warning { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); }
+.bg-gradient-purple  { background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); }
+.bg-gradient-dark    { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+
+/* Typography & Content */
+.card-title-text {
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.card-desc-text {
+  color: #64748b;
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+.feature-dot {
+  width: 6px;
+  height: 6px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.feature-text {
+  color: #475569;
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+.service-card:hover .feature-dot {
+  background: #7c3aed;
+}
+
+/* Interaction: Learn More */
+.learn-more-box {
+  border-top: 1px solid #f1f5f9;
+}
+
+.learn-more-btn {
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   display: inline-flex;
   align-items: center;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .learn-more-arrow {
+  font-size: 1.25rem;
   transition: transform 0.3s ease;
-  display: inline-block;
+}
+
+.service-card:hover .learn-more-btn {
+  color: #3b82f6;
 }
 
 .service-card:hover .learn-more-arrow {
   transform: translateX(4px);
 }
 
-.service-card:hover .learn-more-text {
-  color: #7c3aed;
-}
-
-:global([data-bs-theme="dark"]) .learn-more-link {
-  border-top-color: rgba(255, 255, 255, 0.1);
-}
-
-:global([data-bs-theme="dark"]) .learn-more-text {
-  color: #a78bfa;
-}
-
-:global([data-bs-theme="dark"]) .service-card:hover .learn-more-text {
-  color: #c4b5fd;
-}
-
-/* Icon Wrapper — Purple accent circle */
-.icon-wrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(139, 92, 246, 0.1);
-  color: #8b5cf6;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.service-icon-i {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.service-card:hover .icon-wrapper {
-  transform: scale(1.08);
-  background: rgba(139, 92, 246, 0.18);
-}
-
-/* Text Colors — use CSS vars so they adapt to theme */
-.card-title-text {
-  color: var(--bs-heading-color, #1f2937);
-}
-
-.card-desc-text {
-  color: var(--bs-secondary-color, #6b7280);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.feature-check {
-  color: #7c3aed;
-  font-size: 0.85rem;
-}
-
-.feature-text {
-  color: var(--bs-body-color, #4b5563);
-}
-
-/* Dark Mode Support */
+/* Dark Mode Sophistication */
 :global([data-bs-theme="dark"]) .service-card {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: none !important;
+  background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: none;
 }
 
 :global([data-bs-theme="dark"]) .service-card:hover {
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.2) !important;
-  border-color: rgba(139, 92, 246, 0.4) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(124, 58, 237, 0.3) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-:global([data-bs-theme="dark"]) .card-title-text {
-  color: #ffffff !important;
-}
+:global([data-bs-theme="dark"]) .card-title-text { color: #ffffff; }
+:global([data-bs-theme="dark"]) .card-desc-text { color: rgba(255, 255, 255, 0.7); }
+:global([data-bs-theme="dark"]) .feature-text { color: rgba(255, 255, 255, 0.6); }
+:global([data-bs-theme="dark"]) .learn-more-box { border-top-color: rgba(255, 255, 255, 0.08); }
+:global([data-bs-theme="dark"]) .learn-more-btn { color: #a78bfa; }
+:global([data-bs-theme="dark"]) .service-card:hover .learn-more-btn { color: #ffffff; }
 
-:global([data-bs-theme="dark"]) .card-desc-text {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-:global([data-bs-theme="dark"]) .feature-check {
-  color: #a78bfa !important;
-}
-
-:global([data-bs-theme="dark"]) .feature-text {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
-:global([data-bs-theme="dark"]) .icon-wrapper {
-  background: rgba(139, 92, 246, 0.2);
-}
-
-/* Accessibility */
-.service-card:focus-visible {
-  outline: 2px solid #8b5cf6;
-  outline-offset: 2px;
-}
-
-/* Reduced motion */
+/* Reduced Motion Optimization */
 @media (prefers-reduced-motion: reduce) {
-  .service-card,
-  .icon-wrapper {
+  .service-card, .icon-orb, .orb-glow, .learn-more-btn, .learn-more-arrow {
     transition: none !important;
   }
 }

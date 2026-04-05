@@ -68,12 +68,33 @@
     },
     "delivery": {
       "title": "Delivery & Program Management",
-      "slug": "delivery",
+      "slug": "",
       "description": "Technology projects fail more often from poor execution than poor ideas.",
       "features": ["Agile delivery management", "Program governance", "Vendor coordination", "Risk assessment"]
     },
     "details": {
       "backToServices": "Back to Services",
+      "notFound": "Service not found",
+      "viewApproach": "See Our Approach",
+      "exploreMore": "Explore More Services",
+      "sectionLabels": {
+        "challenge": "The Challenge",
+        "solution": "Our Solution",
+        "capabilities": "Capabilities",
+        "methodology": "Methodology",
+        "industries": "Industry Applications",
+        "techStack": "Technology Stack",
+        "impact": "Business Impact",
+        "whyUs": "Why Gamma Neutral",
+        "caseStudy": "Case in Point",
+        "faq": "Frequently Asked Questions",
+        "relatedServices": "Related Services"
+      },
+      "caseStudyLabels": {
+        "challenge": "Challenge",
+        "approach": "Approach",
+        "result": "Result"
+      },
       "sectionHeadings": {
         "howWeDeliver": "How We Deliver",
         "keyUseCases": "Key Use Cases",
@@ -88,15 +109,78 @@
         "ai-intelligent-systems": {
           "name": "AI & Intelligent Systems",
           "icon": "bi-cpu",
+          "hero": {
+            "tagline": "Artificial Intelligence that Ships",
+            "headline": "Build AI systems that deliver measurable business outcomes",
+            "subheadline": "From machine learning to generative AI — we design, deploy, and scale production-grade AI for financial services, healthcare, and government organizations that demand accuracy, explainability, and regulatory compliance.",
+            "ctaPrimary": "Start Your AI Initiative",
+            "ctaSecondary": "See Our Methodology",
+            "stats": [
+              { "value": "90%+", "label": "Production model accuracy" },
+              { "value": "3-6 mo", "label": "Pilot to production" },
+              { "value": "MLOps", "label": "First engineering discipline" },
+              { "value": "SOC 2", "label": "Compliance-ready" }
+            ]
+          },
+          "challenge": {
+            "title": "Most AI pilots never reach production",
+            "description": "According to Gartner, over 80% of AI projects fail to deliver business value. The gap isn't ideas — it's engineering rigour, data readiness, and operational maturity.",
+            "painPoints": [
+              "AI pilots demonstrate promise but stall in production due to fragile data pipelines and manual deployment",
+              "Regulated industries require explainable models, audit trails, and bias testing — rarely built into pilots",
+              "Model drift goes undetected without proper monitoring, degrading accuracy silently over months",
+              "Integration with legacy systems (core banking, EMR, case management) is treated as an afterthought",
+              "Business stakeholders can't distinguish high-impact use cases from interesting-but-unused technical demos"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Deliver AI Solutions",
-            "description": "We take a practical, business-first approach to AI—focusing on measurable outcomes.",
+            "description": "We take a practical, business-first approach to AI — engineering for production from day one, not bolting it on after the pilot.",
             "items": [
-              "Identify high-impact AI opportunities",
-              "Build and train custom machine learning models",
-              "Integrate AI into your existing systems and workflows",
-              "Deploy scalable, production-ready solutions",
-              "Continuously monitor and improve model performance"
+              "Identify high-impact AI opportunities grounded in measurable KPIs",
+              "Build and train custom machine learning models with explainability built in",
+              "Integrate AI into your existing systems and workflows (not siloed demos)",
+              "Deploy scalable, production-ready solutions with MLOps automation",
+              "Continuously monitor model drift and improve performance post-launch",
+              "Establish governance frameworks for responsible, compliant AI"
+            ]
+          },
+          "capabilities": {
+            "title": "Comprehensive AI Capabilities",
+            "groups": [
+              {
+                "name": "Machine Learning & Deep Learning",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Supervised, unsupervised, reinforcement learning",
+                  "Deep learning (CNNs, RNNs, Transformers)",
+                  "Time-series forecasting",
+                  "Anomaly detection",
+                  "Feature engineering at scale"
+                ]
+              },
+              {
+                "name": "Natural Language & Generative AI",
+                "icon": "bi-chat-quote",
+                "items": [
+                  "Large language model (LLM) integration",
+                  "Retrieval-augmented generation (RAG)",
+                  "Document intelligence & extraction",
+                  "Sentiment analysis & classification",
+                  "Custom fine-tuning & prompt engineering"
+                ]
+              },
+              {
+                "name": "Computer Vision & Decision Systems",
+                "icon": "bi-camera",
+                "items": [
+                  "Image classification & object detection",
+                  "Video analytics & quality inspection",
+                  "OCR & document understanding",
+                  "Expert systems & decision intelligence",
+                  "Recommendation engines"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -113,44 +197,136 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "From idea to deployment, we support the full AI lifecycle:",
+            "description": "From idea to deployment, we support the full AI lifecycle — not just the fun parts.",
             "items": [
-              "Discovery & Use Case Definition",
-              "Data Preparation & Feature Engineering",
-              "Model Development & Validation",
-              "Deployment & Integration (MLOps)",
-              "Monitoring, Optimization & Scaling"
+              { "title": "Discovery & Use Case Definition", "description": "Workshop-driven identification of AI opportunities with clear business KPIs, feasibility scoring, and ROI modeling." },
+              { "title": "Data Preparation & Feature Engineering", "description": "Assess data readiness, address quality gaps, and engineer features that unlock predictive power." },
+              { "title": "Model Development & Validation", "description": "Iterative model development with rigorous validation, bias testing, and explainability from day one." },
+              { "title": "Deployment & Integration (MLOps)", "description": "Production deployment with CI/CD for models, automated testing, and seamless integration with your systems." },
+              { "title": "Monitoring, Optimization & Scaling", "description": "Drift detection, performance dashboards, and continuous improvement loops to keep models sharp." }
+            ]
+          },
+          "industryApplications": {
+            "title": "AI Across Regulated Industries",
+            "description": "Deep domain expertise in the regulated sectors where AI accuracy and compliance matter most.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "AI solutions aligned with OSFI guidelines, model risk management, and fair-lending requirements.",
+                "useCases": [
+                  "Credit scoring & underwriting automation",
+                  "Fraud & AML transaction monitoring",
+                  "Algorithmic trading & risk analytics",
+                  "Customer churn & next-best-action"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "PHIPA-compliant AI for clinical decision support and operational efficiency.",
+                "useCases": [
+                  "Patient risk stratification",
+                  "Medical imaging & diagnostic support",
+                  "Clinical documentation extraction",
+                  "Hospital capacity forecasting"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "Responsible AI for public services with transparency, fairness, and accountability built in.",
+                "useCases": [
+                  "Service delivery automation",
+                  "Program integrity & fraud detection",
+                  "Policy analysis & scenario modeling",
+                  "Citizen inquiry triage & routing"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Platforms",
-            "description": "We leverage modern AI and cloud ecosystems:",
+            "description": "We leverage modern AI and cloud ecosystems chosen for production robustness, not buzzwords.",
             "items": [
-              "Python, TensorFlow, PyTorch",
-              "Cloud AI services (AWS, Azure, GCP)",
-              "Data platforms and APIs",
-              "MLOps and automation tools"
+              "Python, TensorFlow, PyTorch, scikit-learn",
+              "Hugging Face, LangChain, OpenAI, Anthropic",
+              "AWS SageMaker, Azure ML, Google Vertex AI",
+              "MLflow, Weights & Biases, Kubeflow",
+              "Databricks, Snowflake, BigQuery",
+              "Docker, Kubernetes, Terraform"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our AI solutions are designed to deliver:",
+            "description": "Our AI solutions are designed to deliver measurable outcomes — not vanity metrics.",
             "items": [
-              "Increased operational efficiency",
-              "Faster and better decision-making",
-              "Reduced costs and risks",
-              "Enhanced customer experience",
-              "Competitive advantage through data"
+              "Increased operational efficiency through automation",
+              "Faster, data-driven decision-making at every level",
+              "Reduced costs and risks with predictive intervention",
+              "Enhanced customer experience via personalization",
+              "Competitive advantage through proprietary data assets",
+              "Regulatory readiness with auditable model governance"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for AI",
+            "points": [
+              { "title": "Engineering Discipline", "icon": "bi-gear-wide-connected", "description": "We bring software engineering rigour to data science — version control, testing, CI/CD, and observability for models from day one." },
+              { "title": "Production-First Mindset", "icon": "bi-rocket-takeoff", "description": "We don't build Jupyter notebook demos. Every model we build is designed to run in production, at scale, with monitoring." },
+              { "title": "Regulated Industry Expertise", "icon": "bi-shield-check", "description": "Deep understanding of OSFI, PIPEDA, PHIPA and the constraints that shape AI in regulated sectors." },
+              { "title": "Explainability by Default", "icon": "bi-search", "description": "Every model ships with interpretability tools, bias testing, and audit trails — essentials for regulated deployment." }
+            ]
+          },
+          "caseStudy": {
+            "title": "From Fraud Pilot to Production Platform",
+            "client": "Canadian Tier-1 Financial Institution",
+            "challenge": "A fraud detection pilot had been stuck in proof-of-concept for 18 months. Model accuracy was acceptable, but deployment was manual, explanations couldn't be generated for disputed transactions, and drift was undetected.",
+            "approach": "We rebuilt the pipeline on MLOps foundations — automated training, SHAP-based explanations, real-time scoring infrastructure, and drift monitoring dashboards. Partnered with risk and compliance teams throughout.",
+            "result": "Production deployment achieved in 4 months. False-positive rate dropped 40%, investigator workload reduced, and every flagged transaction now ships with a regulator-ready explanation."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "How do you measure AI project success?", "answer": "We tie every AI initiative to specific business KPIs before writing code — reduction in false positives, improvement in forecast accuracy, dollars saved, customer retention uplift. Technical metrics (F1, ROC-AUC) matter only in service of these business outcomes." },
+              { "question": "Can you work with our existing data infrastructure?", "answer": "Yes. We regularly integrate with legacy data warehouses, cloud data platforms, EMRs, core banking systems, and custom applications. Our role is to make AI work within your environment, not demand a greenfield rebuild." },
+              { "question": "How do you ensure models remain compliant with Canadian regulations?", "answer": "We build explainability, bias testing, and audit trails into every model from day one. Our work aligns with OSFI model risk management guidelines, PIPEDA/PHIPA requirements, and emerging federal AI and Data Act (AIDA) standards." },
+              { "question": "Do you use generative AI or focus on traditional ML?", "answer": "Both — the right tool for the job. Generative AI excels at document processing, customer support, and content tasks. Traditional ML often wins for structured-data forecasting, fraud detection, and credit scoring where explainability is paramount." },
+              { "question": "What happens after the model is deployed?", "answer": "Deployment is the beginning, not the end. We establish monitoring for model drift, data quality degradation, and performance decay — plus a clear retraining cadence. Many of our longest client relationships are ongoing model operations." }
             ]
           },
           "closing": {
             "title": "Ready to unlock the power of AI in your organization?",
-            "subtitle": "Let's discuss how we can help you identify and implement high-impact AI solutions."
+            "subtitle": "Let's discuss how we can help you identify and implement high-impact AI solutions that actually ship."
           }
         },
         "data-engineering-platforms": {
           "name": "Data Engineering & Modern Data Platforms",
           "icon": "bi-database",
+          "hero": {
+            "tagline": "The Foundation Every AI Strategy Needs",
+            "headline": "Turn fragmented data into a unified, trusted asset",
+            "subheadline": "We design and implement modern data platforms that power analytics, AI, and decision-making at enterprise scale — with the governance, lineage, and quality that regulated industries demand.",
+            "ctaPrimary": "Discuss Your Data Strategy",
+            "ctaSecondary": "See Our Methodology",
+            "stats": [
+              { "value": "10x", "label": "Faster data delivery" },
+              { "value": "99.9%", "label": "Pipeline reliability SLA" },
+              { "value": "Real-time", "label": "Streaming capabilities" },
+              { "value": "Lineage", "label": "End-to-end traceability" }
+            ]
+          },
+          "challenge": {
+            "title": "Your data is everywhere — and nowhere",
+            "description": "Organizations collect more data than ever, yet struggle to make it trustworthy, accessible, and actionable. Data silos, inconsistent definitions, and fragile pipelines hold back analytics and AI initiatives.",
+            "painPoints": [
+              "Data lives in dozens of disconnected systems — no single source of truth",
+              "Reports from different teams contradict each other because definitions drift",
+              "Legacy data warehouses can't handle modern volume, variety, or velocity",
+              "Data quality issues surface as broken dashboards and failed AI models",
+              "Compliance (PIPEDA, PHIPA, OSFI) requires lineage you can't produce"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Build Modern Data Platforms",
             "description": "We design and implement scalable data architectures that transform raw data into trusted, analytics-ready assets.",
@@ -159,7 +335,46 @@
               "Build robust data pipelines for batch and real-time processing",
               "Integrate data across multiple systems and sources",
               "Ensure high data quality, reliability, and consistency",
-              "Enable seamless access for analytics, BI, and AI use cases"
+              "Enable seamless access for analytics, BI, and AI use cases",
+              "Establish data governance, lineage, and cataloging from day one"
+            ]
+          },
+          "capabilities": {
+            "title": "Full-Stack Data Engineering",
+            "groups": [
+              {
+                "name": "Data Platforms & Architecture",
+                "icon": "bi-diagram-2",
+                "items": [
+                  "Lakehouse architecture (Databricks, Iceberg, Delta)",
+                  "Cloud data warehouses (Snowflake, BigQuery, Redshift)",
+                  "Data mesh & domain-driven design",
+                  "Star/snowflake dimensional modeling",
+                  "Medallion (bronze/silver/gold) patterns"
+                ]
+              },
+              {
+                "name": "Pipelines & Integration",
+                "icon": "bi-arrow-left-right",
+                "items": [
+                  "ETL/ELT pipelines (Airflow, dbt, Fivetran)",
+                  "Real-time streaming (Kafka, Kinesis, Flink)",
+                  "CDC & database replication",
+                  "API integration & ingestion",
+                  "Event-driven architectures"
+                ]
+              },
+              {
+                "name": "Governance & Quality",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Data catalogs & lineage (Collibra, Atlan)",
+                  "Data quality frameworks (Great Expectations)",
+                  "PII discovery & masking",
+                  "Access controls & row-level security",
+                  "Observability (Monte Carlo, Soda)"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -168,7 +383,7 @@
             "items": [
               "Create a unified data platform (single source of truth)",
               "Enable real-time dashboards and operational insights",
-              "Support AI and machine learning initiatives",
+              "Support AI and machine learning initiatives with trusted data",
               "Modernize legacy data warehouses and infrastructure",
               "Improve reporting accuracy and data reliability",
               "Ensure compliance with data governance and security standards"
@@ -176,36 +391,103 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "We cover the full data lifecycle—from ingestion to insight:",
+            "description": "We cover the full data lifecycle — from strategy through operations.",
             "items": [
-              "Data Strategy & Architecture Design",
-              "Data Ingestion & Integration (ETL/ELT)",
-              "Data Modeling & Transformation",
-              "Platform Deployment (Cloud Data Platforms)",
-              "Data Governance, Quality & Security",
-              "Monitoring, Optimization & Scaling"
+              { "title": "Data Strategy & Architecture Design", "description": "Current state assessment, target architecture blueprint, and platform selection grounded in your business KPIs." },
+              { "title": "Data Ingestion & Integration (ETL/ELT)", "description": "Build reliable pipelines connecting source systems to your platform with proper error handling and recovery." },
+              { "title": "Data Modeling & Transformation", "description": "Design dimensional models, semantic layers, and transformations that make data intuitive for analytics." },
+              { "title": "Platform Deployment", "description": "Implement cloud data platforms with infrastructure-as-code, version control, and environment promotion." },
+              { "title": "Data Governance, Quality & Security", "description": "Establish cataloging, lineage tracking, data quality monitoring, and access controls from day one." },
+              { "title": "Monitoring, Optimization & Scaling", "description": "Pipeline observability, cost optimization, and performance tuning as data volumes and use cases grow." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Data Platforms for Regulated Industries",
+            "description": "Purpose-built data architectures that meet the compliance, reliability, and scale demands of regulated sectors.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "Risk data aggregation, regulatory reporting (BCBS 239), and customer 360 platforms built for Canadian banking.",
+                "useCases": [
+                  "Regulatory reporting & data lineage",
+                  "Customer 360 & next-best-action data",
+                  "Transaction data lakes for analytics",
+                  "Risk data aggregation (BCBS 239)"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "Clinical data platforms aligned with PHIPA, supporting population health and research.",
+                "useCases": [
+                  "EMR/EHR integration & normalization",
+                  "Population health analytics",
+                  "Clinical research data platforms",
+                  "HL7/FHIR data pipelines"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "Inter-departmental data sharing platforms and open-data infrastructure.",
+                "useCases": [
+                  "Inter-department data sharing",
+                  "Open data platforms & APIs",
+                  "Program performance analytics",
+                  "Citizen data integration"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Platforms",
-            "description": "We leverage modern data stack and cloud-native tools:",
+            "description": "We leverage modern data stack and cloud-native tools proven at enterprise scale.",
             "items": [
-              "SQL, Python, Spark",
-              "Cloud platforms (AWS, Azure, GCP)",
-              "Data warehouses (Snowflake, BigQuery, Redshift)",
-              "Orchestration tools (Airflow, Prefect)",
-              "Streaming technologies (Kafka, real-time pipelines)"
+              "SQL, Python, Spark, Scala",
+              "Snowflake, BigQuery, Redshift, Databricks",
+              "AWS Glue, Azure Data Factory, GCP Dataflow",
+              "Airflow, Prefect, Dagster, dbt",
+              "Kafka, Kinesis, Flink, Spark Streaming",
+              "Terraform, Docker, Kubernetes"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our data solutions are designed to deliver:",
+            "description": "Our data solutions are designed to deliver transformative, measurable outcomes.",
             "items": [
-              "Faster access to reliable data",
-              "Improved decision-making and reporting",
-              "Scalable infrastructure for growth",
+              "Faster access to reliable data for every team",
+              "Improved decision-making and reporting accuracy",
+              "Scalable infrastructure for growth and new use cases",
               "Reduced data silos and operational inefficiencies",
-              "Strong governance, security, and compliance"
+              "Strong governance, security, and compliance posture",
+              "Foundation for successful AI and ML initiatives"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for Data Engineering",
+            "points": [
+              { "title": "Architecture That Lasts", "icon": "bi-bricks", "description": "We design data platforms to evolve — modular, cloud-native architectures that accommodate new sources, volumes, and use cases without rebuilds." },
+              { "title": "Governance Built In, Not Bolted On", "icon": "bi-shield-check", "description": "Lineage, cataloging, quality, and access controls are part of the foundation — not a phase 2 afterthought." },
+              { "title": "Reliability as a Discipline", "icon": "bi-activity", "description": "Pipeline observability, SLA monitoring, and automated recovery are standard in every platform we build." },
+              { "title": "Regulated-Industry Proven", "icon": "bi-award", "description": "Deep experience with BCBS 239, PHIPA, PIPEDA, OSFI, and the audit requirements that shape Canadian data engineering." }
+            ]
+          },
+          "caseStudy": {
+            "title": "From Siloed Reports to Single Source of Truth",
+            "client": "Provincial Health Authority",
+            "challenge": "12 different departments maintained their own data extracts from the EMR. Reports never matched, analytics took weeks, and no one could trace data back to its clinical origin — blocking PHIPA audit requests.",
+            "approach": "We designed a lakehouse platform with HL7/FHIR ingestion, a canonical clinical data model, automated quality monitoring, and full lineage tracking from EMR to dashboard.",
+            "result": "Single source of truth for 40+ KPIs in 6 months. Audit responses completed in hours instead of weeks. Analytics team shifted from data wrangling to actual analysis."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "Do we need to migrate off our legacy data warehouse?", "answer": "Not necessarily. We often modernize incrementally — adding a cloud data lake/lakehouse alongside existing warehouses, then migrating workloads as value is proven. Big-bang migrations rarely end well." },
+              { "question": "How do you handle data quality?", "answer": "We treat data quality as a first-class engineering concern: automated expectations testing (Great Expectations), freshness monitoring, schema drift detection, and anomaly alerts wired into your observability stack." },
+              { "question": "What's the difference between a data lake, warehouse, and lakehouse?", "answer": "Data warehouses excel at structured analytics (think Snowflake). Data lakes store raw/semi-structured data cheaply. Lakehouses (Databricks, Iceberg) combine both — structured analytics performance on open storage. We pick the right fit for your workloads." },
+              { "question": "Can you work with our on-prem data?", "answer": "Yes. We design hybrid architectures where sensitive data stays on-prem and analytical workloads run in the cloud, with secure connectivity and governance across both environments." },
+              { "question": "How long does a data platform implementation take?", "answer": "A production-ready platform typically takes 3-6 months for initial rollout, then iterative expansion. We prioritize delivering value early with a 'walking skeleton' approach rather than 12-month waterfall programs." }
             ]
           },
           "closing": {
@@ -216,6 +498,30 @@
         "cloud-strategy-engineering": {
           "name": "Cloud Strategy & Engineering",
           "icon": "bi-cloud",
+          "hero": {
+            "tagline": "Cloud-Native, FinOps-Ready",
+            "headline": "Scale infrastructure with performance, security, and cost discipline",
+            "subheadline": "From multi-cloud architecture to application modernization — we help Canadian organizations adopt cloud strategically, aligned with OSFI B-10 guidelines, PHIPA, and government cloud-first policies.",
+            "ctaPrimary": "Plan Your Cloud Journey",
+            "ctaSecondary": "See Our Methodology",
+            "stats": [
+              { "value": "40%", "label": "Avg infrastructure savings" },
+              { "value": "Multi-cloud", "label": "AWS, Azure, GCP" },
+              { "value": "IaC", "label": "Infrastructure as code" },
+              { "value": "OSFI B-10", "label": "Compliance aligned" }
+            ]
+          },
+          "challenge": {
+            "title": "Cloud promises are easy. Cloud reality is hard.",
+            "description": "Cloud adoption should deliver agility, scalability, and efficiency — yet many Canadian organizations end up with runaway costs, security concerns, and half-migrated workloads that work worse than what they replaced.",
+            "painPoints": [
+              "Cloud bills grow faster than the business — no FinOps discipline to reign them in",
+              "Lift-and-shift migrations preserve legacy problems in more expensive infrastructure",
+              "Shadow IT emerges when developers can't get fast, secure cloud provisioning",
+              "OSFI B-10 and data residency requirements weren't fully considered upfront",
+              "Without IaC and CI/CD, environments drift and releases become risky events"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Deliver Cloud Solutions",
             "description": "We help organizations adopt and scale cloud technologies with a focus on performance, security, and cost efficiency.",
@@ -224,7 +530,46 @@
               "Design scalable, cloud-native architectures",
               "Migrate applications and workloads with minimal disruption",
               "Implement DevOps and automation for faster delivery",
-              "Continuously optimize performance, reliability, and costs"
+              "Continuously optimize performance, reliability, and costs",
+              "Establish FinOps practices to keep spending aligned with value"
+            ]
+          },
+          "capabilities": {
+            "title": "End-to-End Cloud Capabilities",
+            "groups": [
+              {
+                "name": "Architecture & Migration",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Cloud strategy & target architecture",
+                  "Landing zones & organization design",
+                  "6R migration (rehost, replatform, refactor, etc.)",
+                  "Application modernization",
+                  "Multi-cloud & hybrid design"
+                ]
+              },
+              {
+                "name": "DevOps & Automation",
+                "icon": "bi-gear-wide-connected",
+                "items": [
+                  "Infrastructure as Code (Terraform, Pulumi)",
+                  "CI/CD pipeline design",
+                  "Kubernetes & containerization",
+                  "GitOps & progressive delivery",
+                  "Platform engineering (internal developer platforms)"
+                ]
+              },
+              {
+                "name": "Security & FinOps",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Cloud security posture management",
+                  "Zero-trust network architecture",
+                  "Identity & access management",
+                  "Cost visibility & optimization",
+                  "Automated policy & compliance guardrails"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -241,55 +586,185 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "We support the full cloud lifecycle from strategy to operations:",
+            "description": "We support the full cloud lifecycle from strategy to operations.",
             "items": [
-              "Cloud Strategy & Roadmap",
-              "Architecture Design & Platform Selection",
-              "Migration & Modernization",
-              "DevOps Enablement & Automation (IaC)",
-              "Security, Compliance & Governance",
-              "Monitoring, Optimization & FinOps"
+              { "title": "Cloud Strategy & Roadmap", "description": "Assess current state, define target outcomes, and build a phased migration roadmap tied to business value." },
+              { "title": "Architecture Design & Platform Selection", "description": "Design landing zones, choose appropriate cloud(s), and define reference architectures for your workloads." },
+              { "title": "Migration & Modernization", "description": "Execute the 6R strategy — rehost what's right, refactor what matters, retire what's obsolete." },
+              { "title": "DevOps Enablement & Automation (IaC)", "description": "Build CI/CD pipelines, Infrastructure as Code, and automation that make deploys safe and routine." },
+              { "title": "Security, Compliance & Governance", "description": "Implement guardrails, identity management, and automated policy enforcement aligned with Canadian regulations." },
+              { "title": "Monitoring, Optimization & FinOps", "description": "Establish cost visibility, rightsizing, and observability practices that keep cloud efficient at scale." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Cloud for Regulated Industries",
+            "description": "Compliant, secure cloud architectures for sectors where data residency and audit trails are non-negotiable.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "OSFI B-10 compliant cloud architectures for federally-regulated financial institutions.",
+                "useCases": [
+                  "OSFI B-10 compliant architectures",
+                  "Data residency & sovereignty controls",
+                  "Cloud risk assessments & TRAs",
+                  "Third-party risk management"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "PHIPA-compliant cloud infrastructure with data residency and encryption controls.",
+                "useCases": [
+                  "PHIPA-compliant cloud architectures",
+                  "Canadian data residency (ca-central-1)",
+                  "PHI encryption & key management",
+                  "Clinical system modernization"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "Aligned with Government of Canada cloud-first strategy and Protected B/C requirements.",
+                "useCases": [
+                  "GC cloud-first strategy alignment",
+                  "Protected B/C workload design",
+                  "ITSG-33 security controls",
+                  "Shared Services Canada integration"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Platforms",
-            "description": "We leverage leading cloud and DevOps ecosystems:",
+            "description": "We leverage leading cloud and DevOps ecosystems with deep expertise across all major providers.",
             "items": [
-              "AWS, Azure, GCP (multi-cloud & hybrid architectures)",
+              "AWS, Azure, GCP (multi-cloud & hybrid)",
               "Kubernetes, Docker, serverless frameworks",
-              "Terraform, CloudFormation (Infrastructure as Code)",
-              "CI/CD tools (GitHub Actions, GitLab CI, Jenkins)",
-              "Monitoring & observability platforms"
+              "Terraform, Pulumi, CloudFormation",
+              "GitHub Actions, GitLab CI, Jenkins, ArgoCD",
+              "Datadog, New Relic, Prometheus, Grafana",
+              "HashiCorp Vault, AWS IAM, Azure AD"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our cloud solutions are designed to deliver:",
+            "description": "Our cloud solutions are designed to deliver lasting business transformation.",
             "items": [
               "Increased agility and faster time-to-market",
               "Scalable and resilient infrastructure",
-              "Reduced infrastructure and operational costs",
+              "Reduced infrastructure and operational costs (typically 30-50%)",
               "Enhanced security and regulatory compliance",
-              "Strong foundation for data and AI initiatives"
+              "Strong foundation for data and AI initiatives",
+              "Empowered engineering teams with self-service platforms"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for Cloud",
+            "points": [
+              { "title": "Canadian Compliance Expertise", "icon": "bi-maple-leaf", "description": "Deep familiarity with OSFI B-10, PHIPA, PIPEDA, GC cloud policy, and the Canadian regulatory landscape." },
+              { "title": "FinOps from Day One", "icon": "bi-graph-down", "description": "Cost discipline built into architecture decisions — not a cleanup project after the bills shock you." },
+              { "title": "Multi-Cloud Reality", "icon": "bi-clouds", "description": "We work across AWS, Azure, and GCP based on what fits your workloads — not vendor allegiance." },
+              { "title": "Platform Engineering Mindset", "icon": "bi-box-seam", "description": "We build internal developer platforms that make cloud self-service safe — empowering dev teams while maintaining guardrails." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Lift, Shift, and Modernize — Without the Bill Shock",
+            "client": "Canadian Insurance Provider",
+            "challenge": "Legacy claims processing ran on aging on-prem infrastructure. A previous cloud migration had doubled hosting costs with minimal agility gains. Leadership demanded both OSFI compliance and cost reduction.",
+            "approach": "We rearchitected the workload using AWS landing zones, Kubernetes for stateless services, and managed databases. Implemented Terraform, GitOps, and FinOps dashboards with automated rightsizing.",
+            "result": "35% infrastructure cost reduction vs. original cloud migration. Release frequency up from monthly to daily. Full OSFI B-10 compliance achieved with automated evidence collection."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "Should we go multi-cloud or stick with one provider?", "answer": "It depends. Single-cloud delivers simpler operations and deeper integration. Multi-cloud offers vendor resilience and best-of-breed services. We help evaluate the trade-offs honestly based on your risk tolerance and team capacity." },
+              { "question": "How do you handle Canadian data residency requirements?", "answer": "All major cloud providers offer Canadian regions (ca-central-1, Canada East/Central). We design architectures that enforce data residency through IAM policies, network controls, and automated compliance checks." },
+              { "question": "What's your approach to cloud cost control?", "answer": "FinOps from the architecture phase — rightsizing, reserved capacity planning, lifecycle policies, and cost allocation tagging built in. Plus dashboards that make spend visible to the teams driving it." },
+              { "question": "Can you help us modernize without a full rewrite?", "answer": "Yes. We follow the 6R framework (rehost, replatform, refactor, repurchase, retain, retire) — matching modernization depth to business value, not applying one approach to everything." },
+              { "question": "What about compliance evidence for audits?", "answer": "We implement automated compliance frameworks (AWS Config, Azure Policy, GCP Policy Intelligence) that continuously enforce controls and generate audit evidence — critical for OSFI, SOC 2, and ISO 27001 readiness." }
             ]
           },
           "closing": {
             "title": "Ready to modernize your infrastructure and accelerate your cloud journey?",
-            "subtitle": "Let's design a cloud strategy tailored to your business goals."
+            "subtitle": "Let's design a cloud strategy tailored to your business goals and regulatory environment."
           }
         },
         "cybersecurity": {
           "name": "Cybersecurity",
           "icon": "bi-shield-check",
+          "hero": {
+            "tagline": "Risk-Based, Compliance-Ready Security",
+            "headline": "Protect your business against evolving cyber threats",
+            "subheadline": "We design and implement enterprise-grade security programs for Canadian organizations in financial services, healthcare, and government — aligned with OSFI, PIPEDA, PHIPA, SOC 2, and NIST frameworks.",
+            "ctaPrimary": "Assess Your Security Posture",
+            "ctaSecondary": "See Our Methodology",
+            "stats": [
+              { "value": "24/7", "label": "Threat monitoring" },
+              { "value": "Zero Trust", "label": "Architecture approach" },
+              { "value": "SOC 2", "label": "Audit-ready programs" },
+              { "value": "<15min", "label": "Critical incident response" }
+            ]
+          },
+          "challenge": {
+            "title": "Cyber threats outpace traditional defenses",
+            "description": "Canadian organizations face ransomware, supply-chain attacks, and insider threats on a weekly basis — while regulators demand stronger controls and faster breach notification. Legacy perimeter defenses no longer suffice.",
+            "painPoints": [
+              "Ransomware and supply-chain attacks target Canadian SMBs, healthcare, and municipalities relentlessly",
+              "Cloud expansion widens the attack surface faster than security teams can keep up",
+              "OSFI, PIPEDA, PHIPA — plus sector guidelines — create overlapping compliance obligations",
+              "Board and leadership demand cyber risk quantification most teams can't provide",
+              "Incident response plans exist on paper but break down in real events"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Secure Your Organization",
-            "description": "We take a proactive, risk-based approach to cybersecurity—protecting your systems, data, and operations against evolving threats.",
+            "description": "We take a proactive, risk-based approach to cybersecurity — protecting your systems, data, and operations against evolving threats.",
             "items": [
               "Assess your current security posture and identify vulnerabilities",
               "Design and implement enterprise-grade security architectures",
               "Deploy advanced threat detection and response capabilities",
               "Establish continuous monitoring and incident response processes",
-              "Ensure compliance with industry standards and regulations"
+              "Ensure compliance with industry standards and regulations",
+              "Build security awareness through training and tabletop exercises"
+            ]
+          },
+          "capabilities": {
+            "title": "Full-Spectrum Security Capabilities",
+            "groups": [
+              {
+                "name": "Assessment & Architecture",
+                "icon": "bi-clipboard-check",
+                "items": [
+                  "Security posture assessments",
+                  "Threat & risk assessments (TRAs)",
+                  "Zero-trust architecture design",
+                  "Cloud security architecture",
+                  "Third-party risk assessments"
+                ]
+              },
+              {
+                "name": "Detection & Response",
+                "icon": "bi-radar",
+                "items": [
+                  "SIEM/SOAR implementation",
+                  "Managed detection & response (MDR)",
+                  "Incident response planning",
+                  "Threat hunting & intel integration",
+                  "Digital forensics readiness"
+                ]
+              },
+              {
+                "name": "Identity, Governance & Compliance",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Identity & access management (IAM)",
+                  "Privileged access management (PAM)",
+                  "ISO 27001, SOC 2, NIST CSF alignment",
+                  "PIPEDA/PHIPA compliance programs",
+                  "Security awareness training"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -306,46 +781,137 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "We cover the full cybersecurity lifecycle:",
+            "description": "We cover the full cybersecurity lifecycle from assessment through continuous improvement.",
             "items": [
-              "Security Assessment & Risk Analysis",
-              "Security Architecture & Controls Implementation",
-              "Threat Detection & Incident Response",
-              "Identity & Access Management (IAM)",
-              "Compliance, Governance & Risk Management",
-              "Continuous Monitoring & Improvement"
+              { "title": "Security Assessment & Risk Analysis", "description": "Current-state evaluation against frameworks like NIST CSF, ISO 27001, or CIS Controls — with risk quantification for the board." },
+              { "title": "Security Architecture & Controls Implementation", "description": "Design and deploy technical and administrative controls aligned to your risk tolerance and regulatory obligations." },
+              { "title": "Threat Detection & Incident Response", "description": "Stand up SIEM/SOAR capabilities, define runbooks, and conduct tabletop exercises so your team is ready when it matters." },
+              { "title": "Identity & Access Management (IAM)", "description": "Implement zero-trust principles: least-privilege access, MFA everywhere, PAM for admins, and lifecycle governance." },
+              { "title": "Compliance, Governance & Risk Management", "description": "Build audit-ready programs covering PIPEDA, PHIPA, OSFI, SOC 2, and sector-specific obligations." },
+              { "title": "Continuous Monitoring & Improvement", "description": "Metrics, penetration testing, threat intel integration, and iterative hardening — security is not a project." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Cybersecurity for Regulated Sectors",
+            "description": "Security programs purpose-built for the compliance and operational realities of Canadian regulated industries.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "OSFI Cyber Security Guideline B-13 compliant programs, operational resilience, and third-party risk.",
+                "useCases": [
+                  "OSFI B-13 cyber risk alignment",
+                  "Operational resilience frameworks",
+                  "Third-party risk management",
+                  "Fraud detection & AML integration"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "PHIPA-compliant security programs protecting clinical data and medical devices.",
+                "useCases": [
+                  "PHIPA compliance programs",
+                  "Medical device security (IoMT)",
+                  "Clinical system protection",
+                  "Ransomware readiness"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "ITSG-33 aligned security controls for Protected A/B/C classifications.",
+                "useCases": [
+                  "ITSG-33 control implementation",
+                  "Protected B/C workload security",
+                  "Citizen data protection",
+                  "Supply chain security"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Frameworks",
-            "description": "We leverage modern security tools and industry frameworks:",
+            "description": "We leverage modern security tools and industry frameworks aligned to Canadian regulatory requirements.",
             "items": [
-              "SIEM & threat detection platforms",
-              "Cloud security tools (AWS, Azure, GCP)",
-              "Identity & access management solutions",
-              "Endpoint and network security tools",
-              "Compliance frameworks (ISO 27001, NIST, SOC 2)"
+              "SIEM platforms (Splunk, Sentinel, Chronicle)",
+              "Cloud security (AWS Security Hub, Azure Defender, GCP SCC)",
+              "IAM & PAM (Okta, CyberArk, BeyondTrust)",
+              "Endpoint & network security (CrowdStrike, Palo Alto)",
+              "Vulnerability management (Tenable, Qualys)",
+              "Frameworks: ISO 27001, NIST CSF, SOC 2, CIS, ITSG-33"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our cybersecurity solutions are designed to deliver:",
+            "description": "Our cybersecurity solutions are designed to deliver measurable risk reduction.",
             "items": [
               "Reduced risk of cyberattacks and data breaches",
               "Stronger protection of critical assets and data",
               "Improved compliance and audit readiness",
               "Increased customer trust and brand reputation",
-              "Resilient and secure business operations"
+              "Resilient and secure business operations",
+              "Faster recovery when incidents occur"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for Cybersecurity",
+            "points": [
+              { "title": "Risk-Based, Not Checkbox", "icon": "bi-graph-up", "description": "We start with business risk — then design controls proportional to it. Not every organization needs the same security program." },
+              { "title": "Canadian Regulatory Depth", "icon": "bi-maple-leaf", "description": "OSFI B-13, PIPEDA, PHIPA, ITSG-33 — we navigate the Canadian compliance landscape your auditors and regulators actually assess against." },
+              { "title": "Engineering + Security", "icon": "bi-shield-shaded", "description": "We bring software engineering discipline to security: IaC for controls, automated compliance, and DevSecOps practices." },
+              { "title": "Board-Ready Risk Communication", "icon": "bi-file-bar-graph", "description": "We translate technical risk into language executives and boards can act on — no FUD, just clear trade-offs." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Ransomware-Ready in 90 Days",
+            "client": "Canadian Municipal Government",
+            "challenge": "After witnessing neighboring municipalities fall to ransomware, leadership demanded rapid improvement. Legacy endpoints, flat network, no SIEM, and an incident response plan no one had tested.",
+            "approach": "We prioritized by risk: deployed EDR across all endpoints, segmented the network, stood up a managed SIEM/SOAR, and ran 3 tabletop exercises. Hardened backups with immutable storage and isolation.",
+            "result": "Within 90 days: 100% EDR coverage, ransomware-resilient backups, 24/7 threat monitoring, tested IR playbook. Cyber insurance premium reduced 25% with improved posture documentation."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "Do we need to be SOC 2 certified?", "answer": "It depends on your customers. If you sell to US enterprises, SOC 2 is often required. If you're serving Canadian FIs or healthcare, ISO 27001 or alignment to OSFI/PHIPA may be more relevant. We help evaluate which certifications actually matter for your business." },
+              { "question": "What's the difference between compliance and security?", "answer": "Compliance is a floor, not a ceiling. You can be PIPEDA-compliant and still be hacked. Real security starts with understanding your actual threats and building controls that matter. Compliance typically follows naturally from good security." },
+              { "question": "How do you help with incident response?", "answer": "We build IR capabilities in three stages: (1) plan + runbooks + tabletop exercises; (2) SIEM/SOAR detection and response tooling; (3) retainer-based on-call support for incidents. Most clients need the first two; some opt for the retainer." },
+              { "question": "What about insider threats?", "answer": "Insider threats (malicious or negligent) are often overlooked. We address them with least-privilege IAM, PAM for admins, user behavior analytics (UEBA), DLP, and security awareness training tailored to your workforce." },
+              { "question": "How do you keep up with evolving threats?", "answer": "Continuous monitoring, threat intelligence integration, regular penetration testing, and active participation in the Canadian security community (Canadian Centre for Cyber Security guidance, CISO Executive Network, OWASP, etc.)." }
             ]
           },
           "closing": {
             "title": "Ready to strengthen your security posture and protect your business?",
-            "subtitle": "Let's build a cybersecurity strategy tailored to your risks and goals."
+            "subtitle": "Let's build a cybersecurity strategy tailored to your risks, regulations, and goals."
           }
         },
         "business-intelligence": {
           "name": "Business Intelligence",
           "icon": "bi-bar-chart",
+          "hero": {
+            "tagline": "Dashboards That Actually Get Used",
+            "headline": "Turn data into decisions your teams will act on",
+            "subheadline": "We design BI solutions that answer the questions your team actually asks — executive dashboards, self-service analytics, and embedded reporting that drive measurable outcomes across finance, operations, and strategy.",
+            "ctaPrimary": "Build Your BI Strategy",
+            "ctaSecondary": "See Our Approach",
+            "stats": [
+              { "value": "80%", "label": "Less manual reporting" },
+              { "value": "Self-service", "label": "Analytics at scale" },
+              { "value": "Real-time", "label": "KPI visibility" },
+              { "value": "5-tool", "label": "Platform expertise" }
+            ]
+          },
+          "challenge": {
+            "title": "Dashboards no one opens — reports no one trusts",
+            "description": "Most organizations have plenty of dashboards. What they lack is dashboards that answer the right questions, built on data people trust, delivered where decisions actually happen.",
+            "painPoints": [
+              "Executives wait days for reports that should be real-time",
+              "Different dashboards show different numbers for the same KPI",
+              "Analysts spend 80% of their time wrangling data, 20% analyzing",
+              "Self-service BI promises fail because of untrustworthy underlying data",
+              "Reports sit unused because they don't surface next actions"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Deliver BI Solutions",
             "description": "We help organizations turn raw data into actionable insights that drive smarter decisions and measurable outcomes.",
@@ -354,7 +920,46 @@
               "Design and implement interactive dashboards and reporting frameworks",
               "Integrate data from multiple sources for a unified view",
               "Automate reporting and KPI tracking for real-time visibility",
-              "Enable predictive and scenario-based analytics for strategic planning"
+              "Enable predictive and scenario-based analytics for strategic planning",
+              "Drive adoption through training, enablement, and iteration"
+            ]
+          },
+          "capabilities": {
+            "title": "Modern BI Capabilities",
+            "groups": [
+              {
+                "name": "Dashboard & Reporting Design",
+                "icon": "bi-clipboard-data",
+                "items": [
+                  "Executive KPI dashboards",
+                  "Operational & tactical dashboards",
+                  "Regulatory & compliance reporting",
+                  "Mobile-friendly BI experiences",
+                  "Embedded analytics in products"
+                ]
+              },
+              {
+                "name": "Semantic Layer & Modeling",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Metric definitions & KPI catalogs",
+                  "Dimensional modeling (star/snowflake)",
+                  "Semantic layers (dbt metrics, LookML)",
+                  "Certified datasets & governance",
+                  "Row-level & column-level security"
+                ]
+              },
+              {
+                "name": "Advanced Analytics",
+                "icon": "bi-graph-up-arrow",
+                "items": [
+                  "Forecasting & what-if scenarios",
+                  "Cohort & funnel analysis",
+                  "Customer behavior analytics",
+                  "A/B testing frameworks",
+                  "Alerting & anomaly detection"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -371,45 +976,137 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "From data to insight, we manage the full BI lifecycle:",
+            "description": "From data to insight, we manage the full BI lifecycle with business outcomes front-and-center.",
             "items": [
-              "Requirements gathering & KPI definition",
-              "Data integration & transformation",
-              "Dashboard & report design",
-              "Automation & scheduling",
-              "User training & adoption support",
-              "Continuous improvement & optimization"
+              { "title": "Requirements Gathering & KPI Definition", "description": "Workshop decisions to be supported, define metric ownership, and establish a governed KPI catalog." },
+              { "title": "Data Integration & Transformation", "description": "Connect source systems, build semantic models, and create certified datasets teams can trust." },
+              { "title": "Dashboard & Report Design", "description": "Design-led dashboards that surface insights visually, with clear calls-to-action and drill-downs." },
+              { "title": "Automation & Scheduling", "description": "Automate data refreshes, report distribution, and alerts so insights arrive when needed." },
+              { "title": "User Training & Adoption Support", "description": "Enable analysts and business users with training, office hours, and documentation — adoption is a program, not an event." },
+              { "title": "Continuous Improvement & Optimization", "description": "Usage analytics, feedback loops, and iterative enhancements based on what teams actually use." }
+            ]
+          },
+          "industryApplications": {
+            "title": "BI Across Regulated Industries",
+            "description": "BI solutions designed for the reporting rigour and audit requirements of Canadian regulated sectors.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "Executive dashboards, regulatory reporting, and risk analytics aligned to OSFI requirements.",
+                "useCases": [
+                  "Executive scorecards & balanced scorecards",
+                  "OSFI regulatory reporting automation",
+                  "Branch & channel performance analytics",
+                  "Customer 360 & LTV dashboards"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "Clinical dashboards, operational analytics, and quality improvement reporting.",
+                "useCases": [
+                  "Clinical quality indicators",
+                  "Hospital operational dashboards",
+                  "Wait-time & capacity analytics",
+                  "Population health reporting"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "Public service performance dashboards and transparency reporting.",
+                "useCases": [
+                  "Program performance measurement",
+                  "Public service delivery dashboards",
+                  "Open data & transparency reporting",
+                  "Budget & spend analytics"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Platforms",
-            "description": "We leverage modern BI tools and platforms:",
+            "description": "We leverage modern BI tools and platforms — matched to your team's skills and existing investments.",
             "items": [
-              "Power BI, Tableau, Looker, Qlik",
-              "SQL, Python, and ETL integration",
-              "Cloud data platforms (AWS, Azure, GCP)",
-              "Automated reporting and visualization pipelines"
+              "Power BI, Tableau, Looker, Qlik Sense",
+              "dbt, Cube.js, Metabase, Superset",
+              "SQL, Python, R for advanced analytics",
+              "Snowflake, BigQuery, Databricks SQL",
+              "Google Analytics 4, Amplitude, Mixpanel",
+              "Automated reporting pipelines"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our BI solutions deliver:",
+            "description": "Our BI solutions deliver transformation you can measure.",
             "items": [
-              "Faster access to actionable insights",
+              "Faster access to actionable insights (hours, not days)",
               "Improved decision-making and strategic planning",
               "Greater transparency across departments",
-              "Reduced time spent on manual reporting",
-              "Enhanced ability to spot trends and seize opportunities"
+              "Reduced time spent on manual reporting (often 50-80%)",
+              "Enhanced ability to spot trends and seize opportunities",
+              "Single source of truth across the organization"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for BI",
+            "points": [
+              { "title": "Business First, Tools Second", "icon": "bi-bullseye", "description": "We start with the decisions you need to make — not the dashboards you want to build. Tools follow strategy." },
+              { "title": "Adoption as a Discipline", "icon": "bi-people", "description": "BI success is measured by usage, not delivery. We bake training, enablement, and feedback loops into every engagement." },
+              { "title": "Platform-Agnostic Expertise", "icon": "bi-tools", "description": "Deep experience across Power BI, Tableau, Looker, and Qlik — we recommend what fits your team, not our familiarity." },
+              { "title": "Data Engineering Foundations", "icon": "bi-bricks", "description": "We build BI on trustworthy data infrastructure — because dashboards built on bad data are worse than no dashboards." }
+            ]
+          },
+          "caseStudy": {
+            "title": "From Spreadsheet Chaos to Executive Clarity",
+            "client": "Canadian Regional Credit Union",
+            "challenge": "Monthly board packages were compiled manually from 15+ spreadsheets, took 5 analysts a full week, and still contained errors. KPIs from different teams never matched.",
+            "approach": "We built a governed data model on the existing data warehouse, established a KPI catalog with executive sign-off, and delivered Power BI dashboards with drill-through to operational detail. Trained analysts on dbt and the semantic layer.",
+            "result": "Board package generation time reduced from 5 days to 2 hours. Analysts reclaimed 30+ hours/week for actual analysis. Executive team reports 'finally trusting the numbers'."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "Which BI tool should we use?", "answer": "It depends on your team's skills, existing licenses, data platform, and use cases. Power BI integrates well with Microsoft stacks; Tableau excels at visualization; Looker offers strong governance; Qlik has a loyal analyst base. We help evaluate honestly." },
+              { "question": "How do you prevent dashboard sprawl?", "answer": "We establish a governed catalog of certified dashboards with clear ownership, regular usage reviews, and retirement of unused content. Self-service still requires guardrails." },
+              { "question": "What's a semantic layer and why does it matter?", "answer": "A semantic layer (dbt metrics, LookML, Cube) defines KPIs and metrics once — so 'revenue' means the same thing whether calculated in Power BI, Tableau, a SQL query, or an alert. It's the foundation of trust in BI." },
+              { "question": "Can you help migrate from legacy BI tools?", "answer": "Yes. We've migrated from Cognos, BusinessObjects, MicroStrategy, and custom reporting platforms to modern BI tools — focusing on re-implementing the 20% of reports that actually drive decisions." },
+              { "question": "How do you measure BI success?", "answer": "Adoption metrics (active users, session frequency), business outcomes (decisions made faster, manual reporting reduced), and qualitative feedback from the teams using the dashboards. Not just 'we delivered X dashboards'." }
             ]
           },
           "closing": {
             "title": "Ready to transform your data into insights that drive results?",
-            "subtitle": "Let's build a BI solution tailored to your business goals."
+            "subtitle": "Let's build a BI solution that your team will actually use and trust."
           }
         },
         "big-data": {
           "name": "Data Platform & Big Data",
           "icon": "bi-hdd-stack",
+          "hero": {
+            "tagline": "Scale Beyond Traditional Databases",
+            "headline": "Process massive datasets at speed and scale",
+            "subheadline": "When your data volumes outgrow traditional databases, you need architecture designed for scale. We build distributed data platforms that handle petabytes, stream millions of events, and power AI workloads without breaking.",
+            "ctaPrimary": "Architect Your Data Platform",
+            "ctaSecondary": "See Our Methodology",
+            "stats": [
+              { "value": "Petabyte", "label": "Scale-ready architectures" },
+              { "value": "Real-time", "label": "Event streaming" },
+              { "value": "Lakehouse", "label": "Modern architecture" },
+              { "value": "100%", "label": "Open-source friendly" }
+            ]
+          },
+          "challenge": {
+            "title": "Your data outgrew your infrastructure",
+            "description": "Transactional databases weren't built for petabyte-scale analytics. Traditional warehouses struggle with unstructured data, streaming events, and the compute demands of modern AI workloads.",
+            "painPoints": [
+              "Analytical queries on transactional databases slow down operations",
+              "Batch ETL jobs can't keep up with data arrival rates",
+              "Unstructured data (documents, images, logs) sits unused in cheap storage",
+              "AI and ML initiatives stall because training data is everywhere but nowhere",
+              "Scaling traditional data warehouses gets expensive fast"
+            ]
+          },
           "howWeDeliver": {
             "title": "How We Deliver Big Data Solutions",
             "description": "We help organizations process, store, and analyze massive datasets to uncover insights and support data-driven decision-making.",
@@ -418,7 +1115,46 @@
               "Integrate and process structured and unstructured data at scale",
               "Optimize performance for high-volume, real-time, and batch data processing",
               "Build modern data lakes and analytics-ready platforms",
-              "Enable AI and advanced analytics on massive datasets"
+              "Enable AI and advanced analytics on massive datasets",
+              "Establish governance and lineage for regulated data"
+            ]
+          },
+          "capabilities": {
+            "title": "Big Data Platform Capabilities",
+            "groups": [
+              {
+                "name": "Distributed Storage & Compute",
+                "icon": "bi-hdd-stack",
+                "items": [
+                  "Data lakes (S3, ADLS, GCS)",
+                  "Lakehouse architecture (Delta, Iceberg, Hudi)",
+                  "Distributed processing (Spark, Flink)",
+                  "Query engines (Presto, Trino, Athena)",
+                  "Columnar formats (Parquet, ORC)"
+                ]
+              },
+              {
+                "name": "Streaming & Real-Time",
+                "icon": "bi-broadcast",
+                "items": [
+                  "Event streaming (Kafka, Kinesis, Pulsar)",
+                  "Stream processing (Flink, Spark Streaming)",
+                  "CDC & change streams",
+                  "Real-time analytics (Druid, Pinot)",
+                  "Low-latency data serving"
+                ]
+              },
+              {
+                "name": "Analytics & ML at Scale",
+                "icon": "bi-cpu",
+                "items": [
+                  "Distributed ML training (Spark MLlib, Ray)",
+                  "Feature stores for production ML",
+                  "Vector databases for GenAI workloads",
+                  "Graph analytics at scale",
+                  "Petabyte-scale ad-hoc analytics"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -435,41 +1171,108 @@
           },
           "ourApproach": {
             "title": "Our Approach",
-            "description": "We manage the full lifecycle of Big Data projects:",
+            "description": "We manage the full lifecycle of Big Data projects from architecture to operations.",
             "items": [
-              "Requirements gathering & architecture planning",
-              "Data ingestion and integration (batch & streaming)",
-              "Distributed processing with Spark, Hadoop, and modern frameworks",
-              "Data lake and data warehouse design",
-              "Optimization, monitoring, and scalability planning",
-              "Governance, security, and compliance"
+              { "title": "Requirements Gathering & Architecture Planning", "description": "Quantify data volumes, velocity, and variety — design a platform that handles today's load and tomorrow's growth." },
+              { "title": "Data Ingestion & Integration", "description": "Build scalable batch and streaming pipelines connecting source systems to the platform." },
+              { "title": "Distributed Processing", "description": "Implement Spark, Flink, or serverless processing matched to your workload patterns and team skills." },
+              { "title": "Data Lake & Warehouse Design", "description": "Design lakehouse architecture with proper partitioning, formats, and catalog — built to query efficiently." },
+              { "title": "Optimization, Monitoring & Scalability", "description": "Tune for cost and performance; establish observability and autoscaling for elastic workloads." },
+              { "title": "Governance, Security & Compliance", "description": "Implement cataloging, fine-grained access controls, and audit logging for regulated data at scale." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Big Data Across Industries",
+            "description": "Scale data platforms proven in Canada's most demanding regulated environments.",
+            "industries": [
+              {
+                "name": "Financial Services",
+                "icon": "bi-bank",
+                "description": "Transaction analytics, risk computation, and fraud detection at the scale Canadian banking demands.",
+                "useCases": [
+                  "Real-time transaction analytics",
+                  "Risk computation & stress testing",
+                  "Historical fraud pattern analysis",
+                  "Market data processing"
+                ]
+              },
+              {
+                "name": "Healthcare",
+                "icon": "bi-heart-pulse",
+                "description": "Genomics, imaging, and population data platforms for research and clinical operations.",
+                "useCases": [
+                  "Genomics & sequencing pipelines",
+                  "Medical imaging archives (PACS)",
+                  "Population health data lakes",
+                  "Real-world evidence generation"
+                ]
+              },
+              {
+                "name": "Government & Public Sector",
+                "icon": "bi-building",
+                "description": "Census, statistical, and open-data platforms serving millions of queries.",
+                "useCases": [
+                  "Census & statistical data platforms",
+                  "Open data infrastructure",
+                  "Inter-agency data sharing",
+                  "Program-level analytics at scale"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies & Platforms",
-            "description": "We leverage leading Big Data tools and frameworks:",
+            "description": "We leverage leading Big Data tools and frameworks — prioritizing open standards and avoiding lock-in.",
             "items": [
-              "Apache Spark, Hadoop, Flink",
-              "Data Lakes & Lakehouses (AWS, Azure, GCP)",
-              "ETL/ELT pipelines and orchestration tools",
-              "Distributed storage and analytics platforms",
-              "Real-time streaming (Kafka, Kinesis)"
+              "Apache Spark, Flink, Hadoop, Beam",
+              "Delta Lake, Apache Iceberg, Hudi",
+              "Kafka, Kinesis, Pulsar, Pub/Sub",
+              "Trino, Presto, Athena, Dremio",
+              "Databricks, EMR, Dataproc, HDInsight",
+              "Druid, Pinot, ClickHouse"
             ]
           },
           "businessImpact": {
             "title": "Business Impact",
-            "description": "Our Big Data solutions deliver:",
+            "description": "Our Big Data solutions deliver scale, performance, and flexibility.",
             "items": [
               "Faster processing and analysis of massive datasets",
               "Improved operational and business decision-making",
               "Scalable infrastructure for growing data volumes",
               "Support for advanced analytics and AI/ML initiatives",
-              "Strong data governance and reliability"
+              "Strong data governance and reliability",
+              "Lower total cost of ownership than traditional warehouses at scale"
+            ]
+          },
+          "differentiators": {
+            "title": "Why Gamma Neutral for Big Data",
+            "points": [
+              { "title": "Open Standards First", "icon": "bi-unlock", "description": "We build on open formats (Parquet, Iceberg, Delta) and open engines (Spark, Trino) — avoiding the vendor lock-in that kills long-term agility." },
+              { "title": "Cost-Aware Architecture", "icon": "bi-calculator", "description": "Big data doesn't have to mean big bills. We engineer for storage/compute separation, intelligent tiering, and workload-appropriate infrastructure." },
+              { "title": "Production Operations", "icon": "bi-activity", "description": "We don't stop at architecture — we implement observability, auto-scaling, and operational runbooks for reliable production systems." },
+              { "title": "AI-Ready Foundations", "icon": "bi-cpu-fill", "description": "Our platforms are designed with AI/ML workloads in mind: feature stores, vector databases, and distributed training infrastructure." }
+            ]
+          },
+          "caseStudy": {
+            "title": "From Warehouse Bottleneck to Lakehouse Scale",
+            "client": "Canadian Telecommunications Provider",
+            "challenge": "Legacy data warehouse couldn't handle 10TB/day of network telemetry. Nightly ETL jobs ran 14+ hours, analysts waited until noon for yesterday's data, and fraud detection was reactive not real-time.",
+            "approach": "Architected a lakehouse on Databricks with Kafka streaming for real-time ingestion, Delta Lake for storage, and Structured Streaming for continuous fraud detection. Implemented medallion architecture and Unity Catalog for governance.",
+            "result": "Data freshness improved from 14 hours to 90 seconds. Fraud detection shifted from batch-reactive to real-time preventive. Infrastructure cost reduced 45% vs. legacy warehouse scaling path."
+          },
+          "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+              { "question": "When do we actually need 'big data' architecture?", "answer": "When traditional databases/warehouses struggle with your volume, velocity, or variety. Often this is > a few TB of data, > millions of events/day, or mixing structured with unstructured data. Don't over-architect for data you don't have yet." },
+              { "question": "Spark vs. Databricks vs. EMR — what's the difference?", "answer": "Spark is the open-source engine. Databricks is a managed platform built around Spark with notebooks, Delta Lake, and governance. EMR/Dataproc/HDInsight are cloud-provider managed Spark services. Databricks typically has the richest ecosystem; provider services are often cheaper." },
+              { "question": "What's a lakehouse and how is it different from a data lake?", "answer": "Traditional data lakes store raw files in object storage — cheap but no ACID transactions, schema enforcement, or fast queries. Lakehouses (Delta, Iceberg, Hudi) add warehouse-like features to the data lake, enabling both streaming and batch on the same storage layer." },
+              { "question": "How do you handle data governance at scale?", "answer": "Catalog-first approach: Unity Catalog, AWS Glue Catalog, or equivalent for metadata. Fine-grained access (row/column level), PII discovery and masking, lineage tracking end-to-end, and audit logging wired into observability." },
+              { "question": "Can big data platforms be cost-effective?", "answer": "Absolutely — but it requires discipline. Storage/compute separation, tiered storage lifecycle policies, query optimization, workload isolation, and rightsizing clusters. Without FinOps practice, big data becomes expensive data fast." }
             ]
           },
           "closing": {
             "title": "Ready to unlock insights from your massive datasets?",
-            "subtitle": "Let's design a Big Data solution that scales with your business needs."
+            "subtitle": "Let's design a Big Data solution that scales with your business needs — and your budget."
           }
         }
       }

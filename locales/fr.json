@@ -68,12 +68,33 @@
     },
     "delivery": {
       "title": "Livraison et gestion de programmes",
-      "slug": "delivery",
+      "slug": "",
       "description": "Les projets technologiques échouent plus souvent par manque d'exécution que par manque d'idées.",
       "features": ["Gestion agile de la livraison", "Gouvernance de programme", "Coordination des fournisseurs", "Évaluation des risques"]
     },
     "details": {
       "backToServices": "Retour aux services",
+      "notFound": "Service introuvable",
+      "viewApproach": "Voir notre approche",
+      "exploreMore": "Découvrir plus de services",
+      "sectionLabels": {
+        "challenge": "Le défi",
+        "solution": "Notre solution",
+        "capabilities": "Capacités",
+        "methodology": "Méthodologie",
+        "industries": "Applications sectorielles",
+        "techStack": "Pile technologique",
+        "impact": "Impact d'affaires",
+        "whyUs": "Pourquoi Gamma Neutral",
+        "caseStudy": "Cas concret",
+        "faq": "Questions fréquentes",
+        "relatedServices": "Services connexes"
+      },
+      "caseStudyLabels": {
+        "challenge": "Défi",
+        "approach": "Approche",
+        "result": "Résultat"
+      },
       "sectionHeadings": {
         "howWeDeliver": "Comment nous livrons",
         "keyUseCases": "Cas d'usage clés",
@@ -88,15 +109,78 @@
         "ai-intelligent-systems": {
           "name": "IA et systèmes intelligents",
           "icon": "bi-cpu",
+          "hero": {
+            "tagline": "L'intelligence artificielle qui livre",
+            "headline": "Déployez des systèmes d'IA qui livrent des résultats d'affaires mesurables",
+            "subheadline": "De l'apprentissage machine à l'IA générative — nous concevons, déployons et faisons évoluer des systèmes d'IA de production pour les services financiers, la santé et le secteur public canadien qui exigent précision, explicabilité et conformité réglementaire.",
+            "ctaPrimary": "Démarrer votre initiative IA",
+            "ctaSecondary": "Voir notre méthodologie",
+            "stats": [
+              { "value": "90%+", "label": "Précision des modèles en production" },
+              { "value": "3-6 mois", "label": "Du pilote à la production" },
+              { "value": "MLOps", "label": "Ingénierie d'abord" },
+              { "value": "SOC 2", "label": "Prêt pour la conformité" }
+            ]
+          },
+          "challenge": {
+            "title": "La plupart des pilotes IA n'atteignent jamais la production",
+            "description": "Selon Gartner, plus de 80 % des projets IA échouent à livrer une valeur d'affaires. Le manque n'est pas les idées — c'est la rigueur d'ingénierie, la maturité des données et l'excellence opérationnelle.",
+            "painPoints": [
+              "Les pilotes IA démontrent du potentiel mais stagnent en production à cause de pipelines fragiles et de déploiements manuels",
+              "Les industries réglementées exigent des modèles explicables, des pistes d'audit et des tests de biais — rarement présents dans les pilotes",
+              "La dérive des modèles passe inaperçue sans surveillance adéquate, dégradant silencieusement la précision",
+              "L'intégration avec les systèmes hérités (banque centrale, DSE, gestion de dossiers) est traitée comme un après-coup",
+              "Les parties prenantes ne distinguent pas les cas d'usage à fort impact des démos techniques inutiles"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous livrons les solutions d'IA",
-            "description": "Nous adoptons une approche pratique et orientée affaires de l'IA — axée sur des résultats mesurables.",
+            "description": "Nous adoptons une approche pratique et orientée affaires de l'IA — en concevant pour la production dès le premier jour, sans l'ajouter après coup.",
             "items": [
-              "Identifier les opportunités d'IA à fort impact",
-              "Concevoir et entraîner des modèles d'apprentissage machine sur mesure",
-              "Intégrer l'IA à vos systèmes et flux de travail existants",
-              "Déployer des solutions évolutives et prêtes pour la production",
-              "Surveiller et améliorer continuellement la performance des modèles"
+              "Identifier les opportunités d'IA à fort impact fondées sur des KPI mesurables",
+              "Concevoir et entraîner des modèles d'apprentissage machine sur mesure avec explicabilité intégrée",
+              "Intégrer l'IA à vos systèmes et flux de travail existants (pas de démos isolées)",
+              "Déployer des solutions évolutives et prêtes pour la production avec automatisation MLOps",
+              "Surveiller la dérive des modèles et améliorer la performance après le lancement",
+              "Établir des cadres de gouvernance pour une IA responsable et conforme"
+            ]
+          },
+          "capabilities": {
+            "title": "Capacités complètes en IA",
+            "groups": [
+              {
+                "name": "Apprentissage machine et profond",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Apprentissage supervisé, non supervisé, par renforcement",
+                  "Apprentissage profond (CNN, RNN, Transformers)",
+                  "Prévision de séries chronologiques",
+                  "Détection d'anomalies",
+                  "Ingénierie de caractéristiques à grande échelle"
+                ]
+              },
+              {
+                "name": "IA générative et langage naturel",
+                "icon": "bi-chat-quote",
+                "items": [
+                  "Intégration de grands modèles de langage (LLM)",
+                  "Génération augmentée par récupération (RAG)",
+                  "Intelligence documentaire et extraction",
+                  "Analyse de sentiment et classification",
+                  "Ajustement fin personnalisé et ingénierie de prompts"
+                ]
+              },
+              {
+                "name": "Vision par ordinateur et systèmes décisionnels",
+                "icon": "bi-camera",
+                "items": [
+                  "Classification d'images et détection d'objets",
+                  "Analyse vidéo et inspection qualité",
+                  "OCR et compréhension documentaire",
+                  "Systèmes experts et intelligence décisionnelle",
+                  "Moteurs de recommandation"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -113,53 +197,184 @@
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "De l'idée au déploiement, nous couvrons le cycle de vie complet de l'IA :",
+            "description": "De l'idée au déploiement, nous couvrons tout le cycle de vie de l'IA — pas seulement les parties amusantes.",
             "items": [
-              "Découverte et définition des cas d'usage",
-              "Préparation des données et ingénierie de caractéristiques",
-              "Développement et validation de modèles",
-              "Déploiement et intégration (MLOps)",
-              "Surveillance, optimisation et mise à l'échelle"
+              { "title": "Découverte et définition des cas d'usage", "description": "Identification des opportunités IA par ateliers avec KPI d'affaires clairs, notation de faisabilité et modélisation du ROI." },
+              { "title": "Préparation des données et ingénierie de caractéristiques", "description": "Évaluer la maturité des données, combler les écarts de qualité et concevoir des caractéristiques qui libèrent la puissance prédictive." },
+              { "title": "Développement et validation de modèles", "description": "Développement itératif avec validation rigoureuse, tests de biais et explicabilité dès le premier jour." },
+              { "title": "Déploiement et intégration (MLOps)", "description": "Déploiement en production avec CI/CD pour les modèles, tests automatisés et intégration transparente à vos systèmes." },
+              { "title": "Surveillance, optimisation et mise à l'échelle", "description": "Détection de dérive, tableaux de bord de performance et boucles d'amélioration continue pour maintenir les modèles performants." }
+            ]
+          },
+          "industryApplications": {
+            "title": "IA dans les industries réglementées",
+            "description": "Expertise sectorielle profonde dans les secteurs réglementés où la précision et la conformité de l'IA comptent le plus.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Solutions IA alignées aux lignes directrices du BSIF, à la gestion des risques de modèles et aux exigences de prêt équitable.",
+                "useCases": [
+                  "Automatisation de la notation de crédit et de la souscription",
+                  "Surveillance des transactions fraude et LCBA",
+                  "Trading algorithmique et analyse de risque",
+                  "Attrition client et prochaine meilleure action"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "IA conforme à la LPRPS pour l'aide à la décision clinique et l'efficacité opérationnelle.",
+                "useCases": [
+                  "Stratification du risque patient",
+                  "Imagerie médicale et aide au diagnostic",
+                  "Extraction de documentation clinique",
+                  "Prévision de capacité hospitalière"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "IA responsable pour les services publics avec transparence, équité et reddition de comptes intégrées.",
+                "useCases": [
+                  "Automatisation de la prestation de services",
+                  "Intégrité des programmes et détection de fraude",
+                  "Analyse de politiques et modélisation de scénarios",
+                  "Triage et routage des demandes citoyennes"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et plateformes",
-            "description": "Nous exploitons les écosystèmes modernes d'IA et infonuagiques :",
+            "description": "Nous exploitons des écosystèmes IA et infonuagiques modernes choisis pour leur robustesse en production, pas pour les mots à la mode.",
             "items": [
-              "Python, TensorFlow, PyTorch",
-              "Services IA infonuagiques (AWS, Azure, GCP)",
-              "Plateformes de données et API",
-              "Outils MLOps et d'automatisation"
+              "Python, TensorFlow, PyTorch, scikit-learn",
+              "Hugging Face, LangChain, OpenAI, Anthropic",
+              "AWS SageMaker, Azure ML, Google Vertex AI",
+              "MLflow, Weights & Biases, Kubeflow",
+              "Databricks, Snowflake, BigQuery",
+              "Docker, Kubernetes, Terraform"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions d'IA sont conçues pour offrir :",
+            "description": "Nos solutions d'IA sont conçues pour livrer des résultats mesurables — pas des indicateurs vaniteux.",
             "items": [
-              "Une efficacité opérationnelle accrue",
-              "Des décisions plus rapides et mieux informées",
-              "Des coûts et risques réduits",
-              "Une expérience client améliorée",
-              "Un avantage concurrentiel grâce aux données"
+              "Efficacité opérationnelle accrue grâce à l'automatisation",
+              "Prise de décision plus rapide et fondée sur les données à tous les niveaux",
+              "Coûts et risques réduits avec intervention prédictive",
+              "Expérience client améliorée via la personnalisation",
+              "Avantage concurrentiel grâce aux actifs de données propriétaires",
+              "Préparation réglementaire avec gouvernance de modèles auditable"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour l'IA",
+            "points": [
+              { "title": "Rigueur d'ingénierie", "icon": "bi-gear-wide-connected", "description": "Nous apportons la rigueur du génie logiciel à la science des données — contrôle de version, tests, CI/CD et observabilité pour les modèles dès le premier jour." },
+              { "title": "Mentalité production-first", "icon": "bi-rocket-takeoff", "description": "Nous ne construisons pas des démos Jupyter. Chaque modèle est conçu pour s'exécuter en production, à grande échelle, avec surveillance." },
+              { "title": "Expertise en industries réglementées", "icon": "bi-shield-check", "description": "Compréhension approfondie du BSIF, de la LPRPDE, de la LPRPS et des contraintes qui façonnent l'IA dans les secteurs réglementés." },
+              { "title": "Explicabilité par défaut", "icon": "bi-search", "description": "Chaque modèle livre des outils d'interprétabilité, des tests de biais et des pistes d'audit — essentiels pour le déploiement réglementé." }
+            ]
+          },
+          "caseStudy": {
+            "title": "D'un pilote de fraude à une plateforme de production",
+            "client": "Institution financière canadienne de niveau 1",
+            "challenge": "Un pilote de détection de fraude était bloqué en preuve de concept depuis 18 mois. La précision du modèle était acceptable, mais le déploiement était manuel, les explications ne pouvaient être générées pour les transactions contestées et la dérive n'était pas détectée.",
+            "approach": "Nous avons reconstruit le pipeline sur des fondations MLOps — entraînement automatisé, explications basées sur SHAP, infrastructure de scoring en temps réel et tableaux de bord de surveillance de dérive. Partenariat avec les équipes de risque et de conformité tout au long.",
+            "result": "Déploiement en production atteint en 4 mois. Taux de faux positifs réduit de 40 %, charge de travail des enquêteurs diminuée et chaque transaction signalée livre désormais une explication prête pour le régulateur."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Comment mesurez-vous le succès d'un projet IA ?", "answer": "Nous lions chaque initiative IA à des KPI d'affaires spécifiques avant d'écrire du code — réduction des faux positifs, amélioration de la précision des prévisions, dollars économisés, hausse de rétention client. Les métriques techniques (F1, ROC-AUC) comptent uniquement au service de ces résultats d'affaires." },
+              { "question": "Pouvez-vous travailler avec notre infrastructure de données existante ?", "answer": "Oui. Nous intégrons régulièrement avec des entrepôts de données hérités, des plateformes de données infonuagiques, des DSE, des systèmes bancaires centraux et des applications personnalisées. Notre rôle est de faire fonctionner l'IA dans votre environnement, pas d'exiger une reconstruction à neuf." },
+              { "question": "Comment vous assurez-vous que les modèles restent conformes à la réglementation canadienne ?", "answer": "Nous intégrons l'explicabilité, les tests de biais et les pistes d'audit dans chaque modèle dès le premier jour. Notre travail s'aligne avec les lignes directrices du BSIF sur la gestion des risques de modèles, les exigences de la LPRPDE/LPRPS et les normes émergentes de la Loi sur l'intelligence artificielle et les données (LIAD)." },
+              { "question": "Utilisez-vous l'IA générative ou vous concentrez-vous sur le ML traditionnel ?", "answer": "Les deux — le bon outil pour le bon travail. L'IA générative excelle au traitement documentaire, au support client et aux tâches de contenu. Le ML traditionnel gagne souvent pour la prévision sur données structurées, la détection de fraude et la notation de crédit où l'explicabilité est primordiale." },
+              { "question": "Que se passe-t-il après le déploiement du modèle ?", "answer": "Le déploiement est le début, pas la fin. Nous établissons la surveillance de la dérive des modèles, de la dégradation de la qualité des données et de la baisse de performance — plus une cadence claire de ré-entraînement. Plusieurs de nos plus longues relations clients sont des opérations de modèles continues." }
             ]
           },
           "closing": {
             "title": "Prêt à libérer la puissance de l'IA dans votre organisation ?",
-            "subtitle": "Discutons de la façon dont nous pouvons vous aider à identifier et déployer des solutions d'IA à fort impact."
+            "subtitle": "Discutons de la façon dont nous pouvons vous aider à identifier et déployer des solutions d'IA à fort impact qui livrent vraiment."
           }
         },
         "data-engineering-platforms": {
           "name": "Ingénierie des données et plateformes modernes",
           "icon": "bi-database",
+          "hero": {
+            "tagline": "La fondation dont votre stratégie IA a besoin",
+            "headline": "Transformez des données fragmentées en un actif unifié et fiable",
+            "subheadline": "Nous concevons et mettons en œuvre des plateformes de données modernes qui alimentent l'analyse, l'IA et la prise de décision à l'échelle de l'entreprise — avec la gouvernance, la traçabilité et la qualité exigées par les industries réglementées.",
+            "ctaPrimary": "Discuter de votre stratégie de données",
+            "ctaSecondary": "Voir notre méthodologie",
+            "stats": [
+              { "value": "10x", "label": "Livraison de données plus rapide" },
+              { "value": "99,9 %", "label": "SLA de fiabilité des pipelines" },
+              { "value": "Temps réel", "label": "Capacités de streaming" },
+              { "value": "Traçabilité", "label": "Lineage de bout en bout" }
+            ]
+          },
+          "challenge": {
+            "title": "Vos données sont partout — et nulle part",
+            "description": "Les organisations collectent plus de données que jamais, mais peinent à les rendre fiables, accessibles et exploitables. Silos, définitions incohérentes et pipelines fragiles freinent les initiatives analytiques et d'IA.",
+            "painPoints": [
+              "Les données vivent dans des dizaines de systèmes déconnectés — aucune source unique de vérité",
+              "Les rapports de différentes équipes se contredisent parce que les définitions dérivent",
+              "Les entrepôts de données hérités ne peuvent gérer les volumes, variétés et vélocités modernes",
+              "Les problèmes de qualité surfacent en tableaux de bord brisés et modèles IA défaillants",
+              "La conformité (LPRPDE, LPRPS, BSIF) exige une traçabilité que vous ne pouvez produire"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous bâtissons des plateformes de données modernes",
             "description": "Nous concevons et mettons en œuvre des architectures de données évolutives qui transforment les données brutes en actifs fiables et prêts pour l'analyse.",
             "items": [
               "Évaluer votre paysage de données actuel et définir une architecture cible",
-              "Construire des pipelines robustes pour le traitement par lots et en temps réel",
+              "Construire des pipelines robustes pour le traitement par lots et temps réel",
               "Intégrer les données entre plusieurs systèmes et sources",
               "Assurer une qualité, fiabilité et cohérence élevées des données",
-              "Permettre un accès fluide pour l'analyse, la BI et les cas d'usage IA"
+              "Permettre un accès fluide pour l'analyse, la BI et les cas d'usage IA",
+              "Établir gouvernance, traçabilité et catalogage dès le premier jour"
+            ]
+          },
+          "capabilities": {
+            "title": "Ingénierie de données complète",
+            "groups": [
+              {
+                "name": "Plateformes et architecture",
+                "icon": "bi-diagram-2",
+                "items": [
+                  "Architecture lakehouse (Databricks, Iceberg, Delta)",
+                  "Entrepôts infonuagiques (Snowflake, BigQuery, Redshift)",
+                  "Data mesh et conception par domaine",
+                  "Modélisation dimensionnelle (étoile/flocon)",
+                  "Patrons medallion (bronze/argent/or)"
+                ]
+              },
+              {
+                "name": "Pipelines et intégration",
+                "icon": "bi-arrow-left-right",
+                "items": [
+                  "Pipelines ETL/ELT (Airflow, dbt, Fivetran)",
+                  "Streaming temps réel (Kafka, Kinesis, Flink)",
+                  "CDC et réplication de bases de données",
+                  "Intégration et ingestion d'API",
+                  "Architectures événementielles"
+                ]
+              },
+              {
+                "name": "Gouvernance et qualité",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Catalogues et traçabilité (Collibra, Atlan)",
+                  "Cadres de qualité (Great Expectations)",
+                  "Découverte et masquage RPI",
+                  "Contrôles d'accès et sécurité au niveau des lignes",
+                  "Observabilité (Monte Carlo, Soda)"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -168,7 +383,7 @@
             "items": [
               "Créer une plateforme de données unifiée (source unique de vérité)",
               "Activer des tableaux de bord temps réel et des insights opérationnels",
-              "Soutenir les initiatives d'IA et d'apprentissage machine",
+              "Soutenir les initiatives d'IA et d'apprentissage machine avec des données fiables",
               "Moderniser les entrepôts et infrastructures de données hérités",
               "Améliorer la précision des rapports et la fiabilité des données",
               "Assurer la conformité avec les normes de gouvernance et de sécurité"
@@ -176,36 +391,103 @@
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "Nous couvrons tout le cycle de vie des données — de l'ingestion à l'insight :",
+            "description": "Nous couvrons tout le cycle de vie des données — de la stratégie aux opérations.",
             "items": [
-              "Stratégie de données et conception d'architecture",
-              "Ingestion et intégration de données (ETL/ELT)",
-              "Modélisation et transformation des données",
-              "Déploiement de plateforme (plateformes infonuagiques)",
-              "Gouvernance, qualité et sécurité des données",
-              "Surveillance, optimisation et mise à l'échelle"
+              { "title": "Stratégie et conception d'architecture", "description": "Évaluation de l'état actuel, plan d'architecture cible et sélection de plateforme ancrés dans vos KPI d'affaires." },
+              { "title": "Ingestion et intégration (ETL/ELT)", "description": "Construire des pipelines fiables reliant les systèmes sources à votre plateforme avec gestion d'erreurs et reprise." },
+              { "title": "Modélisation et transformation", "description": "Concevoir des modèles dimensionnels, des couches sémantiques et des transformations qui rendent les données intuitives." },
+              { "title": "Déploiement de plateforme", "description": "Implémenter des plateformes infonuagiques avec infrastructure-as-code, contrôle de version et promotion d'environnement." },
+              { "title": "Gouvernance, qualité et sécurité", "description": "Établir catalogage, traçabilité, surveillance de qualité et contrôles d'accès dès le premier jour." },
+              { "title": "Surveillance, optimisation et mise à l'échelle", "description": "Observabilité des pipelines, optimisation des coûts et ajustement de performance à mesure que les volumes croissent." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Plateformes de données pour industries réglementées",
+            "description": "Architectures de données conçues pour les exigences de conformité, fiabilité et échelle des secteurs réglementés.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Agrégation de données de risque, rapports réglementaires (BCBS 239) et plateformes client 360 bâties pour la banque canadienne.",
+                "useCases": [
+                  "Rapports réglementaires et traçabilité",
+                  "Données client 360 et prochaine meilleure action",
+                  "Lacs de données transactionnels pour l'analyse",
+                  "Agrégation de données de risque (BCBS 239)"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "Plateformes de données cliniques alignées à la LPRPS, soutenant la santé publique et la recherche.",
+                "useCases": [
+                  "Intégration et normalisation DSE/DME",
+                  "Analyses de santé populationnelle",
+                  "Plateformes de données pour recherche clinique",
+                  "Pipelines de données HL7/FHIR"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "Plateformes de partage de données interministériel et infrastructure de données ouvertes.",
+                "useCases": [
+                  "Partage de données entre ministères",
+                  "Plateformes de données ouvertes et API",
+                  "Analyses de performance de programmes",
+                  "Intégration de données citoyennes"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et plateformes",
-            "description": "Nous exploitons une pile de données moderne et des outils natifs infonuagiques :",
+            "description": "Nous exploitons la pile de données moderne et les outils natifs infonuagiques éprouvés à l'échelle entreprise.",
             "items": [
-              "SQL, Python, Spark",
-              "Plateformes infonuagiques (AWS, Azure, GCP)",
-              "Entrepôts de données (Snowflake, BigQuery, Redshift)",
-              "Outils d'orchestration (Airflow, Prefect)",
-              "Technologies de streaming (Kafka, pipelines temps réel)"
+              "SQL, Python, Spark, Scala",
+              "Snowflake, BigQuery, Redshift, Databricks",
+              "AWS Glue, Azure Data Factory, GCP Dataflow",
+              "Airflow, Prefect, Dagster, dbt",
+              "Kafka, Kinesis, Flink, Spark Streaming",
+              "Terraform, Docker, Kubernetes"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions de données sont conçues pour offrir :",
+            "description": "Nos solutions de données sont conçues pour offrir des résultats transformateurs et mesurables.",
             "items": [
-              "Un accès plus rapide à des données fiables",
-              "Une meilleure prise de décision et des rapports améliorés",
-              "Une infrastructure évolutive pour la croissance",
-              "Une réduction des silos et des inefficacités opérationnelles",
-              "Une gouvernance, sécurité et conformité solides"
+              "Accès plus rapide à des données fiables pour chaque équipe",
+              "Prise de décision et précision des rapports améliorées",
+              "Infrastructure évolutive pour la croissance et nouveaux cas d'usage",
+              "Réduction des silos de données et inefficacités opérationnelles",
+              "Posture de gouvernance, sécurité et conformité solide",
+              "Fondation pour des initiatives IA et ML réussies"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour l'ingénierie de données",
+            "points": [
+              { "title": "Une architecture durable", "icon": "bi-bricks", "description": "Nous concevons des plateformes de données qui évoluent — architectures modulaires natives infonuagiques qui accommodent nouvelles sources, volumes et cas d'usage sans reconstruction." },
+              { "title": "Gouvernance intégrée, pas ajoutée", "icon": "bi-shield-check", "description": "Traçabilité, catalogage, qualité et contrôles d'accès font partie des fondations — pas d'une phase 2 après coup." },
+              { "title": "La fiabilité comme discipline", "icon": "bi-activity", "description": "Observabilité des pipelines, surveillance SLA et récupération automatisée sont standards dans chaque plateforme que nous construisons." },
+              { "title": "Éprouvé en industries réglementées", "icon": "bi-award", "description": "Expérience approfondie avec BCBS 239, LPRPS, LPRPDE, BSIF et les exigences d'audit qui façonnent l'ingénierie de données canadienne." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Des rapports isolés à une source unique de vérité",
+            "client": "Régie provinciale de la santé",
+            "challenge": "12 départements maintenaient leurs propres extractions du DSE. Les rapports ne correspondaient jamais, les analyses prenaient des semaines et personne ne pouvait retracer les données à leur origine clinique — bloquant les demandes d'audit LPRPS.",
+            "approach": "Nous avons conçu une plateforme lakehouse avec ingestion HL7/FHIR, un modèle de données clinique canonique, surveillance automatisée de qualité et suivi complet de traçabilité du DSE au tableau de bord.",
+            "result": "Source unique de vérité pour plus de 40 KPI en 6 mois. Réponses aux audits complétées en heures plutôt qu'en semaines. L'équipe d'analyse est passée du traitement de données à l'analyse réelle."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Devons-nous migrer hors de notre entrepôt de données hérité ?", "answer": "Pas nécessairement. Nous modernisons souvent de manière incrémentale — ajoutant un lac/lakehouse infonuagique aux côtés des entrepôts existants, puis migrant les charges de travail à mesure que la valeur est prouvée. Les migrations big-bang finissent rarement bien." },
+              { "question": "Comment gérez-vous la qualité des données ?", "answer": "Nous traitons la qualité des données comme une préoccupation d'ingénierie de premier plan : tests d'attentes automatisés (Great Expectations), surveillance de fraîcheur, détection de dérive de schéma et alertes d'anomalies reliées à votre pile d'observabilité." },
+              { "question": "Quelle est la différence entre un lac, un entrepôt et un lakehouse ?", "answer": "Les entrepôts excellent pour l'analyse structurée (Snowflake). Les lacs stockent les données brutes/semi-structurées à bas coût. Les lakehouses (Databricks, Iceberg) combinent les deux — performance d'analyse structurée sur stockage ouvert. Nous choisissons ce qui convient à vos charges de travail." },
+              { "question": "Pouvez-vous travailler avec nos données sur site ?", "answer": "Oui. Nous concevons des architectures hybrides où les données sensibles restent sur site et les charges analytiques s'exécutent dans le nuage, avec connectivité sécurisée et gouvernance à travers les deux environnements." },
+              { "question": "Combien de temps prend l'implémentation d'une plateforme de données ?", "answer": "Une plateforme prête pour la production prend généralement 3-6 mois pour le déploiement initial, puis une expansion itérative. Nous priorisons la livraison de valeur tôt avec une approche 'squelette ambulant' plutôt que des programmes cascade de 12 mois." }
             ]
           },
           "closing": {
@@ -216,15 +498,78 @@
         "cloud-strategy-engineering": {
           "name": "Stratégie et ingénierie infonuagique",
           "icon": "bi-cloud",
+          "hero": {
+            "tagline": "Natif infonuagique, prêt pour FinOps",
+            "headline": "Faites évoluer l'infrastructure avec discipline de performance, sécurité et coûts",
+            "subheadline": "De l'architecture multi-nuages à la modernisation d'applications — nous aidons les organisations canadiennes à adopter le nuage stratégiquement, alignées aux lignes directrices BSIF B-10, à la LPRPS et aux politiques cloud-first gouvernementales.",
+            "ctaPrimary": "Planifier votre parcours infonuagique",
+            "ctaSecondary": "Voir notre méthodologie",
+            "stats": [
+              { "value": "40 %", "label": "Économies d'infrastructure moyennes" },
+              { "value": "Multi-nuages", "label": "AWS, Azure, GCP" },
+              { "value": "IaC", "label": "Infrastructure en tant que code" },
+              { "value": "BSIF B-10", "label": "Conformité alignée" }
+            ]
+          },
+          "challenge": {
+            "title": "Les promesses infonuagiques sont faciles. La réalité est difficile.",
+            "description": "L'adoption infonuagique devrait livrer agilité, évolutivité et efficacité — pourtant, beaucoup d'organisations canadiennes se retrouvent avec des coûts incontrôlés, des préoccupations de sécurité et des charges de travail à moitié migrées qui fonctionnent moins bien qu'avant.",
+            "painPoints": [
+              "Les factures infonuagiques croissent plus vite que les affaires — aucune discipline FinOps pour les maîtriser",
+              "Les migrations lift-and-shift préservent les problèmes hérités dans une infrastructure plus coûteuse",
+              "Le Shadow IT émerge quand les développeurs ne peuvent obtenir un provisionnement infonuagique rapide et sécurisé",
+              "Les exigences BSIF B-10 et de résidence de données n'ont pas été pleinement considérées au départ",
+              "Sans IaC ni CI/CD, les environnements dérivent et les déploiements deviennent des événements risqués"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous livrons les solutions infonuagiques",
-            "description": "Nous aidons les organisations à adopter et à faire évoluer les technologies infonuagiques en mettant l'accent sur la performance, la sécurité et l'efficacité des coûts.",
+            "description": "Nous aidons les organisations à adopter et à faire évoluer les technologies infonuagiques en mettant l'accent sur performance, sécurité et efficacité des coûts.",
             "items": [
               "Évaluer l'infrastructure actuelle et définir une stratégie infonuagique",
               "Concevoir des architectures évolutives et natives infonuagiques",
               "Migrer applications et charges de travail avec un minimum de perturbations",
               "Implémenter DevOps et automatisation pour une livraison plus rapide",
-              "Optimiser continuellement performance, fiabilité et coûts"
+              "Optimiser continuellement performance, fiabilité et coûts",
+              "Établir des pratiques FinOps pour aligner les dépenses avec la valeur"
+            ]
+          },
+          "capabilities": {
+            "title": "Capacités infonuagiques de bout en bout",
+            "groups": [
+              {
+                "name": "Architecture et migration",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Stratégie et architecture cible",
+                  "Zones d'atterrissage et conception d'organisation",
+                  "Migration 6R (rehost, replatform, refactor, etc.)",
+                  "Modernisation d'applications",
+                  "Conception multi-nuages et hybride"
+                ]
+              },
+              {
+                "name": "DevOps et automatisation",
+                "icon": "bi-gear-wide-connected",
+                "items": [
+                  "Infrastructure as Code (Terraform, Pulumi)",
+                  "Conception de pipelines CI/CD",
+                  "Kubernetes et conteneurisation",
+                  "GitOps et livraison progressive",
+                  "Plateformes internes de développeurs"
+                ]
+              },
+              {
+                "name": "Sécurité et FinOps",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Gestion de posture de sécurité infonuagique",
+                  "Architecture réseau zéro confiance",
+                  "Gestion des identités et accès",
+                  "Visibilité et optimisation des coûts",
+                  "Garde-fous de politique et conformité automatisés"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -241,55 +586,185 @@
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "Nous soutenons tout le cycle de vie infonuagique, de la stratégie aux opérations :",
+            "description": "Nous soutenons tout le cycle de vie infonuagique, de la stratégie aux opérations.",
             "items": [
-              "Stratégie et feuille de route infonuagique",
-              "Conception d'architecture et choix de plateforme",
-              "Migration et modernisation",
-              "Activation DevOps et automatisation (IaC)",
-              "Sécurité, conformité et gouvernance",
-              "Surveillance, optimisation et FinOps"
+              { "title": "Stratégie et feuille de route infonuagique", "description": "Évaluer l'état actuel, définir les résultats cibles et bâtir une feuille de route de migration par phases liée à la valeur d'affaires." },
+              { "title": "Conception d'architecture et choix de plateforme", "description": "Concevoir des zones d'atterrissage, choisir le nuage approprié et définir des architectures de référence pour vos charges de travail." },
+              { "title": "Migration et modernisation", "description": "Exécuter la stratégie 6R — rehost ce qui est correct, refactor ce qui importe, retirer ce qui est obsolète." },
+              { "title": "Activation DevOps et automatisation (IaC)", "description": "Bâtir des pipelines CI/CD, de l'Infrastructure as Code et de l'automatisation qui rendent les déploiements sûrs et routiniers." },
+              { "title": "Sécurité, conformité et gouvernance", "description": "Implémenter des garde-fous, de la gestion d'identité et application automatisée de politiques alignées à la réglementation canadienne." },
+              { "title": "Surveillance, optimisation et FinOps", "description": "Établir visibilité des coûts, rightsizing et pratiques d'observabilité qui gardent le nuage efficace à grande échelle." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Infonuagique pour industries réglementées",
+            "description": "Architectures infonuagiques conformes et sécurisées pour les secteurs où la résidence de données et les pistes d'audit sont non négociables.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Architectures infonuagiques conformes BSIF B-10 pour les institutions financières sous réglementation fédérale.",
+                "useCases": [
+                  "Architectures conformes BSIF B-10",
+                  "Contrôles de résidence et souveraineté des données",
+                  "Évaluations de risque infonuagique et ÉMR",
+                  "Gestion de risque des tiers"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "Infrastructure infonuagique conforme LPRPS avec contrôles de résidence et chiffrement.",
+                "useCases": [
+                  "Architectures infonuagiques conformes LPRPS",
+                  "Résidence des données canadiennes (ca-central-1)",
+                  "Chiffrement RSP et gestion de clés",
+                  "Modernisation de systèmes cliniques"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "Aligné à la stratégie cloud-first du gouvernement du Canada et aux exigences Protégé B/C.",
+                "useCases": [
+                  "Alignement à la stratégie cloud-first GC",
+                  "Conception de charges Protégé B/C",
+                  "Contrôles de sécurité ITSG-33",
+                  "Intégration avec Services partagés Canada"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et plateformes",
-            "description": "Nous exploitons les principaux écosystèmes infonuagiques et DevOps :",
+            "description": "Nous exploitons les principaux écosystèmes infonuagiques et DevOps avec une expertise approfondie chez tous les grands fournisseurs.",
             "items": [
-              "AWS, Azure, GCP (architectures multi-nuages et hybrides)",
+              "AWS, Azure, GCP (multi-nuages et hybride)",
               "Kubernetes, Docker, frameworks serverless",
-              "Terraform, CloudFormation (Infrastructure as Code)",
-              "Outils CI/CD (GitHub Actions, GitLab CI, Jenkins)",
-              "Plateformes de surveillance et d'observabilité"
+              "Terraform, Pulumi, CloudFormation",
+              "GitHub Actions, GitLab CI, Jenkins, ArgoCD",
+              "Datadog, New Relic, Prometheus, Grafana",
+              "HashiCorp Vault, AWS IAM, Azure AD"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions infonuagiques sont conçues pour offrir :",
+            "description": "Nos solutions infonuagiques sont conçues pour offrir une transformation d'affaires durable.",
             "items": [
-              "Une agilité accrue et un délai de mise en marché plus rapide",
-              "Une infrastructure évolutive et résiliente",
-              "Des coûts d'infrastructure et opérationnels réduits",
-              "Une sécurité et une conformité réglementaire renforcées",
-              "Une base solide pour les initiatives de données et d'IA"
+              "Agilité accrue et délai de mise en marché plus rapide",
+              "Infrastructure évolutive et résiliente",
+              "Coûts d'infrastructure et opérationnels réduits (typiquement 30-50 %)",
+              "Sécurité et conformité réglementaire renforcées",
+              "Base solide pour les initiatives de données et IA",
+              "Équipes d'ingénierie autonomisées avec plateformes en libre-service"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour l'infonuagique",
+            "points": [
+              { "title": "Expertise en conformité canadienne", "icon": "bi-maple-leaf", "description": "Familiarité approfondie avec BSIF B-10, LPRPS, LPRPDE, politique infonuagique GC et le paysage réglementaire canadien." },
+              { "title": "FinOps dès le premier jour", "icon": "bi-graph-down", "description": "Discipline de coûts intégrée aux décisions d'architecture — pas un projet de nettoyage après que les factures vous choquent." },
+              { "title": "Réalité multi-nuages", "icon": "bi-clouds", "description": "Nous travaillons à travers AWS, Azure et GCP selon ce qui convient à vos charges — pas par allégeance à un fournisseur." },
+              { "title": "Mentalité d'ingénierie de plateforme", "icon": "bi-box-seam", "description": "Nous construisons des plateformes internes qui rendent le libre-service infonuagique sûr — autonomisant les développeurs tout en maintenant les garde-fous." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Lift, Shift et modernisation — sans le choc de facturation",
+            "client": "Assureur canadien",
+            "challenge": "Le traitement des réclamations hérité fonctionnait sur une infrastructure sur site vieillissante. Une migration infonuagique précédente avait doublé les coûts d'hébergement avec gains d'agilité minimaux. La direction exigeait à la fois conformité BSIF et réduction de coûts.",
+            "approach": "Nous avons réarchitecturé la charge de travail utilisant des zones d'atterrissage AWS, Kubernetes pour services sans état et bases de données gérées. Implémenté Terraform, GitOps et tableaux de bord FinOps avec rightsizing automatisé.",
+            "result": "Réduction de 35 % des coûts d'infrastructure vs migration infonuagique originale. Fréquence de livraison passée de mensuelle à quotidienne. Conformité BSIF B-10 complète atteinte avec collecte de preuves automatisée."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Devrions-nous aller multi-nuages ou rester avec un seul fournisseur ?", "answer": "Ça dépend. Le mono-nuage offre opérations plus simples et intégration plus profonde. Le multi-nuages offre résilience et services best-of-breed. Nous aidons à évaluer honnêtement les compromis selon votre tolérance au risque et capacité d'équipe." },
+              { "question": "Comment gérez-vous les exigences canadiennes de résidence des données ?", "answer": "Tous les principaux fournisseurs offrent des régions canadiennes (ca-central-1, Canada East/Central). Nous concevons des architectures qui appliquent la résidence via politiques IAM, contrôles réseau et vérifications de conformité automatisées." },
+              { "question": "Quelle est votre approche du contrôle des coûts infonuagiques ?", "answer": "FinOps dès la phase d'architecture — rightsizing, planification de capacité réservée, politiques de cycle de vie et étiquetage d'allocation des coûts intégrés. Plus des tableaux de bord qui rendent les dépenses visibles aux équipes qui les génèrent." },
+              { "question": "Pouvez-vous nous aider à moderniser sans réécriture complète ?", "answer": "Oui. Nous suivons le cadre 6R (rehost, replatform, refactor, repurchase, retain, retire) — adaptant la profondeur de modernisation à la valeur d'affaires, pas appliquant une approche à tout." },
+              { "question": "Qu'en est-il des preuves de conformité pour les audits ?", "answer": "Nous implémentons des cadres de conformité automatisés (AWS Config, Azure Policy, GCP Policy Intelligence) qui appliquent continuellement les contrôles et génèrent les preuves d'audit — critique pour la préparation BSIF, SOC 2 et ISO 27001." }
             ]
           },
           "closing": {
             "title": "Prêt à moderniser votre infrastructure et accélérer votre parcours infonuagique ?",
-            "subtitle": "Concevons une stratégie infonuagique adaptée à vos objectifs d'affaires."
+            "subtitle": "Concevons une stratégie infonuagique adaptée à vos objectifs d'affaires et votre environnement réglementaire."
           }
         },
         "cybersecurity": {
           "name": "Cybersécurité",
           "icon": "bi-shield-check",
+          "hero": {
+            "tagline": "Sécurité basée sur le risque, prête pour la conformité",
+            "headline": "Protégez votre entreprise contre les cybermenaces évolutives",
+            "subheadline": "Nous concevons et déployons des programmes de sécurité de niveau entreprise pour les organisations canadiennes en services financiers, santé et secteur public — alignés aux cadres BSIF, LPRPDE, LPRPS, SOC 2 et NIST.",
+            "ctaPrimary": "Évaluer votre posture de sécurité",
+            "ctaSecondary": "Voir notre méthodologie",
+            "stats": [
+              { "value": "24/7", "label": "Surveillance des menaces" },
+              { "value": "Zéro confiance", "label": "Approche architecturale" },
+              { "value": "SOC 2", "label": "Programmes prêts pour audit" },
+              { "value": "<15 min", "label": "Réponse aux incidents critiques" }
+            ]
+          },
+          "challenge": {
+            "title": "Les cybermenaces dépassent les défenses traditionnelles",
+            "description": "Les organisations canadiennes font face à rançongiciels, attaques de chaîne d'approvisionnement et menaces internes chaque semaine — pendant que les régulateurs exigent contrôles renforcés et notification de violation plus rapide. Les défenses périmétriques traditionnelles ne suffisent plus.",
+            "painPoints": [
+              "Rançongiciels et attaques de chaîne d'approvisionnement ciblent sans relâche les PME, la santé et les municipalités canadiennes",
+              "L'expansion infonuagique élargit la surface d'attaque plus vite que les équipes de sécurité peuvent suivre",
+              "BSIF, LPRPDE, LPRPS — plus les lignes directrices sectorielles — créent des obligations de conformité qui se chevauchent",
+              "Conseils et direction exigent une quantification du risque cyber que la plupart des équipes ne peuvent fournir",
+              "Les plans de réponse aux incidents existent sur papier mais s'effondrent en situations réelles"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous sécurisons votre organisation",
-            "description": "Nous adoptons une approche proactive et basée sur le risque en matière de cybersécurité — protégeant vos systèmes, données et opérations contre les menaces évolutives.",
+            "description": "Nous adoptons une approche proactive et basée sur le risque — protégeant vos systèmes, données et opérations contre les menaces évolutives.",
             "items": [
               "Évaluer votre posture de sécurité actuelle et identifier les vulnérabilités",
               "Concevoir et déployer des architectures de sécurité de niveau entreprise",
-              "Déployer des capacités avancées de détection et de réponse aux menaces",
-              "Établir des processus continus de surveillance et de réponse aux incidents",
-              "Assurer la conformité aux normes et réglementations de l'industrie"
+              "Déployer des capacités avancées de détection et réponse aux menaces",
+              "Établir des processus continus de surveillance et réponse aux incidents",
+              "Assurer la conformité aux normes et réglementations de l'industrie",
+              "Bâtir la sensibilisation par formation et exercices théoriques"
+            ]
+          },
+          "capabilities": {
+            "title": "Capacités de sécurité complètes",
+            "groups": [
+              {
+                "name": "Évaluation et architecture",
+                "icon": "bi-clipboard-check",
+                "items": [
+                  "Évaluations de posture de sécurité",
+                  "Évaluations de menaces et risques (ÉMR)",
+                  "Conception d'architecture zéro confiance",
+                  "Architecture de sécurité infonuagique",
+                  "Évaluations de risque des tiers"
+                ]
+              },
+              {
+                "name": "Détection et réponse",
+                "icon": "bi-radar",
+                "items": [
+                  "Implémentation SIEM/SOAR",
+                  "Détection et réponse gérées (MDR)",
+                  "Planification de réponse aux incidents",
+                  "Chasse aux menaces et intégration de renseignements",
+                  "Préparation à l'investigation numérique"
+                ]
+              },
+              {
+                "name": "Identité, gouvernance et conformité",
+                "icon": "bi-shield-lock",
+                "items": [
+                  "Gestion des identités et accès (IAM)",
+                  "Gestion des accès privilégiés (PAM)",
+                  "Alignement ISO 27001, SOC 2, NIST CSF",
+                  "Programmes de conformité LPRPDE/LPRPS",
+                  "Formation de sensibilisation à la sécurité"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -298,63 +773,193 @@
             "items": [
               "Détecter et répondre aux cybermenaces en temps réel",
               "Sécuriser les environnements et applications infonuagiques",
-              "Protéger les données sensibles et les informations clients",
+              "Protéger les données sensibles et informations clients",
               "Atteindre et maintenir la conformité réglementaire",
-              "Réduire le risque de violations, d'arrêts et de pertes financières",
-              "Améliorer la visibilité de la sécurité sur les systèmes et réseaux"
+              "Réduire le risque de violations, d'arrêts et pertes financières",
+              "Améliorer la visibilité de sécurité sur systèmes et réseaux"
             ]
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "Nous couvrons tout le cycle de vie de la cybersécurité :",
+            "description": "Nous couvrons tout le cycle de vie de la cybersécurité, de l'évaluation à l'amélioration continue.",
             "items": [
-              "Évaluation de la sécurité et analyse des risques",
-              "Architecture de sécurité et mise en œuvre des contrôles",
-              "Détection des menaces et réponse aux incidents",
-              "Gestion des identités et des accès (IAM)",
-              "Conformité, gouvernance et gestion des risques",
-              "Surveillance continue et amélioration"
+              { "title": "Évaluation et analyse des risques", "description": "Évaluation de l'état actuel contre des cadres comme NIST CSF, ISO 27001 ou CIS Controls — avec quantification du risque pour le conseil." },
+              { "title": "Architecture de sécurité et implémentation", "description": "Concevoir et déployer des contrôles techniques et administratifs alignés à votre tolérance au risque et obligations réglementaires." },
+              { "title": "Détection des menaces et réponse aux incidents", "description": "Mettre en place des capacités SIEM/SOAR, définir des runbooks et mener des exercices théoriques afin que votre équipe soit prête." },
+              { "title": "Gestion des identités et accès (IAM)", "description": "Implémenter les principes zéro confiance : accès à moindre privilège, MFA partout, PAM pour admins et gouvernance du cycle de vie." },
+              { "title": "Conformité, gouvernance et gestion des risques", "description": "Bâtir des programmes prêts pour audit couvrant LPRPDE, LPRPS, BSIF, SOC 2 et obligations sectorielles spécifiques." },
+              { "title": "Surveillance continue et amélioration", "description": "Métriques, tests d'intrusion, intégration de renseignements sur les menaces et durcissement itératif — la sécurité n'est pas un projet." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Cybersécurité pour secteurs réglementés",
+            "description": "Programmes de sécurité conçus pour les réalités de conformité et opérationnelles des industries réglementées canadiennes.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Programmes conformes à la ligne directrice BSIF B-13 sur la cybersécurité, résilience opérationnelle et risque des tiers.",
+                "useCases": [
+                  "Alignement BSIF B-13 cyber-risque",
+                  "Cadres de résilience opérationnelle",
+                  "Gestion de risque des tiers",
+                  "Intégration détection fraude et LCBA"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "Programmes de sécurité conformes LPRPS protégeant données cliniques et dispositifs médicaux.",
+                "useCases": [
+                  "Programmes de conformité LPRPS",
+                  "Sécurité des dispositifs médicaux (IoMT)",
+                  "Protection des systèmes cliniques",
+                  "Préparation aux rançongiciels"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "Contrôles de sécurité alignés ITSG-33 pour classifications Protégé A/B/C.",
+                "useCases": [
+                  "Implémentation des contrôles ITSG-33",
+                  "Sécurité des charges Protégé B/C",
+                  "Protection des données citoyennes",
+                  "Sécurité de la chaîne d'approvisionnement"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et cadres",
-            "description": "Nous exploitons des outils de sécurité modernes et des cadres reconnus :",
+            "description": "Nous exploitons outils de sécurité modernes et cadres reconnus alignés aux exigences réglementaires canadiennes.",
             "items": [
-              "Plateformes SIEM et de détection des menaces",
-              "Outils de sécurité infonuagique (AWS, Azure, GCP)",
-              "Solutions de gestion des identités et des accès",
-              "Outils de sécurité des points terminaux et réseau",
-              "Cadres de conformité (ISO 27001, NIST, SOC 2)"
+              "Plateformes SIEM (Splunk, Sentinel, Chronicle)",
+              "Sécurité infonuagique (AWS Security Hub, Azure Defender, GCP SCC)",
+              "IAM et PAM (Okta, CyberArk, BeyondTrust)",
+              "Sécurité points terminaux et réseau (CrowdStrike, Palo Alto)",
+              "Gestion de vulnérabilités (Tenable, Qualys)",
+              "Cadres : ISO 27001, NIST CSF, SOC 2, CIS, ITSG-33"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions de cybersécurité sont conçues pour offrir :",
+            "description": "Nos solutions de cybersécurité sont conçues pour livrer une réduction de risque mesurable.",
             "items": [
-              "Un risque réduit de cyberattaques et de violations de données",
-              "Une protection renforcée des actifs critiques et des données",
-              "Une meilleure conformité et une préparation aux audits",
-              "Une confiance client accrue et une réputation de marque améliorée",
-              "Des opérations d'affaires résilientes et sécurisées"
+              "Risque réduit de cyberattaques et violations de données",
+              "Protection renforcée des actifs critiques et données",
+              "Meilleure conformité et préparation aux audits",
+              "Confiance client accrue et réputation de marque améliorée",
+              "Opérations d'affaires résilientes et sécurisées",
+              "Récupération plus rapide lors d'incidents"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour la cybersécurité",
+            "points": [
+              { "title": "Basé sur le risque, pas les cases à cocher", "icon": "bi-graph-up", "description": "Nous commençons par le risque d'affaires — puis concevons des contrôles proportionnels. Toutes les organisations n'ont pas besoin du même programme de sécurité." },
+              { "title": "Profondeur réglementaire canadienne", "icon": "bi-maple-leaf", "description": "BSIF B-13, LPRPDE, LPRPS, ITSG-33 — nous naviguons le paysage de conformité canadien que vos auditeurs et régulateurs évaluent vraiment." },
+              { "title": "Ingénierie + sécurité", "icon": "bi-shield-shaded", "description": "Nous apportons la discipline d'ingénierie logicielle à la sécurité : IaC pour les contrôles, conformité automatisée et pratiques DevSecOps." },
+              { "title": "Communication de risque prête pour le conseil", "icon": "bi-file-bar-graph", "description": "Nous traduisons le risque technique en langage que les dirigeants et conseils peuvent actionner — pas de peur, juste des compromis clairs." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Prêt aux rançongiciels en 90 jours",
+            "client": "Municipalité canadienne",
+            "challenge": "Après avoir vu des municipalités voisines tomber face aux rançongiciels, la direction exigeait une amélioration rapide. Points terminaux hérités, réseau plat, pas de SIEM et plan de réponse aux incidents jamais testé.",
+            "approach": "Nous avons priorisé par risque : déployé EDR sur tous les points terminaux, segmenté le réseau, mis en place un SIEM/SOAR géré et mené 3 exercices théoriques. Durci les sauvegardes avec stockage immuable et isolation.",
+            "result": "En 90 jours : couverture EDR 100 %, sauvegardes résistantes aux rançongiciels, surveillance des menaces 24/7, plan de RI testé. Prime d'assurance cyber réduite de 25 % avec posture documentée."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Devons-nous être certifiés SOC 2 ?", "answer": "Ça dépend de vos clients. Si vous vendez aux entreprises américaines, SOC 2 est souvent requis. Si vous servez des FI canadiennes ou la santé, ISO 27001 ou alignement BSIF/LPRPS peut être plus pertinent. Nous aidons à évaluer quelles certifications importent vraiment." },
+              { "question": "Quelle est la différence entre conformité et sécurité ?", "answer": "La conformité est un plancher, pas un plafond. Vous pouvez être conforme LPRPDE et être piraté. La vraie sécurité commence par comprendre vos menaces réelles et bâtir des contrôles qui comptent. La conformité suit typiquement naturellement d'une bonne sécurité." },
+              { "question": "Comment aidez-vous avec la réponse aux incidents ?", "answer": "Nous bâtissons les capacités de RI en trois étapes : (1) plan + runbooks + exercices théoriques ; (2) outillage de détection et réponse SIEM/SOAR ; (3) soutien de garde en rétention pour incidents. La plupart des clients ont besoin des deux premières ; certains optent pour la rétention." },
+              { "question": "Qu'en est-il des menaces internes ?", "answer": "Les menaces internes (malicieuses ou négligentes) sont souvent négligées. Nous les adressons avec IAM à moindre privilège, PAM pour admins, analytique comportementale (UEBA), DLP et formation de sensibilisation adaptée à votre personnel." },
+              { "question": "Comment suivez-vous l'évolution des menaces ?", "answer": "Surveillance continue, intégration de renseignements sur les menaces, tests d'intrusion réguliers et participation active à la communauté de sécurité canadienne (Centre canadien pour la cybersécurité, réseau des chefs de la sécurité, OWASP, etc.)." }
             ]
           },
           "closing": {
             "title": "Prêt à renforcer votre posture de sécurité et protéger votre entreprise ?",
-            "subtitle": "Bâtissons une stratégie de cybersécurité adaptée à vos risques et objectifs."
+            "subtitle": "Bâtissons une stratégie de cybersécurité adaptée à vos risques, réglementations et objectifs."
           }
         },
         "business-intelligence": {
           "name": "Intelligence d'affaires",
           "icon": "bi-bar-chart",
+          "hero": {
+            "tagline": "Des tableaux de bord réellement utilisés",
+            "headline": "Transformez les données en décisions que vos équipes actionneront",
+            "subheadline": "Nous concevons des solutions BI qui répondent aux questions que votre équipe pose réellement — tableaux de bord exécutifs, analytique libre-service et reporting intégré qui génèrent des résultats mesurables en finance, opérations et stratégie.",
+            "ctaPrimary": "Bâtir votre stratégie BI",
+            "ctaSecondary": "Voir notre approche",
+            "stats": [
+              { "value": "80 %", "label": "Moins de reporting manuel" },
+              { "value": "Libre-service", "label": "Analytique à grande échelle" },
+              { "value": "Temps réel", "label": "Visibilité des KPI" },
+              { "value": "5 outils", "label": "Expertise plateforme" }
+            ]
+          },
+          "challenge": {
+            "title": "Des tableaux de bord que personne n'ouvre — des rapports auxquels personne ne se fie",
+            "description": "La plupart des organisations ont beaucoup de tableaux de bord. Ce qui manque : des tableaux de bord qui répondent aux bonnes questions, bâtis sur des données fiables, livrés où les décisions se prennent vraiment.",
+            "painPoints": [
+              "Les dirigeants attendent des jours des rapports qui devraient être en temps réel",
+              "Différents tableaux de bord affichent différents chiffres pour le même KPI",
+              "Les analystes passent 80 % de leur temps à traiter les données, 20 % à analyser",
+              "Les promesses de BI libre-service échouent à cause de données sous-jacentes peu fiables",
+              "Les rapports restent inutilisés parce qu'ils ne font pas surgir les prochaines actions"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous livrons les solutions BI",
-            "description": "Nous aidons les organisations à transformer des données brutes en insights actionnables qui guident des décisions intelligentes et des résultats mesurables.",
+            "description": "Nous aidons les organisations à transformer des données brutes en insights actionnables qui guident des décisions intelligentes et résultats mesurables.",
             "items": [
               "Évaluer les objectifs d'affaires et identifier les indicateurs clés",
-              "Concevoir et déployer des tableaux de bord interactifs et des cadres de reporting",
+              "Concevoir et déployer des tableaux de bord interactifs et cadres de reporting",
               "Intégrer les données de sources multiples pour une vue unifiée",
-              "Automatiser le reporting et le suivi des KPI pour une visibilité en temps réel",
-              "Permettre l'analyse prédictive et par scénarios pour la planification stratégique"
+              "Automatiser le reporting et suivi des KPI pour visibilité temps réel",
+              "Permettre l'analyse prédictive et par scénarios pour la planification",
+              "Favoriser l'adoption par formation, accompagnement et itération"
+            ]
+          },
+          "capabilities": {
+            "title": "Capacités BI modernes",
+            "groups": [
+              {
+                "name": "Conception de tableaux de bord",
+                "icon": "bi-clipboard-data",
+                "items": [
+                  "Tableaux de bord KPI exécutifs",
+                  "Tableaux opérationnels et tactiques",
+                  "Reporting réglementaire et conformité",
+                  "Expériences BI adaptées aux mobiles",
+                  "Analytique intégrée dans les produits"
+                ]
+              },
+              {
+                "name": "Couche sémantique et modélisation",
+                "icon": "bi-diagram-3",
+                "items": [
+                  "Définitions de métriques et catalogues KPI",
+                  "Modélisation dimensionnelle (étoile/flocon)",
+                  "Couches sémantiques (dbt metrics, LookML)",
+                  "Jeux de données certifiés et gouvernance",
+                  "Sécurité au niveau des lignes et colonnes"
+                ]
+              },
+              {
+                "name": "Analytique avancée",
+                "icon": "bi-graph-up-arrow",
+                "items": [
+                  "Prévisions et scénarios what-if",
+                  "Analyse de cohortes et d'entonnoirs",
+                  "Analyse du comportement client",
+                  "Cadres de tests A/B",
+                  "Alertes et détection d'anomalies"
+                ]
+              }
             ]
           },
           "keyUseCases": {
@@ -362,114 +967,312 @@
             "description": "Nous permettons aux entreprises d'agir rapidement sur les insights :",
             "items": [
               "Suivre les ventes, opérations et performance financière en temps réel",
-              "Suivre les KPI et configurer des alertes pour les seuils critiques",
+              "Suivre les KPI et configurer des alertes pour seuils critiques",
               "Générer automatiquement des rapports stratégiques pour la direction",
-              "Analyser le comportement et les tendances des clients",
+              "Analyser le comportement et tendances des clients",
               "Évaluer la performance des campagnes marketing",
-              "Soutenir la prise de décision avec l'analyse prédictive"
+              "Soutenir la prise de décision avec analyse prédictive"
             ]
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "Des données aux insights, nous gérons tout le cycle de vie BI :",
+            "description": "Des données aux insights, nous gérons tout le cycle de vie BI avec les résultats d'affaires au premier plan.",
             "items": [
-              "Recueil des besoins et définition des KPI",
-              "Intégration et transformation des données",
-              "Conception de tableaux de bord et rapports",
-              "Automatisation et planification",
-              "Formation et support à l'adoption",
-              "Amélioration et optimisation continues"
+              { "title": "Recueil des besoins et définition des KPI", "description": "Atelier sur les décisions à soutenir, définir la propriété des métriques et établir un catalogue KPI gouverné." },
+              { "title": "Intégration et transformation des données", "description": "Connecter les systèmes sources, bâtir des modèles sémantiques et créer des jeux de données certifiés fiables." },
+              { "title": "Conception de tableaux de bord et rapports", "description": "Tableaux de bord conçus par le design qui font surgir les insights visuellement, avec appels à l'action clairs et drill-downs." },
+              { "title": "Automatisation et planification", "description": "Automatiser les rafraîchissements de données, distribution de rapports et alertes afin que les insights arrivent à temps." },
+              { "title": "Formation et adoption", "description": "Accompagner analystes et utilisateurs d'affaires par formation, heures de bureau et documentation — l'adoption est un programme, pas un événement." },
+              { "title": "Amélioration continue", "description": "Analytique d'utilisation, boucles de rétroaction et améliorations itératives basées sur ce que les équipes utilisent vraiment." }
+            ]
+          },
+          "industryApplications": {
+            "title": "BI à travers les industries réglementées",
+            "description": "Solutions BI conçues pour la rigueur de reporting et exigences d'audit des secteurs réglementés canadiens.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Tableaux de bord exécutifs, reporting réglementaire et analytique de risque alignés aux exigences BSIF.",
+                "useCases": [
+                  "Tableaux de bord équilibrés exécutifs",
+                  "Automatisation des rapports réglementaires BSIF",
+                  "Analytique de performance par succursale et canal",
+                  "Client 360 et tableaux de bord valeur à vie"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "Tableaux de bord cliniques, analytique opérationnelle et reporting d'amélioration de qualité.",
+                "useCases": [
+                  "Indicateurs de qualité clinique",
+                  "Tableaux de bord opérationnels hospitaliers",
+                  "Analytique temps d'attente et capacité",
+                  "Reporting de santé populationnelle"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "Tableaux de bord de performance des services publics et reporting de transparence.",
+                "useCases": [
+                  "Mesure de performance des programmes",
+                  "Tableaux de bord de prestation de services",
+                  "Données ouvertes et reporting de transparence",
+                  "Analytique budgétaire et dépenses"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et plateformes",
-            "description": "Nous exploitons des outils et plateformes BI modernes :",
+            "description": "Nous exploitons des outils et plateformes BI modernes — adaptés aux compétences de votre équipe et investissements existants.",
             "items": [
-              "Power BI, Tableau, Looker, Qlik",
-              "SQL, Python et intégration ETL",
-              "Plateformes de données infonuagiques (AWS, Azure, GCP)",
-              "Pipelines automatisés de reporting et de visualisation"
+              "Power BI, Tableau, Looker, Qlik Sense",
+              "dbt, Cube.js, Metabase, Superset",
+              "SQL, Python, R pour analytique avancée",
+              "Snowflake, BigQuery, Databricks SQL",
+              "Google Analytics 4, Amplitude, Mixpanel",
+              "Pipelines de reporting automatisés"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions BI livrent :",
+            "description": "Nos solutions BI livrent une transformation mesurable.",
             "items": [
-              "Un accès plus rapide à des insights actionnables",
-              "Une meilleure prise de décision et une planification stratégique améliorée",
-              "Une transparence accrue entre les départements",
-              "Une réduction du temps consacré au reporting manuel",
-              "Une capacité renforcée à repérer les tendances et saisir les opportunités"
+              "Accès plus rapide aux insights actionnables (heures, pas jours)",
+              "Prise de décision et planification stratégique améliorées",
+              "Transparence accrue entre les départements",
+              "Temps de reporting manuel réduit (souvent 50-80 %)",
+              "Capacité accrue à repérer les tendances et saisir les opportunités",
+              "Source unique de vérité à travers l'organisation"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour la BI",
+            "points": [
+              { "title": "Les affaires d'abord, les outils ensuite", "icon": "bi-bullseye", "description": "Nous commençons par les décisions à prendre — pas par les tableaux de bord à bâtir. Les outils suivent la stratégie." },
+              { "title": "L'adoption comme discipline", "icon": "bi-people", "description": "Le succès BI se mesure par l'usage, pas la livraison. Nous intégrons formation, accompagnement et rétroaction dans chaque mandat." },
+              { "title": "Expertise agnostique aux plateformes", "icon": "bi-tools", "description": "Expérience approfondie avec Power BI, Tableau, Looker et Qlik — nous recommandons ce qui convient à votre équipe." },
+              { "title": "Fondations d'ingénierie de données", "icon": "bi-bricks", "description": "Nous bâtissons la BI sur une infrastructure de données fiable — car des tableaux de bord sur de mauvaises données sont pires que pas de tableaux." }
+            ]
+          },
+          "caseStudy": {
+            "title": "Du chaos des tableurs à la clarté exécutive",
+            "client": "Caisse populaire régionale canadienne",
+            "challenge": "Les dossiers mensuels du conseil étaient compilés manuellement depuis 15+ tableurs, prenaient à 5 analystes une semaine complète et contenaient encore des erreurs. Les KPI des différentes équipes ne correspondaient jamais.",
+            "approach": "Nous avons bâti un modèle de données gouverné sur l'entrepôt existant, établi un catalogue KPI avec approbation exécutive et livré des tableaux de bord Power BI avec drill-through aux détails opérationnels. Formé les analystes sur dbt et la couche sémantique.",
+            "result": "Temps de génération du dossier conseil réduit de 5 jours à 2 heures. Analystes ont récupéré 30+ heures/semaine pour l'analyse réelle. L'équipe exécutive rapporte enfin 'faire confiance aux chiffres'."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Quel outil BI devrions-nous utiliser ?", "answer": "Ça dépend des compétences de votre équipe, licences existantes, plateforme de données et cas d'usage. Power BI s'intègre bien aux piles Microsoft ; Tableau excelle à la visualisation ; Looker offre une gouvernance forte ; Qlik a une base d'analystes loyaux. Nous aidons à évaluer honnêtement." },
+              { "question": "Comment empêcher la prolifération des tableaux de bord ?", "answer": "Nous établissons un catalogue gouverné de tableaux certifiés avec propriété claire, revues d'utilisation régulières et retrait du contenu inutilisé. Le libre-service nécessite quand même des garde-fous." },
+              { "question": "Qu'est-ce qu'une couche sémantique et pourquoi importe-t-elle ?", "answer": "Une couche sémantique (dbt metrics, LookML, Cube) définit les KPI et métriques une fois — donc 'revenu' signifie la même chose dans Power BI, Tableau, une requête SQL ou une alerte. C'est la fondation de la confiance en BI." },
+              { "question": "Pouvez-vous aider à migrer d'outils BI hérités ?", "answer": "Oui. Nous avons migré de Cognos, BusinessObjects, MicroStrategy et plateformes personnalisées vers des outils BI modernes — en nous concentrant sur la réimplémentation des 20 % de rapports qui pilotent vraiment les décisions." },
+              { "question": "Comment mesurez-vous le succès BI ?", "answer": "Métriques d'adoption (utilisateurs actifs, fréquence de session), résultats d'affaires (décisions prises plus vite, reporting manuel réduit) et rétroaction qualitative des équipes utilisatrices. Pas juste 'nous avons livré X tableaux'." }
             ]
           },
           "closing": {
             "title": "Prêt à transformer vos données en insights qui génèrent des résultats ?",
-            "subtitle": "Bâtissons une solution BI adaptée à vos objectifs d'affaires."
+            "subtitle": "Bâtissons une solution BI que votre équipe utilisera et à laquelle elle fera confiance."
           }
         },
         "big-data": {
           "name": "Plateforme de données et Big Data",
           "icon": "bi-hdd-stack",
+          "hero": {
+            "tagline": "Au-delà des bases de données traditionnelles",
+            "headline": "Traitez des ensembles massifs de données avec vitesse et échelle",
+            "subheadline": "Lorsque vos volumes de données dépassent les bases traditionnelles, il faut une architecture conçue pour l'échelle. Nous bâtissons des plateformes distribuées gérant des pétaoctets, des millions d'événements en streaming et alimentant les charges IA sans faillir.",
+            "ctaPrimary": "Architecturer votre plateforme",
+            "ctaSecondary": "Voir notre méthodologie",
+            "stats": [
+              { "value": "Pétaoctet", "label": "Architectures prêtes à l'échelle" },
+              { "value": "Temps réel", "label": "Streaming d'événements" },
+              { "value": "Lakehouse", "label": "Architecture moderne" },
+              { "value": "100 %", "label": "Compatible open source" }
+            ]
+          },
+          "challenge": {
+            "title": "Vos données ont dépassé votre infrastructure",
+            "description": "Les bases transactionnelles n'ont pas été conçues pour l'analyse à l'échelle du pétaoctet. Les entrepôts traditionnels peinent avec les données non structurées, les événements en streaming et les exigences de calcul des charges IA modernes.",
+            "painPoints": [
+              "Les requêtes analytiques sur les bases transactionnelles ralentissent les opérations",
+              "Les travaux ETL par lots ne peuvent suivre le rythme d'arrivée des données",
+              "Les données non structurées (documents, images, journaux) dorment dans du stockage bon marché",
+              "Les initiatives IA et ML stagnent car les données d'entraînement sont partout mais nulle part",
+              "Faire évoluer les entrepôts de données traditionnels devient rapidement coûteux"
+            ]
+          },
           "howWeDeliver": {
             "title": "Comment nous livrons les solutions Big Data",
-            "description": "Nous aidons les organisations à traiter, stocker et analyser des ensembles de données massifs pour révéler des insights et soutenir la prise de décision basée sur les données.",
+            "description": "Nous aidons les organisations à traiter, stocker et analyser des ensembles massifs pour révéler des insights et soutenir la prise de décision fondée sur les données.",
             "items": [
               "Concevoir et déployer des architectures de calcul distribué évolutives",
               "Intégrer et traiter des données structurées et non structurées à grande échelle",
-              "Optimiser la performance pour le traitement haute volumétrie, temps réel et par lots",
-              "Bâtir des lacs de données modernes et des plateformes prêtes pour l'analyse",
-              "Activer l'IA et l'analyse avancée sur des ensembles de données massifs"
+              "Optimiser la performance pour traitement haute volumétrie, temps réel et par lots",
+              "Bâtir des lacs de données modernes et plateformes prêtes pour l'analyse",
+              "Activer l'IA et l'analyse avancée sur des ensembles massifs",
+              "Établir gouvernance et traçabilité pour les données réglementées"
+            ]
+          },
+          "capabilities": {
+            "title": "Capacités de plateforme Big Data",
+            "groups": [
+              {
+                "name": "Stockage et calcul distribués",
+                "icon": "bi-hdd-stack",
+                "items": [
+                  "Lacs de données (S3, ADLS, GCS)",
+                  "Architecture lakehouse (Delta, Iceberg, Hudi)",
+                  "Traitement distribué (Spark, Flink)",
+                  "Moteurs de requête (Presto, Trino, Athena)",
+                  "Formats colonnaires (Parquet, ORC)"
+                ]
+              },
+              {
+                "name": "Streaming et temps réel",
+                "icon": "bi-broadcast",
+                "items": [
+                  "Streaming d'événements (Kafka, Kinesis, Pulsar)",
+                  "Traitement de flux (Flink, Spark Streaming)",
+                  "CDC et flux de changements",
+                  "Analytique temps réel (Druid, Pinot)",
+                  "Service de données à faible latence"
+                ]
+              },
+              {
+                "name": "Analytique et ML à grande échelle",
+                "icon": "bi-cpu",
+                "items": [
+                  "Entraînement ML distribué (Spark MLlib, Ray)",
+                  "Magasins de caractéristiques pour ML en production",
+                  "Bases vectorielles pour charges IA générative",
+                  "Analyse de graphes à grande échelle",
+                  "Analytique ad hoc à l'échelle pétaoctet"
+                ]
+              }
             ]
           },
           "keyUseCases": {
             "title": "Cas d'usage clés",
             "description": "Nos solutions Big Data créent de la valeur dans toutes les industries :",
             "items": [
-              "Analyse en temps réel pour l'efficacité opérationnelle",
-              "Analyse du comportement et des tendances clients",
-              "Maintenance prédictive et surveillance des données IoT",
+              "Analyse en temps réel pour efficacité opérationnelle",
+              "Analyse du comportement et tendances clients",
+              "Maintenance prédictive et surveillance de données IoT",
               "Détection de fraude et analyse de risque",
-              "Optimisation marketing par analyse de données à grande échelle",
-              "Soutien aux initiatives d'IA et d'apprentissage machine avec des ensembles volumineux"
+              "Optimisation marketing par analyse à grande échelle",
+              "Soutien aux initiatives IA et ML avec ensembles volumineux"
             ]
           },
           "ourApproach": {
             "title": "Notre approche",
-            "description": "Nous gérons tout le cycle de vie des projets Big Data :",
+            "description": "Nous gérons tout le cycle de vie des projets Big Data, de l'architecture aux opérations.",
             "items": [
-              "Recueil des besoins et planification de l'architecture",
-              "Ingestion et intégration des données (lots et streaming)",
-              "Traitement distribué avec Spark, Hadoop et frameworks modernes",
-              "Conception de lac de données et d'entrepôt de données",
-              "Optimisation, surveillance et planification de l'évolutivité",
-              "Gouvernance, sécurité et conformité"
+              { "title": "Recueil des besoins et planification", "description": "Quantifier volumes, vélocité et variété des données — concevoir une plateforme gérant la charge actuelle et la croissance future." },
+              { "title": "Ingestion et intégration", "description": "Bâtir des pipelines évolutifs par lots et streaming reliant les systèmes sources à la plateforme." },
+              { "title": "Traitement distribué", "description": "Implémenter Spark, Flink ou traitement serverless adapté à vos patrons de charge et compétences d'équipe." },
+              { "title": "Conception de lac et entrepôt", "description": "Concevoir l'architecture lakehouse avec partitionnement, formats et catalogue appropriés — bâtie pour requêter efficacement." },
+              { "title": "Optimisation et évolutivité", "description": "Ajuster pour coût et performance ; établir observabilité et auto-scaling pour charges élastiques." },
+              { "title": "Gouvernance, sécurité et conformité", "description": "Implémenter catalogage, contrôles d'accès granulaires et journalisation d'audit pour données réglementées à grande échelle." }
+            ]
+          },
+          "industryApplications": {
+            "title": "Big Data à travers les industries",
+            "description": "Plateformes de données à grande échelle éprouvées dans les environnements réglementés les plus exigeants du Canada.",
+            "industries": [
+              {
+                "name": "Services financiers",
+                "icon": "bi-bank",
+                "description": "Analytique transactionnelle, calcul de risque et détection de fraude à l'échelle que la banque canadienne exige.",
+                "useCases": [
+                  "Analytique transactionnelle temps réel",
+                  "Calcul de risque et tests de stress",
+                  "Analyse historique de patrons de fraude",
+                  "Traitement de données de marché"
+                ]
+              },
+              {
+                "name": "Santé",
+                "icon": "bi-heart-pulse",
+                "description": "Génomique, imagerie et plateformes de données populationnelles pour la recherche et les opérations cliniques.",
+                "useCases": [
+                  "Pipelines de génomique et séquençage",
+                  "Archives d'imagerie médicale (PACS)",
+                  "Lacs de données de santé populationnelle",
+                  "Génération de preuves concrètes"
+                ]
+              },
+              {
+                "name": "Gouvernement et secteur public",
+                "icon": "bi-building",
+                "description": "Plateformes de données de recensement, statistiques et données ouvertes servant des millions de requêtes.",
+                "useCases": [
+                  "Plateformes de données de recensement",
+                  "Infrastructure de données ouvertes",
+                  "Partage de données inter-agences",
+                  "Analytique au niveau programme à grande échelle"
+                ]
+              }
             ]
           },
           "technologies": {
             "title": "Technologies et plateformes",
-            "description": "Nous exploitons les principaux outils et cadres Big Data :",
+            "description": "Nous exploitons les principaux outils et cadres Big Data — privilégiant les standards ouverts et évitant le verrouillage.",
             "items": [
-              "Apache Spark, Hadoop, Flink",
-              "Lacs de données et Lakehouses (AWS, Azure, GCP)",
-              "Pipelines ETL/ELT et outils d'orchestration",
-              "Stockage distribué et plateformes d'analyse",
-              "Streaming temps réel (Kafka, Kinesis)"
+              "Apache Spark, Flink, Hadoop, Beam",
+              "Delta Lake, Apache Iceberg, Hudi",
+              "Kafka, Kinesis, Pulsar, Pub/Sub",
+              "Trino, Presto, Athena, Dremio",
+              "Databricks, EMR, Dataproc, HDInsight",
+              "Druid, Pinot, ClickHouse"
             ]
           },
           "businessImpact": {
             "title": "Impact d'affaires",
-            "description": "Nos solutions Big Data livrent :",
+            "description": "Nos solutions Big Data livrent échelle, performance et flexibilité.",
             "items": [
-              "Un traitement et une analyse plus rapides d'ensembles de données massifs",
-              "Une meilleure prise de décision opérationnelle et d'affaires",
-              "Une infrastructure évolutive pour des volumes de données croissants",
-              "Un soutien pour l'analyse avancée et les initiatives IA/ML",
-              "Une gouvernance et une fiabilité des données solides"
+              "Traitement et analyse plus rapides d'ensembles massifs",
+              "Prise de décision opérationnelle et d'affaires améliorée",
+              "Infrastructure évolutive pour volumes croissants",
+              "Soutien pour analytique avancée et initiatives IA/ML",
+              "Gouvernance et fiabilité des données solides",
+              "Coût total de possession inférieur aux entrepôts traditionnels à grande échelle"
+            ]
+          },
+          "differentiators": {
+            "title": "Pourquoi Gamma Neutral pour le Big Data",
+            "points": [
+              { "title": "Standards ouverts d'abord", "icon": "bi-unlock", "description": "Nous bâtissons sur formats ouverts (Parquet, Iceberg, Delta) et moteurs ouverts (Spark, Trino) — évitant le verrouillage fournisseur qui tue l'agilité à long terme." },
+              { "title": "Architecture soucieuse des coûts", "icon": "bi-calculator", "description": "Big data n'égale pas grosses factures. Nous concevons pour séparation stockage/calcul, tiering intelligent et infrastructure adaptée aux charges." },
+              { "title": "Opérations de production", "icon": "bi-activity", "description": "Nous ne nous arrêtons pas à l'architecture — nous implémentons observabilité, auto-scaling et runbooks opérationnels pour systèmes de production fiables." },
+              { "title": "Fondations prêtes pour l'IA", "icon": "bi-cpu-fill", "description": "Nos plateformes sont conçues avec les charges IA/ML en tête : magasins de caractéristiques, bases vectorielles et infrastructure d'entraînement distribué." }
+            ]
+          },
+          "caseStudy": {
+            "title": "D'un goulot d'entrepôt à l'échelle lakehouse",
+            "client": "Fournisseur canadien de télécommunications",
+            "challenge": "L'entrepôt hérité ne pouvait gérer 10 To/jour de télémétrie réseau. Les travaux ETL nocturnes duraient 14+ heures, les analystes attendaient midi pour les données de la veille, et la détection de fraude était réactive pas temps réel.",
+            "approach": "Architecturé un lakehouse sur Databricks avec streaming Kafka pour ingestion temps réel, Delta Lake pour stockage et Structured Streaming pour détection continue de fraude. Implémenté architecture medallion et Unity Catalog pour la gouvernance.",
+            "result": "Fraîcheur des données améliorée de 14 heures à 90 secondes. Détection de fraude passée de réactive par lots à préventive en temps réel. Coût d'infrastructure réduit de 45 % vs trajectoire d'expansion de l'entrepôt hérité."
+          },
+          "faq": {
+            "title": "Questions fréquentes",
+            "items": [
+              { "question": "Quand avons-nous vraiment besoin d'architecture 'big data' ?", "answer": "Quand les bases/entrepôts traditionnels peinent avec votre volume, vélocité ou variété. Souvent c'est plus de quelques To de données, des millions d'événements/jour ou le mélange de données structurées et non structurées. Ne sur-architecturez pas pour des données que vous n'avez pas encore." },
+              { "question": "Spark vs Databricks vs EMR — quelle différence ?", "answer": "Spark est le moteur open-source. Databricks est une plateforme gérée autour de Spark avec notebooks, Delta Lake et gouvernance. EMR/Dataproc/HDInsight sont des services Spark gérés par fournisseurs infonuagiques. Databricks a typiquement l'écosystème le plus riche ; les services des fournisseurs sont souvent moins chers." },
+              { "question": "Qu'est-ce qu'un lakehouse et en quoi diffère-t-il d'un lac de données ?", "answer": "Les lacs de données traditionnels stockent des fichiers bruts dans du stockage objet — bon marché mais sans transactions ACID, application de schéma ou requêtes rapides. Les lakehouses (Delta, Iceberg, Hudi) ajoutent des fonctionnalités d'entrepôt au lac, permettant streaming et lots sur la même couche de stockage." },
+              { "question": "Comment gérez-vous la gouvernance des données à grande échelle ?", "answer": "Approche catalogue-first : Unity Catalog, AWS Glue Catalog ou équivalent pour les métadonnées. Accès granulaire (ligne/colonne), découverte et masquage RPI, suivi de traçabilité de bout en bout et journalisation d'audit reliée à l'observabilité." },
+              { "question": "Les plateformes Big Data peuvent-elles être rentables ?", "answer": "Absolument — mais ça exige de la discipline. Séparation stockage/calcul, politiques de cycle de vie de stockage par niveaux, optimisation de requêtes, isolation des charges et rightsizing des clusters. Sans pratique FinOps, le big data devient rapidement des données coûteuses." }
             ]
           },
           "closing": {
-            "title": "Prêt à révéler les insights de vos ensembles de données massifs ?",
-            "subtitle": "Concevons une solution Big Data qui évolue avec les besoins de votre entreprise."
+            "title": "Prêt à révéler les insights de vos ensembles massifs ?",
+            "subtitle": "Concevons une solution Big Data qui évolue avec les besoins de votre entreprise — et votre budget."
           }
         }
       }

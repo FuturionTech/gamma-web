@@ -50,73 +50,97 @@
 
 
     <!-- Company Overview -->
-    <section class="py-5">
-      <div class="container py-4">
+    <section class="py-5 position-relative overflow-hidden">
+      <!-- Ambient Backgrounds -->
+      <div class="ambient-glow glow-primary d-none d-md-block"></div>
+      
+      <div class="container py-5 position-relative z-1">
         <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
-              <i class="bi bi-building me-2"></i>{{ $t('about.companyOverview.badge') }}
-            </div>
-            <h2 class="display-6 fw-bold mb-4">
-              {{ $t('about.companyOverview.title') }}
-            </h2>
-            <p class="fs-5 mb-4 lh-lg about-body-text">
-              <strong>{{ $t('about.companyOverview.company') }}</strong> {{ $t('about.companyOverview.description', { company: '' }).trim() }}
-            </p>
+          <!-- Left Text Content -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="pe-lg-4">
+              <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4 shadow-sm border border-primary border-opacity-10">
+                <i class="bi bi-building me-2"></i><span class="fw-semibold">{{ $t('about.companyOverview.badge') }}</span>
+              </div>
+              <h2 class="display-5 fw-bold mb-4 tracking-tight">
+                {{ $t('about.companyOverview.title') }}
+              </h2>
+              <p class="fs-5 mb-5 lh-lg about-body-text text-muted">
+                <strong class="text-dark dark-mode-strong">{{ $t('about.companyOverview.company') }}</strong> {{ $t('about.companyOverview.description', { company: '' }).trim() }}
+              </p>
 
-            <!-- Company Details -->
-            <div class="bg-light rounded-3 p-4 mb-4">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="d-flex align-items-start">
-                    <i class="bi bi-pin-map text-primary me-3 mt-1"></i>
-                    <div>
-                      <small class="text-muted d-block">{{ $t('about.companyOverview.headquarters') }}</small>
-                      <strong class="fs-6">{{ company.address.line1 }}<br/>{{ company.address.line2 }}</strong>
+              <!-- Company Details Card (Glassmorphic) -->
+              <div class="glass-card-info p-4 rounded-4">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <div class="icon-square bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-3">
+                        <i class="bi bi-pin-map fs-5"></i>
+                      </div>
+                      <div>
+                        <small class="text-muted d-block fw-medium mb-1">{{ $t('about.companyOverview.headquarters') }}</small>
+                        <strong class="fs-6 d-block lh-sm text-dark dark-mode-strong">{{ company.address.line1 }}<br/>{{ company.address.line2 }}</strong>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="d-flex align-items-start">
-                    <i class="bi bi-calendar-check text-primary me-3 mt-1"></i>
-                    <div>
-                      <small class="text-muted d-block">{{ $t('about.companyOverview.incorporated') }}</small>
-                      <strong class="fs-6">{{ $t('about.companyOverview.incorporatedDate') }}</strong>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <div class="icon-square bg-success bg-opacity-10 text-success rounded-3 p-2 me-3">
+                        <i class="bi bi-calendar-check fs-5"></i>
+                      </div>
+                      <div>
+                        <small class="text-muted d-block fw-medium mb-1">{{ $t('about.companyOverview.incorporated') }}</small>
+                        <strong class="fs-6 d-block lh-sm text-dark dark-mode-strong">{{ $t('about.companyOverview.incorporatedDate') }}</strong>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Right Visual Grid -->
           <div class="col-lg-6">
-            <div class="values-visual rounded-4 p-4 p-lg-5">
-              <div class="row g-4">
-                <div class="col-6">
-                  <div class="value-card text-center p-3 rounded-3">
-                    <i class="bi bi-shield-check fs-2 text-primary mb-2 d-block"></i>
-                    <h5 class="fw-bold mb-1">{{ $t('about.values.rigor') }}</h5>
-                    <p class="text-muted small mb-0">{{ $t('about.values.rigorDesc') }}</p>
+            <div class="position-relative right-visual-wrapper">
+              <div class="ambient-glow glow-info d-none d-lg-block" style="top: -10%; right: -10%;"></div>
+              
+              <div class="row g-4 position-relative z-1 align-items-center">
+                <!-- Left Column of Cards -->
+                <div class="col-sm-6">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="value-glass-card p-4 rounded-4 text-center">
+                       <div class="icon-orb bg-white shadow-sm mb-3 mx-auto">
+                         <i class="bi bi-shield-check fs-3 text-primary"></i>
+                       </div>
+                       <h5 class="fw-bold mb-2">{{ $t('about.values.rigor') }}</h5>
+                       <p class="text-muted small mb-0 lh-base">{{ $t('about.values.rigorDesc') }}</p>
+                    </div>
+                    <div class="value-glass-card p-4 rounded-4 text-center">
+                       <div class="icon-orb bg-white shadow-sm mb-3 mx-auto">
+                         <i class="bi bi-people fs-3 text-success"></i>
+                       </div>
+                       <h5 class="fw-bold mb-2">{{ $t('about.values.partnership') }}</h5>
+                       <p class="text-muted small mb-0 lh-base">{{ $t('about.values.partnershipDesc') }}</p>
+                    </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="value-card text-center p-3 rounded-3">
-                    <i class="bi bi-lightbulb fs-2 text-warning mb-2 d-block"></i>
-                    <h5 class="fw-bold mb-1">{{ $t('about.values.clarity') }}</h5>
-                    <p class="text-muted small mb-0">{{ $t('about.values.clarityDesc') }}</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="value-card text-center p-3 rounded-3">
-                    <i class="bi bi-people fs-2 text-success mb-2 d-block"></i>
-                    <h5 class="fw-bold mb-1">{{ $t('about.values.partnership') }}</h5>
-                    <p class="text-muted small mb-0">{{ $t('about.values.partnershipDesc') }}</p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="value-card text-center p-3 rounded-3">
-                    <i class="bi bi-graph-up-arrow fs-2 text-info mb-2 d-block"></i>
-                    <h5 class="fw-bold mb-1">{{ $t('about.values.impact') }}</h5>
-                    <p class="text-muted small mb-0">{{ $t('about.values.impactDesc') }}</p>
+                <!-- Right Column of Cards (Offset) -->
+                <div class="col-sm-6 mt-4 mt-sm-5 pt-sm-4">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="value-glass-card p-4 rounded-4 text-center">
+                       <div class="icon-orb bg-white shadow-sm mb-3 mx-auto">
+                         <i class="bi bi-lightbulb fs-3 text-warning"></i>
+                       </div>
+                       <h5 class="fw-bold mb-2">{{ $t('about.values.clarity') }}</h5>
+                       <p class="text-muted small mb-0 lh-base">{{ $t('about.values.clarityDesc') }}</p>
+                    </div>
+                    <div class="value-glass-card p-4 rounded-4 text-center">
+                       <div class="icon-orb bg-white shadow-sm mb-3 mx-auto">
+                         <i class="bi bi-graph-up-arrow fs-3 text-info"></i>
+                       </div>
+                       <h5 class="fw-bold mb-2">{{ $t('about.values.impact') }}</h5>
+                       <p class="text-muted small mb-0 lh-base">{{ $t('about.values.impactDesc') }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -410,52 +434,119 @@ useHead({
   }
 }
 
-/* Values Visual */
-.values-visual {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
-  border: 1px solid rgba(139, 92, 246, 0.1);
-}
-
-.value-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+/* Glass Info Card */
+.glass-card-info {
+  background: rgba(248, 249, 250, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: all 0.3s ease;
 }
 
-.value-card h5 {
-  color: #1f2937;
+.glass-card-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-.value-card p.text-muted {
-  color: #4b5563 !important;
+/* Value Glass Cards */
+.value-glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.value-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.value-glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
 }
 
-:global([data-bs-theme="dark"]) .values-visual {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
-  border-color: rgba(139, 92, 246, 0.2);
+.icon-orb {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px; /* Squircle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-:global([data-bs-theme="dark"]) .value-card {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
+.value-glass-card:hover .icon-orb {
+  transform: scale(1.1) rotate(5deg);
 }
 
-:global([data-bs-theme="dark"]) .value-card h5 {
+.icon-square {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ambient Glow */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: pulse-glow 8s ease-in-out infinite alternate;
+}
+
+.glow-primary {
+  top: 10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
+.glow-info {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(56, 189, 248, 0) 70%);
+  animation-delay: -3s;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(0.9); opacity: 0.2; }
+  100% { transform: scale(1.1); opacity: 0.4; }
+}
+
+/* Dark Mode Extends */
+:global([data-bs-theme="dark"]) .text-dark.dark-mode-strong {
   color: #f9fafb !important;
 }
 
-:global([data-bs-theme="dark"]) .value-card p.text-muted {
-  color: #d1d5db !important;
+:global([data-bs-theme="dark"]) .glass-card-info {
+  background: rgba(30, 30, 35, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-:global([data-bs-theme="dark"]) .value-card:hover {
-  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.15);
-  border-color: rgba(139, 92, 246, 0.25);
+:global([data-bs-theme="dark"]) .value-glass-card {
+  background: rgba(30, 30, 35, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+:global([data-bs-theme="dark"]) .value-glass-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+:global([data-bs-theme="dark"]) .icon-orb {
+  background: rgba(40, 40, 45, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+:global([data-bs-theme="dark"]) .value-glass-card h5 {
+  color: #f9fafb !important;
 }
 
 /* Clean shadows */
