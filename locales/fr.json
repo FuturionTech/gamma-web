@@ -1616,7 +1616,9 @@
     "noResults": "Aucune question ne correspond à votre recherche.",
     "clearSearch": "Effacer les filtres",
     "retry": "Réessayer",
-    "showingCount": "Affichage de {count} sur {total} questions"
+    "showingCount": "Affichage de {count} sur {total} questions",
+    "errorTitle": "Impossible de charger les FAQ",
+    "errorMessage": "Un problème est survenu lors du chargement des questions. Veuillez vérifier votre connexion et réessayer."
   },
   "privacy": {
     "breadcrumb": "Politique de confidentialité",

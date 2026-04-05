@@ -1616,7 +1616,9 @@
     "noResults": "No questions match your search.",
     "clearSearch": "Clear filters",
     "retry": "Try Again",
-    "showingCount": "Showing {count} of {total} questions"
+    "showingCount": "Showing {count} of {total} questions",
+    "errorTitle": "We couldn't load the FAQs",
+    "errorMessage": "Something went wrong loading the questions. Please check your connection and try again."
   },
   "privacy": {
     "breadcrumb": "Privacy Policy",

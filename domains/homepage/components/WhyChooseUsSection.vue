@@ -32,15 +32,15 @@
           </div>
 
           <!-- CTA -->
-          <div class="d-flex flex-column flex-sm-row gap-3 align-items-sm-center">
-            <a href="/contact" class="btn interactive-btn">
+          <div class="cta-group">
+            <NuxtLink to="/contact" class="interactive-btn">
               <span class="btn-text">{{ $t('whyChooseUs.ctaPrimary') }}</span>
               <i class="bi bi-arrow-right btn-icon" aria-hidden="true"></i>
-            </a>
-            <a href="/about" class="link-hover-fx text-decoration-none learn-more-link">
+            </NuxtLink>
+            <NuxtLink to="/about" class="link-hover-fx text-decoration-none learn-more-link">
               <span>{{ $t('whyChooseUs.ctaSecondary') }}</span>
               <i class="bi bi-arrow-right link-icon" aria-hidden="true"></i>
-            </a>
+            </NuxtLink>
           </div>
         </div>
 
@@ -327,12 +327,22 @@ const benefits = computed(() => [
   }
 }
 
-/* Interactive Button — Dark Solid CTA */
+/* CTA group — wraps button + link side-by-side */
+.cta-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Interactive Button — Dark Solid CTA (sized to content) */
 .interactive-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
+  width: auto;
+  align-self: flex-start;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
   border: none;

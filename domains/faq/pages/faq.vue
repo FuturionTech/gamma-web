@@ -84,11 +84,14 @@
 
             <!-- Error State -->
             <div v-else-if="faqStore.error" class="text-center py-5">
-              <div class="card border-0 shadow-sm rounded-4 p-5">
-                <i class="bi bi-exclamation-triangle fs-1 text-warning mb-3"></i>
-                <p class="text-muted mb-3">{{ faqStore.error }}</p>
-                <button class="btn btn-primary rounded-pill px-4" @click="faqStore.fetchFaqs()">
-                  {{ $t('faq.retry') }}
+              <div class="card border-0 shadow-sm rounded-4 p-5 mx-auto" style="max-width: 520px;">
+                <div class="error-icon-wrapper mx-auto mb-3">
+                  <i class="bi bi-cloud-slash"></i>
+                </div>
+                <h3 class="h5 fw-bold mb-2">{{ $t('faq.errorTitle') }}</h3>
+                <p class="text-muted mb-4">{{ $t('faq.errorMessage') }}</p>
+                <button class="btn btn-primary rounded-pill px-4 py-2 mx-auto" @click="faqStore.fetchFaqs()" style="max-width: 160px;">
+                  <i class="bi bi-arrow-clockwise me-2"></i>{{ $t('faq.retry') }}
                 </button>
               </div>
             </div>
@@ -253,6 +256,21 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* ================================
+   ERROR ICON
+   ================================ */
+.error-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(251, 146, 60, 0.18) 100%);
+  color: #f59e0b;
+  font-size: 1.75rem;
+}
+
 /* ================================
    HERO
    ================================ */

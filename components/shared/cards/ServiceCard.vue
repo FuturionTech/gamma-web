@@ -1,14 +1,11 @@
 <template>
-  <component
-    :is="link ? 'NuxtLink' : 'div'"
-    :to="link || undefined"
-    class="service-card h-100 p-4 rounded-5 border-0 text-decoration-none"
-    :class="{ 'service-card-linkable': !!link }"
+  <NuxtLink
+    v-if="link"
+    :to="link"
+    class="service-card service-card-linkable h-100 p-4 rounded-5 border-0 text-decoration-none"
     @click="onCardClick"
   >
-    <!-- Card Inner Base -->
     <div class="service-card-inner h-100 d-flex flex-column">
-      <!-- Icon with Ambient Glow -->
       <div class="service-icon mb-4">
         <div class="icon-orb" :class="gradientClass">
           <component v-if="svgIcon" :is="svgIcon" />
@@ -17,11 +14,9 @@
         </div>
       </div>
 
-      <!-- Title & Description -->
       <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
       <p class="card-desc-text mb-4">{{ description }}</p>
 
-      <!-- Feature List -->
       <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto pt-2">
         <li
           class="d-flex align-items-center mb-2"
@@ -33,15 +28,40 @@
         </li>
       </ul>
 
-      <!-- Learn More Link -->
-      <div v-if="link" class="learn-more-box mt-4 pt-4">
+      <div class="learn-more-box mt-4 pt-4">
         <span class="learn-more-btn">
           {{ learnMoreLabel || $t('services.learnMore') }}
-          <i class="bi bi-arrow-right-short ms-1 learn-more-arrow"></i>
+          <i class="bi bi-arrow-right-short ms-1 learn-more-arrow" aria-hidden="true"></i>
         </span>
       </div>
     </div>
-  </component>
+  </NuxtLink>
+
+  <div v-else class="service-card h-100 p-4 rounded-5 border-0">
+    <div class="service-card-inner h-100 d-flex flex-column">
+      <div class="service-icon mb-4">
+        <div class="icon-orb" :class="gradientClass">
+          <component v-if="svgIcon" :is="svgIcon" />
+          <i v-else-if="icon" :class="icon" class="service-icon-i"></i>
+          <div class="orb-glow"></div>
+        </div>
+      </div>
+
+      <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
+      <p class="card-desc-text mb-4">{{ description }}</p>
+
+      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto pt-2">
+        <li
+          class="d-flex align-items-center mb-2"
+          v-for="(feature, idx) in features"
+          :key="idx"
+        >
+          <div class="feature-dot me-2 flex-shrink-0"></div>
+          <span class="feature-text">{{ feature }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
