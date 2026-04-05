@@ -329,7 +329,7 @@ const benefits = computed(() => [
 
 /* CTA group — wraps button + link side-by-side */
 .cta-group {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
@@ -340,23 +340,39 @@ const benefits = computed(() => [
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
   width: auto;
-  align-self: flex-start;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #ffffff;
+  height: auto;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: #ffffff !important;
   border: none;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.875rem 1.75rem;
-  border-radius: 12px;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  text-decoration: none;
+  text-decoration: none !important;
   white-space: nowrap;
-  line-height: 1.25;
+  line-height: 1;
+}
+
+.interactive-btn .btn-text {
+  color: #ffffff !important;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.interactive-btn .btn-icon {
+  color: #ffffff !important;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .interactive-btn::before {
@@ -378,18 +394,6 @@ const benefits = computed(() => [
 
 .interactive-btn:hover::before {
   left: 100%;
-}
-
-.interactive-btn .btn-text {
-  line-height: 1;
-  display: inline-block;
-}
-
-.interactive-btn .btn-icon {
-  font-size: 1.1rem;
-  line-height: 1;
-  transition: transform 0.3s ease;
-  display: inline-block;
 }
 
 .interactive-btn:hover .btn-icon {
