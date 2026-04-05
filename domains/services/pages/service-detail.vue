@@ -694,6 +694,10 @@ useHead(() => ({
   border-radius: 0.875rem;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-card:hover {
