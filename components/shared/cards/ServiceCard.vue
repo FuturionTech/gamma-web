@@ -95,6 +95,8 @@ const onCardClick = () => {
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   cursor: default;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card-linkable {
