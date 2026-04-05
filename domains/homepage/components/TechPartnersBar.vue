@@ -96,31 +96,31 @@ const technologies = [
 }
 
 /* Dark mode support */
-:global([data-bs-theme="dark"]) .tech-partners-bar {
+[data-bs-theme="dark"] .tech-partners-bar {
   background: linear-gradient(180deg, #111111 0%, #0f0f0f 100%);
   border-top-color: rgba(255, 255, 255, 0.05);
   border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
-:global([data-bs-theme="dark"]) .tech-badge {
+[data-bs-theme="dark"] .tech-badge {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-:global([data-bs-theme="dark"]) .tech-badge:hover {
+[data-bs-theme="dark"] .tech-badge:hover {
   background: rgba(139, 92, 246, 0.1);
   border-color: rgba(139, 92, 246, 0.3);
 }
 
-:global([data-bs-theme="dark"]) .tech-heading {
+[data-bs-theme="dark"] .tech-heading {
   color: rgba(255, 255, 255, 0.85);
 }
 
-:global([data-bs-theme="dark"]) .tech-icon {
+[data-bs-theme="dark"] .tech-icon {
   color: #d1d5db;
 }
 
-:global([data-bs-theme="dark"]) .tech-name {
+[data-bs-theme="dark"] .tech-name {
   color: #e5e7eb;
 }
 

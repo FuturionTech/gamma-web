@@ -193,21 +193,21 @@ useHead({
   box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
 }
 
-:global([data-bs-theme="dark"]) .card {
+[data-bs-theme="dark"] .card {
   background-color: rgba(255, 255, 255, 0.04) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-:global([data-bs-theme="dark"]) .card .text-muted {
+[data-bs-theme="dark"] .card .text-muted {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-:global([data-bs-theme="dark"]) .card:hover {
+[data-bs-theme="dark"] .card:hover {
   box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15) !important;
   border-color: rgba(139, 92, 246, 0.25) !important;
 }
 
-:global([data-bs-theme="dark"]) .bg-light {
+[data-bs-theme="dark"] .bg-light {
   background-color: rgba(255, 255, 255, 0.04) !important;
 }
 </style>

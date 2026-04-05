@@ -1275,52 +1275,52 @@ useHead(() => ({
 /* ========================================
    DARK MODE
    ======================================== */
-:global([data-bs-theme="dark"]) .bg-light {
+[data-bs-theme="dark"] .bg-light {
   background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
-:global([data-bs-theme="dark"]) .detail-item,
-:global([data-bs-theme="dark"]) .capability-card,
-:global([data-bs-theme="dark"]) .approach-step-item,
-:global([data-bs-theme="dark"]) .industry-app-card,
-:global([data-bs-theme="dark"]) .tech-badge,
-:global([data-bs-theme="dark"]) .impact-card,
-:global([data-bs-theme="dark"]) .diff-card,
-:global([data-bs-theme="dark"]) .faq-item,
-:global([data-bs-theme="dark"]) .related-card,
-:global([data-bs-theme="dark"]) .challenge-item {
+[data-bs-theme="dark"] .detail-item,
+[data-bs-theme="dark"] .capability-card,
+[data-bs-theme="dark"] .approach-step-item,
+[data-bs-theme="dark"] .industry-app-card,
+[data-bs-theme="dark"] .tech-badge,
+[data-bs-theme="dark"] .impact-card,
+[data-bs-theme="dark"] .diff-card,
+[data-bs-theme="dark"] .faq-item,
+[data-bs-theme="dark"] .related-card,
+[data-bs-theme="dark"] .challenge-item {
   background: rgba(255, 255, 255, 0.04) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Preserve challenge item left-border accent color in dark mode */
-:global([data-bs-theme="dark"]) .challenge-item {
+[data-bs-theme="dark"] .challenge-item {
   border-left-color: rgba(220, 38, 38, 0.7) !important;
 }
 
 /* Strengthen hover shadow in dark mode for visibility */
-:global([data-bs-theme="dark"]) .approach-step-item:hover {
+[data-bs-theme="dark"] .approach-step-item:hover {
   box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18) !important;
 }
 
-:global([data-bs-theme="dark"]) .text-muted {
+[data-bs-theme="dark"] .text-muted {
   color: rgba(255, 255, 255, 0.65) !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-title,
-:global([data-bs-theme="dark"]) .faq-question,
-:global([data-bs-theme="dark"]) .industry-app-card h4,
-:global([data-bs-theme="dark"]) .diff-card h5,
-:global([data-bs-theme="dark"]) .related-card h5,
-:global([data-bs-theme="dark"]) .approach-content h5 {
+[data-bs-theme="dark"] .capability-title,
+[data-bs-theme="dark"] .faq-question,
+[data-bs-theme="dark"] .industry-app-card h4,
+[data-bs-theme="dark"] .diff-card h5,
+[data-bs-theme="dark"] .related-card h5,
+[data-bs-theme="dark"] .approach-content h5 {
   color: #ffffff !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-header {
+[data-bs-theme="dark"] .capability-header {
   border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
-:global([data-bs-theme="dark"]) .industry-usecase-list li {
+[data-bs-theme="dark"] .industry-usecase-list li {
   border-top-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1342,7 +1342,7 @@ useHead(() => ({
   }
 }
 
-:global([data-bs-theme="dark"]) .challenge-grid {
+[data-bs-theme="dark"] .challenge-grid {
   border-top-color: rgba(255, 255, 255, 0.08);
 }
 

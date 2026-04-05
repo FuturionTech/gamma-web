@@ -398,7 +398,7 @@ const approachSteps = computed(() =>
   line-height: 0;
 }
 
-:global([data-bs-theme="dark"]) .hero-separator {
+[data-bs-theme="dark"] .hero-separator {
   color: #0b0f19;
 }
 
@@ -416,7 +416,7 @@ const approachSteps = computed(() =>
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
 
-:global([data-bs-theme="dark"]) .bg-white-to-gray {
+[data-bs-theme="dark"] .bg-white-to-gray {
   background: #0b0f19;
 }
 
@@ -445,7 +445,7 @@ const approachSteps = computed(() =>
   background: #f1f5f9;
 }
 
-:global([data-bs-theme="dark"]) .approach-bg-gradient {
+[data-bs-theme="dark"] .approach-bg-gradient {
   background: #0f172a;
 }
 
@@ -583,7 +583,7 @@ const approachSteps = computed(() =>
   background: #ffffff;
 }
 
-:global([data-bs-theme="dark"]) .cta-section {
+[data-bs-theme="dark"] .cta-section {
   background: #0b0f19;
 }
 
@@ -635,34 +635,34 @@ const approachSteps = computed(() =>
 /* ================================
    DARK MODE OVERRIDES
    ================================ */
-:global([data-bs-theme="dark"]) .glass-card-v2 {
+[data-bs-theme="dark"] .glass-card-v2 {
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-:global([data-bs-theme="dark"]) .glass-card-v2:hover {
+[data-bs-theme="dark"] .glass-card-v2:hover {
   background: rgba(15, 23, 42, 1);
   border-color: rgba(139, 92, 246, 0.3) !important;
 }
 
-:global([data-bs-theme="dark"]) .glass-card-v3 {
+[data-bs-theme="dark"] .glass-card-v3 {
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
-:global([data-bs-theme="dark"]) .glass-card-v3:hover {
+[data-bs-theme="dark"] .glass-card-v3:hover {
   border-color: rgba(255, 255, 255, 0.15) !important;
   background: rgba(15, 23, 42, 0.8);
 }
 
-:global([data-bs-theme="dark"]) .framework-chip {
+[data-bs-theme="dark"] .framework-chip {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.1);
   color: #94a3b8;
 }
 
-:global([data-bs-theme="dark"]) .framework-chip:hover {
+[data-bs-theme="dark"] .framework-chip:hover {
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.2);
 }

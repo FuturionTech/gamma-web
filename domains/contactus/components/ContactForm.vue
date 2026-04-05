@@ -361,23 +361,23 @@ const handleSubmit = async () => {
 /* ================================
    DARK MODE
    ================================ */
-:global([data-bs-theme="dark"]) .premium-input {
+[data-bs-theme="dark"] .premium-input {
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
-:global([data-bs-theme="dark"]) .premium-input:focus {
+[data-bs-theme="dark"] .premium-input:focus {
   background: rgba(255, 255, 255, 0.05);
   border-color: #a78bfa;
 }
 
-:global([data-bs-theme="dark"]) .alert-premium-success {
+[data-bs-theme="dark"] .alert-premium-success {
   background: rgba(16, 185, 129, 0.1);
   color: #34d399;
 }
 
-:global([data-bs-theme="dark"]) .alert-premium-danger {
+[data-bs-theme="dark"] .alert-premium-danger {
   background: rgba(239, 68, 68, 0.1);
   color: #f87171;
 }

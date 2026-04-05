@@ -107,21 +107,21 @@ const iconColorClass = computed(() => {
 }
 
 /* Dark mode support */
-:global([data-bs-theme="dark"]) .benefit-card:hover {
+[data-bs-theme="dark"] .benefit-card:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-:global([data-bs-theme="dark"]) .benefit-icon-wrapper {
+[data-bs-theme="dark"] .benefit-icon-wrapper {
   opacity: 0.9;
 }
 
-:global([data-bs-theme="dark"]) .benefit-card h4 {
+[data-bs-theme="dark"] .benefit-card h4 {
   color: #ffffff !important;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-:global([data-bs-theme="dark"]) .benefit-card .text-muted {
+[data-bs-theme="dark"] .benefit-card .text-muted {
   color: rgba(255, 255, 255, 0.7) !important;
   line-height: 1.6;
 }

@@ -419,7 +419,7 @@ useHead({
   color: #374151;
 }
 
-:global([data-bs-theme="dark"]) .about-body-text {
+[data-bs-theme="dark"] .about-body-text {
   color: #d1d5db;
 }
 
@@ -518,34 +518,34 @@ useHead({
 }
 
 /* Dark Mode Extends */
-:global([data-bs-theme="dark"]) .text-dark.dark-mode-strong {
+[data-bs-theme="dark"] .text-dark.dark-mode-strong {
   color: #f9fafb !important;
 }
 
-:global([data-bs-theme="dark"]) .glass-card-info {
+[data-bs-theme="dark"] .glass-card-info {
   background: rgba(30, 30, 35, 0.6);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-:global([data-bs-theme="dark"]) .value-glass-card {
+[data-bs-theme="dark"] .value-glass-card {
   background: rgba(30, 30, 35, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-:global([data-bs-theme="dark"]) .value-glass-card:hover {
+[data-bs-theme="dark"] .value-glass-card:hover {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border-color: rgba(139, 92, 246, 0.3);
 }
 
-:global([data-bs-theme="dark"]) .icon-orb {
+[data-bs-theme="dark"] .icon-orb {
   background: rgba(40, 40, 45, 0.8) !important;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
 }
 
-:global([data-bs-theme="dark"]) .value-glass-card h5 {
+[data-bs-theme="dark"] .value-glass-card h5 {
   color: #f9fafb !important;
 }
 
@@ -563,100 +563,100 @@ useHead({
    ================================ */
 
 /* Headings */
-:global([data-bs-theme="dark"]) h2.display-6,
-:global([data-bs-theme="dark"]) h2.h2,
-:global([data-bs-theme="dark"]) h4,
-:global([data-bs-theme="dark"]) h5 {
+[data-bs-theme="dark"] h2.display-6,
+[data-bs-theme="dark"] h2.h2,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5 {
   color: #f9fafb !important;
 }
 
 /* Badge */
-:global([data-bs-theme="dark"]) .badge.bg-primary.bg-opacity-10 {
+[data-bs-theme="dark"] .badge.bg-primary.bg-opacity-10 {
   background: rgba(139, 92, 246, 0.2) !important;
   color: #c4b5fd !important;
 }
 
 /* Body text in dark mode */
-:global([data-bs-theme="dark"]) .fs-5,
-:global([data-bs-theme="dark"]) p {
+[data-bs-theme="dark"] .fs-5,
+[data-bs-theme="dark"] p {
   color: rgba(255, 255, 255, 0.8);
 }
 
 /* Strong text */
-:global([data-bs-theme="dark"]) strong {
+[data-bs-theme="dark"] strong {
   color: #f3f4f6 !important;
 }
 
 /* Text muted */
-:global([data-bs-theme="dark"]) .text-muted,
-:global([data-bs-theme="dark"]) small.text-muted {
+[data-bs-theme="dark"] .text-muted,
+[data-bs-theme="dark"] small.text-muted {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
 /* bg-light sections */
-:global([data-bs-theme="dark"]) .bg-light {
+[data-bs-theme="dark"] .bg-light {
   background-color: rgba(255, 255, 255, 0.04) !important;
 }
 
 /* Cards */
-:global([data-bs-theme="dark"]) .capability-card {
+[data-bs-theme="dark"] .capability-card {
   background: rgba(255, 255, 255, 0.06) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-card h4 {
+[data-bs-theme="dark"] .capability-card h4 {
   color: #ffffff !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-card .text-muted {
+[data-bs-theme="dark"] .capability-card .text-muted {
   color: rgba(255, 255, 255, 0.65) !important;
 }
 
-:global([data-bs-theme="dark"]) .capability-card:hover {
+[data-bs-theme="dark"] .capability-card:hover {
   border-color: rgba(139, 92, 246, 0.3) !important;
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1) !important;
 }
 
 /* Growing team card — dark */
-:global([data-bs-theme="dark"]) .growing-team-card {
+[data-bs-theme="dark"] .growing-team-card {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
   border-color: rgba(139, 92, 246, 0.25);
 }
 
-:global([data-bs-theme="dark"]) .growing-team-card:hover {
+[data-bs-theme="dark"] .growing-team-card:hover {
   border-color: rgba(139, 92, 246, 0.4);
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.15);
 }
 
-:global([data-bs-theme="dark"]) .growing-team-card .text-muted {
+[data-bs-theme="dark"] .growing-team-card .text-muted {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-:global([data-bs-theme="dark"]) .growing-team-icon {
+[data-bs-theme="dark"] .growing-team-icon {
   background: rgba(139, 92, 246, 0.2);
   color: #c4b5fd;
 }
 
 /* Growing team section */
-:global([data-bs-theme="dark"]) .bg-light h5 {
+[data-bs-theme="dark"] .bg-light h5 {
   color: #f9fafb !important;
 }
 
-:global([data-bs-theme="dark"]) .bg-light .text-muted {
+[data-bs-theme="dark"] .bg-light .text-muted {
   color: rgba(255, 255, 255, 0.65) !important;
 }
 
 /* Icon colors in dark mode */
-:global([data-bs-theme="dark"]) .text-primary {
+[data-bs-theme="dark"] .text-primary {
   color: #a78bfa !important;
 }
 
 /* Shadows */
-:global([data-bs-theme="dark"]) .shadow-sm {
+[data-bs-theme="dark"] .shadow-sm {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-:global([data-bs-theme="dark"]) .shadow-lg {
+[data-bs-theme="dark"] .shadow-lg {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
 }
 

@@ -219,24 +219,24 @@ const onCardClick = () => {
 }
 
 /* Dark Mode Sophistication */
-:global([data-bs-theme="dark"]) .service-card {
+[data-bs-theme="dark"] .service-card {
   background: rgba(15, 23, 42, 0.4);
   border-color: rgba(255, 255, 255, 0.06) !important;
   box-shadow: none;
 }
 
-:global([data-bs-theme="dark"]) .service-card:hover {
+[data-bs-theme="dark"] .service-card:hover {
   background: rgba(15, 23, 42, 0.8);
   border-color: rgba(124, 58, 237, 0.3) !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-:global([data-bs-theme="dark"]) .card-title-text { color: #ffffff; }
-:global([data-bs-theme="dark"]) .card-desc-text { color: rgba(255, 255, 255, 0.7); }
-:global([data-bs-theme="dark"]) .feature-text { color: rgba(255, 255, 255, 0.6); }
-:global([data-bs-theme="dark"]) .learn-more-box { border-top-color: rgba(255, 255, 255, 0.08); }
-:global([data-bs-theme="dark"]) .learn-more-btn { color: #a78bfa; }
-:global([data-bs-theme="dark"]) .service-card:hover .learn-more-btn { color: #ffffff; }
+[data-bs-theme="dark"] .card-title-text { color: #ffffff; }
+[data-bs-theme="dark"] .card-desc-text { color: rgba(255, 255, 255, 0.7); }
+[data-bs-theme="dark"] .feature-text { color: rgba(255, 255, 255, 0.6); }
+[data-bs-theme="dark"] .learn-more-box { border-top-color: rgba(255, 255, 255, 0.08); }
+[data-bs-theme="dark"] .learn-more-btn { color: #a78bfa; }
+[data-bs-theme="dark"] .service-card:hover .learn-more-btn { color: #ffffff; }
 
 /* Reduced Motion Optimization */
 @media (prefers-reduced-motion: reduce) {

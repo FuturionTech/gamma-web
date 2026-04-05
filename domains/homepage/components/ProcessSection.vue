@@ -117,16 +117,16 @@ const processSteps = computed(() =>
 }
 
 /* Dark mode support */
-:global([data-bs-theme="dark"]) .bg-light {
+[data-bs-theme="dark"] .bg-light {
   background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
-:global([data-bs-theme="dark"]) .results-card {
+[data-bs-theme="dark"] .results-card {
   background-color: var(--bs-body-bg) !important;
   border-color: var(--bs-border-color) !important;
 }
 
-:global([data-bs-theme="dark"]) .results-card:hover {
+[data-bs-theme="dark"] .results-card:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
 }
 </style>

@@ -263,16 +263,16 @@ useHead({
   transform: translateY(-2px);
 }
 
-:global([data-bs-theme="dark"]) .card {
+[data-bs-theme="dark"] .card {
   background-color: rgba(255, 255, 255, 0.04) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-:global([data-bs-theme="dark"]) .card .text-muted {
+[data-bs-theme="dark"] .card .text-muted {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-:global([data-bs-theme="dark"]) .card:hover {
+[data-bs-theme="dark"] .card:hover {
   border-color: rgba(139, 92, 246, 0.3) !important;
 }
 

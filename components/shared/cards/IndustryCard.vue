@@ -117,25 +117,25 @@ const iconColorClass = computed(() => {
 }
 
 /* Dark mode support */
-:global([data-bs-theme="dark"]) .industry-card {
+[data-bs-theme="dark"] .industry-card {
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-:global([data-bs-theme="dark"]) .industry-card:hover {
+[data-bs-theme="dark"] .industry-card:hover {
   box-shadow: 0 15px 30px rgba(139, 92, 246, 0.15) !important;
   border-color: rgba(139, 92, 246, 0.4) !important;
 }
 
-:global([data-bs-theme="dark"]) .industry-card h4 {
+[data-bs-theme="dark"] .industry-card h4 {
   color: #ffffff !important;
 }
 
-:global([data-bs-theme="dark"]) .industry-card .text-muted {
+[data-bs-theme="dark"] .industry-card .text-muted {
   color: rgba(255, 255, 255, 0.78) !important;
 }
 
-:global([data-bs-theme="dark"]) .industry-icon-wrapper {
+[data-bs-theme="dark"] .industry-icon-wrapper {
   background: rgba(139, 92, 246, 0.15) !important;
 }
 

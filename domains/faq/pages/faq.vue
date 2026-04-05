@@ -378,7 +378,7 @@ onMounted(() => {
   border-radius: 6px;
 }
 
-:global([data-bs-theme="dark"]) .shimmer {
+[data-bs-theme="dark"] .shimmer {
   background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
   background-size: 800px 100%;
 }
@@ -398,59 +398,59 @@ onMounted(() => {
 /* ================================
    DARK MODE
    ================================ */
-:global([data-bs-theme="dark"]) .search-input {
+[data-bs-theme="dark"] .search-input {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   color: #ffffff;
 }
 
-:global([data-bs-theme="dark"]) .faq-item {
+[data-bs-theme="dark"] .faq-item {
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-item:hover {
+[data-bs-theme="dark"] .faq-item:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-item-active {
+[data-bs-theme="dark"] .faq-item-active {
   border-left: 3px solid #8b5cf6 !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-question,
-:global([data-bs-theme="dark"]) .faq-question .fw-semibold {
+[data-bs-theme="dark"] .faq-question,
+[data-bs-theme="dark"] .faq-question .fw-semibold {
   color: #e5e7eb !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-question:hover,
-:global([data-bs-theme="dark"]) .faq-question:hover .fw-semibold {
+[data-bs-theme="dark"] .faq-question:hover,
+[data-bs-theme="dark"] .faq-question:hover .fw-semibold {
   color: #c4b5fd !important;
 }
 
-:global([data-bs-theme="dark"]) .faq-answer .text-muted {
+[data-bs-theme="dark"] .faq-answer .text-muted {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-:global([data-bs-theme="dark"]) .bg-light {
+[data-bs-theme="dark"] .bg-light {
   background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
-:global([data-bs-theme="dark"]) .cta-card {
+[data-bs-theme="dark"] .cta-card {
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-:global([data-bs-theme="dark"]) .cta-card:hover {
+[data-bs-theme="dark"] .cta-card:hover {
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
   border-color: rgba(139, 92, 246, 0.25) !important;
 }
 
-:global([data-bs-theme="dark"]) .category-pill.btn-outline-secondary {
+[data-bs-theme="dark"] .category-pill.btn-outline-secondary {
   color: rgba(255, 255, 255, 0.6);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-:global([data-bs-theme="dark"]) .category-pill.btn-outline-secondary:hover {
+[data-bs-theme="dark"] .category-pill.btn-outline-secondary:hover {
   background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
 }

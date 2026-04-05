@@ -96,7 +96,7 @@ const subtitleClass = computed(() => {
   color: #6d28d9 !important;
 }
 
-:global([data-bs-theme="dark"]) .badge {
+[data-bs-theme="dark"] .badge {
   background: rgba(139, 92, 246, 0.2) !important;
   color: #a78bfa !important;
 }
@@ -116,16 +116,16 @@ const subtitleClass = computed(() => {
 }
 
 /* Dark mode overrides */
-:global([data-bs-theme="dark"]) .section-header h1,
-:global([data-bs-theme="dark"]) .section-header h2,
-:global([data-bs-theme="dark"]) .section-header h3,
-:global([data-bs-theme="dark"]) .section-header h4,
-:global([data-bs-theme="dark"]) .section-header h5,
-:global([data-bs-theme="dark"]) .section-header h6 {
+[data-bs-theme="dark"] .section-header h1,
+[data-bs-theme="dark"] .section-header h2,
+[data-bs-theme="dark"] .section-header h3,
+[data-bs-theme="dark"] .section-header h4,
+[data-bs-theme="dark"] .section-header h5,
+[data-bs-theme="dark"] .section-header h6 {
   color: #ffffff !important;
 }
 
-:global([data-bs-theme="dark"]) .section-header .text-muted {
+[data-bs-theme="dark"] .section-header .text-muted {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 </style>

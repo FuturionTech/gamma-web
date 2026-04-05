@@ -263,7 +263,7 @@ useHead({
   background-size: 40px 40px;
 }
 
-:global([data-bs-theme="dark"]) .bg-grid-light {
+[data-bs-theme="dark"] .bg-grid-light {
   background-color: #0b0f19;
   background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
 }
@@ -273,7 +273,7 @@ useHead({
   border: 1px solid #eef2f6;
 }
 
-:global([data-bs-theme="dark"]) .glass-card-premium {
+[data-bs-theme="dark"] .glass-card-premium {
   background: rgba(15, 23, 42, 0.8);
   border-color: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
@@ -352,8 +352,8 @@ useHead({
 /* ================================
    DARK MODE
    ================================ */
-:global([data-bs-theme="dark"]) .glass-card-v2,
-:global([data-bs-theme="dark"]) .info-card-premium {
+[data-bs-theme="dark"] .glass-card-v2,
+[data-bs-theme="dark"] .info-card-premium {
   background: rgba(15, 23, 42, 0.6);
   border-color: rgba(255, 255, 255, 0.06) !important;
 }
