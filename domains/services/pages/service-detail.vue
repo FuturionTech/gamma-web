@@ -610,7 +610,7 @@ useHead(() => ({
   ],
 }))
 
-useSeoMeta({
+usePageSeo({
   title: detail.value ? `${detail.value.name} | Gamma Neutral Consulting` : 'Service | Gamma Neutral',
   description: detail.value?.hero?.subheadline || detail.value?.howWeDeliver?.description || '',
   path: `/services/${slug.value}`,

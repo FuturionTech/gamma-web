@@ -58,7 +58,7 @@ useHead(() => ({
   ],
 }))
 
-useSeoMeta({
+usePageSeo({
   title: locale.value === 'fr' ? 'Politique de confidentialité | Gamma Neutral' : 'Privacy Policy | Gamma Neutral Consulting',
   description: locale.value === 'fr' ? 'Politique de confidentialité de Gamma Neutral Consulting Inc.' : 'Privacy Policy for Gamma Neutral Consulting Inc. PIPEDA and Canadian privacy laws.',
   path: '/privacy-policy',

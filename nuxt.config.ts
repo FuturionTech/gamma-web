@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-09-18',
     devtools: { enabled: true },
-    ssr: false, // Temporarily disable SSR for stable production build
+    ssr: true, // Enabled for SEO — routeRules below keep SPA behavior where needed
     devServer: { port: 3006 },
 
     runtimeConfig: {

@@ -190,7 +190,7 @@ useHead({
   ]
 })
 
-useSeoMeta({
+usePageSeo({
   title: 'Contact Us | Book a Discovery Call | Gamma Neutral Toronto',
   description: 'Book a discovery call with Gamma Neutral. Tell us your data and AI challenges — we outline a practical path forward.',
   path: '/contact',

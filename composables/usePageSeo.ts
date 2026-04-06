@@ -11,7 +11,7 @@ interface SeoMetaOptions {
  * Adds Open Graph, Twitter Card, canonical, and hreflang tags.
  * Call from every page's <script setup>.
  */
-export const useSeoMeta = (options: SeoMetaOptions) => {
+export const usePageSeo = (options: SeoMetaOptions) => {
   const siteUrl = 'https://gammaneutral.com'
   const canonicalUrl = `${siteUrl}${options.path}`
   const ogImage = options.ogImage || `${siteUrl}/og-image.png`

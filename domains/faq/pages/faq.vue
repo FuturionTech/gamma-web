@@ -196,7 +196,7 @@ useHead({
   ]
 })
 
-useSeoMeta({
+usePageSeo({
   title: 'FAQ | AI & Data Consulting Questions | Gamma Neutral',
   description: 'Answers about our AI, data engineering, and cloud consulting services, engagement process, and how we work with clients.',
   path: '/faq',

@@ -159,7 +159,7 @@ useHead({
   ]
 })
 
-useSeoMeta({
+usePageSeo({
   title: 'Careers | Join Gamma Neutral Consulting Toronto',
   description: 'Build your career at the forefront of AI and data innovation. We are looking for passionate consultants in Toronto.',
   path: '/careers',

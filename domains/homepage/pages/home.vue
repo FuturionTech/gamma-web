@@ -113,7 +113,7 @@ useHead({
   ]
 })
 
-useSeoMeta({
+usePageSeo({
   title: 'Gamma Neutral Consulting | AI & Data Consulting, Toronto',
   description: 'AI, data engineering, and cloud consulting for financial services, healthcare, and government. Toronto-based. From pilot to production.',
   path: '/',

@@ -303,7 +303,7 @@ useHead({
   ]
 })
 
-useSeoMeta({
+usePageSeo({
   title: 'About Us | AI & Data Consulting Firm Toronto | Gamma Neutral',
   description: 'Gamma Neutral bridges the gap between AI prototypes and production systems. Engineering discipline for data and AI consulting in Toronto.',
   path: '/about',
