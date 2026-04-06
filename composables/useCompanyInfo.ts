@@ -17,9 +17,9 @@ export const useCompanyInfo = () => {
     // Primary contact — one functional email for all inquiries
     email: 'info@gammaneutral.com',
 
-    // Phone (placeholder — update when phone line is live)
-    phone: '+1 (416) 555-1234',
-    phoneHref: '+14165551234',
+    // Phone — set to empty until a real number is available
+    phone: '',
+    phoneHref: '',
 
     // Physical address
     address: {
@@ -47,7 +47,7 @@ export const useCompanyInfo = () => {
       return `mailto:${this.email}`
     },
     get telHref() {
-      return `tel:${this.phoneHref}`
+      return this.phoneHref ? `tel:${this.phoneHref}` : ''
     },
   }
 
