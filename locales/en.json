@@ -1279,7 +1279,7 @@
     },
     "page": {
       "badge": "AI & Data Consulting Services",
-      "title": "Our Services",
+      "title": "AI, Data Engineering & Cloud Consulting",
       "subtitle": "Focused consulting in Artificial Intelligence (AI), data engineering, cloud architecture, and cybersecurity — from strategy to production.",
       "ctaPrimary": "Discuss Your Project",
       "ctaSecondary": "See How We Work",
@@ -1399,7 +1399,7 @@
   },
   "about": {
     "heroBadge": "Toronto, Canada - Incorporated 2025",
-    "pageTitle": "Gamma Neutral Consulting Inc.",
+    "pageTitle": "Engineering Discipline for Data & AI",
     "badge": "AI & Data Consulting",
     "intro": "Gamma Neutral was founded on a simple observation: too many organizations invest in data and Artificial Intelligence (AI) technology without the engineering discipline to make it work. Our team brings hands-on experience from financial services, government, and healthcare technology programs — and we built this firm to deliver the focused, senior-level attention that large consultancies cannot.",
     "pointOfView": {
@@ -1470,7 +1470,7 @@
   },
   "contact": {
     "breadcrumb": "Contact",
-    "pageTitle": "Let's Connect",
+    "pageTitle": "Contact Our AI & Data Consulting Team",
     "subtitle": "Ready to transform your data into competitive advantage? Our team of experts is here to help you navigate your digital transformation journey.",
     "emailUs": "Email us",
     "form": {

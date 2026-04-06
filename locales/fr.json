@@ -1279,7 +1279,7 @@
     },
     "page": {
       "badge": "Services de consultation en IA et données",
-      "title": "Nos services",
+      "title": "Consultation en IA, ingénierie des données et infonuagique",
       "subtitle": "Consultation ciblée en Intelligence Artificielle (IA), ingénierie des données, architecture infonuagique et cybersécurité — de la stratégie à la production.",
       "ctaPrimary": "Discuter de votre projet",
       "ctaSecondary": "Découvrir notre approche",
@@ -1399,7 +1399,7 @@
   },
   "about": {
     "heroBadge": "Toronto, Canada - Constituée en 2025",
-    "pageTitle": "Gamma Neutral Consulting Inc.",
+    "pageTitle": "Rigueur d'ingénierie pour les données et l'IA",
     "badge": "Consultation en IA et données",
     "intro": "Gamma Neutral a été fondée sur un constat simple : trop d'organisations investissent dans les technologies de données et d'Intelligence Artificielle (IA) sans la discipline d'ingénierie nécessaire pour les faire fonctionner. Notre équipe apporte une expérience concrète des programmes technologiques en services financiers, gouvernement et santé — et nous avons bâti ce cabinet pour offrir l'attention ciblée et expérimentée que les grands cabinets ne peuvent pas fournir.",
     "pointOfView": {
@@ -1470,7 +1470,7 @@
   },
   "contact": {
     "breadcrumb": "Contact",
-    "pageTitle": "Entrons en contact",
+    "pageTitle": "Contactez notre équipe en consultation IA et données",
     "subtitle": "Prêt à transformer vos données en avantage concurrentiel ? Notre équipe d'experts est là pour vous accompagner dans votre parcours de transformation numérique.",
     "emailUs": "Écrivez-nous",
     "form": {
