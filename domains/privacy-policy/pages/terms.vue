@@ -57,6 +57,12 @@ useHead(() => ({
     { name: 'robots', content: 'index, follow' },
   ],
 }))
+
+useSeoMeta({
+  title: locale.value === 'fr' ? "Conditions d'utilisation | Gamma Neutral" : 'Terms and Conditions | Gamma Neutral Consulting',
+  description: locale.value === 'fr' ? "Conditions d'utilisation de Gamma Neutral Consulting Inc." : 'Terms and Conditions for Gamma Neutral Consulting Inc.',
+  path: '/terms-of-service',
+})
 </script>
 
 <style lang="scss">

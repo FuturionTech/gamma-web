@@ -21,5 +21,5 @@
 </template>
 
 <script setup>
-// Components auto-imported in Nuxt 3
+useSchemaOrg()
 </script>

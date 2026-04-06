@@ -609,6 +609,17 @@ useHead(() => ({
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 }))
+
+useSeoMeta({
+  title: detail.value ? `${detail.value.name} | Gamma Neutral Consulting` : 'Service | Gamma Neutral',
+  description: detail.value?.hero?.subheadline || detail.value?.howWeDeliver?.description || '',
+  path: `/services/${slug.value}`,
+})
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+  { name: detail.value?.name || '', url: `/services/${slug.value}` },
+])
 </script>
 
 <style scoped>

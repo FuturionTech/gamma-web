@@ -112,6 +112,45 @@ useHead({
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ]
 })
+
+useSeoMeta({
+  title: 'Gamma Neutral Consulting | AI & Data Consulting, Toronto',
+  description: 'AI, data engineering, and cloud consulting for financial services, healthcare, and government. Toronto-based. From pilot to production.',
+  path: '/',
+})
+
+// LocalBusiness schema
+const company = useCompanyInfo()
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      '@id': 'https://gammaneutral.com/#localbusiness',
+      name: company.name,
+      url: 'https://gammaneutral.com',
+      email: company.email,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: company.address.street,
+        addressLocality: company.address.city,
+        addressRegion: company.address.province,
+        postalCode: company.address.postalCode,
+        addressCountry: 'CA',
+      },
+      geo: { '@type': 'GeoCoordinates', latitude: 43.7001, longitude: -79.3946 },
+      areaServed: [
+        { '@type': 'City', name: 'Toronto' },
+        { '@type': 'AdministrativeArea', name: 'Ontario' },
+        { '@type': 'Country', name: 'Canada' },
+      ],
+      serviceType: ['AI Consulting', 'Data Engineering', 'Cloud Architecture', 'Cybersecurity', 'Business Intelligence', 'Big Data'],
+      priceRange: '$$$$',
+      knowsLanguage: ['en', 'fr'],
+    }),
+  }],
+})
 </script>
 
 <style scoped>

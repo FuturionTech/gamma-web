@@ -196,6 +196,16 @@ useHead({
   ]
 })
 
+useSeoMeta({
+  title: 'FAQ | AI & Data Consulting Questions | Gamma Neutral',
+  description: 'Answers about our AI, data engineering, and cloud consulting services, engagement process, and how we work with clients.',
+  path: '/faq',
+})
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'FAQ', url: '/faq' },
+])
+
 const activeIndex = ref(null)
 const searchQuery = ref('')
 const activeCategory = ref('all')

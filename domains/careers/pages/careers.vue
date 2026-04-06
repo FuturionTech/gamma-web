@@ -158,6 +158,16 @@ useHead({
     }
   ]
 })
+
+useSeoMeta({
+  title: 'Careers | Join Gamma Neutral Consulting Toronto',
+  description: 'Build your career at the forefront of AI and data innovation. We are looking for passionate consultants in Toronto.',
+  path: '/careers',
+})
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Careers', url: '/careers' },
+])
 </script>
 
 <style scoped>

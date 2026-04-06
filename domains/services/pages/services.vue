@@ -253,6 +253,16 @@ useHead({
   ],
 })
 
+useSeoMeta({
+  title: 'AI, Data & Cloud Consulting Services | Gamma Neutral, Toronto',
+  description: 'From AI and ML engineering to data architecture, cloud, and cybersecurity. Consulting that moves from pilot to production in Toronto.',
+  path: '/services',
+})
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+])
+
 // Icon-to-gradient mapping for API services
 const iconGradientMap: Record<string, string> = {
   brain: 'bg-gradient-primary',
