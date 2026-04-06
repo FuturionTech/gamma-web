@@ -9,7 +9,7 @@
         muted
         loop
         playsinline
-        poster="/assets/videos/toronto_drone_footage.mp4"
+
       >
         <source src="/assets/videos/toronto_drone_footage.mp4" type="video/mp4">
         <!-- Fallback image -->
