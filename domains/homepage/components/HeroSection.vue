@@ -21,10 +21,10 @@
 
     <!-- Main Content -->
     <div class="container position-relative" style="z-index: 10;">
-      <div class="row min-vh-100 align-items-center py-5">
+      <div class="row min-vh-100 align-items-center hero-content-row">
         <div class="col-12 col-lg-8 col-xl-7 text-center text-lg-start">
 
-          <!-- Badge — hidden on mobile where it clips behind the fixed navbar -->
+          <!-- Badge — desktop only, needs padding to clear fixed navbar -->
           <div class="d-none d-lg-inline-flex align-items-center mb-4 animate-fade-in">
             <span class="badge bg-secondary text-white px-4 py-2 rounded-pill">
               <span class="pulse-dot me-2"></span>
@@ -83,6 +83,24 @@ const scrollToServices = () => {
 </script>
 
 <style scoped>
+/* Hero content row — enough top padding to clear the fixed navbar on all sizes */
+.hero-content-row {
+  padding-top: 100px;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-content-row {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-content-row {
+    padding-top: 80px;
+  }
+}
+
 /* Video Background */
 .object-fit-cover {
   object-fit: cover;
