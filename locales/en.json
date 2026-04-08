@@ -76,7 +76,6 @@
       "backToServices": "Back to Services",
       "notFound": "Service not found",
       "viewApproach": "See Our Approach",
-      "exploreMore": "Explore More Services",
       "sectionLabels": {
         "challenge": "The Challenge",
         "solution": "Our Solution",
@@ -85,15 +84,7 @@
         "industries": "Industry Applications",
         "techStack": "Technology Stack",
         "impact": "Business Impact",
-        "whyUs": "Why Gamma Neutral",
-        "caseStudy": "Case in Point",
-        "faq": "Frequently Asked Questions",
-        "relatedServices": "Related Services"
-      },
-      "caseStudyLabels": {
-        "challenge": "Challenge",
-        "approach": "Approach",
-        "result": "Result"
+        "whyUs": "Why Gamma Neutral"
       },
       "sectionHeadings": {
         "howWeDeliver": "How We Deliver",
@@ -278,23 +269,6 @@
               { "title": "Explainability by Default", "icon": "bi-search", "description": "Every model ships with interpretability tools, bias testing, and audit trails — essentials for regulated deployment." }
             ]
           },
-          "caseStudy": {
-            "title": "From Fraud Pilot to Production Platform",
-            "client": "Canadian Tier-1 Financial Institution",
-            "challenge": "A fraud detection pilot had been stuck in proof-of-concept for 18 months. Model accuracy was acceptable, but deployment was manual, explanations couldn't be generated for disputed transactions, and drift was undetected.",
-            "approach": "We rebuilt the pipeline on MLOps foundations — automated training, SHAP-based explanations, real-time scoring infrastructure, and drift monitoring dashboards. Partnered with risk and compliance teams throughout.",
-            "result": "Production deployment achieved in 4 months. False-positive rate dropped 40%, investigator workload reduced, and every flagged transaction now ships with a regulator-ready explanation."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "How do you measure AI project success?", "answer": "We tie every AI initiative to specific business KPIs before writing code — reduction in false positives, improvement in forecast accuracy, dollars saved, customer retention uplift. Technical metrics (F1, ROC-AUC) matter only in service of these business outcomes." },
-              { "question": "Can you work with our existing data infrastructure?", "answer": "Yes. We regularly integrate with legacy data warehouses, cloud data platforms, EMRs, core banking systems, and custom applications. Our role is to make AI work within your environment, not demand a greenfield rebuild." },
-              { "question": "How do you ensure models remain compliant with Canadian regulations?", "answer": "We build explainability, bias testing, and audit trails into every model from day one. Our work aligns with OSFI model risk management guidelines, PIPEDA/PHIPA requirements, and emerging federal AI and Data Act (AIDA) standards." },
-              { "question": "Do you use generative AI or focus on traditional ML?", "answer": "Both — the right tool for the job. Generative AI excels at document processing, customer support, and content tasks. Traditional ML often wins for structured-data forecasting, fraud detection, and credit scoring where explainability is paramount." },
-              { "question": "What happens after the model is deployed?", "answer": "Deployment is the beginning, not the end. We establish monitoring for model drift, data quality degradation, and performance decay — plus a clear retraining cadence. Many of our longest client relationships are ongoing model operations." }
-            ]
-          },
           "closing": {
             "title": "Ready to unlock the power of AI in your organization?",
             "subtitle": "Let's discuss how we can help you identify and implement high-impact AI solutions that actually ship."
@@ -471,23 +445,6 @@
               { "title": "Governance Built In, Not Bolted On", "icon": "bi-shield-check", "description": "Lineage, cataloging, quality, and access controls are part of the foundation — not a phase 2 afterthought." },
               { "title": "Reliability as a Discipline", "icon": "bi-activity", "description": "Pipeline observability, SLA monitoring, and automated recovery are standard in every platform we build." },
               { "title": "Regulated-Industry Proven", "icon": "bi-award", "description": "Deep experience with BCBS 239, PHIPA, PIPEDA, OSFI, and the audit requirements that shape Canadian data engineering." }
-            ]
-          },
-          "caseStudy": {
-            "title": "From Siloed Reports to Single Source of Truth",
-            "client": "Provincial Health Authority",
-            "challenge": "12 different departments maintained their own data extracts from the EMR. Reports never matched, analytics took weeks, and no one could trace data back to its clinical origin — blocking PHIPA audit requests.",
-            "approach": "We designed a lakehouse platform with HL7/FHIR ingestion, a canonical clinical data model, automated quality monitoring, and full lineage tracking from EMR to dashboard.",
-            "result": "Single source of truth for 40+ KPIs in 6 months. Audit responses completed in hours instead of weeks. Analytics team shifted from data wrangling to actual analysis."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "Do we need to migrate off our legacy data warehouse?", "answer": "Not necessarily. We often modernize incrementally — adding a cloud data lake/lakehouse alongside existing warehouses, then migrating workloads as value is proven. Big-bang migrations rarely end well." },
-              { "question": "How do you handle data quality?", "answer": "We treat data quality as a first-class engineering concern: automated expectations testing (Great Expectations), freshness monitoring, schema drift detection, and anomaly alerts wired into your observability stack." },
-              { "question": "What's the difference between a data lake, warehouse, and lakehouse?", "answer": "Data warehouses excel at structured analytics (think Snowflake). Data lakes store raw/semi-structured data cheaply. Lakehouses (Databricks, Iceberg) combine both — structured analytics performance on open storage. We pick the right fit for your workloads." },
-              { "question": "Can you work with our on-prem data?", "answer": "Yes. We design hybrid architectures where sensitive data stays on-prem and analytical workloads run in the cloud, with secure connectivity and governance across both environments." },
-              { "question": "How long does a data platform implementation take?", "answer": "A production-ready platform typically takes 3-6 months for initial rollout, then iterative expansion. We prioritize delivering value early with a 'walking skeleton' approach rather than 12-month waterfall programs." }
             ]
           },
           "closing": {
@@ -668,23 +625,6 @@
               { "title": "Platform Engineering Mindset", "icon": "bi-box-seam", "description": "We build internal developer platforms that make cloud self-service safe — empowering dev teams while maintaining guardrails." }
             ]
           },
-          "caseStudy": {
-            "title": "Lift, Shift, and Modernize — Without the Bill Shock",
-            "client": "Canadian Insurance Provider",
-            "challenge": "Legacy claims processing ran on aging on-prem infrastructure. A previous cloud migration had doubled hosting costs with minimal agility gains. Leadership demanded both OSFI compliance and cost reduction.",
-            "approach": "We rearchitected the workload using AWS landing zones, Kubernetes for stateless services, and managed databases. Implemented Terraform, GitOps, and FinOps dashboards with automated rightsizing.",
-            "result": "35% infrastructure cost reduction vs. original cloud migration. Release frequency up from monthly to daily. Full OSFI B-10 compliance achieved with automated evidence collection."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "Should we go multi-cloud or stick with one provider?", "answer": "It depends. Single-cloud delivers simpler operations and deeper integration. Multi-cloud offers vendor resilience and best-of-breed services. We help evaluate the trade-offs honestly based on your risk tolerance and team capacity." },
-              { "question": "How do you handle Canadian data residency requirements?", "answer": "All major cloud providers offer Canadian regions (ca-central-1, Canada East/Central). We design architectures that enforce data residency through IAM policies, network controls, and automated compliance checks." },
-              { "question": "What's your approach to cloud cost control?", "answer": "FinOps from the architecture phase — rightsizing, reserved capacity planning, lifecycle policies, and cost allocation tagging built in. Plus dashboards that make spend visible to the teams driving it." },
-              { "question": "Can you help us modernize without a full rewrite?", "answer": "Yes. We follow the 6R framework (rehost, replatform, refactor, repurchase, retain, retire) — matching modernization depth to business value, not applying one approach to everything." },
-              { "question": "What about compliance evidence for audits?", "answer": "We implement automated compliance frameworks (AWS Config, Azure Policy, GCP Policy Intelligence) that continuously enforce controls and generate audit evidence — critical for OSFI, SOC 2, and ISO 27001 readiness." }
-            ]
-          },
           "closing": {
             "title": "Ready to modernize your infrastructure and accelerate your cloud journey?",
             "subtitle": "Let's design a cloud strategy tailored to your business goals and regulatory environment."
@@ -861,23 +801,6 @@
               { "title": "Canadian Regulatory Depth", "icon": "bi-maple-leaf", "description": "OSFI B-13, PIPEDA, PHIPA, ITSG-33 — we navigate the Canadian compliance landscape your auditors and regulators actually assess against." },
               { "title": "Engineering + Security", "icon": "bi-shield-shaded", "description": "We bring software engineering discipline to security: IaC for controls, automated compliance, and DevSecOps practices." },
               { "title": "Board-Ready Risk Communication", "icon": "bi-file-bar-graph", "description": "We translate technical risk into language executives and boards can act on — no FUD, just clear trade-offs." }
-            ]
-          },
-          "caseStudy": {
-            "title": "Ransomware-Ready in 90 Days",
-            "client": "Canadian Municipal Government",
-            "challenge": "After witnessing neighboring municipalities fall to ransomware, leadership demanded rapid improvement. Legacy endpoints, flat network, no SIEM, and an incident response plan no one had tested.",
-            "approach": "We prioritized by risk: deployed EDR across all endpoints, segmented the network, stood up a managed SIEM/SOAR, and ran 3 tabletop exercises. Hardened backups with immutable storage and isolation.",
-            "result": "Within 90 days: 100% EDR coverage, ransomware-resilient backups, 24/7 threat monitoring, tested IR playbook. Cyber insurance premium reduced 25% with improved posture documentation."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "Do we need to be SOC 2 certified?", "answer": "It depends on your customers. If you sell to US enterprises, SOC 2 is often required. If you're serving Canadian FIs or healthcare, ISO 27001 or alignment to OSFI/PHIPA may be more relevant. We help evaluate which certifications actually matter for your business." },
-              { "question": "What's the difference between compliance and security?", "answer": "Compliance is a floor, not a ceiling. You can be PIPEDA-compliant and still be hacked. Real security starts with understanding your actual threats and building controls that matter. Compliance typically follows naturally from good security." },
-              { "question": "How do you help with incident response?", "answer": "We build IR capabilities in three stages: (1) plan + runbooks + tabletop exercises; (2) SIEM/SOAR detection and response tooling; (3) retainer-based on-call support for incidents. Most clients need the first two; some opt for the retainer." },
-              { "question": "What about insider threats?", "answer": "Insider threats (malicious or negligent) are often overlooked. We address them with least-privilege IAM, PAM for admins, user behavior analytics (UEBA), DLP, and security awareness training tailored to your workforce." },
-              { "question": "How do you keep up with evolving threats?", "answer": "Continuous monitoring, threat intelligence integration, regular penetration testing, and active participation in the Canadian security community (Canadian Centre for Cyber Security guidance, CISO Executive Network, OWASP, etc.)." }
             ]
           },
           "closing": {
@@ -1058,23 +981,6 @@
               { "title": "Data Engineering Foundations", "icon": "bi-bricks", "description": "We build BI on trustworthy data infrastructure — because dashboards built on bad data are worse than no dashboards." }
             ]
           },
-          "caseStudy": {
-            "title": "From Spreadsheet Chaos to Executive Clarity",
-            "client": "Canadian Regional Credit Union",
-            "challenge": "Monthly board packages were compiled manually from 15+ spreadsheets, took 5 analysts a full week, and still contained errors. KPIs from different teams never matched.",
-            "approach": "We built a governed data model on the existing data warehouse, established a KPI catalog with executive sign-off, and delivered Power BI dashboards with drill-through to operational detail. Trained analysts on dbt and the semantic layer.",
-            "result": "Board package generation time reduced from 5 days to 2 hours. Analysts reclaimed 30+ hours/week for actual analysis. Executive team reports 'finally trusting the numbers'."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "Which BI tool should we use?", "answer": "It depends on your team's skills, existing licenses, data platform, and use cases. Power BI integrates well with Microsoft stacks; Tableau excels at visualization; Looker offers strong governance; Qlik has a loyal analyst base. We help evaluate honestly." },
-              { "question": "How do you prevent dashboard sprawl?", "answer": "We establish a governed catalog of certified dashboards with clear ownership, regular usage reviews, and retirement of unused content. Self-service still requires guardrails." },
-              { "question": "What's a semantic layer and why does it matter?", "answer": "A semantic layer (dbt metrics, LookML, Cube) defines KPIs and metrics once — so 'revenue' means the same thing whether calculated in Power BI, Tableau, a SQL query, or an alert. It's the foundation of trust in BI." },
-              { "question": "Can you help migrate from legacy BI tools?", "answer": "Yes. We've migrated from Cognos, BusinessObjects, MicroStrategy, and custom reporting platforms to modern BI tools — focusing on re-implementing the 20% of reports that actually drive decisions." },
-              { "question": "How do you measure BI success?", "answer": "Adoption metrics (active users, session frequency), business outcomes (decisions made faster, manual reporting reduced), and qualitative feedback from the teams using the dashboards. Not just 'we delivered X dashboards'." }
-            ]
-          },
           "closing": {
             "title": "Ready to transform your data into insights that drive results?",
             "subtitle": "Let's build a BI solution that your team will actually use and trust."
@@ -1251,23 +1157,6 @@
               { "title": "Cost-Aware Architecture", "icon": "bi-calculator", "description": "Big data doesn't have to mean big bills. We engineer for storage/compute separation, intelligent tiering, and workload-appropriate infrastructure." },
               { "title": "Production Operations", "icon": "bi-activity", "description": "We don't stop at architecture — we implement observability, auto-scaling, and operational runbooks for reliable production systems." },
               { "title": "AI-Ready Foundations", "icon": "bi-cpu-fill", "description": "Our platforms are designed with AI/ML workloads in mind: feature stores, vector databases, and distributed training infrastructure." }
-            ]
-          },
-          "caseStudy": {
-            "title": "From Warehouse Bottleneck to Lakehouse Scale",
-            "client": "Canadian Telecommunications Provider",
-            "challenge": "Legacy data warehouse couldn't handle 10TB/day of network telemetry. Nightly ETL jobs ran 14+ hours, analysts waited until noon for yesterday's data, and fraud detection was reactive not real-time.",
-            "approach": "Architected a lakehouse on Databricks with Kafka streaming for real-time ingestion, Delta Lake for storage, and Structured Streaming for continuous fraud detection. Implemented medallion architecture and Unity Catalog for governance.",
-            "result": "Data freshness improved from 14 hours to 90 seconds. Fraud detection shifted from batch-reactive to real-time preventive. Infrastructure cost reduced 45% vs. legacy warehouse scaling path."
-          },
-          "faq": {
-            "title": "Frequently Asked Questions",
-            "items": [
-              { "question": "When do we actually need 'big data' architecture?", "answer": "When traditional databases/warehouses struggle with your volume, velocity, or variety. Often this is > a few TB of data, > millions of events/day, or mixing structured with unstructured data. Don't over-architect for data you don't have yet." },
-              { "question": "Spark vs. Databricks vs. EMR — what's the difference?", "answer": "Spark is the open-source engine. Databricks is a managed platform built around Spark with notebooks, Delta Lake, and governance. EMR/Dataproc/HDInsight are cloud-provider managed Spark services. Databricks typically has the richest ecosystem; provider services are often cheaper." },
-              { "question": "What's a lakehouse and how is it different from a data lake?", "answer": "Traditional data lakes store raw files in object storage — cheap but no ACID transactions, schema enforcement, or fast queries. Lakehouses (Delta, Iceberg, Hudi) add warehouse-like features to the data lake, enabling both streaming and batch on the same storage layer." },
-              { "question": "How do you handle data governance at scale?", "answer": "Catalog-first approach: Unity Catalog, AWS Glue Catalog, or equivalent for metadata. Fine-grained access (row/column level), PII discovery and masking, lineage tracking end-to-end, and audit logging wired into observability." },
-              { "question": "Can big data platforms be cost-effective?", "answer": "Absolutely — but it requires discipline. Storage/compute separation, tiered storage lifecycle policies, query optimization, workload isolation, and rightsizing clusters. Without FinOps practice, big data becomes expensive data fast." }
             ]
           },
           "closing": {

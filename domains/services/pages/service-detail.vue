@@ -365,114 +365,6 @@
       </section>
 
       <!-- ========================================
-           CASE STUDY — Example scenario
-           ======================================== -->
-      <section v-if="detail.caseStudy" class="case-study-section py-5">
-        <div class="container py-4">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <div class="case-study-card">
-                <div class="section-eyebrow text-white-50 mb-2">
-                  <i class="bi bi-lightbulb-fill me-2"></i>
-                  {{ $t('services.details.sectionLabels.caseStudy') }}
-                </div>
-                <h2 class="h2 fw-bold text-white mb-2">{{ detail.caseStudy.title }}</h2>
-                <p class="text-white text-opacity-75 mb-4" v-if="detail.caseStudy.client">
-                  <i class="bi bi-building me-2"></i>{{ detail.caseStudy.client }}
-                </p>
-                <div class="row g-4">
-                  <div class="col-md-4">
-                    <div class="case-stage case-stage-challenge">
-                      <div class="case-stage-label">{{ $t('services.details.caseStudyLabels.challenge') }}</div>
-                      <p class="mb-0">{{ detail.caseStudy.challenge }}</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="case-stage case-stage-approach">
-                      <div class="case-stage-label">{{ $t('services.details.caseStudyLabels.approach') }}</div>
-                      <p class="mb-0">{{ detail.caseStudy.approach }}</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="case-stage case-stage-result">
-                      <div class="case-stage-label">{{ $t('services.details.caseStudyLabels.result') }}</div>
-                      <p class="mb-0">{{ detail.caseStudy.result }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================
-           FAQ — Common questions
-           ======================================== -->
-      <section v-if="detail.faq" class="bg-light py-5">
-        <div class="container py-4">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="section-header text-center mb-5">
-                <div class="section-eyebrow text-info mb-2">
-                  <i class="bi bi-question-circle-fill me-2"></i>
-                  {{ $t('services.details.sectionLabels.faq') }}
-                </div>
-                <h2 class="h2 fw-bold mb-3">{{ detail.faq.title }}</h2>
-              </div>
-              <div class="faq-list">
-                <details
-                  v-for="(item, i) in detail.faq.items"
-                  :key="i"
-                  class="faq-item"
-                >
-                  <summary class="faq-question">
-                    <span>{{ item.question }}</span>
-                    <i class="bi bi-plus-lg faq-toggle" aria-hidden="true"></i>
-                  </summary>
-                  <div class="faq-answer">
-                    <p class="mb-0">{{ item.answer }}</p>
-                  </div>
-                </details>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================
-           RELATED SERVICES — Cross-sell
-           ======================================== -->
-      <section v-if="relatedServices.length > 0" class="py-5">
-        <div class="container py-4">
-          <div class="section-header text-center mb-5">
-            <div class="section-eyebrow text-primary mb-2">
-              <i class="bi bi-arrow-right-circle-fill me-2"></i>
-              {{ $t('services.details.sectionLabels.relatedServices') }}
-            </div>
-            <h2 class="h2 fw-bold mb-3">{{ $t('services.details.exploreMore') }}</h2>
-          </div>
-          <div class="row g-4">
-            <div
-              v-for="related in relatedServices"
-              :key="related.slug"
-              class="col-md-6 col-lg-4"
-            >
-              <NuxtLink :to="`/services/${related.slug}`" class="related-card text-decoration-none">
-                <div class="related-icon">
-                  <i :class="`bi ${related.icon}`"></i>
-                </div>
-                <h5 class="fw-bold mb-2">{{ related.name }}</h5>
-                <span class="related-link">
-                  {{ $t('services.learnMore') }} <i class="bi bi-arrow-right ms-1"></i>
-                </span>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================
            CLOSING CTA — Strong finish
            ======================================== -->
       <section class="cta-gradient py-5 position-relative overflow-hidden">
@@ -555,14 +447,6 @@ interface ServiceDetail {
     title: string
     points: Array<{ title: string; description: string; icon: string }>
   }
-  caseStudy?: {
-    title: string
-    client?: string
-    challenge: string
-    approach: string
-    result: string
-  }
-  faq?: { title: string; items: Array<{ question: string; answer: string }> }
   closing: { title: string; subtitle: string }
 }
 
@@ -571,26 +455,6 @@ const detail = computed<ServiceDetail | null>(() => {
   const items = tm('services.details.items') as Record<string, ServiceDetail> | undefined
   if (!items || !items[slug.value]) return null
   return items[slug.value]
-})
-
-// Related services (exclude current + delivery, pick 3)
-interface RelatedService {
-  slug: string
-  name: string
-  icon: string
-}
-
-const relatedServices = computed<RelatedService[]>(() => {
-  const items = tm('services.details.items') as Record<string, ServiceDetail> | undefined
-  if (!items) return []
-  return Object.entries(items)
-    .filter(([key]) => key !== slug.value)
-    .slice(0, 3)
-    .map(([key, val]) => ({
-      slug: key,
-      name: val.name,
-      icon: val.icon,
-    }))
 })
 
 // SEO meta
@@ -1089,156 +953,6 @@ useBreadcrumbSchema([
 }
 
 /* ========================================
-   CASE STUDY
-   ======================================== */
-.case-study-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.case-study-card {
-  padding: 2.5rem 3rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
-  backdrop-filter: blur(10px);
-}
-
-.case-stage {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 0.875rem;
-  height: 100%;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  border-top: 3px solid;
-}
-
-.case-stage-challenge { border-top-color: #dc2626; }
-.case-stage-approach { border-top-color: #f59e0b; }
-.case-stage-result { border-top-color: #10b981; }
-
-.case-stage-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 0.75rem;
-}
-
-/* ========================================
-   FAQ
-   ======================================== */
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-}
-
-.faq-item {
-  background: var(--bs-body-bg, #ffffff);
-  border: 1px solid var(--bs-border-color, #e5e7eb);
-  border-radius: 0.875rem;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.faq-item[open] {
-  border-color: rgba(14, 165, 233, 0.3);
-  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.08);
-}
-
-.faq-question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.125rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--bs-heading-color, #1f2937);
-  cursor: pointer;
-  list-style: none;
-  transition: color 0.2s ease;
-}
-
-.faq-question::-webkit-details-marker {
-  display: none;
-}
-
-.faq-toggle {
-  color: #0ea5e9;
-  font-size: 1.25rem;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.faq-item[open] .faq-toggle {
-  transform: rotate(45deg);
-}
-
-.faq-item[open] .faq-question {
-  color: #0ea5e9;
-}
-
-.faq-answer {
-  padding: 0 1.5rem 1.25rem;
-  color: var(--bs-body-color);
-  font-size: 0.9375rem;
-  line-height: 1.65;
-}
-
-/* ========================================
-   RELATED SERVICES
-   ======================================== */
-.related-card {
-  display: block;
-  padding: 1.75rem;
-  background: var(--bs-body-bg, #ffffff);
-  border: 1px solid var(--bs-border-color, #e5e7eb);
-  border-radius: 1rem;
-  height: 100%;
-  transition: all 0.3s ease;
-  color: var(--bs-body-color);
-}
-
-.related-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(139, 92, 246, 0.3);
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.1);
-}
-
-.related-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(139, 92, 246, 0.1);
-  color: #8b5cf6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.related-link {
-  display: inline-flex;
-  align-items: center;
-  color: #8b5cf6;
-  font-weight: 600;
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
-}
-
-.related-card:hover .related-link {
-  color: #7c3aed;
-  transform: translateX(3px);
-}
-
-/* ========================================
    CLOSING CTA
    ======================================== */
 .cta-gradient {
@@ -1301,8 +1015,6 @@ useBreadcrumbSchema([
 [data-bs-theme="dark"] .tech-badge,
 [data-bs-theme="dark"] .impact-card,
 [data-bs-theme="dark"] .diff-card,
-[data-bs-theme="dark"] .faq-item,
-[data-bs-theme="dark"] .related-card,
 [data-bs-theme="dark"] .challenge-item {
   background: rgba(255, 255, 255, 0.04) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
@@ -1323,10 +1035,8 @@ useBreadcrumbSchema([
 }
 
 [data-bs-theme="dark"] .capability-title,
-[data-bs-theme="dark"] .faq-question,
 [data-bs-theme="dark"] .industry-app-card h4,
 [data-bs-theme="dark"] .diff-card h5,
-[data-bs-theme="dark"] .related-card h5,
 [data-bs-theme="dark"] .approach-content h5 {
   color: #ffffff !important;
 }
@@ -1342,12 +1052,6 @@ useBreadcrumbSchema([
 /* ========================================
    RESPONSIVE
    ======================================== */
-@media (max-width: 991.98px) {
-  .case-study-card {
-    padding: 2rem 1.5rem;
-  }
-}
-
 @media (max-width: 991.98px) {
   /* Add divider between narrative and pain points on tablet/mobile */
   .challenge-grid {
@@ -1389,16 +1093,6 @@ useBreadcrumbSchema([
   .diff-card {
     flex-direction: column;
   }
-
-  .case-study-card {
-    padding: 1.5rem 1.25rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .case-study-card {
-    padding: 1.25rem 1rem;
-  }
 }
 
 /* ========================================
@@ -1412,13 +1106,10 @@ useBreadcrumbSchema([
   .tech-badge,
   .impact-card,
   .diff-card,
-  .faq-item,
-  .related-card,
   .challenge-item,
   .stat-card,
   .btn-white,
-  .btn-outline-light,
-  .faq-toggle {
+  .btn-outline-light {
     transition: none !important;
   }
 }

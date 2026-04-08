@@ -76,7 +76,6 @@
       "backToServices": "Retour aux services",
       "notFound": "Service introuvable",
       "viewApproach": "Voir notre approche",
-      "exploreMore": "Découvrir plus de services",
       "sectionLabels": {
         "challenge": "Le défi",
         "solution": "Notre solution",
@@ -85,15 +84,7 @@
         "industries": "Applications sectorielles",
         "techStack": "Pile technologique",
         "impact": "Impact d'affaires",
-        "whyUs": "Pourquoi Gamma Neutral",
-        "caseStudy": "Cas concret",
-        "faq": "Questions fréquentes",
-        "relatedServices": "Services connexes"
-      },
-      "caseStudyLabels": {
-        "challenge": "Défi",
-        "approach": "Approche",
-        "result": "Résultat"
+        "whyUs": "Pourquoi Gamma Neutral"
       },
       "sectionHeadings": {
         "howWeDeliver": "Comment nous livrons",
@@ -278,23 +269,6 @@
               { "title": "Explicabilité par défaut", "icon": "bi-search", "description": "Chaque modèle livre des outils d'interprétabilité, des tests de biais et des pistes d'audit — essentiels pour le déploiement réglementé." }
             ]
           },
-          "caseStudy": {
-            "title": "D'un pilote de fraude à une plateforme de production",
-            "client": "Institution financière canadienne de niveau 1",
-            "challenge": "Un pilote de détection de fraude était bloqué en preuve de concept depuis 18 mois. La précision du modèle était acceptable, mais le déploiement était manuel, les explications ne pouvaient être générées pour les transactions contestées et la dérive n'était pas détectée.",
-            "approach": "Nous avons reconstruit le pipeline sur des fondations MLOps — entraînement automatisé, explications basées sur SHAP, infrastructure de scoring en temps réel et tableaux de bord de surveillance de dérive. Partenariat avec les équipes de risque et de conformité tout au long.",
-            "result": "Déploiement en production atteint en 4 mois. Taux de faux positifs réduit de 40 %, charge de travail des enquêteurs diminuée et chaque transaction signalée livre désormais une explication prête pour le régulateur."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Comment mesurez-vous le succès d'un projet IA ?", "answer": "Nous lions chaque initiative IA à des KPI d'affaires spécifiques avant d'écrire du code — réduction des faux positifs, amélioration de la précision des prévisions, dollars économisés, hausse de rétention client. Les métriques techniques (F1, ROC-AUC) comptent uniquement au service de ces résultats d'affaires." },
-              { "question": "Pouvez-vous travailler avec notre infrastructure de données existante ?", "answer": "Oui. Nous intégrons régulièrement avec des entrepôts de données hérités, des plateformes de données infonuagiques, des DSE, des systèmes bancaires centraux et des applications personnalisées. Notre rôle est de faire fonctionner l'IA dans votre environnement, pas d'exiger une reconstruction à neuf." },
-              { "question": "Comment vous assurez-vous que les modèles restent conformes à la réglementation canadienne ?", "answer": "Nous intégrons l'explicabilité, les tests de biais et les pistes d'audit dans chaque modèle dès le premier jour. Notre travail s'aligne avec les lignes directrices du BSIF sur la gestion des risques de modèles, les exigences de la LPRPDE/LPRPS et les normes émergentes de la Loi sur l'intelligence artificielle et les données (LIAD)." },
-              { "question": "Utilisez-vous l'IA générative ou vous concentrez-vous sur le ML traditionnel ?", "answer": "Les deux — le bon outil pour le bon travail. L'IA générative excelle au traitement documentaire, au support client et aux tâches de contenu. Le ML traditionnel gagne souvent pour la prévision sur données structurées, la détection de fraude et la notation de crédit où l'explicabilité est primordiale." },
-              { "question": "Que se passe-t-il après le déploiement du modèle ?", "answer": "Le déploiement est le début, pas la fin. Nous établissons la surveillance de la dérive des modèles, de la dégradation de la qualité des données et de la baisse de performance — plus une cadence claire de ré-entraînement. Plusieurs de nos plus longues relations clients sont des opérations de modèles continues." }
-            ]
-          },
           "closing": {
             "title": "Prêt à libérer la puissance de l'IA dans votre organisation ?",
             "subtitle": "Discutons de la façon dont nous pouvons vous aider à identifier et déployer des solutions d'IA à fort impact qui livrent vraiment."
@@ -471,23 +445,6 @@
               { "title": "Gouvernance intégrée, pas ajoutée", "icon": "bi-shield-check", "description": "Traçabilité, catalogage, qualité et contrôles d'accès font partie des fondations — pas d'une phase 2 après coup." },
               { "title": "La fiabilité comme discipline", "icon": "bi-activity", "description": "Observabilité des pipelines, surveillance SLA et récupération automatisée sont standards dans chaque plateforme que nous construisons." },
               { "title": "Éprouvé en industries réglementées", "icon": "bi-award", "description": "Expérience approfondie avec BCBS 239, LPRPS, LPRPDE, BSIF et les exigences d'audit qui façonnent l'ingénierie de données canadienne." }
-            ]
-          },
-          "caseStudy": {
-            "title": "Des rapports isolés à une source unique de vérité",
-            "client": "Régie provinciale de la santé",
-            "challenge": "12 départements maintenaient leurs propres extractions du DSE. Les rapports ne correspondaient jamais, les analyses prenaient des semaines et personne ne pouvait retracer les données à leur origine clinique — bloquant les demandes d'audit LPRPS.",
-            "approach": "Nous avons conçu une plateforme lakehouse avec ingestion HL7/FHIR, un modèle de données clinique canonique, surveillance automatisée de qualité et suivi complet de traçabilité du DSE au tableau de bord.",
-            "result": "Source unique de vérité pour plus de 40 KPI en 6 mois. Réponses aux audits complétées en heures plutôt qu'en semaines. L'équipe d'analyse est passée du traitement de données à l'analyse réelle."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Devons-nous migrer hors de notre entrepôt de données hérité ?", "answer": "Pas nécessairement. Nous modernisons souvent de manière incrémentale — ajoutant un lac/lakehouse infonuagique aux côtés des entrepôts existants, puis migrant les charges de travail à mesure que la valeur est prouvée. Les migrations big-bang finissent rarement bien." },
-              { "question": "Comment gérez-vous la qualité des données ?", "answer": "Nous traitons la qualité des données comme une préoccupation d'ingénierie de premier plan : tests d'attentes automatisés (Great Expectations), surveillance de fraîcheur, détection de dérive de schéma et alertes d'anomalies reliées à votre pile d'observabilité." },
-              { "question": "Quelle est la différence entre un lac, un entrepôt et un lakehouse ?", "answer": "Les entrepôts excellent pour l'analyse structurée (Snowflake). Les lacs stockent les données brutes/semi-structurées à bas coût. Les lakehouses (Databricks, Iceberg) combinent les deux — performance d'analyse structurée sur stockage ouvert. Nous choisissons ce qui convient à vos charges de travail." },
-              { "question": "Pouvez-vous travailler avec nos données sur site ?", "answer": "Oui. Nous concevons des architectures hybrides où les données sensibles restent sur site et les charges analytiques s'exécutent dans le nuage, avec connectivité sécurisée et gouvernance à travers les deux environnements." },
-              { "question": "Combien de temps prend l'implémentation d'une plateforme de données ?", "answer": "Une plateforme prête pour la production prend généralement 3-6 mois pour le déploiement initial, puis une expansion itérative. Nous priorisons la livraison de valeur tôt avec une approche 'squelette ambulant' plutôt que des programmes cascade de 12 mois." }
             ]
           },
           "closing": {
@@ -668,23 +625,6 @@
               { "title": "Mentalité d'ingénierie de plateforme", "icon": "bi-box-seam", "description": "Nous construisons des plateformes internes qui rendent le libre-service infonuagique sûr — autonomisant les développeurs tout en maintenant les garde-fous." }
             ]
           },
-          "caseStudy": {
-            "title": "Lift, Shift et modernisation — sans le choc de facturation",
-            "client": "Assureur canadien",
-            "challenge": "Le traitement des réclamations hérité fonctionnait sur une infrastructure sur site vieillissante. Une migration infonuagique précédente avait doublé les coûts d'hébergement avec gains d'agilité minimaux. La direction exigeait à la fois conformité BSIF et réduction de coûts.",
-            "approach": "Nous avons réarchitecturé la charge de travail utilisant des zones d'atterrissage AWS, Kubernetes pour services sans état et bases de données gérées. Implémenté Terraform, GitOps et tableaux de bord FinOps avec rightsizing automatisé.",
-            "result": "Réduction de 35 % des coûts d'infrastructure vs migration infonuagique originale. Fréquence de livraison passée de mensuelle à quotidienne. Conformité BSIF B-10 complète atteinte avec collecte de preuves automatisée."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Devrions-nous aller multi-nuages ou rester avec un seul fournisseur ?", "answer": "Ça dépend. Le mono-nuage offre opérations plus simples et intégration plus profonde. Le multi-nuages offre résilience et services best-of-breed. Nous aidons à évaluer honnêtement les compromis selon votre tolérance au risque et capacité d'équipe." },
-              { "question": "Comment gérez-vous les exigences canadiennes de résidence des données ?", "answer": "Tous les principaux fournisseurs offrent des régions canadiennes (ca-central-1, Canada East/Central). Nous concevons des architectures qui appliquent la résidence via politiques IAM, contrôles réseau et vérifications de conformité automatisées." },
-              { "question": "Quelle est votre approche du contrôle des coûts infonuagiques ?", "answer": "FinOps dès la phase d'architecture — rightsizing, planification de capacité réservée, politiques de cycle de vie et étiquetage d'allocation des coûts intégrés. Plus des tableaux de bord qui rendent les dépenses visibles aux équipes qui les génèrent." },
-              { "question": "Pouvez-vous nous aider à moderniser sans réécriture complète ?", "answer": "Oui. Nous suivons le cadre 6R (rehost, replatform, refactor, repurchase, retain, retire) — adaptant la profondeur de modernisation à la valeur d'affaires, pas appliquant une approche à tout." },
-              { "question": "Qu'en est-il des preuves de conformité pour les audits ?", "answer": "Nous implémentons des cadres de conformité automatisés (AWS Config, Azure Policy, GCP Policy Intelligence) qui appliquent continuellement les contrôles et génèrent les preuves d'audit — critique pour la préparation BSIF, SOC 2 et ISO 27001." }
-            ]
-          },
           "closing": {
             "title": "Prêt à moderniser votre infrastructure et accélérer votre parcours infonuagique ?",
             "subtitle": "Concevons une stratégie infonuagique adaptée à vos objectifs d'affaires et votre environnement réglementaire."
@@ -861,23 +801,6 @@
               { "title": "Profondeur réglementaire canadienne", "icon": "bi-maple-leaf", "description": "BSIF B-13, LPRPDE, LPRPS, ITSG-33 — nous naviguons le paysage de conformité canadien que vos auditeurs et régulateurs évaluent vraiment." },
               { "title": "Ingénierie + sécurité", "icon": "bi-shield-shaded", "description": "Nous apportons la discipline d'ingénierie logicielle à la sécurité : IaC pour les contrôles, conformité automatisée et pratiques DevSecOps." },
               { "title": "Communication de risque prête pour le conseil", "icon": "bi-file-bar-graph", "description": "Nous traduisons le risque technique en langage que les dirigeants et conseils peuvent actionner — pas de peur, juste des compromis clairs." }
-            ]
-          },
-          "caseStudy": {
-            "title": "Prêt aux rançongiciels en 90 jours",
-            "client": "Municipalité canadienne",
-            "challenge": "Après avoir vu des municipalités voisines tomber face aux rançongiciels, la direction exigeait une amélioration rapide. Points terminaux hérités, réseau plat, pas de SIEM et plan de réponse aux incidents jamais testé.",
-            "approach": "Nous avons priorisé par risque : déployé EDR sur tous les points terminaux, segmenté le réseau, mis en place un SIEM/SOAR géré et mené 3 exercices théoriques. Durci les sauvegardes avec stockage immuable et isolation.",
-            "result": "En 90 jours : couverture EDR 100 %, sauvegardes résistantes aux rançongiciels, surveillance des menaces 24/7, plan de RI testé. Prime d'assurance cyber réduite de 25 % avec posture documentée."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Devons-nous être certifiés SOC 2 ?", "answer": "Ça dépend de vos clients. Si vous vendez aux entreprises américaines, SOC 2 est souvent requis. Si vous servez des FI canadiennes ou la santé, ISO 27001 ou alignement BSIF/LPRPS peut être plus pertinent. Nous aidons à évaluer quelles certifications importent vraiment." },
-              { "question": "Quelle est la différence entre conformité et sécurité ?", "answer": "La conformité est un plancher, pas un plafond. Vous pouvez être conforme LPRPDE et être piraté. La vraie sécurité commence par comprendre vos menaces réelles et bâtir des contrôles qui comptent. La conformité suit typiquement naturellement d'une bonne sécurité." },
-              { "question": "Comment aidez-vous avec la réponse aux incidents ?", "answer": "Nous bâtissons les capacités de RI en trois étapes : (1) plan + runbooks + exercices théoriques ; (2) outillage de détection et réponse SIEM/SOAR ; (3) soutien de garde en rétention pour incidents. La plupart des clients ont besoin des deux premières ; certains optent pour la rétention." },
-              { "question": "Qu'en est-il des menaces internes ?", "answer": "Les menaces internes (malicieuses ou négligentes) sont souvent négligées. Nous les adressons avec IAM à moindre privilège, PAM pour admins, analytique comportementale (UEBA), DLP et formation de sensibilisation adaptée à votre personnel." },
-              { "question": "Comment suivez-vous l'évolution des menaces ?", "answer": "Surveillance continue, intégration de renseignements sur les menaces, tests d'intrusion réguliers et participation active à la communauté de sécurité canadienne (Centre canadien pour la cybersécurité, réseau des chefs de la sécurité, OWASP, etc.)." }
             ]
           },
           "closing": {
@@ -1058,23 +981,6 @@
               { "title": "Fondations d'ingénierie de données", "icon": "bi-bricks", "description": "Nous bâtissons la BI sur une infrastructure de données fiable — car des tableaux de bord sur de mauvaises données sont pires que pas de tableaux." }
             ]
           },
-          "caseStudy": {
-            "title": "Du chaos des tableurs à la clarté exécutive",
-            "client": "Caisse populaire régionale canadienne",
-            "challenge": "Les dossiers mensuels du conseil étaient compilés manuellement depuis 15+ tableurs, prenaient à 5 analystes une semaine complète et contenaient encore des erreurs. Les KPI des différentes équipes ne correspondaient jamais.",
-            "approach": "Nous avons bâti un modèle de données gouverné sur l'entrepôt existant, établi un catalogue KPI avec approbation exécutive et livré des tableaux de bord Power BI avec drill-through aux détails opérationnels. Formé les analystes sur dbt et la couche sémantique.",
-            "result": "Temps de génération du dossier conseil réduit de 5 jours à 2 heures. Analystes ont récupéré 30+ heures/semaine pour l'analyse réelle. L'équipe exécutive rapporte enfin 'faire confiance aux chiffres'."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Quel outil BI devrions-nous utiliser ?", "answer": "Ça dépend des compétences de votre équipe, licences existantes, plateforme de données et cas d'usage. Power BI s'intègre bien aux piles Microsoft ; Tableau excelle à la visualisation ; Looker offre une gouvernance forte ; Qlik a une base d'analystes loyaux. Nous aidons à évaluer honnêtement." },
-              { "question": "Comment empêcher la prolifération des tableaux de bord ?", "answer": "Nous établissons un catalogue gouverné de tableaux certifiés avec propriété claire, revues d'utilisation régulières et retrait du contenu inutilisé. Le libre-service nécessite quand même des garde-fous." },
-              { "question": "Qu'est-ce qu'une couche sémantique et pourquoi importe-t-elle ?", "answer": "Une couche sémantique (dbt metrics, LookML, Cube) définit les KPI et métriques une fois — donc 'revenu' signifie la même chose dans Power BI, Tableau, une requête SQL ou une alerte. C'est la fondation de la confiance en BI." },
-              { "question": "Pouvez-vous aider à migrer d'outils BI hérités ?", "answer": "Oui. Nous avons migré de Cognos, BusinessObjects, MicroStrategy et plateformes personnalisées vers des outils BI modernes — en nous concentrant sur la réimplémentation des 20 % de rapports qui pilotent vraiment les décisions." },
-              { "question": "Comment mesurez-vous le succès BI ?", "answer": "Métriques d'adoption (utilisateurs actifs, fréquence de session), résultats d'affaires (décisions prises plus vite, reporting manuel réduit) et rétroaction qualitative des équipes utilisatrices. Pas juste 'nous avons livré X tableaux'." }
-            ]
-          },
           "closing": {
             "title": "Prêt à transformer vos données en insights qui génèrent des résultats ?",
             "subtitle": "Bâtissons une solution BI que votre équipe utilisera et à laquelle elle fera confiance."
@@ -1251,23 +1157,6 @@
               { "title": "Architecture soucieuse des coûts", "icon": "bi-calculator", "description": "Big data n'égale pas grosses factures. Nous concevons pour séparation stockage/calcul, tiering intelligent et infrastructure adaptée aux charges." },
               { "title": "Opérations de production", "icon": "bi-activity", "description": "Nous ne nous arrêtons pas à l'architecture — nous implémentons observabilité, auto-scaling et runbooks opérationnels pour systèmes de production fiables." },
               { "title": "Fondations prêtes pour l'IA", "icon": "bi-cpu-fill", "description": "Nos plateformes sont conçues avec les charges IA/ML en tête : magasins de caractéristiques, bases vectorielles et infrastructure d'entraînement distribué." }
-            ]
-          },
-          "caseStudy": {
-            "title": "D'un goulot d'entrepôt à l'échelle lakehouse",
-            "client": "Fournisseur canadien de télécommunications",
-            "challenge": "L'entrepôt hérité ne pouvait gérer 10 To/jour de télémétrie réseau. Les travaux ETL nocturnes duraient 14+ heures, les analystes attendaient midi pour les données de la veille, et la détection de fraude était réactive pas temps réel.",
-            "approach": "Architecturé un lakehouse sur Databricks avec streaming Kafka pour ingestion temps réel, Delta Lake pour stockage et Structured Streaming pour détection continue de fraude. Implémenté architecture medallion et Unity Catalog pour la gouvernance.",
-            "result": "Fraîcheur des données améliorée de 14 heures à 90 secondes. Détection de fraude passée de réactive par lots à préventive en temps réel. Coût d'infrastructure réduit de 45 % vs trajectoire d'expansion de l'entrepôt hérité."
-          },
-          "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-              { "question": "Quand avons-nous vraiment besoin d'architecture 'big data' ?", "answer": "Quand les bases/entrepôts traditionnels peinent avec votre volume, vélocité ou variété. Souvent c'est plus de quelques To de données, des millions d'événements/jour ou le mélange de données structurées et non structurées. Ne sur-architecturez pas pour des données que vous n'avez pas encore." },
-              { "question": "Spark vs Databricks vs EMR — quelle différence ?", "answer": "Spark est le moteur open-source. Databricks est une plateforme gérée autour de Spark avec notebooks, Delta Lake et gouvernance. EMR/Dataproc/HDInsight sont des services Spark gérés par fournisseurs infonuagiques. Databricks a typiquement l'écosystème le plus riche ; les services des fournisseurs sont souvent moins chers." },
-              { "question": "Qu'est-ce qu'un lakehouse et en quoi diffère-t-il d'un lac de données ?", "answer": "Les lacs de données traditionnels stockent des fichiers bruts dans du stockage objet — bon marché mais sans transactions ACID, application de schéma ou requêtes rapides. Les lakehouses (Delta, Iceberg, Hudi) ajoutent des fonctionnalités d'entrepôt au lac, permettant streaming et lots sur la même couche de stockage." },
-              { "question": "Comment gérez-vous la gouvernance des données à grande échelle ?", "answer": "Approche catalogue-first : Unity Catalog, AWS Glue Catalog ou équivalent pour les métadonnées. Accès granulaire (ligne/colonne), découverte et masquage RPI, suivi de traçabilité de bout en bout et journalisation d'audit reliée à l'observabilité." },
-              { "question": "Les plateformes Big Data peuvent-elles être rentables ?", "answer": "Absolument — mais ça exige de la discipline. Séparation stockage/calcul, politiques de cycle de vie de stockage par niveaux, optimisation de requêtes, isolation des charges et rightsizing des clusters. Sans pratique FinOps, le big data devient rapidement des données coûteuses." }
             ]
           },
           "closing": {
