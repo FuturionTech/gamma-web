@@ -8,27 +8,28 @@
       <div class="hero-glow-orb hero-glow-2"></div>
 
       <div class="container position-relative z-2 py-5">
-        <div class="row align-items-center">
-          <div class="col-lg-10 mx-auto">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mb-4">
-              <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">
-                  <NuxtLink to="/" class="text-white text-opacity-75 text-decoration-none">
-                    {{ $t('breadcrumbs.home') }}
-                  </NuxtLink>
-                </li>
-                <li class="breadcrumb-item">
-                  <NuxtLink to="/services" class="text-white text-opacity-75 text-decoration-none">
-                    {{ $t('breadcrumbs.services') }}
-                  </NuxtLink>
-                </li>
-                <li class="breadcrumb-item active text-white" aria-current="page">
-                  {{ detail?.name || slug }}
-                </li>
-              </ol>
-            </nav>
 
+        <!-- Breadcrumb — at container level to align with navbar logo -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <NuxtLink to="/" class="text-white text-opacity-75 text-decoration-none">
+                {{ $t('breadcrumbs.home') }}
+              </NuxtLink>
+            </li>
+            <li class="breadcrumb-item">
+              <NuxtLink to="/services" class="text-white text-opacity-75 text-decoration-none">
+                {{ $t('breadcrumbs.services') }}
+              </NuxtLink>
+            </li>
+            <li class="breadcrumb-item active text-white" aria-current="page">
+              {{ detail?.name || slug }}
+            </li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center">
+          <div class="col-lg-10">
             <!-- Tagline pill -->
             <div v-if="detail?.hero?.tagline" class="hero-tagline mb-3">
               <i :class="`bi ${detail.icon || 'bi-stars'} me-2`"></i>

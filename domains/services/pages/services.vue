@@ -8,27 +8,28 @@
       <div class="hero-glow"></div>
       
       <div class="container position-relative z-2 py-5">
+
+        <!-- Breadcrumb — at container level to align with navbar logo -->
+        <nav aria-label="breadcrumb" class="mb-4 reveal-fade-up">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item">
+              <NuxtLink to="/" class="text-white text-opacity-60 text-decoration-none hover-white">
+                {{ $t('breadcrumbs.home') }}
+              </NuxtLink>
+            </li>
+            <li class="breadcrumb-item active text-white fw-medium" aria-current="page">
+              {{ $t('breadcrumbs.services') }}
+            </li>
+          </ol>
+        </nav>
+
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mb-4 reveal-fade-up">
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item">
-                  <NuxtLink to="/" class="text-white text-opacity-60 text-decoration-none hover-white">
-                    {{ $t('breadcrumbs.home') }}
-                  </NuxtLink>
-                </li>
-                <li class="breadcrumb-item active text-white fw-medium" aria-current="page">
-                  {{ $t('breadcrumbs.services') }}
-                </li>
-              </ol>
-            </nav>
- 
             <!-- Title -->
             <h1 class="display-3 fw-bold text-white mb-4 tracking-tight reveal-fade-up-1">
               {{ $t('services.page.title') }}
             </h1>
- 
+
             <!-- Subtitle -->
             <p class="fs-5 text-white text-opacity-80 mb-0 mx-auto leading-relaxed reveal-fade-up-2" style="max-width: 720px;">
               {{ $t('services.page.subtitle') }}
@@ -286,7 +287,7 @@ const iconBootstrapMap: Record<string, string> = {
 }
 
 // i18n-driven service keys for the static fallback
-const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData', 'delivery'] as const
+const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData'] as const
 const serviceIconMap: Record<string, string> = {
   ai: 'bi bi-cpu',
   dataEngineering: 'bi bi-database',
@@ -294,7 +295,7 @@ const serviceIconMap: Record<string, string> = {
   cybersecurity: 'bi bi-shield-check',
   bi: 'bi bi-bar-chart',
   bigData: 'bi bi-hdd-stack',
-  delivery: 'bi bi-clipboard-data',
+
 }
 const serviceGradientMap: Record<string, string> = {
   ai: 'bg-gradient-primary',
@@ -303,7 +304,7 @@ const serviceGradientMap: Record<string, string> = {
   cybersecurity: 'bg-gradient-danger',
   bi: 'bg-gradient-warning',
   bigData: 'bg-gradient-purple',
-  delivery: 'bg-gradient-dark',
+
 }
 
 // Build the URL for the learn-more detail page from a slug
