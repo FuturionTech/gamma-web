@@ -10,9 +10,9 @@
 
       <!-- Process Steps using ProcessStepCard -->
       <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-4" v-for="(step, index) in processSteps" :key="step.title">
+        <div class="col-md-6 col-lg-4" v-for="step in displaySteps" :key="step.title">
           <ProcessStepCard
-            :stepNumber="index + 1"
+            :stepNumber="step.stepNumber"
             :title="step.title"
             :description="step.description"
             :items="step.items"
@@ -29,31 +29,23 @@
                 <span class="badge bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3 d-flex align-items-center justify-content-center badge-icon">
                   ★
                 </span>
-                <h4 class="mb-0">{{ $t('process.results.title') }}</h4>
+                <h4 class="mb-0">{{ resultsData.title }}</h4>
               </div>
 
               <!-- Description -->
               <p class="text-muted mb-3">
-                {{ $t('process.results.description') }}
+                {{ resultsData.description }}
               </p>
 
               <!-- Features -->
               <div class="small">
-                <div class="d-flex align-items-start mb-2">
+                <div
+                  class="d-flex align-items-start mb-2"
+                  v-for="(item, idx) in resultsData.items"
+                  :key="idx"
+                >
                   <span class="text-primary me-2">→</span>
-                  <span>{{ $t('process.results.fasterTime') }}</span>
-                </div>
-                <div class="d-flex align-items-start mb-2">
-                  <span class="text-primary me-2">→</span>
-                  <span>{{ $t('process.results.reducedCosts') }}</span>
-                </div>
-                <div class="d-flex align-items-start mb-2">
-                  <span class="text-primary me-2">→</span>
-                  <span>{{ $t('process.results.improvedQuality') }}</span>
-                </div>
-                <div class="d-flex align-items-start">
-                  <span class="text-primary me-2">→</span>
-                  <span>{{ $t('process.results.competitiveAdvantage') }}</span>
+                  <span>{{ item }}</span>
                 </div>
               </div>
             </div>
@@ -75,20 +67,83 @@
 <script setup lang="ts">
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
 import ProcessStepCard from '~/components/shared/cards/ProcessStepCard.vue'
+import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
-const { t, tm } = useI18n()
+const { t, tm, locale } = useI18n()
+const homepageStore = useHomepageStore()
 
-const stepKeys = ['discovery', 'solutionDesign', 'development', 'deployment', 'support'] as const
-const stepColors = ['primary', 'gradient', 'info', 'warning', 'success'] as const
+// Badge color mapping by step_number (or fallback by index)
+const stepBadgeColors: Record<number, string> = {
+  1: 'primary',
+  2: 'gradient',
+  3: 'info',
+  4: 'warning',
+  5: 'success',
+}
 
-const processSteps = computed(() =>
-  stepKeys.map((key, i) => ({
+// i18n-driven static fallback keys
+const staticStepKeys = ['discovery', 'solutionDesign', 'development', 'deployment', 'support'] as const
+const staticStepColors = ['primary', 'gradient', 'info', 'warning', 'success'] as const
+
+// Re-fetch when locale changes
+watch(locale, () => {
+  homepageStore.fetchProcessSteps()
+})
+
+// First 5 steps (excluding Results which is step 6, rendered separately)
+const displaySteps = computed(() => {
+  const apiSteps = homepageStore.processSteps.filter(s => s.step_number <= 5)
+
+  if (apiSteps.length > 0) {
+    return apiSteps
+      .sort((a, b) => a.step_number - b.step_number)
+      .map(step => ({
+        stepNumber: step.step_number,
+        title: step.title,
+        description: step.short_description || step.description || '',
+        items: step.items
+          .sort((a, b) => a.order - b.order)
+          .map(item => item.title),
+        badgeColor: stepBadgeColors[step.step_number] || 'primary',
+      }))
+  }
+
+  // i18n fallback
+  return staticStepKeys.map((key, i) => ({
+    stepNumber: i + 1,
     title: t(`process.${key}.title`),
     description: t(`process.${key}.description`),
     items: tm(`process.${key}.items`) as string[],
-    badgeColor: stepColors[i],
+    badgeColor: staticStepColors[i],
   }))
-)
+})
+
+// Results card — step 6 from API or i18n fallback
+const resultsData = computed(() => {
+  const resultsStep = homepageStore.processSteps.find(s => s.step_number === 6)
+
+  if (resultsStep) {
+    return {
+      title: resultsStep.title,
+      description: resultsStep.short_description || resultsStep.description || '',
+      items: resultsStep.items
+        .sort((a, b) => a.order - b.order)
+        .map(item => item.title),
+    }
+  }
+
+  // i18n fallback
+  return {
+    title: t('process.results.title'),
+    description: t('process.results.description'),
+    items: [
+      t('process.results.fasterTime'),
+      t('process.results.reducedCosts'),
+      t('process.results.improvedQuality'),
+      t('process.results.competitiveAdvantage'),
+    ],
+  }
+})
 </script>
 
 <style scoped>

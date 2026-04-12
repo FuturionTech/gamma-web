@@ -64,6 +64,39 @@ interface Stat {
   order: number
 }
 
+interface Industry {
+  id: string
+  title: string
+  description: string | null
+  short_description: string | null
+  icon: string | null
+  icon_color: string | null
+  category: string | null
+  slug: string
+  order: number
+  is_active: boolean
+}
+
+interface ProcessStepItem {
+  id: string
+  title: string
+  icon: string | null
+  order: number
+}
+
+interface ProcessStep {
+  id: string
+  title: string
+  description: string | null
+  short_description: string | null
+  step_number: number
+  icon: string | null
+  icon_color: string | null
+  slug: string
+  order: number
+  items: ProcessStepItem[]
+}
+
 interface BlogPost {
   id: string
   title: string
@@ -84,9 +117,13 @@ export const useHomepageStore = defineStore('homepageStore', {
     clients: [] as Client[],
     testimonials: [] as Testimonial[],
     stats: [] as Stat[],
+    industries: [] as Industry[],
+    processSteps: [] as ProcessStep[],
     blogPosts: [] as BlogPost[],
     loadingServices: false,
     loadingSolutions: false,
+    loadingIndustries: false,
+    loadingProcessSteps: false,
     loadingPartners: false,
     loadingClients: false,
     loadingTestimonials: false,
@@ -231,11 +268,52 @@ export const useHomepageStore = defineStore('homepageStore', {
       }
     },
 
+    async fetchIndustries(limit = 10) {
+      this.loadingIndustries = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ industries: Industry[] }>(`
+          query Industries($limit: Int, $is_active: Boolean) {
+            industries(limit: $limit, is_active: $is_active) {
+              id title description short_description icon icon_color category slug order is_active
+            }
+          }
+        `, { limit, is_active: true })
+        this.industries = data.industries ?? []
+      } catch (e: any) {
+        this.industries = []
+      } finally {
+        this.loadingIndustries = false
+      }
+    },
+
+    async fetchProcessSteps() {
+      this.loadingProcessSteps = true
+      try {
+        const { query } = useGraphql()
+        const data = await query<{ processSteps: ProcessStep[] }>(`
+          query ProcessSteps($is_active: Boolean) {
+            processSteps(is_active: $is_active) {
+              id title description short_description step_number icon icon_color slug order
+              items { id title icon order }
+            }
+          }
+        `, { is_active: true })
+        this.processSteps = data.processSteps ?? []
+      } catch (e: any) {
+        this.processSteps = []
+      } finally {
+        this.loadingProcessSteps = false
+      }
+    },
+
     /** Fetch all homepage data in parallel */
     async fetchAll() {
       await Promise.allSettled([
         this.fetchServices(6),
         this.fetchSolutions(6),
+        this.fetchIndustries(6),
+        this.fetchProcessSteps(),
         this.fetchStats(10),
         this.fetchTestimonials(10),
         this.fetchPartners(10),

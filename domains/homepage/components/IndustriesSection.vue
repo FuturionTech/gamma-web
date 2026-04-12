@@ -2,7 +2,7 @@
   <!-- Industries Section -->
   <div>
     <!-- Loading State -->
-    <div v-if="homepageStore.loadingSolutions" class="row g-4">
+    <div v-if="homepageStore.loadingIndustries" class="row g-4">
       <div class="col-sm-6 col-lg-4" v-for="n in 6" :key="n">
         <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
           <div class="placeholder-glow">
@@ -37,24 +37,29 @@ import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 const { t, locale } = useI18n()
 const homepageStore = useHomepageStore()
 
-// Map API icon names to Bootstrap Icons
+// Map API icon names (Heroicons/Font Awesome style) to Bootstrap Icons
 const iconBootstrapMap: Record<string, string> = {
-  bank: 'bi-bank',
-  landmark: 'bi-building',
-  hospital: 'bi-heart-pulse',
+  'building-columns': 'bi-bank',
+  'heart-pulse': 'bi-heart-pulse',
+  'landmark': 'bi-building',
+  'briefcase': 'bi-briefcase',
+  'circle-dot': 'bi-globe2',
   'graduation-cap': 'bi-mortarboard',
-  cog: 'bi-gear',
+  'bank': 'bi-bank',
+  'hospital': 'bi-heart-pulse',
+  'cog': 'bi-gear',
   'shopping-cart': 'bi-cart',
 }
 
 // Map API icon_color hex to Bootstrap color names
 const iconColorMap: Record<string, string> = {
+  '#6B7280': 'secondary',
   '#10B981': 'success',
   '#3B82F6': 'info',
-  '#EC4899': 'danger',
-  '#8B5CF6': 'primary',
   '#F59E0B': 'warning',
+  '#8B5CF6': 'primary',
   '#EF4444': 'danger',
+  '#EC4899': 'danger',
 }
 
 // i18n-driven static fallback
@@ -65,17 +70,17 @@ const industryColors = ['primary', 'danger', 'info', 'success', 'warning', 'seco
 // Re-fetch when locale changes — the Accept-Language header
 // in useGraphql picks up the new locale automatically
 watch(locale, () => {
-  homepageStore.fetchSolutions(6)
+  homepageStore.fetchIndustries(6)
 })
 
 // Prefer API data, fall back to i18n static
 const displayIndustries = computed(() => {
-  if (homepageStore.solutions.length > 0) {
-    return homepageStore.solutions.slice(0, 6).map(s => ({
-      title: s.title,
-      description: s.description || '',
-      icon: iconBootstrapMap[s.icon ?? ''] || 'bi-gear',
-      iconColor: iconColorMap[s.icon_color ?? ''] || 'primary',
+  if (homepageStore.industries.length > 0) {
+    return homepageStore.industries.slice(0, 6).map(ind => ({
+      title: ind.title,
+      description: ind.short_description || ind.description || '',
+      icon: iconBootstrapMap[ind.icon ?? ''] || 'bi-gear',
+      iconColor: iconColorMap[ind.icon_color ?? ''] || 'primary',
     }))
   }
   return industryKeys.map((key, i) => ({
