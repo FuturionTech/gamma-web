@@ -91,16 +91,17 @@ import { computed } from 'vue'
 const { t } = useI18n()
 const company = useCompanyInfo()
 
-// Service nav items linking to individual service detail pages
-const serviceKeys = ['ai', 'dataEngineering', 'cloud', 'cybersecurity', 'bi', 'bigData']
-
-const serviceNavItems = computed(() =>
-  serviceKeys.map((key) => ({
-    key,
-    label: t(`footer.servicesItems.${key}`),
-    link: `/services/${t(`services.${key}.slug`)}`,
-  }))
-)
+// Service nav items linking to individual service detail pages.
+// Slugs are hard-coded to match the API and prerender routes —
+// i18n does not control URL paths here.
+const serviceNavItems = computed(() => [
+  { key: 'ai', label: t('footer.servicesItems.ai'), link: '/services/ai-intelligent-systems' },
+  { key: 'dataEngineering', label: t('footer.servicesItems.dataEngineering'), link: '/services/data-engineering-platforms' },
+  { key: 'cloud', label: t('footer.servicesItems.cloud'), link: '/services/cloud-strategy-engineering' },
+  { key: 'cybersecurity', label: t('footer.servicesItems.cybersecurity'), link: '/services/cybersecurity' },
+  { key: 'bi', label: t('footer.servicesItems.bi'), link: '/services/business-intelligence' },
+  { key: 'bigData', label: t('footer.servicesItems.bigData'), link: '/services/big-data' },
+])
 </script>
 
 <style scoped>
