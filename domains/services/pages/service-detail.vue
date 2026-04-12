@@ -399,7 +399,7 @@
 import { useHead } from '#imports'
 import type { LegacyServiceDetail as ServiceDetail } from '~/composables/useServiceDetail'
 
-const { t, tm, locale } = useI18n()
+const { t, locale } = useI18n()
 const route = useRoute()
 
 // Extract slug from route params (dynamic route: /services/[slug])
@@ -417,20 +417,7 @@ const impactIcons = [
 
 // Fetch service detail from the gamma-api GraphQL endpoint.
 // On slug or locale change, the composable re-fetches automatically.
-const { detail: apiDetail } = useServiceDetail(slug)
-
-// Fallback to the legacy i18n content if the API is unreachable or the slug
-// is missing from the backend. This ensures the page still renders during
-// the cutover period and for any service that hasn't been migrated yet.
-// After Plan F ships, the i18n fallback can be removed.
-const detail = computed<ServiceDetail | null>(() => {
-  if (apiDetail.value) return apiDetail.value
-
-  // Fallback: read from i18n JSON (legacy behavior)
-  const items = tm('services.details.items') as Record<string, ServiceDetail> | undefined
-  if (!items || !items[slug.value]) return null
-  return items[slug.value]
-})
+const { detail } = useServiceDetail(slug)
 
 // SEO meta
 useHead(() => ({
