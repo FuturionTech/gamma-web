@@ -1,18 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#7c3aed"/>
-      <stop offset="50%" style="stop-color:#8b5cf6"/>
       <stop offset="100%" style="stop-color:#6d28d9"/>
     </linearGradient>
   </defs>
 
-  <!-- Rounded square background -->
-  <rect width="64" height="64" rx="14" ry="14" fill="url(#bg)"/>
+  <!-- Rounded square -->
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
 
-  <!-- "G" letter path — bold geometric -->
-  <path d="M10 32 C10 20.5 18.5 14 27 14 C32 14 35.5 16 37 18 L33 23 C32 21.5 30 20 27.5 20 C22 20 17.5 24.5 17.5 32 C17.5 39.5 22 44 27.5 44 C30 44 31.5 43 32.5 42 L32.5 35 L27 35 L27 29.5 L39 29.5 L39 45 C36.5 48 32 50 27 50 C18.5 50 10 43.5 10 32 Z" fill="white"/>
+  <!-- G — clean geometric, thick strokes -->
+  <path d="
+    M 72 256
+    C 72 168 124 108 192 108
+    C 224 108 250 120 266 140
+    L 234 176
+    C 222 162 210 152 192 152
+    C 152 152 124 194 124 256
+    C 124 318 152 360 192 360
+    C 210 360 222 352 230 340
+    L 230 272
+    L 188 272
+    L 188 232
+    L 276 232
+    L 276 368
+    C 258 392 228 404 192 404
+    C 124 404 72 344 72 256
+    Z
+  " fill="white"/>
 
-  <!-- "N" letter path — bold geometric -->
-  <path d="M42 15 L48.5 15 L57 40 L57 15 L63 15 L63 49 L56.5 49 L48 24 L48 49 L42 49 Z" fill="rgba(255,255,255,0.9)"/>
+  <!-- N — bold, balanced -->
+  <path d="
+    M 296 112
+    L 344 112
+    L 420 340
+    L 420 112
+    L 464 112
+    L 464 400
+    L 416 400
+    L 340 172
+    L 340 400
+    L 296 400
+    Z
+  " fill="white" opacity="0.92"/>
 </svg>
