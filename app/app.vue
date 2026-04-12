@@ -23,6 +23,14 @@ html, body {
   max-width: 100vw;
 }
 
+/* Nuxt root must fill body flex so sticky footer works */
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  min-height: 100vh;
+}
+
 /* Page transition — smooth fade + subtle slide */
 .page-enter-active,
 .page-leave-active {
