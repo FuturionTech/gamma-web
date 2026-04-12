@@ -38,7 +38,11 @@ export default defineNuxtConfig({
                 { name: 'msapplication-TileColor', content: '#8b5cf6' }
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '32x32' },
+                { rel: 'icon', type: 'image/png', href: '/favicon-192.png', sizes: '192x192' },
+                { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+                { rel: 'manifest', href: '/site.webmanifest' },
                 { rel: 'preconnect', href: 'https://cdn.jsdelivr.net', crossorigin: '' },
                 { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com', crossorigin: '' },
                 { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
