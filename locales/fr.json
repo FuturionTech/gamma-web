@@ -300,7 +300,9 @@
       "send": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": "Merci pour votre message ! Nous vous répondrons dans les 24 heures.",
+      "successTitle": "Message envoyé !",
       "error": "Une erreur s'est produite. Veuillez réessayer ou nous écrire directement à info{'@'}gammaneutral.com",
+      "errorTitle": "Erreur",
       "validation": {
         "firstName": "Veuillez entrer votre prénom !",
         "lastName": "Veuillez entrer votre nom de famille !",
@@ -357,6 +359,15 @@
         "description": "Travailler sur des projets de pointe qui transforment les entreprises et les industries."
       }
     },
+    "openPositions": {
+      "badge": "Postes ouverts",
+      "title": "Opportunites actuelles",
+      "subtitle": "Rejoignez notre equipe et contribuez a faconner l'avenir du conseil en donnees et en IA."
+    },
+    "remote": "Teletravail",
+    "errorTitle": "Impossible de charger les postes",
+    "errorMessage": "Nous n'avons pas pu recuperer nos postes ouverts. Veuillez reessayer.",
+    "retry": "Reessayer",
     "noOpenings": {
       "title": "Aucun poste disponible actuellement",
       "description": "Nous sommes toujours à la recherche de personnes talentueuses. Bien que nous n'ayons pas de postes ouverts en ce moment, nous serions ravis de vous entendre.",

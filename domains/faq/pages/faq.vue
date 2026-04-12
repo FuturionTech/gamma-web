@@ -73,10 +73,8 @@
               <div v-for="n in 6" :key="n" class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
                 <div class="p-4">
                   <div class="d-flex align-items-center">
-                    <div class="shimmer shimmer-icon me-3 rounded-3"></div>
-                    <div class="flex-grow-1">
-                      <div class="shimmer shimmer-line mb-0" :style="{ width: `${60 + (n * 7) % 30}%` }"></div>
-                    </div>
+                    <Shimmer width="32px" height="32px" radius="8px" class="me-3 flex-shrink-0" />
+                    <Shimmer :width="`${60 + (n * 7) % 30}%`" height="1.125rem" pill />
                   </div>
                 </div>
               </div>
@@ -181,6 +179,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useHead } from '#imports'
+import Shimmer from '~/components/shared/utils/Shimmer.vue'
 import { useFaqStore } from '~/domains/faq/stores/useFaqStore'
 
 const { sanitize } = useSanitize()
@@ -379,36 +378,6 @@ onMounted(() => {
 
 .faq-answer-open {
   display: block;
-}
-
-/* ================================
-   SHIMMER LOADING
-   ================================ */
-@keyframes shimmer {
-  0% { background-position: -400px 0; }
-  100% { background-position: 400px 0; }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 800px 100%;
-  animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.shimmer-icon {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-}
-
-.shimmer-line {
-  height: 18px;
-  border-radius: 6px;
-}
-
-[data-bs-theme="dark"] .shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
-  background-size: 800px 100%;
 }
 
 /* ================================

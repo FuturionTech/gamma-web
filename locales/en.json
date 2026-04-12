@@ -300,7 +300,9 @@
       "send": "Send Message",
       "sending": "Sending...",
       "success": "Thank you for your message! We'll get back to you within 24 hours.",
+      "successTitle": "Message sent!",
       "error": "Something went wrong. Please try again or email us directly at info{'@'}gammaneutral.com",
+      "errorTitle": "Error",
       "validation": {
         "firstName": "Please enter your first name!",
         "lastName": "Please enter your last name!",
@@ -357,6 +359,15 @@
         "description": "Work on cutting-edge projects that transform businesses and industries."
       }
     },
+    "openPositions": {
+      "badge": "Open Positions",
+      "title": "Current Opportunities",
+      "subtitle": "Join our team and help shape the future of data and AI consulting."
+    },
+    "remote": "Remote",
+    "errorTitle": "Unable to Load Positions",
+    "errorMessage": "We could not retrieve our current openings. Please try again.",
+    "retry": "Retry",
     "noOpenings": {
       "title": "No Current Openings",
       "description": "We're always looking for talented people. While we don't have open positions at this time, we'd love to hear from you.",

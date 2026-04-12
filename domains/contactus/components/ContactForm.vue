@@ -162,7 +162,7 @@
         <i class="bi bi-check-circle-fill"></i>
       </div>
       <div>
-        <h5 class="h6 fw-bold mb-1">Message envoyé !</h5>
+        <h5 class="h6 fw-bold mb-1">{{ $t('contact.form.successTitle') }}</h5>
         <p class="small mb-0 opacity-80">{{ $t('contact.form.success') }}</p>
       </div>
     </div>
@@ -173,7 +173,7 @@
         <i class="bi bi-exclamation-triangle-fill"></i>
       </div>
       <div>
-        <h5 class="h6 fw-bold mb-1">Erreur</h5>
+        <h5 class="h6 fw-bold mb-1">{{ $t('contact.form.errorTitle') }}</h5>
         <p class="small mb-0 opacity-80">{{ errorMessage || $t('contact.form.error') }}</p>
       </div>
     </div>
