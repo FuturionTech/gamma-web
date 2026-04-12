@@ -52,7 +52,7 @@ import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 const { t, tm, locale } = useI18n()
 const homepageStore = useHomepageStore()
 
-// Icon-to-gradient mapping for API services
+// Icon-to-gradient mapping for API services (supports both old short names and new bi-* classes)
 const iconGradientMap: Record<string, string> = {
   brain: 'bg-gradient-primary',
   database: 'bg-gradient-info',
@@ -60,9 +60,15 @@ const iconGradientMap: Record<string, string> = {
   shield: 'bg-gradient-danger',
   chart: 'bg-gradient-warning',
   server: 'bg-gradient-purple',
+  'bi-cpu': 'bg-gradient-primary',
+  'bi-database': 'bg-gradient-info',
+  'bi-cloud': 'bg-gradient-success',
+  'bi-shield-check': 'bg-gradient-danger',
+  'bi-bar-chart': 'bg-gradient-warning',
+  'bi-hdd-stack': 'bg-gradient-purple',
 }
 
-// Bootstrap icon mapping from API icon names
+// Bootstrap icon mapping from API icon names (old short names)
 const iconBootstrapMap: Record<string, string> = {
   brain: 'bi bi-cpu',
   database: 'bi bi-database',
@@ -70,6 +76,12 @@ const iconBootstrapMap: Record<string, string> = {
   shield: 'bi bi-shield-check',
   chart: 'bi bi-bar-chart',
   server: 'bi bi-hdd-stack',
+}
+
+function resolveIcon(icon: string | null | undefined): string {
+  if (!icon) return 'bi bi-gear'
+  if (icon.startsWith('bi-')) return `bi ${icon}`
+  return iconBootstrapMap[icon] || 'bi bi-gear'
 }
 
 // Service translation keys mapped to icons/gradients (i18n fallback)
@@ -110,7 +122,7 @@ const displayServices = computed(() => {
       title: s.title,
       description: s.short_description || s.description,
       features: s.features.map(f => f.title),
-      icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
+      icon: resolveIcon(s.icon),
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       link: buildServiceLink(s.slug),
     }))

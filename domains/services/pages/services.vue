@@ -62,12 +62,13 @@
         <!-- Loading Skeletons -->
         <div v-if="servicesStore.loading" class="row g-4">
           <div class="col-sm-6 col-lg-4" v-for="n in 6" :key="n">
-            <div class="card h-100 p-4 rounded-5 border-0 shadow-sm glass-loading">
-              <div class="placeholder-glow">
-                <div class="placeholder bg-light rounded-4 mb-4" style="width: 64px; height: 64px;"></div>
-                <div class="placeholder bg-light col-8 mb-3 rounded-pill" style="height: 24px;"></div>
-                <div class="placeholder bg-light col-11 mb-2 rounded-pill" style="height: 14px;"></div>
-                <div class="placeholder bg-light col-9 rounded-pill" style="height: 14px;"></div>
+            <div class="card h-100 p-4 rounded-5 border-0 shadow-sm shimmer-card">
+              <Shimmer width="64px" height="64px" radius="1rem" class="mb-4" />
+              <Shimmer width="70%" height="1.5rem" pill class="mb-3" />
+              <Shimmer width="90%" height="0.875rem" pill class="mb-2" />
+              <Shimmer width="80%" height="0.875rem" pill class="mb-4" />
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <Shimmer v-for="f in 3" :key="f" width="60px" height="24px" pill />
               </div>
             </div>
           </div>
@@ -264,7 +265,7 @@ useBreadcrumbSchema([
   { name: 'Services', url: '/services' },
 ])
 
-// Icon-to-gradient mapping for API services
+// Icon-to-gradient mapping for API services (supports both old short names and new bi-* classes)
 const iconGradientMap: Record<string, string> = {
   brain: 'bg-gradient-primary',
   database: 'bg-gradient-info',
@@ -273,9 +274,15 @@ const iconGradientMap: Record<string, string> = {
   chart: 'bg-gradient-warning',
   server: 'bg-gradient-purple',
   clipboard: 'bg-gradient-dark',
+  'bi-cpu': 'bg-gradient-primary',
+  'bi-database': 'bg-gradient-info',
+  'bi-cloud': 'bg-gradient-success',
+  'bi-shield-check': 'bg-gradient-danger',
+  'bi-bar-chart': 'bg-gradient-warning',
+  'bi-hdd-stack': 'bg-gradient-purple',
 }
 
-// Bootstrap icon mapping from API icon names
+// Bootstrap icon mapping from API icon names (old short names)
 const iconBootstrapMap: Record<string, string> = {
   brain: 'bi bi-cpu',
   database: 'bi bi-database',
@@ -284,6 +291,16 @@ const iconBootstrapMap: Record<string, string> = {
   chart: 'bi bi-bar-chart',
   server: 'bi bi-hdd-stack',
   clipboard: 'bi bi-clipboard-data',
+}
+
+/**
+ * Resolve an icon value from the API to a Bootstrap icon class.
+ * Handles both old short names ('brain') and new bi-* classes ('bi-cpu').
+ */
+function resolveIcon(icon: string | null | undefined): string {
+  if (!icon) return 'bi bi-gear'
+  if (icon.startsWith('bi-')) return `bi ${icon}`
+  return iconBootstrapMap[icon] || 'bi bi-gear'
 }
 
 // i18n-driven service keys for the static fallback
@@ -319,7 +336,7 @@ const services = computed(() => {
     return servicesStore.services.map((s) => ({
       title: s.title,
       description: s.short_description || s.description,
-      icon: iconBootstrapMap[s.icon ?? ''] || 'bi bi-gear',
+      icon: resolveIcon(s.icon),
       gradientClass: iconGradientMap[s.icon ?? ''] || 'bg-gradient-primary',
       features: s.features.map((f) => f.title),
       link: buildServiceLink(s.slug),
