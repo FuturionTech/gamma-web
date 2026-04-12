@@ -171,34 +171,40 @@ import ContactForm from '~/domains/contactus/components/ContactForm'
 
 const company = useCompanyInfo()
 
-// SEO Meta tags
+// SEO — single source of truth
+const contactTitle = 'Contact Us | Book a Discovery Call | Gamma Neutral Consulting'
+const contactDescription = 'Book a discovery call with Gamma Neutral Consulting. Tell us about your data and AI challenges — we will outline a practical path forward.'
 useHead({
-  title: 'Contact Us | Book a Discovery Call | Gamma Neutral Consulting',
+  title: contactTitle,
   meta: [
-    {
-      name: 'description',
-      content: 'Book a discovery call with Gamma Neutral Consulting. Tell us about your data and Artificial Intelligence (AI) challenges — we will outline a practical path forward.'
-    },
-    {
-      name: 'keywords',
-      content: 'contact Gamma Neutral, Artificial Intelligence consulting Toronto, AI consulting, data consulting discovery call, book consultation'
-    },
-    {
-      name: 'author',
-      content: 'Gamma Neutral Consulting Inc.'
-    },
-  ]
+    { name: 'description', content: contactDescription },
+    { name: 'keywords', content: 'contact Gamma Neutral, Artificial Intelligence consulting Toronto, AI consulting, data consulting discovery call, book consultation' },
+    { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
+  ],
 })
-
 usePageSeo({
-  title: 'Contact Us | Book a Discovery Call | Gamma Neutral Toronto',
-  description: 'Book a discovery call with Gamma Neutral. Tell us your data and AI challenges — we outline a practical path forward.',
+  title: contactTitle,
+  description: contactDescription,
   path: '/contact',
 })
 useBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Contact', url: '/contact' },
 ])
+// ContactPage schema
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: contactTitle,
+      description: contactDescription,
+      url: 'https://gammaneutral.com/contact',
+      isPartOf: { '@id': 'https://gammaneutral.com/#website' },
+    }),
+  }],
+})
 </script>
 
 <style scoped>

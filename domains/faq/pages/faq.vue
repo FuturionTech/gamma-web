@@ -227,18 +227,19 @@ const { sanitize } = useSanitize()
 const { t, locale } = useI18n()
 const faqStore = useFaqStore()
 
+const faqTitle = 'FAQ | AI & Data Consulting Questions | Gamma Neutral'
+const faqDescription = 'Answers to common questions about Gamma Neutral Consulting — our services, engagement process, pricing, and how we work with clients.'
 useHead({
-  title: 'Frequently Asked Questions | Gamma Neutral Consulting',
+  title: faqTitle,
   meta: [
-    { name: 'description', content: 'Answers to common questions about Gamma Neutral Consulting — our services, engagement process, pricing, and how we work with clients.' },
+    { name: 'description', content: faqDescription },
     { name: 'keywords', content: 'FAQ, frequently asked questions, Artificial Intelligence consulting, AI consulting, data engineering, Gamma Neutral' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
-  ]
+  ],
 })
-
 usePageSeo({
-  title: 'FAQ | AI & Data Consulting Questions | Gamma Neutral',
-  description: 'Answers about our AI, data engineering, and cloud consulting services, engagement process, and how we work with clients.',
+  title: faqTitle,
+  description: faqDescription,
   path: '/faq',
 })
 useBreadcrumbSchema([

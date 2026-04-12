@@ -262,24 +262,19 @@ watch(locale, () => {
   careersStore.fetchPositions()
 })
 
-// SEO
+// SEO — single source of truth
+const careersTitle = 'Careers | AI & Data Jobs Toronto | Gamma Neutral Consulting'
+const careersDescription = 'Join Gamma Neutral Consulting. We are building a team of experienced consultants in data engineering, ML operations, cloud architecture, and cybersecurity in Toronto.'
 useHead({
-  title: 'Careers | Gamma Neutral Consulting',
+  title: careersTitle,
   meta: [
-    {
-      name: 'description',
-      content: 'Join Gamma Neutral Consulting. We are building a team of experienced consultants in data engineering, ML operations, cloud architecture, and cybersecurity.'
-    },
-    {
-      name: 'keywords',
-      content: 'Gamma Neutral careers, Toronto tech jobs, data engineering careers, Artificial Intelligence consulting jobs, AI consulting jobs'
-    }
-  ]
+    { name: 'description', content: careersDescription },
+    { name: 'keywords', content: 'Gamma Neutral careers, Toronto tech jobs, data engineering careers, Artificial Intelligence consulting jobs, AI consulting jobs' },
+  ],
 })
-
 usePageSeo({
-  title: 'Careers | Join Gamma Neutral Consulting Toronto',
-  description: 'Build your career at the forefront of AI and data innovation. We are looking for passionate consultants in Toronto.',
+  title: careersTitle,
+  description: careersDescription,
   path: '/careers',
 })
 useBreadcrumbSchema([

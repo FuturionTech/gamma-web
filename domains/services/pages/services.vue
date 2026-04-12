@@ -247,18 +247,19 @@ watch(locale, () => {
   servicesStore.fetchServices(20)
 })
 
+const svcTitle = 'AI, Data & Cloud Consulting Services | Gamma Neutral, Toronto'
+const svcDescription = 'From AI and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting that moves from pilot to production.'
 useHead({
-  title: 'Our Services | AI, Data Engineering & Cloud Consulting | Gamma Neutral',
+  title: svcTitle,
   meta: [
-    { name: 'description', content: 'From Artificial Intelligence (AI) and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting services that move from pilot to production.' },
+    { name: 'description', content: svcDescription },
     { name: 'keywords', content: 'Artificial Intelligence consulting, AI consulting, data engineering, cloud migration, cybersecurity, business intelligence, MLOps, data architecture, Toronto' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 })
-
 usePageSeo({
-  title: 'AI, Data & Cloud Consulting Services | Gamma Neutral, Toronto',
-  description: 'From AI and ML engineering to data architecture, cloud, and cybersecurity. Consulting that moves from pilot to production in Toronto.',
+  title: svcTitle,
+  description: svcDescription,
   path: '/services',
 })
 useBreadcrumbSchema([

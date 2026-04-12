@@ -471,7 +471,7 @@ const impactIcons = [
 // On slug or locale change, the composable re-fetches automatically.
 const { detail, loading, error } = useServiceDetail(slug)
 
-// SEO meta
+// SEO meta — reactive getters so tags update once GraphQL data arrives
 useHead(() => ({
   title: detail.value
     ? `${detail.value.name} | Gamma Neutral Consulting`
@@ -482,22 +482,50 @@ useHead(() => ({
       content:
         detail.value?.hero?.subheadline ||
         detail.value?.howWeDeliver?.description ||
-        t('services.page.subtitle'),
+        '',
     },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 }))
 
 usePageSeo({
-  title: detail.value ? `${detail.value.name} | Gamma Neutral Consulting` : 'Service | Gamma Neutral',
-  description: detail.value?.hero?.subheadline || detail.value?.howWeDeliver?.description || '',
-  path: `/services/${slug.value}`,
+  title: () => detail.value ? `${detail.value.name} | Gamma Neutral Consulting` : 'Service | Gamma Neutral Consulting',
+  description: () => detail.value?.hero?.subheadline || detail.value?.howWeDeliver?.description || '',
+  path: () => `/services/${slug.value}`,
 })
-useBreadcrumbSchema([
+
+// Breadcrumb — reactive via watch so the name populates after fetch
+const breadcrumbItems = computed(() => [
   { name: 'Home', url: '/' },
   { name: 'Services', url: '/services' },
-  { name: detail.value?.name || '', url: `/services/${slug.value}` },
+  { name: detail.value?.name || slug.value, url: `/services/${slug.value}` },
 ])
+useBreadcrumbSchema(breadcrumbItems.value)
+watch(breadcrumbItems, (items) => useBreadcrumbSchema(items), { deep: true })
+
+// Service JSON-LD schema
+useHead(() => {
+  if (!detail.value) return {}
+  const siteUrl = 'https://gammaneutral.com'
+  return {
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: detail.value.name,
+        description: detail.value.hero?.subheadline || detail.value.howWeDeliver?.description || '',
+        url: `${siteUrl}/services/${slug.value}`,
+        provider: { '@id': `${siteUrl}/#organization` },
+        areaServed: [
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'United States' },
+        ],
+        category: 'Information Technology Consulting',
+      }),
+    }],
+  }
+})
 </script>
 
 <style scoped>

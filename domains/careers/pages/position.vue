@@ -213,17 +213,26 @@ const mailtoLink = computed(() => {
 })
 
 // SEO
+const posTitle = position.value ? `${position.value.title} - Careers at Gamma Neutral` : 'Position - Gamma Neutral'
+const posDescription = position.value
+  ? `Apply for ${position.value.title} position at Gamma Neutral. ${position.value.summary}`
+  : 'View job position details and apply at Gamma Neutral Consulting.'
 useHead({
-  title: position.value ? `${position.value.title} - Careers at Gamma Neutral` : 'Position - Gamma Neutral',
+  title: posTitle,
   meta: [
-    {
-      name: 'description',
-      content: position.value
-        ? `Apply for ${position.value.title} position at Gamma Neutral. ${position.value.summary}`
-        : 'View job position details and apply at Gamma Neutral Consulting.'
-    }
-  ]
+    { name: 'description', content: posDescription },
+  ],
 })
+usePageSeo({
+  title: posTitle,
+  description: posDescription,
+  path: `/careers/${route.params.id}`,
+})
+useBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Careers', url: '/careers' },
+  { name: position.value?.title || 'Position', url: `/careers/${route.params.id}` },
+])
 </script>
 
 <style scoped>

@@ -16,6 +16,14 @@ export default defineNuxtConfig({
     },
     sitemap: {
       hostname: process.env.NUXT_PUBLIC_SITE_URL,
+      exclude: [
+        '/about/team',
+        '/about/methodology',
+        '/en/**',
+      ],
+      defaults: {
+        lastmod: new Date().toISOString(),
+      },
     },
     imports: {
         autoImport: true,
@@ -34,9 +42,8 @@ export default defineNuxtConfig({
                 { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com', crossorigin: '' },
                 { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
                 { rel: 'dns-prefetch', href: 'https://cdnjs.cloudflare.com' },
-                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'},
-                {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'},
-                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'}
+                {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css', media: 'print', onload: 'this.media="all"'},
+                {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', media: 'print', onload: 'this.media="all"'}
             ],
             script: [
                 {src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose'},
@@ -123,6 +130,7 @@ export default defineNuxtConfig({
           '/contact',
           '/faq',
           '/careers',
+          '/industries',
           '/privacy-policy',
           '/terms-of-service',
         ],

@@ -104,18 +104,19 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
+const homeTitle = 'Gamma Neutral Consulting | AI & Data Consulting, Toronto'
+const homeDescription = 'Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that deliver measurable outcomes.'
 useHead({
-  title: 'Gamma Neutral Consulting | AI & Data Consulting, Toronto',
+  title: homeTitle,
   meta: [
-    { name: 'description', content: 'Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design Artificial Intelligence (AI) systems, data architectures, and analytics platforms that deliver measurable outcomes.' },
+    { name: 'description', content: homeDescription },
     { name: 'keywords', content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering, cloud architecture, machine learning, business intelligence, cybersecurity consulting, Canada' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
-  ]
+  ],
 })
-
 usePageSeo({
-  title: 'Gamma Neutral Consulting | AI & Data Consulting, Toronto',
-  description: 'AI, data engineering, and cloud consulting for financial services, healthcare, and government. Toronto-based. From pilot to production.',
+  title: homeTitle,
+  description: homeDescription,
   path: '/',
 })
 
@@ -127,7 +128,7 @@ useHead({
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
-      '@id': 'https://gammaneutral.com/#localbusiness',
+      '@id': 'https://gammaneutral.com/#professionalservice',
       name: company.name,
       url: 'https://gammaneutral.com',
       email: company.email,

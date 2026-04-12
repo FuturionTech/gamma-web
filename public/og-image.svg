@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="40%" style="stop-color:#1a1a2e"/>
+      <stop offset="70%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#667eea"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="#8b5cf6" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="300" fill="#667eea" opacity="0.05"/>
+
+  <!-- Accent bar -->
+  <rect x="80" y="200" width="6" height="80" rx="3" fill="url(#accent)"/>
+
+  <!-- Company name -->
+  <text x="110" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="700" fill="white">Gamma Neutral</text>
+  <text x="110" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="white" opacity="0.7">Consulting Inc.</text>
+
+  <!-- Tagline -->
+  <text x="110" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="500" fill="#8b5cf6">AI &amp; Data Engineering Consulting</text>
+
+  <!-- Services -->
+  <text x="110" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="white" opacity="0.6">Artificial Intelligence | Data Engineering | Cloud Architecture</text>
+  <text x="110" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="white" opacity="0.6">Cybersecurity | Business Intelligence | Big Data</text>
+
+  <!-- Location -->
+  <text x="110" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="white" opacity="0.4">Toronto, Canada | gammaneutral.com</text>
+
+  <!-- Logo mark -->
+  <g transform="translate(1020, 200)">
+    <rect x="0" y="0" width="100" height="100" rx="20" fill="url(#accent)" opacity="0.9"/>
+    <path d="M 25 25 L 75 25 L 75 35 L 35 35 L 35 50 L 55 50 L 55 75 L 45 75 L 45 50 L 25 50 Z" fill="white" opacity="0.95"/>
+    <rect x="62" y="62" width="13" height="13" rx="2" fill="#ffd700" opacity="0.9"/>
+  </g>
+</svg>

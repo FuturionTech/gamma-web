@@ -288,30 +288,40 @@
 <script setup lang="ts">
 const company = useCompanyInfo()
 
-// SEO
+// SEO — single source of truth
+const aboutTitle = 'About Us | AI & Data Consulting Firm Toronto | Gamma Neutral'
+const aboutDescription = 'Gamma Neutral bridges the gap between AI prototypes and production systems. Engineering discipline for data and AI consulting in Toronto.'
 useHead({
-  title: 'About Us | Gamma Neutral Consulting',
+  title: aboutTitle,
   meta: [
-    {
-      name: 'description',
-      content: 'Gamma Neutral was founded to close the gap between Artificial Intelligence (AI) prototypes and production-ready systems. We bring engineering discipline to data and AI consulting for financial services, healthcare, and government.'
-    },
-    {
-      name: 'keywords',
-      content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering firm, about Gamma Neutral, data consulting Canada'
-    }
-  ]
+    { name: 'description', content: aboutDescription },
+    { name: 'keywords', content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering firm, about Gamma Neutral, data consulting Canada' },
+  ],
 })
-
 usePageSeo({
-  title: 'About Us | AI & Data Consulting Firm Toronto | Gamma Neutral',
-  description: 'Gamma Neutral bridges the gap between AI prototypes and production systems. Engineering discipline for data and AI consulting in Toronto.',
+  title: aboutTitle,
+  description: aboutDescription,
   path: '/about',
 })
 useBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'About', url: '/about' },
 ])
+// AboutPage schema
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: aboutTitle,
+      description: aboutDescription,
+      url: 'https://gammaneutral.com/about',
+      isPartOf: { '@id': 'https://gammaneutral.com/#website' },
+      about: { '@id': 'https://gammaneutral.com/#organization' },
+    }),
+  }],
+})
 </script>
 
 <style scoped>
