@@ -1,4 +1,23 @@
 User-Agent: *
 Disallow:
 
+# AI crawlers — explicitly allowed
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://gammaneutral.com/sitemap.xml

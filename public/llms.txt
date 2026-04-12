@@ -1,0 +1,46 @@
+# Gamma Neutral Consulting Inc.
+
+> Premium AI, data engineering, and cloud consulting firm based in Toronto, Canada. We partner with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that deliver measurable outcomes.
+
+## Company Information
+
+- **Name**: Gamma Neutral Consulting Inc.
+- **Location**: 108 Redpath Ave, Toronto, ON M4S 2J7, Canada
+- **Founded**: 2025
+- **Email**: info@gammaneutral.com
+- **Website**: https://gammaneutral.com
+- **Service Areas**: Canada, United States
+- **Price Range**: Premium ($$$$)
+
+## Services
+
+- [AI & Intelligent Systems](https://gammaneutral.com/services/ai-intelligent-systems): Enterprise AI consulting from strategy to production — machine learning, NLP, computer vision, and intelligent automation.
+- [Data Engineering Platforms](https://gammaneutral.com/services/data-engineering-platforms): Modern data platform design — ETL/ELT pipelines, data lakes, warehouses, and real-time streaming architectures.
+- [Cloud Strategy & Engineering](https://gammaneutral.com/services/cloud-strategy-engineering): Cloud migration, multi-cloud architecture, infrastructure as code, and cost optimization across AWS, Azure, and GCP.
+- [Cybersecurity](https://gammaneutral.com/services/cybersecurity): Security assessments, compliance frameworks, threat detection, and security architecture for regulated industries.
+- [Business Intelligence](https://gammaneutral.com/services/business-intelligence): BI strategy, dashboard design, self-service analytics, and data visualization for executive decision-making.
+- [Big Data](https://gammaneutral.com/services/big-data): Large-scale data processing, distributed computing, and analytics platforms for high-volume data environments.
+
+## Key Pages
+
+- [Homepage](https://gammaneutral.com/)
+- [About Us](https://gammaneutral.com/about)
+- [All Services](https://gammaneutral.com/services)
+- [Contact / Book a Discovery Call](https://gammaneutral.com/contact)
+- [Careers](https://gammaneutral.com/careers)
+- [FAQ](https://gammaneutral.com/faq)
+- [Privacy Policy](https://gammaneutral.com/privacy-policy)
+- [Terms of Service](https://gammaneutral.com/terms-of-service)
+
+## Industries Served
+
+- Financial Services & Banking
+- Healthcare
+- Government & Public Sector
+- Education
+- Insurance
+- Telecommunications
+
+## Expertise
+
+Artificial Intelligence, Machine Learning, Data Engineering, Cloud Architecture, Cybersecurity, Business Intelligence, Big Data, MLOps, Data Governance, ETL/ELT, Data Lakes, Data Warehousing, AWS, Azure, GCP, Python, Apache Spark, Kubernetes, Terraform

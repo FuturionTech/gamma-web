@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       defaults: {
         lastmod: new Date().toISOString(),
       },
+      autoI18n: false,
     },
     imports: {
         autoImport: true,
