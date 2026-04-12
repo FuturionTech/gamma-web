@@ -5,16 +5,14 @@
       <!-- Loading State -->
       <div v-if="homepageStore.loadingServices" class="row g-4">
         <div class="col-lg-4 col-md-6" v-for="n in 6" :key="n">
-          <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
-            <div class="placeholder-glow">
-              <div class="placeholder bg-secondary rounded-circle mb-3" style="width: 56px; height: 56px;"></div>
-              <div class="placeholder bg-secondary col-8 mb-3" style="height: 20px;"></div>
-              <div class="placeholder bg-secondary col-12 mb-2" style="height: 14px;"></div>
-              <div class="placeholder bg-secondary col-10 mb-2" style="height: 14px;"></div>
-              <div class="placeholder bg-secondary col-8 mb-4" style="height: 14px;"></div>
-              <div class="placeholder bg-secondary col-6 mb-2" style="height: 12px;"></div>
-              <div class="placeholder bg-secondary col-7 mb-2" style="height: 12px;"></div>
-              <div class="placeholder bg-secondary col-5" style="height: 12px;"></div>
+          <div class="card h-100 p-4 rounded-5 border-0 shadow-sm shimmer-card">
+            <Shimmer width="56px" height="56px" radius="1rem" class="mb-4" />
+            <Shimmer width="70%" height="1.5rem" pill class="mb-3" />
+            <Shimmer width="100%" height="0.875rem" pill class="mb-2" />
+            <Shimmer width="90%" height="0.875rem" pill class="mb-2" />
+            <Shimmer width="80%" height="0.875rem" pill class="mb-4" />
+            <div class="d-flex flex-wrap gap-2 mt-auto">
+              <Shimmer v-for="f in 3" :key="f" width="60px" height="20px" pill />
             </div>
           </div>
         </div>
@@ -47,6 +45,7 @@
 
 <script setup lang="ts">
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
+import Shimmer from '~/components/shared/utils/Shimmer.vue'
 import { useHomepageStore } from '~/domains/homepage/stores/useHomepageStore'
 
 const { t, tm, locale } = useI18n()

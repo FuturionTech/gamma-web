@@ -76,8 +76,59 @@
       </div>
     </section>
 
+    <!-- Loading State -->
+    <template v-if="loading">
+      <section class="hero-gradient position-relative overflow-hidden hero-offset">
+        <div class="container position-relative z-2 py-5">
+          <nav aria-label="breadcrumb" class="mb-4">
+            <Shimmer width="200px" height="1.5rem" pill />
+          </nav>
+          <div class="row align-items-center">
+            <div class="col-lg-10">
+              <Shimmer width="150px" height="2rem" pill class="mb-3" />
+              <Shimmer width="60%" height="4rem" class="mb-3" />
+              <Shimmer width="80%" height="1.5rem" class="mb-4" />
+              <div class="d-flex gap-3 mb-5">
+                <Shimmer width="180px" height="3.5rem" radius="100px" />
+                <Shimmer width="180px" height="3.5rem" radius="100px" />
+              </div>
+              <div class="row g-3 g-lg-4">
+                <div v-for="n in 4" :key="n" class="col-6 col-lg-3">
+                  <div class="stat-card">
+                    <Shimmer width="60%" height="2.5rem" class="mb-2" />
+                    <Shimmer width="40%" height="1rem" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-light">
+        <div class="container py-5">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <Shimmer width="120px" height="1rem" pill class="mb-2" />
+              <Shimmer width="80%" height="2.5rem" class="mb-4" />
+              <Shimmer width="100%" height="1.25rem" class="mb-2" />
+              <Shimmer width="90%" height="1.25rem" />
+            </div>
+            <div class="col-lg-7">
+              <div class="challenge-grid">
+                <div v-for="n in 3" :key="n" class="challenge-item">
+                  <Shimmer width="40px" height="2rem" class="me-3" />
+                  <Shimmer width="100%" height="1.5rem" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
     <!-- Not Found State -->
-    <section v-if="!detail" class="py-5">
+    <section v-else-if="!detail && !loading" class="py-5">
       <div class="container py-5 text-center">
         <i class="bi bi-exclamation-circle text-warning" style="font-size: 3rem;"></i>
         <h2 class="mt-3 mb-3">{{ $t('services.details.notFound') }}</h2>
@@ -87,7 +138,7 @@
       </div>
     </section>
 
-    <template v-else>
+    <template v-else-if="detail">
       <!-- ========================================
            THE CHALLENGE — Problem narrative
            ======================================== -->
@@ -398,6 +449,7 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
 import type { LegacyServiceDetail as ServiceDetail } from '~/composables/useServiceDetail'
+import Shimmer from '~/components/shared/utils/Shimmer.vue'
 
 const { t, locale } = useI18n()
 const route = useRoute()
@@ -417,7 +469,7 @@ const impactIcons = [
 
 // Fetch service detail from the gamma-api GraphQL endpoint.
 // On slug or locale change, the composable re-fetches automatically.
-const { detail } = useServiceDetail(slug)
+const { detail, loading, error } = useServiceDetail(slug)
 
 // SEO meta
 useHead(() => ({

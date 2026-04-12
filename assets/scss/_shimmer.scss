@@ -1,0 +1,68 @@
+/* ==========================================================================
+   PREMIUM SHIMMER ANIMATION
+   ========================================================================== */
+
+@keyframes premium-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-block {
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: premium-shimmer 2.5s infinite linear;
+    opacity: 0.8;
+  }
+}
+
+[data-bs-theme="dark"] .shimmer-block {
+  background: rgba(255, 255, 255, 0.05);
+
+  &::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.5;
+  }
+}
+
+.shimmer-pill {
+  border-radius: 1000px !important;
+}
+
+.shimmer-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] .shimmer-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.06);
+}

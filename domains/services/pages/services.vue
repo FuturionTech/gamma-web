@@ -40,8 +40,8 @@
  
       <!-- Bottom wave/curve separator -->
       <div class="hero-separator">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 120L60 110C120 100 240 80 360 76.7C480 73.3 600 86.7 720 90C840 93.3 960 86.7 1080 73.3C1200 60 1320 40 1380 30L1440 20V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="currentColor"></path>
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 120L60 115C120 110 240 105 360 103.3C480 101.7 600 110.3 720 112.5C840 114.7 960 110.3 1080 103.3C1200 96.3 1320 86.7 1380 81.7L1440 76.7V120H0Z" fill="currentColor"></path>
         </svg>
       </div>
     </section>
@@ -230,6 +230,7 @@
 import { useHead } from '#imports'
 import ServiceCard from '~/components/shared/cards/ServiceCard.vue'
 import SectionHeader from '~/components/shared/sections/SectionHeader.vue'
+import Shimmer from '~/components/shared/utils/Shimmer.vue'
 import { useServicesStore } from '~/domains/services/stores/useServicesStore'
 
 const { $trackEvent } = useNuxtApp()
@@ -402,10 +403,11 @@ const approachSteps = computed(() =>
 
 .hero-gradient {
   background: #0f172a;
-  min-height: 480px;
+  min-height: 540px;
   display: flex;
   align-items: center;
   position: relative;
+  padding-bottom: 8rem;
 }
 
 .hero-glow {
