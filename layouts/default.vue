@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <main class="page-wrapper">
+  <div class="d-flex flex-column min-vh-100">
+    <main class="page-wrapper flex-grow-1">
 
       <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
       <Header/>
