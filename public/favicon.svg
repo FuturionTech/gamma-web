@@ -14,8 +14,8 @@
   <!-- Rounded square dark navy background -->
   <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
 
-  <!-- Subtle purple accent bar at bottom -->
-  <rect x="96" y="436" width="320" height="6" rx="3" fill="url(#accent)"/>
+  <!-- Subtle purple accent bar spanning under both G and N -->
+  <rect x="72" y="436" width="392" height="8" rx="4" fill="url(#accent)"/>
 
   <!-- G — clean geometric, thick strokes, pure white -->
   <path d="
