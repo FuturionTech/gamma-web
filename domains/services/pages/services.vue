@@ -60,9 +60,9 @@
         />
  
         <!-- Loading Skeletons -->
-        <div v-if="servicesStore.loading" class="row g-4">
-          <div class="col-sm-6 col-lg-4" v-for="n in 6" :key="n">
-            <div class="card h-100 p-4 rounded-5 border-0 shadow-sm shimmer-card">
+        <div v-if="servicesStore.loading" class="services-grid">
+          <div class="services-grid-item" v-for="n in 6" :key="n">
+            <div class="card h-100 w-100 p-4 rounded-5 border-0 shadow-sm shimmer-card">
               <Shimmer width="64px" height="64px" radius="1rem" class="mb-4" />
               <Shimmer width="70%" height="1.5rem" pill class="mb-3" />
               <Shimmer width="90%" height="0.875rem" pill class="mb-2" />
@@ -75,22 +75,21 @@
         </div>
  
         <!-- Service Cards with Stagger -->
-        <div v-else class="row g-4">
+        <div v-else class="services-grid">
           <div
-            class="col-sm-6 col-lg-4"
+            class="reveal-card services-grid-item"
             v-for="(service, index) in services"
             :key="index"
+            :style="{ '--delay': index * 0.1 + 's' }"
           >
-            <div class="reveal-card" :style="{ '--delay': index * 0.1 + 's' }">
-              <ServiceCard
-                :title="service.title"
-                :description="service.description"
-                :features="service.features"
-                :icon="service.icon"
-                :gradientClass="service.gradientClass"
-                :link="service.link"
-              />
-            </div>
+            <ServiceCard
+              :title="service.title"
+              :description="service.description"
+              :features="service.features"
+              :icon="service.icon"
+              :gradientClass="service.gradientClass"
+              :link="service.link"
+            />
           </div>
         </div>
       </div>
@@ -449,6 +448,38 @@ const approachSteps = computed(() =>
 
 [data-bs-theme="dark"] .bg-white-to-gray {
   background: #0b0f19;
+}
+
+/* Services grid — equal heights across all rows so cards with fewer
+   features don't look shorter than cards with more features. */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}
+
+.services-grid-item {
+  display: flex;
+  min-width: 0;
+}
+
+.services-grid-item > :deep(.service-card),
+.services-grid-item > .card {
+  width: 100%;
 }
 
 .reveal-card {

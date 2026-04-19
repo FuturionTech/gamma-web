@@ -17,7 +17,7 @@
       <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
       <p class="card-desc-text mb-4">{{ description }}</p>
 
-      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto pt-2">
+      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 pt-2">
         <li
           class="d-flex align-items-center mb-2"
           v-for="(feature, idx) in features"
@@ -28,7 +28,7 @@
         </li>
       </ul>
 
-      <div class="learn-more-box mt-4 pt-4">
+      <div class="learn-more-box mt-auto pt-4">
         <span class="learn-more-btn">
           {{ learnMoreLabel || $t('services.learnMore') }}
           <i class="bi bi-arrow-right-short ms-1 learn-more-arrow" aria-hidden="true"></i>
@@ -50,7 +50,7 @@
       <h3 class="h5 fw-bold mb-3 card-title-text">{{ title }}</h3>
       <p class="card-desc-text mb-4">{{ description }}</p>
 
-      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 mt-auto pt-2">
+      <ul v-if="features && features.length > 0" class="list-unstyled mb-0 pt-2">
         <li
           class="d-flex align-items-center mb-2"
           v-for="(feature, idx) in features"
