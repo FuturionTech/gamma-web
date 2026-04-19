@@ -289,13 +289,13 @@
 const company = useCompanyInfo()
 
 // SEO — single source of truth
-const aboutTitle = 'About Us | AI & Data Consulting Firm Toronto | Gamma Neutral'
-const aboutDescription = 'Gamma Neutral bridges the gap between AI prototypes and production systems. Engineering discipline for data and AI consulting in Toronto.'
+const aboutTitle = 'About Us | AI & Data Consulting Firm Toronto | Gamma Neutral Consulting'
+const aboutDescription = 'Gamma Neutral Consulting bridges the gap between AI prototypes and production systems. Engineering discipline for data and AI consulting in Toronto.'
 useHead({
   title: aboutTitle,
   meta: [
     { name: 'description', content: aboutDescription },
-    { name: 'keywords', content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering firm, about Gamma Neutral, data consulting Canada' },
+    { name: 'keywords', content: 'Artificial Intelligence consulting Toronto, AI consulting, data engineering firm, about Gamma Neutral Consulting, data consulting Canada' },
   ],
 })
 usePageSeo({

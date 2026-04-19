@@ -59,7 +59,7 @@
             </div>
 
             <!-- Stats Row -->
-            <div v-if="detail?.hero?.stats" class="hero-stats row g-3 g-lg-4">
+            <div v-if="detail?.hero?.stats && detail.hero.stats.length" class="hero-stats row g-3 g-lg-4">
               <div
                 v-for="(stat, i) in detail.hero.stats"
                 :key="i"

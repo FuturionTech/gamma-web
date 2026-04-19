@@ -269,7 +269,7 @@ useHead({
   title: careersTitle,
   meta: [
     { name: 'description', content: careersDescription },
-    { name: 'keywords', content: 'Gamma Neutral careers, Toronto tech jobs, data engineering careers, Artificial Intelligence consulting jobs, AI consulting jobs' },
+    { name: 'keywords', content: 'Gamma Neutral Consulting careers, Toronto tech jobs, data engineering careers, Artificial Intelligence consulting jobs, AI consulting jobs' },
   ],
 })
 usePageSeo({

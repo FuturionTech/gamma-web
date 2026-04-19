@@ -227,13 +227,13 @@ const { sanitize } = useSanitize()
 const { t, locale } = useI18n()
 const faqStore = useFaqStore()
 
-const faqTitle = 'FAQ | AI & Data Consulting Questions | Gamma Neutral'
+const faqTitle = 'FAQ | AI & Data Consulting Questions | Gamma Neutral Consulting'
 const faqDescription = 'Answers to common questions about Gamma Neutral Consulting — our services, engagement process, pricing, and how we work with clients.'
 useHead({
   title: faqTitle,
   meta: [
     { name: 'description', content: faqDescription },
-    { name: 'keywords', content: 'FAQ, frequently asked questions, Artificial Intelligence consulting, AI consulting, data engineering, Gamma Neutral' },
+    { name: 'keywords', content: 'FAQ, frequently asked questions, Artificial Intelligence consulting, AI consulting, data engineering, Gamma Neutral Consulting' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 })

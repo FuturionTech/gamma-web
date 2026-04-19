@@ -207,15 +207,15 @@ const mailtoLink = computed(() => {
   if (!position.value) return company.mailtoHref
   const subject = encodeURIComponent(`Application: ${position.value.title}`)
   const body = encodeURIComponent(
-    `Hi Gamma Neutral Careers Team,\n\nI am writing to express my interest in the ${position.value.title} position (${position.value.department}).\n\nPlease find my resume attached.\n\nBest regards`
+    `Hi Gamma Neutral Consulting Careers Team,\n\nI am writing to express my interest in the ${position.value.title} position (${position.value.department}).\n\nPlease find my resume attached.\n\nBest regards`
   )
   return `${company.mailtoHref}?subject=${subject}&body=${body}`
 })
 
 // SEO
-const posTitle = position.value ? `${position.value.title} - Careers at Gamma Neutral` : 'Position - Gamma Neutral'
+const posTitle = position.value ? `${position.value.title} - Careers at Gamma Neutral Consulting` : 'Position - Gamma Neutral Consulting'
 const posDescription = position.value
-  ? `Apply for ${position.value.title} position at Gamma Neutral. ${position.value.summary}`
+  ? `Apply for ${position.value.title} position at Gamma Neutral Consulting. ${position.value.summary}`
   : 'View job position details and apply at Gamma Neutral Consulting.'
 useHead({
   title: posTitle,

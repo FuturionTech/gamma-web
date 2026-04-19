@@ -105,7 +105,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const homeTitle = 'Gamma Neutral Consulting | AI & Data Consulting, Toronto'
-const homeDescription = 'Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that deliver measurable outcomes.'
+const homeDescription = 'Gamma Neutral Consulting partners with financial institutions, healthcare organizations, and government agencies to design AI systems, data architectures, and analytics platforms that deliver measurable outcomes.'
 useHead({
   title: homeTitle,
   meta: [

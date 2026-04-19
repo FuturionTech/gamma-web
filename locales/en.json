@@ -13,7 +13,7 @@
     "title1": "Your Data Has Answers.",
     "title2": "We Ask the Right {highlight}",
     "titleHighlight": "Questions.",
-    "subtitle": "Gamma Neutral partners with financial institutions, healthcare organizations, and government agencies to design Artificial Intelligence (AI) systems, data architectures, and analytics platforms that solve specific business problems — not just generate dashboards.",
+    "subtitle": "Gamma Neutral Consulting partners with financial institutions, healthcare organizations, and government agencies to design Artificial Intelligence (AI) systems, data architectures, and analytics platforms that solve specific business problems — not just generate dashboards.",
     "ctaPrimary": "Book a Discovery Call",
     "ctaSecondary": "See How We Work",
     "tagline": "Toronto-based AI & data consulting firm"
@@ -21,7 +21,7 @@
   "homepage": {
     "servicesTitle": "What We Do",
     "servicesSubtitle": "Focused consulting in Artificial Intelligence, data engineering, and cloud — from strategy to production",
-    "whyChooseTitle": "Why Choose Gamma Neutral",
+    "whyChooseTitle": "Why Choose Gamma Neutral Consulting",
     "whyChooseSubtitle": "Experience the advantages of working with a dedicated data consulting firm",
     "industriesTitle": "Industries We Serve",
     "industriesSubtitle": "Deep domain expertise in regulated, data-intensive sectors",
@@ -42,7 +42,7 @@
         "industries": "Industry Applications",
         "techStack": "Technology Stack",
         "impact": "Business Impact",
-        "whyUs": "Why Gamma Neutral"
+        "whyUs": "Why Gamma Neutral Consulting"
       },
       "sectionHeadings": {
         "howWeDeliver": "How We Deliver",
@@ -75,7 +75,7 @@
   },
   "whyChooseUs": {
     "title": "Why teams choose",
-    "brandName": "Gamma Neutral",
+    "brandName": "Gamma Neutral Consulting",
     "subtitle": "We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.",
     "expertTeam": {
       "title": "Expert Team",
@@ -199,10 +199,10 @@
     "heroBadge": "Toronto, Canada - Incorporated 2025",
     "pageTitle": "Engineering Discipline for Data & AI",
     "badge": "AI & Data Consulting",
-    "intro": "Gamma Neutral was founded on a simple observation: too many organizations invest in data and Artificial Intelligence (AI) technology without the engineering discipline to make it work. Our team brings hands-on experience from financial services, government, and healthcare technology programs — and we built this firm to deliver the focused, senior-level attention that large consultancies cannot.",
+    "intro": "Gamma Neutral Consulting was founded on a simple observation: too many organizations invest in data and Artificial Intelligence (AI) technology without the engineering discipline to make it work. Our team brings hands-on experience from financial services, government, and healthcare technology programs — and we built this firm to deliver the focused, senior-level attention that large consultancies cannot.",
     "pointOfView": {
       "title": "Our Point of View",
-      "content": "We believe that the gap between a promising AI prototype and a production-ready system is where most data initiatives fail. Gamma Neutral exists to close that gap — with rigorous engineering, pragmatic architecture decisions, and a commitment to solutions your team can actually maintain after we leave."
+      "content": "We believe that the gap between a promising AI prototype and a production-ready system is where most data initiatives fail. Gamma Neutral Consulting exists to close that gap — with rigorous engineering, pragmatic architecture decisions, and a commitment to solutions your team can actually maintain after we leave."
     },
     "ctaPrimary": "Schedule a Consultation",
     "ctaSecondary": "Explore Services",
@@ -255,7 +255,7 @@
     },
     "growingTeam": {
       "title": "A Growing Team",
-      "description": "Gamma Neutral brings together experienced consultants for each engagement. Our network includes specialists in data engineering, ML operations, cloud architecture, and cybersecurity — assembled based on the specific needs of your project.",
+      "description": "Gamma Neutral Consulting brings together experienced consultants for each engagement. Our network includes specialists in data engineering, ML operations, cloud architecture, and cybersecurity — assembled based on the specific needs of your project.",
       "cta": "Join Our Team"
     },
     "ctaBottom": {
@@ -340,12 +340,12 @@
   "careers": {
     "breadcrumbAbout": "About",
     "breadcrumbCareers": "Careers",
-    "pageTitle": "Join Gamma Neutral",
+    "pageTitle": "Join Gamma Neutral Consulting",
     "subtitle": "Build your career at the forefront of data science and Artificial Intelligence (AI) innovation. We're looking for passionate individuals who want to make a real impact.",
     "whyJoin": {
       "badge": "WHY JOIN US",
-      "title": "Build Your Future With Gamma Neutral",
-      "subtitle": "At Gamma Neutral, you'll work on challenging projects, learn from industry experts, and grow your career in a supportive, innovative environment.",
+      "title": "Build Your Future With Gamma Neutral Consulting",
+      "subtitle": "At Gamma Neutral Consulting, you'll work on challenging projects, learn from industry experts, and grow your career in a supportive, innovative environment.",
       "careerGrowth": {
         "title": "Career Growth",
         "description": "Clear advancement paths with mentorship programs and continuous learning opportunities."
@@ -394,7 +394,7 @@
       "applyDescription": "To apply for the {position} position, please send your resume and cover letter to our careers team.",
       "sendApplication": "Send Application",
       "applyInstructions": "Include your resume (PDF), a brief cover letter, and your LinkedIn profile link. We'll review your application and get back to you within 5 business days.",
-      "whyJoinTitle": "Why Join Gamma Neutral?",
+      "whyJoinTitle": "Why Join Gamma Neutral Consulting?",
       "whyJoinItems": [
         "Work on cutting-edge AI projects",
         "Learn from industry experts",

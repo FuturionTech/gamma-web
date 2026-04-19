@@ -59,7 +59,7 @@ useHead(() => ({
 }))
 
 usePageSeo({
-  title: locale.value === 'fr' ? "Conditions d'utilisation | Gamma Neutral" : 'Terms and Conditions | Gamma Neutral Consulting',
+  title: locale.value === 'fr' ? "Conditions d'utilisation | Gamma Neutral Consulting" : 'Terms and Conditions | Gamma Neutral Consulting',
   description: locale.value === 'fr' ? "Conditions d'utilisation de Gamma Neutral Consulting Inc." : 'Terms and Conditions for Gamma Neutral Consulting Inc.',
   path: '/terms-of-service',
 })

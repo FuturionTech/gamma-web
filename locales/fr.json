@@ -13,7 +13,7 @@
     "title1": "Vos données ont des réponses.",
     "title2": "Nous posons les bonnes {highlight}",
     "titleHighlight": "questions.",
-    "subtitle": "Gamma Neutral accompagne les institutions financières, les organismes de santé et les agences gouvernementales dans la conception de systèmes d'Intelligence Artificielle (IA), d'architectures de données et de plateformes analytiques qui résolvent des problèmes d'affaires concrets — pas seulement générer des tableaux de bord.",
+    "subtitle": "Gamma Neutral Consulting accompagne les institutions financières, les organismes de santé et les agences gouvernementales dans la conception de systèmes d'Intelligence Artificielle (IA), d'architectures de données et de plateformes analytiques qui résolvent des problèmes d'affaires concrets — pas seulement générer des tableaux de bord.",
     "ctaPrimary": "Réserver un appel découverte",
     "ctaSecondary": "Découvrir notre approche",
     "tagline": "Cabinet de consultation en IA et données, basé à Toronto"
@@ -21,7 +21,7 @@
   "homepage": {
     "servicesTitle": "Ce que nous faisons",
     "servicesSubtitle": "Consultation ciblée en Intelligence Artificielle, ingénierie des données et infonuagique — de la stratégie à la production",
-    "whyChooseTitle": "Pourquoi choisir Gamma Neutral",
+    "whyChooseTitle": "Pourquoi choisir Gamma Neutral Consulting",
     "whyChooseSubtitle": "Découvrez les avantages de travailler avec un cabinet de consultation dédié aux données",
     "industriesTitle": "Industries que nous desservons",
     "industriesSubtitle": "Expertise approfondie dans les secteurs réglementés et à forte intensité de données",
@@ -42,7 +42,7 @@
         "industries": "Applications sectorielles",
         "techStack": "Pile technologique",
         "impact": "Impact d'affaires",
-        "whyUs": "Pourquoi Gamma Neutral"
+        "whyUs": "Pourquoi Gamma Neutral Consulting"
       },
       "sectionHeadings": {
         "howWeDeliver": "Comment nous livrons",
@@ -75,7 +75,7 @@
   },
   "whyChooseUs": {
     "title": "Pourquoi les équipes choisissent",
-    "brandName": "Gamma Neutral",
+    "brandName": "Gamma Neutral Consulting",
     "subtitle": "Nous combinons des technologies de pointe avec une expertise sectorielle approfondie pour livrer des solutions qui génèrent une réelle valeur d'affaires.",
     "expertTeam": {
       "title": "Équipe d'experts",
@@ -199,10 +199,10 @@
     "heroBadge": "Toronto, Canada - Constituée en 2025",
     "pageTitle": "Rigueur d'ingénierie pour les données et l'IA",
     "badge": "Consultation en IA et données",
-    "intro": "Gamma Neutral a été fondée sur un constat simple : trop d'organisations investissent dans les technologies de données et d'Intelligence Artificielle (IA) sans la discipline d'ingénierie nécessaire pour les faire fonctionner. Notre équipe apporte une expérience concrète des programmes technologiques en services financiers, gouvernement et santé — et nous avons bâti ce cabinet pour offrir l'attention ciblée et expérimentée que les grands cabinets ne peuvent pas fournir.",
+    "intro": "Gamma Neutral Consulting a été fondée sur un constat simple : trop d'organisations investissent dans les technologies de données et d'Intelligence Artificielle (IA) sans la discipline d'ingénierie nécessaire pour les faire fonctionner. Notre équipe apporte une expérience concrète des programmes technologiques en services financiers, gouvernement et santé — et nous avons bâti ce cabinet pour offrir l'attention ciblée et expérimentée que les grands cabinets ne peuvent pas fournir.",
     "pointOfView": {
       "title": "Notre point de vue",
-      "content": "Nous croyons que l'écart entre un prototype d'IA prometteur et un système prêt pour la production est là où la plupart des initiatives de données échouent. Gamma Neutral existe pour combler cet écart — avec une ingénierie rigoureuse, des décisions d'architecture pragmatiques et un engagement envers des solutions que votre équipe peut réellement maintenir après notre départ."
+      "content": "Nous croyons que l'écart entre un prototype d'IA prometteur et un système prêt pour la production est là où la plupart des initiatives de données échouent. Gamma Neutral Consulting existe pour combler cet écart — avec une ingénierie rigoureuse, des décisions d'architecture pragmatiques et un engagement envers des solutions que votre équipe peut réellement maintenir après notre départ."
     },
     "ctaPrimary": "Planifier une consultation",
     "ctaSecondary": "Explorer les services",
@@ -255,7 +255,7 @@
     },
     "growingTeam": {
       "title": "Une équipe en croissance",
-      "description": "Gamma Neutral rassemble des consultants expérimentés pour chaque mandat. Notre réseau comprend des spécialistes en ingénierie des données, opérations ML, architecture infonuagique et cybersécurité — assemblés selon les besoins spécifiques de votre projet.",
+      "description": "Gamma Neutral Consulting rassemble des consultants expérimentés pour chaque mandat. Notre réseau comprend des spécialistes en ingénierie des données, opérations ML, architecture infonuagique et cybersécurité — assemblés selon les besoins spécifiques de votre projet.",
       "cta": "Rejoindre notre équipe"
     },
     "ctaBottom": {
@@ -340,12 +340,12 @@
   "careers": {
     "breadcrumbAbout": "À propos",
     "breadcrumbCareers": "Carrières",
-    "pageTitle": "Rejoindre Gamma Neutral",
+    "pageTitle": "Rejoindre Gamma Neutral Consulting",
     "subtitle": "Bâtissez votre carrière à la fine pointe de la science des données et de l'innovation en Intelligence Artificielle (IA). Nous recherchons des personnes passionnées qui souhaitent avoir un impact réel.",
     "whyJoin": {
       "badge": "POURQUOI NOUS REJOINDRE",
-      "title": "Bâtissez votre avenir avec Gamma Neutral",
-      "subtitle": "Chez Gamma Neutral, vous travaillerez sur des projets stimulants, apprendrez auprès d'experts de l'industrie et développerez votre carrière dans un environnement innovant et bienveillant.",
+      "title": "Bâtissez votre avenir avec Gamma Neutral Consulting",
+      "subtitle": "Chez Gamma Neutral Consulting, vous travaillerez sur des projets stimulants, apprendrez auprès d'experts de l'industrie et développerez votre carrière dans un environnement innovant et bienveillant.",
       "careerGrowth": {
         "title": "Croissance professionnelle",
         "description": "Des parcours d'avancement clairs avec des programmes de mentorat et des occasions d'apprentissage continu."
@@ -394,7 +394,7 @@
       "applyDescription": "Pour postuler au poste de {position}, veuillez envoyer votre CV et lettre de motivation à notre équipe des carrières.",
       "sendApplication": "Envoyer la candidature",
       "applyInstructions": "Incluez votre CV (PDF), une brève lettre de motivation et le lien vers votre profil LinkedIn. Nous examinerons votre candidature et vous répondrons dans les 5 jours ouvrables.",
-      "whyJoinTitle": "Pourquoi rejoindre Gamma Neutral ?",
+      "whyJoinTitle": "Pourquoi rejoindre Gamma Neutral Consulting ?",
       "whyJoinItems": [
         "Travailler sur des projets d'IA de pointe",
         "Apprendre auprès d'experts de l'industrie",

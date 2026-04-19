@@ -178,7 +178,7 @@ useHead({
   title: contactTitle,
   meta: [
     { name: 'description', content: contactDescription },
-    { name: 'keywords', content: 'contact Gamma Neutral, Artificial Intelligence consulting Toronto, AI consulting, data consulting discovery call, book consultation' },
+    { name: 'keywords', content: 'contact Gamma Neutral Consulting, Artificial Intelligence consulting Toronto, AI consulting, data consulting discovery call, book consultation' },
     { name: 'author', content: 'Gamma Neutral Consulting Inc.' },
   ],
 })

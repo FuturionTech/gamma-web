@@ -247,7 +247,7 @@ watch(locale, () => {
   servicesStore.fetchServices(20)
 })
 
-const svcTitle = 'AI, Data & Cloud Consulting Services | Gamma Neutral, Toronto'
+const svcTitle = 'AI, Data & Cloud Consulting Services | Gamma Neutral Consulting, Toronto'
 const svcDescription = 'From AI and ML engineering to data architecture, cloud migration, cybersecurity, and business intelligence — consulting that moves from pilot to production.'
 useHead({
   title: svcTitle,
